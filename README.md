@@ -12,4 +12,7 @@
 - react-jss
 - react-router-dom
 
+- redux
+- react-redux
+
 > End of Reactor

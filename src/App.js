@@ -1,16 +1,16 @@
 import Header from './components/Header';
-import Navigation from './components/Navigation';
+import Dropdown from './components/NavMenu';
 import Content from './components/Content';
-// import HomeView from './views/HomeView';
+import useStyles from './AppStyles';
 
 export default function App() {
+  const s = useStyles();
+
   return (
-    <>
+    <div className={s.App}>
       <Header />
-      <Navigation />
-      <main>
-        <Content />
-      </main>
-    </>
+      <Content />
+      <Dropdown />
+    </div>
   );
 }

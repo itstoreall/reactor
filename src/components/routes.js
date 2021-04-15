@@ -1,10 +1,10 @@
 import { lazy } from 'react';
 
 const HomeView = lazy(() =>
-  import('../views/HomeView' /*webpackChunckName: 'Home'*/),
+  import('../views/HomeView' /*webpackChunkName: 'Home'*/),
 );
 const ContactsView = lazy(() =>
-  import('../views/ContactsView' /*webpackChunckName: 'Contacts'*/),
+  import('../views/ContactsView' /*webpackChunkName: 'Contacts'*/),
 );
 
 export const routes = [
