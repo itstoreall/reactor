@@ -10,5 +10,6 @@
 - modern-normalize
 - node-sass
 - react-jss
+- react-router-dom
 
 > End of Reactor

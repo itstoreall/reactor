@@ -1,20 +1,15 @@
-import HomeView from './views/HomeView';
+import Header from './components/Header';
+import Navigation from './components/Navigation';
+import Content from './components/Content';
+// import HomeView from './views/HomeView';
 
 export default function App() {
   return (
     <>
-      <header>
-        <a className="logo" href="/">
-          Reactor
-        </a>
-      </header>
-      <nav>
-        <a className="nav" href="/">
-          Nav
-        </a>
-      </nav>
+      <Header />
+      <Navigation />
       <main>
-        <HomeView />
+        <Content />
       </main>
     </>
   );
