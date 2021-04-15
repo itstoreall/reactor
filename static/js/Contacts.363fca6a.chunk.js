@@ -1,0 +1,2 @@
+(this.webpackJsonpreactor=this.webpackJsonpreactor||[]).push([[0],{42:function(t,n,c){"use strict";c.r(n),c.d(n,"default",(function(){return s}));var r=c(2);function e(){return Object(r.jsx)("p",{children:"Hi from Contacts"})}function s(){return Object(r.jsxs)(r.Fragment,{children:[Object(r.jsx)("h1",{children:"Contacts"}),Object(r.jsx)(e,{})]})}}}]);
+//# sourceMappingURL=Contacts.363fca6a.chunk.js.map
