@@ -1,22 +1,19 @@
 import { createUseStyles } from 'react-jss';
 
-const modile = 375;
-const tablet = 768;
+// const modile = 375;
+// const tablet = 768;
 const desktop = 900;
 
 export default createUseStyles({
   App: {
-    // display: 'flex',
+    position: 'relative',
     height: '100vh',
-    maxWidth: 1280,
+    width: '100%',
     margin: '0 auto',
-
-    [`@media (min-width: ${modile}px)`]: {},
-
-    [`@media (min-width: ${tablet}px)`]: {},
+    backgroundColor: 'pink',
 
     [`@media (min-width: ${desktop}px)`]: {
-      display: 'flex',
+      maxWidth: 1440,
     },
   },
 });

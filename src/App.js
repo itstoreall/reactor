@@ -1,5 +1,5 @@
 import Header from './components/Header';
-import Dropdown from './components/NavMenu';
+import NavMenu from './components/NavMenu';
 import Content from './components/Content';
 import useStyles from './AppStyles';
 
@@ -10,7 +10,7 @@ export default function App() {
     <div className={s.App}>
       <Header />
       <Content />
-      <Dropdown />
+      <NavMenu />
     </div>
   );
 }

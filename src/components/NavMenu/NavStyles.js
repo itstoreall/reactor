@@ -1,29 +1,33 @@
 import { createUseStyles } from 'react-jss';
 
+const modile = 414;
+// const tablet = 768;
+// const desktop = 900;
+
 export default createUseStyles({
   // NavMenu
   NavMenu: {
-    // maxWidth: 400,
-    width: '100%',
-    height: '100%',
-    backgroundColor: 'skyblue',
+    position: 'absolute',
+    top: 0,
+    right: 0,
   },
+
   navMenuButton: {
+    position: 'absolute',
+    right: 0,
+    width: 150,
     padding: {
       top: 10,
       left: 20,
       right: 20,
       bottom: 10,
     },
-    // margin: 30,
-    // minWidth: 140,
-    // fontSize: 16,
+    fontSize: 16,
     textTransform: 'uppercase',
     cursor: 'pointer',
     color: 'white',
     backgroundColor: 'teal',
     border: 'none',
-    borderRadius: 4,
     outline: 'none',
 
     '&:hover': {
@@ -35,18 +39,28 @@ export default createUseStyles({
   Navigation: {
     display: 'flex',
     flexDirection: 'column',
-    borderRight: '1px solid teal',
+    width: '100vw',
+    height: '100vh',
+    // borderRight: '1px solid teal',
     listStyle: 'none',
     margin: 0,
     padding: 10,
+    paddingTop: 100,
+
     minWidth: 130,
     overflow: 'auto',
+    backgroundColor: 'skyblue',
+
+    [`@media (min-width: ${modile}px)`]: {
+      width: 250,
+    },
   },
 
   link: {
     backgroundColor: 'inherit',
     textDecoration: 'none',
     padding: 10,
+    fontSize: 22,
     color: 'teal',
 
     '&:hover': {
