@@ -13,7 +13,7 @@ export default function NavMenu() {
       <button className={s.navMenuButton} type="button" onClick={toggleVisible}>
         {visible ? 'Hide menu' : 'Show menu'}
       </button>
-      {visible && <Navigation />}
+      {visible && <Navigation onToggleVisible={toggleVisible} />}
     </div>
   );
 }

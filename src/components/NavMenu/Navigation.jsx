@@ -2,8 +2,10 @@ import { NavLink } from 'react-router-dom';
 import useStyles from './NavStyles';
 import { routes } from '../routes';
 
-export default function Navigation() {
+export default function Navigation({ onToggleVisible }) {
   const s = useStyles();
+
+  const handleCloseNavMenu = () => onToggleVisible();
 
   return (
     <div className={s.Navigation}>
@@ -15,6 +17,7 @@ export default function Navigation() {
             exact
             className={s.link}
             activeClassName={s.activeLink}
+            onClick={handleCloseNavMenu}
           >
             {label}
           </NavLink>
