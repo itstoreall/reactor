@@ -1,21 +1,7 @@
 import { createStore } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
+import mainReducer from './mainReducer';
 
-// Initial State
-const initialState = {
-  navMenu: false,
-};
-
-// Reducer
-const reducer = (state = initialState, action) => {
-  switch (action.type) {
-    case 'navMenu/visible':
-      return {
-        navMenu: (state.navMenu = action.payload),
-      };
-    default:
-      return state;
-  }
-};
-const store = createStore(reducer);
+const store = createStore(mainReducer, composeWithDevTools());
 
 export default store;

@@ -25,6 +25,13 @@ import store from './redux/store'
   <App />
 </Provider>
 
+04. Install Redux DevTools Extension:
+npm install --save-dev redux-devtools-extension
+
+04.1 In the store.js:
+import { composeWithDevTools } from 'redux-devtools-extension';
+const store = createStore(reducer, composeWithDevTools());
+
 --------------------------------------------- */
 
 /** =================================================

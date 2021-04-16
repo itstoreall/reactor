@@ -1,33 +1,28 @@
 import { connect } from 'react-redux';
+import { toggleVisible } from '../../redux/navMenu/actions';
 import Navigation from './Navigation';
 import useStyles from './NavStyles';
 
-const NavMenu = ({ navMenu, visibleNavMenu }) => {
+const NavMenu = ({ isVisible, toggleVisible }) => {
   const s = useStyles();
 
-  const toggleVisible = () => visibleNavMenu(navMenu);
+  const handleNavMenu = () => toggleVisible(isVisible);
 
   return (
     <div className={s.NavMenu}>
-      <button className={s.navMenuButton} type="button" onClick={toggleVisible}>
-        {navMenu ? 'Hide menu' : 'Show menu'}
+      <button className={s.navMenuButton} type="button" onClick={handleNavMenu}>
+        {isVisible ? 'Hide menu' : 'Show menu'}
       </button>
-      {navMenu && <Navigation onToggleVisible={toggleVisible} />}
+      {isVisible && <Navigation onToggleVisible={handleNavMenu} />}
     </div>
   );
 };
 
 const mapState = state => ({
-  navMenu: state.navMenu,
+  isVisible: state.navMenu.visible,
 });
 
-const mapDispatch = dispatch => ({
-  visibleNavMenu: navMenu =>
-    dispatch({
-      type: 'navMenu/visible',
-      payload: !navMenu,
-    }),
-});
+const mapDispatch = { toggleVisible };
 
 export default connect(mapState, mapDispatch)(NavMenu);
 
