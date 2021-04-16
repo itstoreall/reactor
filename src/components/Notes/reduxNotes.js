@@ -1,14 +1,33 @@
 /* ======================================
 // Redux connection
 
-01 Install Redux and React-Redux 
+01. Install Redux and React-Redux: 
+npm install redux
 npm install react-redux
 
+02. Creates redux > store.js
+import { createStore } from 'redux';
 
+const initialState = {
+  value: 5,
+};
 
--------------------------------------- */
+const reducer = (state = initialState, action) => state;
+const store = createStore(reducer);
+export default store;
 
-/**
+console.log(store.getState()); // {value: 5}
+
+03. Add Provider to the index.js: 
+import { Provider } from 'react-redux';
+import store from './redux/store'
+<Provider store={store}>
+  <App />
+</Provider>
+
+--------------------------------------------- */
+
+/** =================================================
  * React-Redax
  *
  * - Hабор компонентов связывающих React-компоненты и
@@ -58,7 +77,7 @@ const mapDispatchToProps = dispatch => ({
  *
  */
 
-/**
+/** ===============================================
  * Redax
  *
  * - Поток данных однонаправленный
@@ -93,6 +112,7 @@ const mapDispatchToProps = dispatch => ({
  * reducer - возвращает следующий state
  * preloadedState - начальный state
  * enhancer - middleware
+ * - Возвращает state - store.getState()
  *
  * Actions
  *
@@ -148,4 +168,61 @@ function notesReducer(state = initialState, action) {
  
  * 
  *
+ */
+
+/**
+ * Example of the initial Store
+ * 
+ * Counter (increment/decrement)
+
+import { createStore } from 'redux';
+
+// Initial State
+const initialState = {
+  value: 0,
+};
+
+// Reducer
+const reducer = (state = initialState, action) => {
+  switch (action.type) {
+    case 'counter/increment':
+      return {
+        value: state.value + action.payload.value,
+      };
+    case 'counter/decrement':
+      return {
+        value: state.value - action.payload.value,
+      };
+    default:
+      return state;
+  }
+};
+const store = createStore(reducer);
+
+// Action #1
+store.dispatch({
+  type: 'counter/increment',
+  payload: {
+    value: 7,
+  },
+});
+
+// State after the changes #1
+console.log(store.getState()); // {value: 7}
+
+// Action #2
+store.dispatch({
+  type: 'counter/decrement',
+  payload: {
+    value: 3,
+  },
+});
+
+// State after the changes #2
+console.log(store.getState()); // {value: 4}
+
+export default store;
+
+ * 
+ * 
  */

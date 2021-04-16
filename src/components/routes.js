@@ -3,8 +3,11 @@ import { lazy } from 'react';
 const HomeView = lazy(() =>
   import('../views/HomeView' /*webpackChunkName: 'Home'*/),
 );
+const ApplicationView = lazy(() =>
+  import('../views/ApplicationView' /*webpackChunkName: 'Applications'*/),
+);
 const ContactsView = lazy(() =>
-  import('../views/ContactsView' /*webpackChunkName: 'Contacts'*/),
+  import('../views/ContactView' /*webpackChunkName: 'Contacts'*/),
 );
 
 export const routes = [
@@ -13,6 +16,12 @@ export const routes = [
     label: 'Home',
     component: HomeView,
     exact: true,
+    showInMenu: true,
+  },
+  {
+    path: '/applications',
+    label: 'Applications',
+    component: ApplicationView,
     showInMenu: true,
   },
   {
