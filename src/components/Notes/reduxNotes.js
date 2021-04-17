@@ -32,7 +32,96 @@ npm install --save-dev redux-devtools-extension
 import { composeWithDevTools } from 'redux-devtools-extension';
 const store = createStore(reducer, composeWithDevTools());
 
+05.1 Install the Redux Toolkit:
+npm install @reduxjs/toolkit
+
+05.2 Uninstall Redux Devtools:
+npm uninstall --save-dev redux-devtools-extension
+
+06.1 Install the Logger:
+npm i --save redux-logger
+
+06.2 Import the logger and getDefaultMiddleware:
+import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
+import logger from 'redux-logger';
+
+06.3 Declare middleware like new array with default gDM and logger:
+const middleware = [...getDefaultMiddleware(), logger];
+
+06.4 Add middleware to the store:
+const store = configureStore({
+  reducer: {
+    navMenu,
+  },
+  middleware,
+  devTools: process.env.NODE_ENV !== 'production',
+});
+
+07. Install the Persistor
+npm install redux-persist
+
 --------------------------------------------- */
+
+/** =================================================
+ * Redux Toolkit
+ *
+ * - Функция configureStore() оборачивает createStore()
+ * - Под капотом уже настроены Redux Devtools и createAsyncThunk
+ * поэтому redux-devtools-extension из сборки можно удалить
+ * - Под капотом настроен combineReducers(), поэтому он
+ * нам тоже уже не нужен, его можно удалить
+ *
+ * logger for Redux
+ *
+ * - Middleware
+ *
+ * createAction()
+ * - Функция принимающая аргументами type и prepareAction (не обязат.)
+ 
+function createAction(type, prepareAction)
+
+ * - Реагирует на действия пользователя в ui, 
+ * - Возвращает объект у которого свойство type - это counter/add,
+ * a payload - это то, что в это функцию пердать
+ * - Чтобы передать сложный payload используем prepareAction
+ * - prepareAction() - колбек, позволяет приготовить сложный payload
+ 
+// Example 1
+const addTodo = createAction(types.ADD, text => {
+  return {
+    payload: {
+      id: shortid.generate(),
+      text,
+      completed: false,
+    }
+  }
+})
+
+// Example 2
+const INCREMENT = 'counter/increment'
+
+function increment(amount) {
+  return {
+    type: INCREMENT,
+    payload: amount,
+  }
+}
+const action = increment(3) // { type: 'counter/increment', payload: 3 }
+ 
+ * createReducer()
+ *
+ * - В createReducer() передается начальный стейт и объект кейсов
+
+import { createReducer } from '@reduxjs/toolkit';
+
+const timer = createReducer(0, {
+  [increment.type]: (state, action) => state + action.payload,
+  [decrement.type]: (state, action) => state - action.payload,
+});
+
+ * 
+ * 
+ */
 
 /** =================================================
  * React-Redax

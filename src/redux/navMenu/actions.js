@@ -1,8 +1,12 @@
-export const toggleVisible = navMenu => ({
-  type: 'navMenu/visible',
-  payload: !navMenu,
-});
+import { createAction } from '@reduxjs/toolkit';
 
-/**
- * Action - функция принимает некий параметр и возвращает объект
- */
+// Ссылка на функцию со свойством type
+export const toggleVisible = createAction('navMenu/visible');
+
+/* Action toggleVisible #1
+
+export const toggleVisible = visible => ({
+  type: 'navMenu/visible',
+  payload: !visible,
+});
+*/

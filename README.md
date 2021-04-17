@@ -14,5 +14,9 @@
 
 - redux
 - react-redux
+- redux-devtools-extension (deleted)
+- @reduxjs/toolkit
+- redux-logger
+- redux-persist
 
 > End of Reactor

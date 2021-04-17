@@ -3,23 +3,23 @@ import { toggleVisible } from '../../redux/navMenu/actions';
 import Navigation from './Navigation';
 import useStyles from './NavStyles';
 
-const NavMenu = ({ isVisible, toggleVisible }) => {
+const NavMenu = ({ visible, toggleVisible }) => {
   const s = useStyles();
 
-  const handleNavMenu = () => toggleVisible(isVisible);
+  const handleNavMenu = () => toggleVisible(!visible);
 
   return (
     <div className={s.NavMenu}>
       <button className={s.navMenuButton} type="button" onClick={handleNavMenu}>
-        {isVisible ? 'Hide menu' : 'Show menu'}
+        {visible ? 'Hide menu' : 'Show menu'}
       </button>
-      {isVisible && <Navigation onToggleVisible={handleNavMenu} />}
+      {visible && <Navigation onToggleVisible={handleNavMenu} />}
     </div>
   );
 };
 
 const mapState = state => ({
-  isVisible: state.navMenu.visible,
+  visible: state.navMenu.visible,
 });
 
 const mapDispatch = { toggleVisible };

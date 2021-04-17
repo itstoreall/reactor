@@ -1,7 +1,9 @@
+import { NavLink } from 'react-router-dom';
+
 export default function Header() {
   return (
-    <a className="logo" href="/">
+    <NavLink className="logo" to="/">
       Reactor
-    </a>
+    </NavLink>
   );
 }
