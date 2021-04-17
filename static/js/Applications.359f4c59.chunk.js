@@ -1,2 +1,0 @@
-(this.webpackJsonpreactor=this.webpackJsonpreactor||[]).push([[0],{44:function(t,n,c){"use strict";c.r(n),c.d(n,"default",(function(){return i}));var r=c(2);function e(){return Object(r.jsx)("p",{children:"Hi from Applications"})}function i(){return Object(r.jsxs)(r.Fragment,{children:[Object(r.jsx)("h1",{children:"Application"}),Object(r.jsx)(e,{})]})}}}]);
-//# sourceMappingURL=Applications.359f4c59.chunk.js.map

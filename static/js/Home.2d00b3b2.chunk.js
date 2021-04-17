@@ -1,2 +1,0 @@
-(this.webpackJsonpreactor=this.webpackJsonpreactor||[]).push([[2],{43:function(e,t,r){"use strict";r.r(t),r.d(t,"default",(function(){return s}));var n=r(2);function c(){return Object(n.jsx)("p",{children:"Hi from Home"})}function s(){return Object(n.jsxs)(n.Fragment,{children:[Object(n.jsx)("h1",{children:"Home"}),Object(n.jsx)(c,{})]})}}}]);
-//# sourceMappingURL=Home.2d00b3b2.chunk.js.map
