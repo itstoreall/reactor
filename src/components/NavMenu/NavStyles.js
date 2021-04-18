@@ -9,6 +9,7 @@ export default createUseStyles({
     width: '100%',
     height: '100vh',
     backgroundColor: 'yellow',
+    overflow: 'scroll',
 
     [`@media (min-width: ${refs.tablet}px)`]: {
       width: 220,

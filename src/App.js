@@ -1,16 +1,23 @@
+import { connect } from 'react-redux';
 import Header from './components/Header';
 import NavMenu from './components/NavMenu';
 import Content from './components/Content';
 import useStyles from './AppStyles';
 
-export default function App() {
+const App = ({ visible }) => {
   const s = useStyles();
 
   return (
-    <div className={s.App}>
+    <div className={visible ? s.NavMenu : s.App}>
       <Header />
       <Content />
       <NavMenu />
     </div>
   );
-}
+};
+
+const mapState = state => ({
+  visible: state.navMenu.visible,
+});
+
+export default connect(mapState)(App);
