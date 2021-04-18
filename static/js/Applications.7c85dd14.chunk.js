@@ -1,2 +1,0 @@
-(this.webpackJsonpreactor=this.webpackJsonpreactor||[]).push([[0],{53:function(t,e,s){t.exports={section:"ViewStyles_section__AuNei",useList:"ViewStyles_useList__3vLRS"}},92:function(t,e,s){"use strict";s.r(e),s.d(e,"default",(function(){return o}));var i=s(2);function n(){return Object(i.jsx)("p",{children:"Hi from Applications"})}var c=s(53),r=s.n(c);function o(){return Object(i.jsxs)("section",{className:r.a.section,children:[Object(i.jsx)("h1",{children:"Application"}),Object(i.jsx)(n,{})]})}}}]);
-//# sourceMappingURL=Applications.7c85dd14.chunk.js.map

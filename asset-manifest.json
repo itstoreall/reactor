@@ -1,8 +1,8 @@
 {
   "files": {
     "Applications.css": "/reactor/static/css/Applications.8f2c149d.chunk.css",
-    "Applications.js": "/reactor/static/js/Applications.7c85dd14.chunk.js",
-    "Applications.js.map": "/reactor/static/js/Applications.7c85dd14.chunk.js.map",
+    "Applications.js": "/reactor/static/js/Applications.1a3ada85.chunk.js",
+    "Applications.js.map": "/reactor/static/js/Applications.1a3ada85.chunk.js.map",
     "Book.css": "/reactor/static/css/Book.7b805cc9.chunk.css",
     "Book.js": "/reactor/static/js/Book.15e80e13.chunk.js",
     "Book.js.map": "/reactor/static/js/Book.15e80e13.chunk.js.map",
@@ -12,11 +12,11 @@
     "Home.css": "/reactor/static/css/Home.8f2c149d.chunk.css",
     "Home.js": "/reactor/static/js/Home.1296e562.chunk.js",
     "Home.js.map": "/reactor/static/js/Home.1296e562.chunk.js.map",
-    "main.css": "/reactor/static/css/main.72f5f8e5.chunk.css",
-    "main.js": "/reactor/static/js/main.0ffb657e.chunk.js",
-    "main.js.map": "/reactor/static/js/main.0ffb657e.chunk.js.map",
-    "runtime-main.js": "/reactor/static/js/runtime-main.93193e2a.js",
-    "runtime-main.js.map": "/reactor/static/js/runtime-main.93193e2a.js.map",
+    "main.css": "/reactor/static/css/main.324fe2c5.chunk.css",
+    "main.js": "/reactor/static/js/main.50fb2d29.chunk.js",
+    "main.js.map": "/reactor/static/js/main.50fb2d29.chunk.js.map",
+    "runtime-main.js": "/reactor/static/js/runtime-main.407aa797.js",
+    "runtime-main.js.map": "/reactor/static/js/runtime-main.407aa797.js.map",
     "static/css/6.de71bbd8.chunk.css": "/reactor/static/css/6.de71bbd8.chunk.css",
     "static/js/6.cf15502e.chunk.js": "/reactor/static/js/6.cf15502e.chunk.js",
     "static/js/6.cf15502e.chunk.js.map": "/reactor/static/js/6.cf15502e.chunk.js.map",
@@ -30,14 +30,14 @@
     "static/css/Book.7b805cc9.chunk.css.map": "/reactor/static/css/Book.7b805cc9.chunk.css.map",
     "static/css/Contacts.8f2c149d.chunk.css.map": "/reactor/static/css/Contacts.8f2c149d.chunk.css.map",
     "static/css/Home.8f2c149d.chunk.css.map": "/reactor/static/css/Home.8f2c149d.chunk.css.map",
-    "static/css/main.72f5f8e5.chunk.css.map": "/reactor/static/css/main.72f5f8e5.chunk.css.map",
+    "static/css/main.324fe2c5.chunk.css.map": "/reactor/static/css/main.324fe2c5.chunk.css.map",
     "static/js/6.cf15502e.chunk.js.LICENSE.txt": "/reactor/static/js/6.cf15502e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.93193e2a.js",
+    "static/js/runtime-main.407aa797.js",
     "static/css/6.de71bbd8.chunk.css",
     "static/js/6.cf15502e.chunk.js",
-    "static/css/main.72f5f8e5.chunk.css",
-    "static/js/main.0ffb657e.chunk.js"
+    "static/css/main.324fe2c5.chunk.css",
+    "static/js/main.50fb2d29.chunk.js"
   ]
 }
