@@ -1,14 +1,5 @@
 import { createUseStyles } from 'react-jss';
-
-const primaryBg = '#2c3139';
-const darkBg = '#2b2c30';
-const accentBg = '#9697b6';
-const primaryColor = '#9697b6';
-const primaryWhiteColor = '#fff';
-
-const modile = 414;
-// const tablet = 768;
-// const desktop = 900;
+import { refs } from '../refs';
 
 export default createUseStyles({
   // NavMenu
@@ -33,15 +24,15 @@ export default createUseStyles({
     fontWeight: 500,
     textTransform: 'uppercase',
     cursor: 'pointer',
-    color: primaryColor,
-    backgroundColor: primaryBg,
-    border: `2px solid ${accentBg}`,
+    color: refs.primaryColor,
+    backgroundColor: refs.primaryBg,
+    border: `2px solid ${refs.accentBg}`,
     borderRadius: 4,
     outline: 'none',
 
     '&:hover': {
-      backgroundColor: accentBg,
-      color: primaryWhiteColor,
+      backgroundColor: refs.accentBg,
+      color: refs.primaryWhiteColor,
     },
   },
 
@@ -51,18 +42,15 @@ export default createUseStyles({
     flexDirection: 'column',
     width: '100vw',
     height: '100vh',
-    // borderRight: '1px solid teal',
     listStyle: 'none',
     margin: 0,
     padding: 10,
     paddingTop: 100,
-
-    minWidth: 130,
     overflow: 'auto',
-    backgroundColor: darkBg,
+    backgroundColor: refs.darkBg,
 
-    [`@media (min-width: ${modile}px)`]: {
-      width: 250,
+    [`@media (min-width: ${refs.modile}px)`]: {
+      width: 200,
     },
   },
 
@@ -71,7 +59,7 @@ export default createUseStyles({
     textDecoration: 'none',
     padding: 10,
     fontSize: 16,
-    color: primaryColor,
+    color: refs.primaryColor,
     borderRadius: 4,
 
     '&:not(:last-child)': {
@@ -79,18 +67,18 @@ export default createUseStyles({
     },
 
     '&:hover': {
-      color: '#fff',
-      backgroundColor: accentBg,
+      color: refs.primaryWhiteColor,
+      backgroundColor: refs.accentBg,
     },
   },
 
   activeLink: {
-    backgroundColor: primaryBg,
-    color: '#f1f1f1',
+    backgroundColor: refs.primaryBg,
+    color: refs.primaryWhiteColor,
 
     '&:hover': {
-      color: '#fff',
-      backgroundColor: primaryBg,
+      color: refs.primaryWhiteColor,
+      backgroundColor: refs.primaryBg,
     },
   },
 });
