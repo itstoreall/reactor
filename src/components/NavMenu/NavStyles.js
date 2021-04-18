@@ -44,13 +44,23 @@ export default createUseStyles({
     height: '100vh',
     listStyle: 'none',
     margin: 0,
-    padding: 10,
-    paddingTop: 100,
-    overflow: 'auto',
+    padding: {
+      top: 100,
+      left: 40,
+      right: 40,
+      bottom: 40,
+    },
     backgroundColor: refs.darkBg,
+    overflow: 'scroll',
 
-    [`@media (min-width: ${refs.modile}px)`]: {
-      width: 200,
+    [`@media (min-width: ${refs.tablet}px)`]: {
+      padding: {
+        top: 100,
+        left: 10,
+        right: 10,
+        bottom: 20,
+      },
+      width: 220,
     },
   },
 
@@ -58,9 +68,13 @@ export default createUseStyles({
     backgroundColor: 'inherit',
     textDecoration: 'none',
     padding: 10,
-    fontSize: 16,
+    fontSize: 20,
     color: refs.primaryColor,
     borderRadius: 4,
+
+    [`@media (min-width: ${refs.tablet}px)`]: {
+      fontSize: 16,
+    },
 
     '&:not(:last-child)': {
       marginBottom: 5,

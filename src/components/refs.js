@@ -1,8 +1,8 @@
 export const refs = {
   // Viewport
-  modile: 375,
-  tablet: 768,
-  desktop: 900,
+  modile: '375',
+  tablet: '768',
+  desktop: '900',
 
   // Colors
   primaryColor: '#9697b6',
