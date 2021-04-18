@@ -41,7 +41,7 @@ export default createUseStyles({
     display: 'flex',
     flexDirection: 'column',
     width: '100vw',
-    height: '100vh',
+    minHeight: '100vh',
     listStyle: 'none',
     margin: 0,
     padding: {
@@ -51,7 +51,7 @@ export default createUseStyles({
       bottom: 40,
     },
     backgroundColor: refs.darkBg,
-    overflow: 'scroll',
+    // overflow: 'scroll',
 
     [`@media (min-width: ${refs.tablet}px)`]: {
       padding: {
