@@ -1,0 +1,9 @@
+.toast {
+  @media screen and (max-width: 479px) {
+    padding: 5px;
+  }
+
+  @media screen and (min-width: 480px) {
+    width: 300px;
+  }
+}

@@ -19,4 +19,8 @@
 - redux-logger
 - redux-persist
 
+- json-server
+- axios
+- react-toastify
+
 > End of Reactor

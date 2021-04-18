@@ -6,6 +6,9 @@ const HomeView = lazy(() =>
 const ApplicationView = lazy(() =>
   import('../views/ApplicationView' /*webpackChunkName: 'Applications'*/),
 );
+const BookView = lazy(() =>
+  import('../views/BookView' /*webpackChunkName: 'Book'*/),
+);
 const ContactsView = lazy(() =>
   import('../views/ContactView' /*webpackChunkName: 'Contacts'*/),
 );
@@ -22,6 +25,12 @@ export const routes = [
     path: '/applications',
     label: 'Applications',
     component: ApplicationView,
+    showInMenu: true,
+  },
+  {
+    path: '/books',
+    label: 'Books',
+    component: BookView,
     showInMenu: true,
   },
   {

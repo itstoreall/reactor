@@ -5,7 +5,7 @@ import { routes } from '../routes';
 export default function Navigation({ onToggleVisible }) {
   const s = useStyles();
 
-  const handleCloseNavMenu = () => onToggleVisible();
+  const handleToggleNavMenu = () => onToggleVisible();
 
   return (
     <div className={s.Navigation}>
@@ -17,7 +17,8 @@ export default function Navigation({ onToggleVisible }) {
             exact
             className={s.link}
             activeClassName={s.activeLink}
-            onClick={handleCloseNavMenu}
+            onClick={handleToggleNavMenu}
+            replace
           >
             {label}
           </NavLink>
