@@ -13,6 +13,7 @@ export default function BookView() {
         <li>use json-server</li>
         <li>use axios</li>
         <li>use server/db.json</li>
+        <li>use try...catch</li>
       </ul>
     </>
   );

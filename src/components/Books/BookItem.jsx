@@ -1,3 +1,3 @@
-const BookItem = ({ book }) => <li key={book.id}>{book.title}</li>;
+const BookItem = ({ book }) => <li>{book.title}</li>;
 
 export default BookItem;

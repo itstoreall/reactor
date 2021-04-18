@@ -27,7 +27,7 @@ export default class Books extends Component {
     return (
       <>
         {books.length !== 0 && (
-          <ul>
+          <ul className={s.bookList}>
             {books.map(book => (
               <BookItem key={book.id} book={book} />
             ))}

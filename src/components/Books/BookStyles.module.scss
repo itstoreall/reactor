@@ -1,3 +1,11 @@
+.bookList {
+  li {
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+}
+
 .toast {
   @media screen and (max-width: 479px) {
     padding: 5px;

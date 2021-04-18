@@ -1,5 +1,11 @@
 import { createUseStyles } from 'react-jss';
 
+const primaryBg = '#2c3139';
+const darkBg = '#2b2c30';
+const accentBg = '#9697b6';
+const primaryColor = '#9697b6';
+const primaryWhiteColor = '#fff';
+
 const modile = 414;
 // const tablet = 768;
 // const desktop = 900;
@@ -14,24 +20,28 @@ export default createUseStyles({
 
   navMenuButton: {
     position: 'absolute',
-    right: 0,
-    width: 150,
+    top: 11,
+    right: 10,
+    width: 120,
     padding: {
       top: 10,
-      left: 20,
-      right: 20,
+      left: 10,
+      right: 10,
       bottom: 10,
     },
-    fontSize: 16,
+    fontSize: 14,
+    fontWeight: 500,
     textTransform: 'uppercase',
     cursor: 'pointer',
-    color: 'white',
-    backgroundColor: 'teal',
-    border: 'none',
+    color: primaryColor,
+    backgroundColor: primaryBg,
+    border: `2px solid ${accentBg}`,
+    borderRadius: 4,
     outline: 'none',
 
     '&:hover': {
-      backgroundColor: 'tomato',
+      backgroundColor: accentBg,
+      color: primaryWhiteColor,
     },
   },
 
@@ -49,7 +59,7 @@ export default createUseStyles({
 
     minWidth: 130,
     overflow: 'auto',
-    backgroundColor: 'skyblue',
+    backgroundColor: darkBg,
 
     [`@media (min-width: ${modile}px)`]: {
       width: 250,
@@ -60,22 +70,27 @@ export default createUseStyles({
     backgroundColor: 'inherit',
     textDecoration: 'none',
     padding: 10,
-    fontSize: 22,
-    color: 'teal',
+    fontSize: 16,
+    color: primaryColor,
+    borderRadius: 4,
+
+    '&:not(:last-child)': {
+      marginBottom: 5,
+    },
 
     '&:hover': {
       color: '#fff',
-      backgroundColor: 'teal',
+      backgroundColor: accentBg,
     },
   },
 
   activeLink: {
-    backgroundColor: 'tomato',
+    backgroundColor: primaryBg,
     color: '#f1f1f1',
 
     '&:hover': {
       color: '#fff',
-      backgroundColor: 'tomato',
+      backgroundColor: primaryBg,
     },
   },
 });

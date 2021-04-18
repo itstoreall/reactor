@@ -1,9 +1,14 @@
 import { NavLink } from 'react-router-dom';
+import useStyles from './HeaderStyles';
 
 export default function Header() {
+  const s = useStyles();
+
   return (
-    <NavLink className="logo" to="/" replace>
-      Reactor
-    </NavLink>
+    <header className={s.Header}>
+      <NavLink className={s.logoLink} to="/" replace>
+        Reactor
+      </NavLink>
+    </header>
   );
 }
