@@ -4,8 +4,8 @@
     "Applications.js": "/reactor/static/js/Applications.3dcd38ae.chunk.js",
     "Applications.js.map": "/reactor/static/js/Applications.3dcd38ae.chunk.js.map",
     "Book.css": "/reactor/static/css/Book.7b805cc9.chunk.css",
-    "Book.js": "/reactor/static/js/Book.15e80e13.chunk.js",
-    "Book.js.map": "/reactor/static/js/Book.15e80e13.chunk.js.map",
+    "Book.js": "/reactor/static/js/Book.7ab42463.chunk.js",
+    "Book.js.map": "/reactor/static/js/Book.7ab42463.chunk.js.map",
     "Contacts.css": "/reactor/static/css/Contacts.8f2c149d.chunk.css",
     "Contacts.js": "/reactor/static/js/Contacts.de894838.chunk.js",
     "Contacts.js.map": "/reactor/static/js/Contacts.de894838.chunk.js.map",
@@ -13,16 +13,16 @@
     "Home.js": "/reactor/static/js/Home.a7e57982.chunk.js",
     "Home.js.map": "/reactor/static/js/Home.a7e57982.chunk.js.map",
     "main.css": "/reactor/static/css/main.324fe2c5.chunk.css",
-    "main.js": "/reactor/static/js/main.49d3b8dd.chunk.js",
-    "main.js.map": "/reactor/static/js/main.49d3b8dd.chunk.js.map",
-    "runtime-main.js": "/reactor/static/js/runtime-main.3579ad92.js",
-    "runtime-main.js.map": "/reactor/static/js/runtime-main.3579ad92.js.map",
+    "main.js": "/reactor/static/js/main.a903de40.chunk.js",
+    "main.js.map": "/reactor/static/js/main.a903de40.chunk.js.map",
+    "runtime-main.js": "/reactor/static/js/runtime-main.861347da.js",
+    "runtime-main.js.map": "/reactor/static/js/runtime-main.861347da.js.map",
     "static/css/6.de71bbd8.chunk.css": "/reactor/static/css/6.de71bbd8.chunk.css",
-    "static/js/6.cf15502e.chunk.js": "/reactor/static/js/6.cf15502e.chunk.js",
-    "static/js/6.cf15502e.chunk.js.map": "/reactor/static/js/6.cf15502e.chunk.js.map",
+    "static/js/6.4ed8480c.chunk.js": "/reactor/static/js/6.4ed8480c.chunk.js",
+    "static/js/6.4ed8480c.chunk.js.map": "/reactor/static/js/6.4ed8480c.chunk.js.map",
     "static/css/7.3f6a4e7d.chunk.css": "/reactor/static/css/7.3f6a4e7d.chunk.css",
-    "static/js/7.4102b8d5.chunk.js": "/reactor/static/js/7.4102b8d5.chunk.js",
-    "static/js/7.4102b8d5.chunk.js.map": "/reactor/static/js/7.4102b8d5.chunk.js.map",
+    "static/js/7.b6cc2f60.chunk.js": "/reactor/static/js/7.b6cc2f60.chunk.js",
+    "static/js/7.b6cc2f60.chunk.js.map": "/reactor/static/js/7.b6cc2f60.chunk.js.map",
     "index.html": "/reactor/index.html",
     "static/css/6.de71bbd8.chunk.css.map": "/reactor/static/css/6.de71bbd8.chunk.css.map",
     "static/css/7.3f6a4e7d.chunk.css.map": "/reactor/static/css/7.3f6a4e7d.chunk.css.map",
@@ -31,13 +31,13 @@
     "static/css/Contacts.8f2c149d.chunk.css.map": "/reactor/static/css/Contacts.8f2c149d.chunk.css.map",
     "static/css/Home.8f2c149d.chunk.css.map": "/reactor/static/css/Home.8f2c149d.chunk.css.map",
     "static/css/main.324fe2c5.chunk.css.map": "/reactor/static/css/main.324fe2c5.chunk.css.map",
-    "static/js/6.cf15502e.chunk.js.LICENSE.txt": "/reactor/static/js/6.cf15502e.chunk.js.LICENSE.txt"
+    "static/js/6.4ed8480c.chunk.js.LICENSE.txt": "/reactor/static/js/6.4ed8480c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.3579ad92.js",
+    "static/js/runtime-main.861347da.js",
     "static/css/6.de71bbd8.chunk.css",
-    "static/js/6.cf15502e.chunk.js",
+    "static/js/6.4ed8480c.chunk.js",
     "static/css/main.324fe2c5.chunk.css",
-    "static/js/main.49d3b8dd.chunk.js"
+    "static/js/main.a903de40.chunk.js"
   ]
 }
