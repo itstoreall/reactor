@@ -6,7 +6,7 @@ export default createUseStyles({
     // flex: 1,
     padding: 15,
     height: 'calc(100vh - 60px)',
-    overflow: 'scroll',
+    // overflow: 'scroll',
 
     [`@media (min-width: ${refs.tablet}px)`]: {
       padding: 30,

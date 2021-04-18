@@ -9,12 +9,22 @@ const NavMenu = ({ visible, toggleVisible }) => {
   const handleNavMenu = () => toggleVisible(!visible);
 
   return (
-    <div className={s.NavMenu}>
-      <button className={s.navMenuButton} type="button" onClick={handleNavMenu}>
+    <>
+      {visible && (
+        <div className={s.backdrop}>
+          <div className={s.NavMenu}>
+            {visible && <Navigation onToggleVisible={handleNavMenu} />}
+          </div>
+        </div>
+      )}
+      <button
+        className={visible ? s.activeNavMenuButton : s.navMenuButton}
+        type="button"
+        onClick={handleNavMenu}
+      >
         {visible ? 'Hide menu' : 'Show menu'}
       </button>
-      {visible && <Navigation onToggleVisible={handleNavMenu} />}
-    </div>
+    </>
   );
 };
 

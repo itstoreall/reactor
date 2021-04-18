@@ -2,15 +2,27 @@ import { createUseStyles } from 'react-jss';
 import { refs } from '../refs';
 
 export default createUseStyles({
-  // NavMenu
-  NavMenu: {
-    position: 'absolute',
+  backdrop: {
+    position: 'fixed',
     top: 0,
     right: 0,
+    width: '100%',
+    height: '100vh',
+    backgroundColor: 'yellow',
+
+    [`@media (min-width: ${refs.tablet}px)`]: {
+      width: 220,
+    },
+  },
+  // NavMenu
+  NavMenu: {
+    position: 'relative',
+    // top: 0,
+    // right: 0,
   },
 
   navMenuButton: {
-    position: 'absolute',
+    position: 'fixed',
     top: 11,
     right: 10,
     width: 120,
@@ -36,6 +48,33 @@ export default createUseStyles({
     },
   },
 
+  activeNavMenuButton: {
+    composes: 'navMenuButton',
+    position: 'fixed',
+    top: 11,
+    right: 10,
+    width: 120,
+    padding: {
+      top: 12,
+      left: 12,
+      right: 12,
+      bottom: 12,
+    },
+    fontSize: 14,
+    fontWeight: 500,
+    textTransform: 'uppercase',
+    cursor: 'pointer',
+    color: refs.primaryWhiteColor,
+    backgroundColor: refs.primaryBg,
+    border: 'none',
+    borderRadius: 4,
+    outline: 'none',
+
+    '&:hover': {
+      backgroundColor: refs.accentBg,
+    },
+  },
+
   // Navigation
   Navigation: {
     display: 'flex',
@@ -50,7 +89,7 @@ export default createUseStyles({
       right: 40,
       bottom: 40,
     },
-    backgroundColor: refs.darkBg,
+    // backgroundColor: refs.darkBg,
     // overflow: 'scroll',
 
     [`@media (min-width: ${refs.tablet}px)`]: {
@@ -67,9 +106,9 @@ export default createUseStyles({
   link: {
     backgroundColor: 'inherit',
     textDecoration: 'none',
-    padding: 10,
-    fontSize: 20,
-    color: refs.primaryColor,
+    padding: 15,
+    fontSize: 22,
+    color: refs.darkColor,
     borderRadius: 4,
 
     [`@media (min-width: ${refs.tablet}px)`]: {

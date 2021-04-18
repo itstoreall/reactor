@@ -1,3 +1,6 @@
+// "homepage": "http://test.storeall.com.ua",
+// "homepage": "https://itstoreall.github.io/reactor",
+
 /* ======================================
 // Redux connection
 
