@@ -23,13 +23,14 @@ export default class Books extends Component {
 
   render() {
     const { books } = this.state;
+    const { match } = this.props;
 
     return (
       <>
         {books.length !== 0 && (
           <ul className={s.bookList}>
             {books.map(book => (
-              <BookItem key={book.id} book={book} />
+              <BookItem key={book.id} book={book} match={match} />
             ))}
           </ul>
         )}

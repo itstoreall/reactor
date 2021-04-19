@@ -8,7 +8,7 @@ const App = ({ visible }) => {
   const s = useStyles();
 
   return (
-    <div className={visible ? s.NavMenu : s.App}>
+    <div className={s.App}>
       <Header />
       <Content />
       <NavMenu />

@@ -1,10 +1,19 @@
+import { Link } from 'react-router-dom';
 import useStyles from './ApplicationStyles';
 
-export default function Applications() {
+export default function Applications({ match }) {
   const s = useStyles();
 
   return (
     <div className={s.text}>
+      <ul>
+        <li>
+          <Link to={`${match.url}/books`}>App 1</Link>
+        </li>
+        <li>
+          <Link to={`${match.url}/books`}>App 1</Link>
+        </li>
+      </ul>
       <p>
         Hi from Applications Lorem ipsum dolor sit amet consectetur adipisicing
         elit. Numquam quos id ipsa et dolorum magnam labore, iure soluta

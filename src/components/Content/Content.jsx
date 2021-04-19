@@ -1,13 +1,14 @@
+import { connect } from 'react-redux';
 import { Suspense } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import { routes } from '../routes';
 import useStyles from './ContentStyles';
 
-export default function Content() {
+const Content = ({ visible }) => {
   const s = useStyles();
 
   return (
-    <div className={s.Content}>
+    <div className={visible ? s.NavMenu : s.Content}>
       <Suspense fallback={<p>Content Loading...</p>}>
         <Switch>
           {routes.map(({ path, exact, component: Component }) => (
@@ -18,4 +19,10 @@ export default function Content() {
       </Suspense>
     </div>
   );
-}
+};
+
+const mapState = state => ({
+  visible: state.navMenu.visible,
+});
+
+export default connect(mapState)(Content);
