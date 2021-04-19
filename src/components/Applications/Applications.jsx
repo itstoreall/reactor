@@ -1,5 +1,6 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import useStyles from './ApplicationStyles';
+import { apps } from './apps.json';
 
 export default function Applications({ match }) {
   const s = useStyles();
@@ -7,13 +8,13 @@ export default function Applications({ match }) {
   return (
     <div className={s.text}>
       <ul>
-        <li>
-          <Link to={`${match.url}/books`}>App 1</Link>
-        </li>
-        <li>
-          <Link to={`${match.url}/books`}>App 1</Link>
-        </li>
+        {apps.map(app => (
+          <li key={app.id}>
+            <NavLink to={`${match.url}/${app.name}`}>{app.name}</NavLink>
+          </li>
+        ))}
       </ul>
+
       <p>
         Hi from Applications Lorem ipsum dolor sit amet consectetur adipisicing
         elit. Numquam quos id ipsa et dolorum magnam labore, iure soluta

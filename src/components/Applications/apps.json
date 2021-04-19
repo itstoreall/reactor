@@ -1,0 +1,6 @@
+{
+  "apps": [
+    { "id": 1, "name": "Books" },
+    { "id": 2, "name": "Books" }
+  ]
+}

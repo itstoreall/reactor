@@ -10,8 +10,9 @@ import {
   REGISTER,
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage'; // link to localStorage
-import logger from 'redux-logger';
+// import logger from 'redux-logger';
 import navMenuReducer from './navMenu/reducer';
+import bookReducer from './books/reducer';
 
 // Middleware
 const middleware = [
@@ -20,7 +21,7 @@ const middleware = [
       ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
     },
   }),
-  logger,
+  // logger,
 ];
 
 // Persist Config
@@ -29,10 +30,16 @@ const navMenuPersistConfig = {
   storage,
 };
 
+const booksPersistConfig = {
+  key: 'bookDetails',
+  storage,
+};
+
 const store = configureStore({
   // Root Reducer
   reducer: {
     navMenu: persistReducer(navMenuPersistConfig, navMenuReducer),
+    books: persistReducer(booksPersistConfig, bookReducer),
   },
   middleware,
   devTools: process.env.NODE_ENV !== 'production',
