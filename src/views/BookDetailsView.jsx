@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import axios from 'axios';
 import { getBookDetails } from '../redux/books/actions';
 import BookDetails from '../components/Books/BookDetails';
+import reserveData from '../components/Books/reserveBooks.json';
 import { ToastContainer } from 'react-toastify';
 import notify from '../components/Toastify';
 import s from './ViewStyles.module.scss';
@@ -20,9 +21,15 @@ class BookDetailsView extends Component {
       notify('success', 'Successful downloading!');
       // throw new Error(); // *
     } catch (error) {
+      this.getReserveBook(bookId);
       notify('error', 'Server is not available!');
     }
   }
+
+  getReserveBook = bookId =>
+    this.props.getBookDetails(
+      reserveData.books.find(book => book.id === Number(bookId)),
+    );
 
   render() {
     const { bookId } = this.props.match.params;
@@ -32,7 +39,7 @@ class BookDetailsView extends Component {
       <>
         <section className={s.section}>
           <h1>Book Details {bookId}</h1>
-          <BookDetails bookDetails={bookDetails} />
+          <BookDetails bookDetails={bookDetails} reserveData={reserveData} />
           <ToastContainer className={s.toast} />
         </section>
       </>

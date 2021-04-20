@@ -1,7 +1,7 @@
 import { createReducer } from '@reduxjs/toolkit';
 import { getBookDetails } from './actions';
 
-// Initial state of the Nav Menu
+// Initial state of the Books
 const initialState = {
   bookDetails: {},
 };

@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import axios from 'axios';
 import BookItem from './BookItem';
+import reserveData from './reserveBooks.json';
 import { ToastContainer } from 'react-toastify';
 import notify from '../../components/Toastify';
 import s from './BookStyles.module.scss';
@@ -18,6 +19,7 @@ export default class Books extends Component {
       // throw new Error();
     } catch (error) {
       notify('error', 'Server is not available!');
+      this.setState({ books: reserveData.books });
     }
   }
 

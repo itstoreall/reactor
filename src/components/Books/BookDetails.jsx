@@ -1,4 +1,7 @@
-export default function BookDetails({ bookDetails }) {
+import errorImg from './error.jpg';
+console.log(errorImg);
+
+export default function BookDetails({ bookDetails, reserveData }) {
   const { imgUrl, title, genre, author, descr } = bookDetails;
 
   return (
@@ -6,7 +9,7 @@ export default function BookDetails({ bookDetails }) {
       <img src={imgUrl} alt={title} />
       <h2>{title}</h2>
       <p>{genre}</p>
-      <p>Author: {author.name}</p>
+      {author && <p>Author: {author.name}</p>}
       <p>{descr}</p>
     </>
   );
