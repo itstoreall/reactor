@@ -1,12 +1,12 @@
 import Books from '../components/Books';
 import s from './ViewStyles.module.scss';
 
-export default function BookView({ match }) {
+export default function BookView() {
   return (
     <>
       <section className={s.section}>
         <h1>Books</h1>
-        <Books match={match} />
+        <Books />
       </section>
 
       <ul className={s.useList}>
