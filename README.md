@@ -24,5 +24,3 @@
 - react-toastify
 
 > End of Reactor
-
-"homepage": "https://itstoreall.github.io/reactor",

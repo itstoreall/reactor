@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { Component } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Route } from 'react-router-dom';
+import AuthorBooks from '../components/AuthorBooks';
 
 class AuthorView extends Component {
   state = {
@@ -8,24 +9,46 @@ class AuthorView extends Component {
   };
 
   async componentDidMount() {
-    const { data } = await axios.get(`http://localhost:2222/authors`);
+    const { data } = await axios.get(
+      `http://localhost:2222/authors?_embed=books`,
+    );
 
     this.setState({ authors: data });
   }
 
   render() {
+    const { match } = this.props;
+    const { authors } = this.state;
+
     return (
       <>
         <h1>Authors View</h1>
         <ul>
-          {this.state.authors.map(author => (
+          {authors.map(author => (
             <li key={author.id}>
-              <NavLink to={`${this.props.match.url}/${author.id}`}>
+              <NavLink to={`${match.url}/${author.id}`} replace>
                 {author.name}
               </NavLink>
             </li>
           ))}
         </ul>
+
+        <Route
+          path={`${match.path}/:authorId`}
+          render={props => {
+            const bookId = Number(props.match.params.authorId);
+            const author = authors.find(({ id }) => id === bookId);
+
+            return (
+              author && (
+                <>
+                  <h3>Books by authors</h3>
+                  <AuthorBooks {...props} books={author.books} />
+                </>
+              )
+            );
+          }}
+        />
       </>
     );
   }

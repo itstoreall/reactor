@@ -1,4 +1,4 @@
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
 import Header from './components/Header';
 import NavMenu from './components/NavMenu';
 import Content from './components/Content';
@@ -16,8 +16,9 @@ const App = ({ visible }) => {
   );
 };
 
-const mapState = state => ({
-  visible: state.navMenu.visible,
-});
+// const mapState = state => ({
+//   visible: state.navMenu.visible,
+// });
 
-export default connect(mapState)(App);
+// export default connect(mapState)(App);
+export default App;

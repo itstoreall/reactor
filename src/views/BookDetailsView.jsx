@@ -2,6 +2,7 @@ import { Component } from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
 import { getBookDetails } from '../redux/books/actions';
+import BookDetails from '../components/Books/BookDetails';
 import { ToastContainer } from 'react-toastify';
 import notify from '../components/Toastify';
 import s from './ViewStyles.module.scss';
@@ -12,7 +13,9 @@ class BookDetailsView extends Component {
     const { getBookDetails } = this.props;
 
     try {
-      const { data } = await axios.get(`http://localhost:2222/books/${bookId}`);
+      const { data } = await axios.get(
+        `http://localhost:2222/books/${bookId}?_expand=author`,
+      );
       getBookDetails(data);
       notify('success', 'Successful downloading!');
       // throw new Error(); // *
@@ -29,10 +32,7 @@ class BookDetailsView extends Component {
       <>
         <section className={s.section}>
           <h1>Book Details {bookId}</h1>
-          <img src={bookDetails.imgUrl} alt={bookDetails.title} />
-          <h2>{bookDetails.title}</h2>
-          <p>{bookDetails.genre}</p>
-          <p>{bookDetails.descr}</p>
+          <BookDetails bookDetails={bookDetails} />
           <ToastContainer className={s.toast} />
         </section>
       </>
