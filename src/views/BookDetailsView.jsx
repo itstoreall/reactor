@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import axios from 'axios';
 import { getBookDetails } from '../redux/books/actions';
 import BookDetails from '../components/Books/BookDetails';
+import { routes } from '../components/routes';
 import reserveData from '../components/Books/reserveBooks.json';
 import { ToastContainer } from 'react-toastify';
 import notify from '../components/Toastify';
@@ -31,14 +32,30 @@ class BookDetailsView extends Component {
       reserveData.books.find(book => book.id === Number(bookId)),
     );
 
+  handleGoBack = () => {
+    const { location, history } = this.props;
+
+    location.state && location.state.from
+      ? history.push(location.state.from)
+      : history.push(routes[2].path);
+
+    // history.push(location.state.from);
+  };
+
   render() {
-    const { bookId } = this.props.match.params;
     const { bookDetails } = this.props;
 
     return (
       <>
         <section className={s.section}>
-          <h1>Book Details {bookId}</h1>
+          <button
+            className={s.goBackBtn}
+            type="button"
+            onClick={this.handleGoBack}
+          >
+            &#8592; Go back
+          </button>
+          <h1>Book Details</h1>
           <BookDetails bookDetails={bookDetails} reserveData={reserveData} />
           <ToastContainer className={s.toast} />
         </section>

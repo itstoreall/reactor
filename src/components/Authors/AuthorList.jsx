@@ -1,7 +1,6 @@
 import { Component } from 'react';
 import { NavLink, Route, withRouter } from 'react-router-dom';
 import axios from 'axios';
-// import AuthorBooks from './AuthorBooks';
 import BookList from '../Books/BookList';
 import reserveData from '../Books/reserveBooks.json';
 import { ToastContainer } from 'react-toastify';
@@ -36,22 +35,21 @@ class AuthorList extends Component {
       <>
         <ul>
           {authors
-            ? authors.map(author => (
-                <li key={author.id}>
-                  <NavLink to={`${match.url}/${author.id}`} replace>
-                    {author.name}
+            ? authors.map(({ id, name }) => (
+                <li key={id}>
+                  <NavLink to={`${match.url}/${id}`} replace>
+                    {name}
                   </NavLink>
                 </li>
               ))
-            : reserveData.authors.map(author => (
-                <li key={author.id}>
-                  <NavLink to={`${match.url}/${author.id}`} replace>
-                    {author.name}
+            : reserveData.authors.map(({ id, name }) => (
+                <li key={id}>
+                  <NavLink to={`${match.url}/${id}`} replace>
+                    {name}
                   </NavLink>
                 </li>
               ))}
         </ul>
-
         <Route
           path={`${match.path}/:authorId`}
           render={props => {

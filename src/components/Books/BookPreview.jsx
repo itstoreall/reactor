@@ -1,6 +1,5 @@
 import errorImg from './error.jpg';
 import s from './BookStyles.module.scss';
-console.log(s);
 
 const BookPreview = ({ imgUrl, title, genre }) => {
   return (

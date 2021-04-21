@@ -4,6 +4,15 @@
   padding: 0 0 30px 0;
   color: #e0e0e0;
 
+  .goBackBtn {
+    padding: 0;
+    font-size: 14px;
+    color: $linkColor;
+    background-color: transparent;
+    border: none;
+    margin-bottom: 10px;
+  }
+
   h1,
   h2,
   h3 {

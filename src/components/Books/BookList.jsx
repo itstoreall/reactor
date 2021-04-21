@@ -1,24 +1,37 @@
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import BookPreview from './BookPreview';
 import s from './BookStyles.module.scss';
+import reserveAuthor from './reserveBooks.json';
 
 // Reuseble Component
-export default function BookList({ books }) {
+const BookList = ({ books, location }) => {
   return (
     <>
-      <ul className={s.bookList}>
-        {books.map(({ id, imgUrl, title, genre }) => (
-          <li key={id}>
-            <Link to={`/applications/books/${id}`}>
-              <BookPreview imgUrl={imgUrl} title={title} genre={genre} />
-            </Link>
-          </li>
-        ))}
-      </ul>
+      {books ? (
+        <ul className={s.bookList}>
+          {books.map(({ id, imgUrl, title, genre }) => (
+            <li key={id}>
+              <Link
+                to={{
+                  pathname: `/applications/books/${id}`,
+                  state: {
+                    from: location,
+                  },
+                }}
+              >
+                <BookPreview imgUrl={imgUrl} title={title} genre={genre} />
+              </Link>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p>{`To see ${reserveAuthor.name}'s books, you need to turn on the Local Server`}</p>
+      )}
     </>
   );
-}
+};
 
+export default withRouter(BookList);
 /*
 import { Component } from 'react';
 import { Link } from 'react-router-dom';
