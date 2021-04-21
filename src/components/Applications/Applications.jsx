@@ -1,16 +1,16 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
 import useStyles from './ApplicationStyles';
 import { apps } from './apps.json';
 
-export default function Applications({ match }) {
+const Applications = ({ match }) => {
   const s = useStyles();
 
   return (
-    <div className={s.text}>
+    <div className={s.Applications}>
       <ul>
-        {apps.map(app => (
-          <li key={app.id}>
-            <NavLink to={`${match.url}/${app.name}`}>{app.name}</NavLink>
+        {apps.map(({ id, url, name }) => (
+          <li key={id}>
+            <NavLink to={`${match.url}/${url}`}>{name}</NavLink>
           </li>
         ))}
       </ul>
@@ -66,4 +66,6 @@ export default function Applications({ match }) {
       </p>
     </div>
   );
-}
+};
+
+export default withRouter(Applications);

@@ -1,8 +1,7 @@
 import { Component } from 'react';
-import { Link, withRouter } from 'react-router-dom';
 import axios from 'axios';
-import BookPreview from './BookPreview';
 import reserveData from './reserveBooks.json';
+import BookList from './BookList';
 import { ToastContainer } from 'react-toastify';
 import notify from '../../components/Toastify';
 import s from './BookStyles.module.scss';
@@ -26,26 +25,14 @@ class Books extends Component {
 
   render() {
     const { books } = this.state;
-    const { match } = this.props;
 
     return (
       <>
-        {books.length !== 0 && (
-          <ul className={s.bookList}>
-            {books.map(book => (
-              <li key={book.id}>
-                <Link to={`${match.url}/${book.id}`}>
-                  <BookPreview book={book} />
-                </Link>
-              </li>
-              // <BookItem key={book.id} book={book} />
-            ))}
-          </ul>
-        )}
+        {books.length !== 0 && <BookList books={books} />}
         <ToastContainer className={s.toast} />
       </>
     );
   }
 }
 
-export default withRouter(Books);
+export default Books;

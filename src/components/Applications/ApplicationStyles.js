@@ -2,7 +2,7 @@ import { createUseStyles } from 'react-jss';
 // import { refs } from '../refs';
 
 export default createUseStyles({
-  text: {
+  Applications: {
     '& > p': {
       lineHeight: 1.6,
       marginBottom: 30,

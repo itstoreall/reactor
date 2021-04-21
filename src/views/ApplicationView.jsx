@@ -5,7 +5,7 @@ export default function ApplicationView({ match }) {
   return (
     <section className={s.section}>
       <h1>Application</h1>
-      <Applications match={match} />
+      <Applications />
     </section>
   );
 }
