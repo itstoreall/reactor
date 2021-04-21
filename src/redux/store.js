@@ -40,6 +40,7 @@ const store = configureStore({
   reducer: {
     navMenu: persistReducer(navMenuPersistConfig, navMenuReducer),
     books: persistReducer(booksPersistConfig, bookReducer),
+    // books: bookReducer,
   },
   middleware,
   devTools: process.env.NODE_ENV !== 'production',

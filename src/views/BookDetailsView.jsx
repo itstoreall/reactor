@@ -27,6 +27,10 @@ class BookDetailsView extends Component {
     }
   }
 
+  componentWillUnmount() {
+    this.props.getBookDetails({});
+  }
+
   getReserveBook = bookId =>
     this.props.getBookDetails(
       reserveData.books.find(book => book.id === Number(bookId)),
