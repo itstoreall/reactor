@@ -23,4 +23,8 @@
 - axios
 - react-toastify
 
+- @material-ui
+- classnames
+- shortid
+
 > End of Reactor

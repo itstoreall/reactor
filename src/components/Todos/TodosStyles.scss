@@ -1,0 +1,99 @@
+@import 'styles/shared.scss'; // смотри в корне .env
+
+// Section/Container
+// .section {
+//   padding-left: 30px;
+//   padding-right: 30px;
+
+//   .container {
+//     margin: 0 auto;
+//     max-width: 1000px;
+//   }
+// }
+
+// .Loading {
+//   font-weight: 200;
+//   color: rgb(154, 149, 201);
+//   letter-spacing: 1.3px;
+// }
+
+// Button Open Modal
+.MuiButton-root {
+  &.ModaOpen__btn {
+    min-width: 300px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+}
+
+.TodoEditor {
+  min-width: 300px;
+  max-width: 500px;
+
+  .TodoEditor__textarea-label {
+    // TextField
+    .TodoEditor__textarea {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+
+  // Button (+ Add Todo)
+  .TodoEditor__btn {
+    padding: 10px;
+    width: 100%;
+  }
+}
+
+.TodoFilter-label {
+  display: block;
+  margin-bottom: 20px;
+  width: 100%;
+  min-width: 300px;
+  max-width: 500px;
+
+  // Input
+  .TodoInput {
+    width: 100%;
+  }
+}
+
+.TodoList {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.TodoList__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  width: 31%;
+  min-width: 300px;
+  background-color: $todoBg;
+  box-shadow: $todoShadov;
+  border-radius: 4px;
+
+  .PrivateSwitchBase-root-1 {
+    padding: 12px;
+    margin-right: 10px;
+  }
+
+  .TodoList__text {
+    color: $todoColor;
+    margin-right: 30px;
+    width: 100%;
+  }
+}
+
+.UseList {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  li:not(:last-child) {
+    margin-bottom: 5px;
+  }
+}

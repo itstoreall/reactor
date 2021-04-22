@@ -4,6 +4,17 @@
   padding: 0 0 30px 0;
   color: #e0e0e0;
 
+  .container {
+    margin: 0 auto;
+    max-width: 1000px;
+
+    .Loading {
+      font-weight: 200;
+      color: rgb(154, 149, 201);
+      letter-spacing: 1.3px;
+    }
+  }
+
   .goBackBtn {
     padding: 0;
     font-size: 14px;

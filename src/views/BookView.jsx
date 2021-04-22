@@ -1,10 +1,25 @@
+import { withRouter } from 'react-router-dom';
 import Books from '../components/Books';
 import s from './ViewStyles.module.scss';
 
-export default function BookView() {
+const BookView = ({ location, history }) => {
+  console.log('location', location);
+  console.log('history', history);
+
+  const handleGoBack = () => {
+    // const { location, history } = this.props;
+
+    location.state && location.state.from
+      ? history.push(location.state.from)
+      : history.push('/applications');
+  };
+
   return (
     <>
       <section className={s.section}>
+        <button className={s.goBackBtn} type="button" onClick={handleGoBack}>
+          &#8592; Go back
+        </button>
         <h1>Books</h1>
         <Books />
       </section>
@@ -18,4 +33,6 @@ export default function BookView() {
       </ul>
     </>
   );
-}
+};
+
+export default withRouter(BookView);

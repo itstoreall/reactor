@@ -1,0 +1,47 @@
+// Reused Modal
+@import "styles/shared.scss";
+
+.Modal__backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.Modal__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // min-width: 400px;
+  // min-height: 250px;
+  padding: 45px;
+  background-color: #fff;
+  border-radius: 3px;
+  transform: translate(-50%, -50%);
+  box-shadow: $modalShadow;
+}
+
+// .ModaOpen__btn {
+//   height: 100px;
+// }
+
+.ModaClose__btn-wrap {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  & .MuiIconButton-root {
+    padding: 5px;
+  }
+
+  // .ModaClose__btn {
+  //   width: 35px;
+  //   height: 35px;
+  // }
+}

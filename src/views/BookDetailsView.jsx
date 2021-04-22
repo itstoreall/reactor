@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import axios from 'axios';
 import { getBookDetails } from '../redux/books/actions';
 import BookDetails from '../components/Books/BookDetails';
-import { routes } from '../components/routes';
 import reserveData from '../components/Books/reserveBooks.json';
 import { ToastContainer } from 'react-toastify';
 import notify from '../components/Toastify';
@@ -41,9 +40,7 @@ class BookDetailsView extends Component {
 
     location.state && location.state.from
       ? history.push(location.state.from)
-      : history.push(routes[2].path);
-
-    // history.push(location.state.from);
+      : history.push('/applications/books');
   };
 
   render() {

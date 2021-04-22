@@ -2,7 +2,7 @@ import { NavLink, withRouter } from 'react-router-dom';
 import useStyles from './ApplicationStyles';
 import { apps } from './apps.json';
 
-const Applications = ({ match }) => {
+const Applications = ({ location, match }) => {
   const s = useStyles();
 
   return (
@@ -10,7 +10,17 @@ const Applications = ({ match }) => {
       <ul>
         {apps.map(({ id, url, name }) => (
           <li key={id}>
-            <NavLink to={`${match.url}/${url}`}>{name}</NavLink>
+            {/* <NavLink to={`${match.url}/${url}`}>{name}</NavLink> */}
+            <NavLink
+              to={{
+                pathname: `${match.url}/${url}`,
+                state: {
+                  from: location,
+                },
+              }}
+            >
+              {name}
+            </NavLink>
           </li>
         ))}
       </ul>

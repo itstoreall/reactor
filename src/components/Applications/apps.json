@@ -1,6 +1,6 @@
 {
   "apps": [
     { "id": 1, "name": "Books", "url": "books" },
-    { "id": 2, "name": "Books", "url": "books" }
+    { "id": 2, "name": "Todos", "url": "todos" }
   ]
 }
