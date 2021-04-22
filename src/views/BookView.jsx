@@ -3,12 +3,8 @@ import Books from '../components/Books';
 import s from './ViewStyles.module.scss';
 
 const BookView = ({ location, history }) => {
-  console.log('location', location);
-  console.log('history', history);
 
   const handleGoBack = () => {
-    // const { location, history } = this.props;
-
     location.state && location.state.from
       ? history.push(location.state.from)
       : history.push('/applications');

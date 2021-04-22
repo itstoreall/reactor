@@ -8,7 +8,7 @@ import TodoFilter from './TodoFilter';
 import { Button, IconButton } from '@material-ui/core';
 import CloseIcon from '@material-ui/icons/Close';
 import Modal from '../Modal';
-import './TodosStyles.scss';
+import './TodoStyles.scss';
 
 export default function Todos() {
   const [showModal, setShowModal] = useState(false);

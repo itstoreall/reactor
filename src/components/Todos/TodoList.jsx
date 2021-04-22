@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import classNames from 'classnames';
 import TodoItem from './TodoItem';
 import { todosSelectors } from '../../redux/todos';
-import './TodosStyles.scss';
+import './TodoStyles.scss';
 
 const TodoList = () => {
   const todos = useSelector(todosSelectors.getVisibleTodos);

@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import shortid from 'shortid';
 import Todos from '../components/Todos';
@@ -6,11 +7,20 @@ import todoSelectors from '../redux/todos/todos-selectors';
 // import './components/Todos/TodosStyles.scss';
 import s from './ViewStyles.module.scss';
 
-export default function App() {
+const TodoView = ({ location, history }) => {
   const isLoadingTodos = useSelector(todoSelectors.getLoading);
+
+  const handleGoBack = () => {
+    location.state && location.state.from
+      ? history.push(location.state.from)
+      : history.push('/applications');
+  };
 
   return (
     <section className={s.section}>
+      <button className={s.goBackBtn} type="button" onClick={handleGoBack}>
+        &#8592; Go back
+      </button>
       <div className={s.container}>
         <h1>
           Todos View Redux
@@ -51,4 +61,6 @@ export default function App() {
       </div>
     </section>
   );
-}
+};
+
+export default withRouter(TodoView);

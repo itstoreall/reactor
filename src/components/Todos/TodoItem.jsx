@@ -4,7 +4,7 @@ import { todosOperations } from '../../redux/todos';
 import { IconButton } from '@material-ui/core';
 import DeleteTwoToneIcon from '@material-ui/icons/DeleteTwoTone';
 import Checkbox from '@material-ui/core/Checkbox';
-import './TodosStyles.scss';
+import './TodoStyles.scss';
 
 const TodoItem = ({ id, text, completed }) => {
   const dispatch = useDispatch();

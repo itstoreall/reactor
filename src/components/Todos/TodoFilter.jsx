@@ -2,7 +2,7 @@ import React, { useEffect, useCallback, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { changeFilter, todosSelectors } from '../../redux/todos';
 import { TextField } from '@material-ui/core';
-import './TodosStyles.scss';
+import './TodoStyles.scss';
 
 export default function TodoFilter() {
   const dispatch = useDispatch();

@@ -1,21 +1,9 @@
-@import 'styles/shared.scss'; // смотри в корне .env
+@import 'styles/shared.scss';
 
-// Section/Container
-// .section {
-//   padding-left: 30px;
-//   padding-right: 30px;
-
-//   .container {
-//     margin: 0 auto;
-//     max-width: 1000px;
-//   }
-// }
-
-// .Loading {
-//   font-weight: 200;
-//   color: rgb(154, 149, 201);
-//   letter-spacing: 1.3px;
-// }
+// Stats
+.Stats {
+  margin-bottom: 20px;
+}
 
 // Button Open Modal
 .MuiButton-root {
