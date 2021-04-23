@@ -29,4 +29,8 @@ export default createUseStyles({
       padding: 30,
     },
   },
+
+  Loading: {
+    color: 'tomato',
+  },
 });

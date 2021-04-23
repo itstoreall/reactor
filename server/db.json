@@ -34,16 +34,6 @@
       "text": "Todo 7",
       "completed": false,
       "id": 7
-    },
-    {
-      "text": "Todo 8",
-      "completed": false,
-      "id": 8
-    },
-    {
-      "text": "Todo 9",
-      "completed": false,
-      "id": 9
     }
   ],
   "books": [

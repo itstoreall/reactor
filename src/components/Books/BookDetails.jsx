@@ -13,10 +13,12 @@ export default function BookDetails({ bookDetails, reserveData }) {
           <img src={imgUrl} alt={title} />
         )}
       </div>
-      <h2>{title}</h2>
-      <p>{genre}</p>
-      {author && <p>Author: {author.name}</p>}
-      <p>{descr}</p>
+      <div className={s.meta}>
+        <h2>{title}</h2>
+        <p className={s.genre}>{genre}</p>
+        {author && <p>Author: {author.name}</p>}
+        <p>{descr}</p>
+      </div>
     </div>
   );
 }

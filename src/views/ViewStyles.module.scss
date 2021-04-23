@@ -31,17 +31,6 @@
     }
   }
 
-  // Any Lists
-  // ul {
-  //   margin-bottom: 30px;
-
-  // li {
-  //   &:not(:last-child) {
-  //     margin-bottom: 10px;
-  //   }
-  // }
-  // }
-
   // Any Links
   a {
     color: $linkColor;
@@ -55,15 +44,16 @@
   color: $primaryColor;
 
   li {
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+
     &.strong {
       padding-top: 20px;
+      margin-bottom: 15px;
       font-weight: 600;
       font-size: 18px;
       color: #fff;
-    }
-
-    &:not(:last-child) {
-      margin-bottom: 5px;
     }
   }
 }
