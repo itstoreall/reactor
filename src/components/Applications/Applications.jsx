@@ -7,9 +7,9 @@ const Applications = ({ location, match }) => {
 
   return (
     <div className={s.Applications}>
-      <ul>
+      <ul className={s.list}>
         {apps.map(({ id, url, name }) => (
-          <li key={id}>
+          <li key={id} className={s.item}>
             {/* <NavLink to={`${match.url}/${url}`}>{name}</NavLink> */}
             <NavLink
               to={{

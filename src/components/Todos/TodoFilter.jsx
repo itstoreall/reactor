@@ -9,7 +9,6 @@ import { refs } from '../refs';
 const useStyles = makeStyles(theme => ({
   root: {
     display: 'block',
-    // width: '100%',
     marginBottom: 30,
 
     '& > *': {
@@ -21,7 +20,7 @@ const useStyles = makeStyles(theme => ({
       },
 
       [`@media (min-width: ${refs.desktop}px)`]: {
-        // width: 'calc(50% - 5px)',
+        width: 'calc(33% - 5px)',
       },
     },
 
@@ -31,6 +30,7 @@ const useStyles = makeStyles(theme => ({
 
     '& .MuiInputBase-input.MuiInput-input': {
       borderBottom: '2px solid #666',
+      borderRadius: 0,
     },
 
     '& .MuiInput-underline:after': {

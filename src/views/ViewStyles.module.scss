@@ -13,6 +13,11 @@
     background-color: transparent;
     border: none;
     margin-bottom: 10px;
+    cursor: pointer;
+  }
+
+  h1 {
+    margin-bottom: 20px;
   }
 
   // Todos Container
@@ -26,24 +31,16 @@
     }
   }
 
-  // Any Titles
-  h1,
-  h2,
-  h3 {
-    padding: 0 0 20px 0;
-    color: #fff;
-  }
-
   // Any Lists
-  ul {
-    margin-bottom: 30px;
+  // ul {
+  //   margin-bottom: 30px;
 
-    li {
-      &:not(:last-child) {
-        margin-bottom: 10px;
-      }
-    }
-  }
+  // li {
+  //   &:not(:last-child) {
+  //     margin-bottom: 10px;
+  //   }
+  // }
+  // }
 
   // Any Links
   a {

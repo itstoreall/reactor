@@ -32,8 +32,8 @@ class AuthorList extends Component {
     const { authors } = this.state;
 
     return (
-      <>
-        <ul>
+      <div className={s.autorListWrap}>
+        <ul className={s.Autorlist}>
           {authors
             ? authors.map(({ id, name }) => (
                 <li key={id}>
@@ -50,6 +50,7 @@ class AuthorList extends Component {
                 </li>
               ))}
         </ul>
+
         <Route
           path={`${match.path}/:authorId`}
           render={props => {
@@ -61,7 +62,7 @@ class AuthorList extends Component {
 
             return (
               author && (
-                <>
+                <div className={s.autorBooksWrap}>
                   <h3>Books by authors</h3>
                   <BookList
                     {...props}
@@ -73,13 +74,13 @@ class AuthorList extends Component {
                     books={author.books}
                     reserveAuthor={reserveAuthor}
                   /> */}
-                </>
+                </div>
               )
             );
           }}
         />
         <ToastContainer className={s.toast} />
-      </>
+      </div>
     );
   }
 }
