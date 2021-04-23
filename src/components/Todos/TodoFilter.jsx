@@ -3,15 +3,26 @@ import { useSelector, useDispatch } from 'react-redux';
 import { changeFilter, todosSelectors } from '../../redux/todos';
 import { makeStyles } from '@material-ui/core/styles';
 import { TextField } from '@material-ui/core';
-import './TodoStyles.scss';
+import { refs } from '../refs';
+// import './TodoStyles.scss';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    width: '100%',
+    display: 'block',
+    // width: '100%',
     marginBottom: 30,
 
     '& > *': {
       color: '#fff',
+      width: '100%',
+
+      [`@media (min-width: ${refs.tablet}px)`]: {
+        width: 'calc(50% - 5px)',
+      },
+
+      [`@media (min-width: ${refs.desktop}px)`]: {
+        // width: 'calc(50% - 5px)',
+      },
     },
 
     '& .MuiFormLabel-root.Mui-focused': {
@@ -24,6 +35,10 @@ const useStyles = makeStyles(theme => ({
 
     '& .MuiInput-underline:after': {
       borderBottom: '2px solid white',
+    },
+
+    '& .MuiInput-underline:hover:not(.Mui-disabled):before': {
+      borderBottom: '2px solid #666',
     },
   },
 }));

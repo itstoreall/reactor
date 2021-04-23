@@ -1,5 +1,5 @@
 // Reused Modal
-@import "styles/shared.scss";
+@import 'styles/shared.scss';
 
 .Modal__backdrop {
   position: fixed;
@@ -7,7 +7,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: 1;
 }
 
@@ -18,30 +18,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  // min-width: 400px;
-  // min-height: 250px;
-  padding: 45px;
+  padding: 20px;
   background-color: #fff;
-  border-radius: 3px;
+  border-radius: 8px;
   transform: translate(-50%, -50%);
   box-shadow: $modalShadow;
 }
 
-// .ModaOpen__btn {
-//   height: 100px;
-// }
-
 .ModaClose__btn-wrap {
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: -45px;
+  right: -15px;
 
-  & .MuiIconButton-root {
-    padding: 5px;
+  // & .MuiIconButton-root {
+  // padding: 5px;
+  // background-color: red;
+
+  // & .MuiIconButton-label {
+  //   background-color: green;
+
+  & .MuiSvgIcon-root {
+    fill: red;
   }
-
-  // .ModaClose__btn {
-  //   width: 35px;
-  //   height: 35px;
-  // }
 }

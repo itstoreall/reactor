@@ -12,16 +12,27 @@
 // Button Open Modal
 .MuiButton-root {
   &.ModaOpen__btn {
-    // min-width: 300px;
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
+
+    @media screen and (min-width: 768px) {
+      width: calc(50% - 5px);
+    }
+
+    @media screen and (min-width: 768px) {
+      width: calc(33% - 5px);
+    }
   }
 }
 
 .TodoEditor {
+  width: calc(100vw - 80px);
   min-width: 200px;
-  // max-width: 500px;
+
+  @media screen and (min-width: 450px) {
+    width: 350px;
+  }
 
   .TodoEditor__textarea-label {
     // TextField
@@ -31,7 +42,7 @@
     }
   }
 
-  // Button (+ Add Todo)
+  // Button (Submit)
   .TodoEditor__btn {
     padding: 10px;
     width: 100%;
@@ -49,19 +60,33 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  // margin-right: 10px;
   margin-bottom: 10px;
-  // width: 31%;
   width: 100%;
-  // min-width: 300px;
   background-color: $todoBg;
   box-shadow: $todoShadov;
   border-radius: 4px;
 
-  .PrivateSwitchBase-root-1 {
-    padding: 12px;
-    margin-right: 10px;
+  @media screen and (min-width: 768px) {
+    width: calc(50% - 5px);
+
+    @media screen and (max-width: 899px) {
+      &:not(:nth-child(2n)) {
+        margin-right: 10px;
+      }
+    }
   }
+
+  @media screen and (min-width: 900px) {
+    width: calc(33% - 5px);
+    &:not(:nth-child(3n)) {
+      margin-right: 10px;
+    }
+  }
+
+  // .PrivateSwitchBase-root-1 {
+  //   padding: 12px;
+  //   margin-right: 10px;
+  // }
 
   .TodoList__text {
     color: $todoColor;

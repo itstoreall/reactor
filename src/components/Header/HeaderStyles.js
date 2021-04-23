@@ -7,11 +7,19 @@ export default createUseStyles({
     display: 'flex',
     alignItems: 'center',
     margin: '0 auto',
-    maxWidth: 450,
     height: 60,
+
+    [`@media (max-width: 767px)`]: {
+      maxWidth: 450,
+    },
 
     [`@media (min-width: ${refs.tablet}px)`]: {
       paddingLeft: 30,
+    },
+
+    [`@media (min-width: ${refs.desktop}px)`]: {
+      width: '100%',
+      // maxWidth: 1440,
     },
   },
   logoLink: {

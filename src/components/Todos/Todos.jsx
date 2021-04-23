@@ -34,6 +34,7 @@ export default function Todos() {
       >
         + Add Todo
       </Button>
+
       {showModal && (
         <Modal onClose={toggleModal}>
           <span className="ModaClose__btn-wrap">
