@@ -3,20 +3,25 @@
 // Stats
 .Stats {
   margin-bottom: 20px;
+
+  p:not(:last-child) {
+    margin-bottom: 10px;
+  }
 }
 
 // Button Open Modal
 .MuiButton-root {
   &.ModaOpen__btn {
-    min-width: 300px;
+    // min-width: 300px;
+    width: 100%;
     padding: 10px;
     margin-bottom: 20px;
   }
 }
 
 .TodoEditor {
-  min-width: 300px;
-  max-width: 500px;
+  min-width: 200px;
+  // max-width: 500px;
 
   .TodoEditor__textarea-label {
     // TextField
@@ -33,19 +38,6 @@
   }
 }
 
-.TodoFilter-label {
-  display: block;
-  margin-bottom: 20px;
-  width: 100%;
-  min-width: 300px;
-  max-width: 500px;
-
-  // Input
-  .TodoInput {
-    width: 100%;
-  }
-}
-
 .TodoList {
   display: flex;
   flex-wrap: wrap;
@@ -57,10 +49,11 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  margin-right: 20px;
-  margin-bottom: 20px;
-  width: 31%;
-  min-width: 300px;
+  // margin-right: 10px;
+  margin-bottom: 10px;
+  // width: 31%;
+  width: 100%;
+  // min-width: 300px;
   background-color: $todoBg;
   box-shadow: $todoShadov;
   border-radius: 4px;
@@ -74,14 +67,5 @@
     color: $todoColor;
     margin-right: 30px;
     width: 100%;
-  }
-}
-
-.UseList {
-  padding-top: 50px;
-  padding-bottom: 50px;
-
-  li:not(:last-child) {
-    margin-bottom: 5px;
   }
 }

@@ -102,5 +102,44 @@
     { "id": 2, "name": "Кристофер Фаулер" },
     { "id": 3, "name": "Говард Лавкрафт" },
     { "id": 4, "name": "Вячеслав Шалыгин" }
-  ]
+  ],
+  "todos": [
+    {
+      "text": "Todo 1",
+      "completed": false,
+      "id": 1
+    },
+    {
+      "text": "Todo 2",
+      "completed": false,
+      "id": 2
+    },
+    {
+      "text": "Todo 3",
+      "completed": false,
+      "id": 3
+    },
+    {
+      "text": "Todo 4",
+      "completed": false,
+      "id": 4
+    },
+    {
+      "text": "Todo 5",
+      "completed": false,
+      "id": 5
+    },
+    {
+      "text": "Todo 6",
+      "completed": false,
+      "id": 6
+    },
+    {
+      "text": "Todo 7",
+      "completed": true,
+      "id": 7
+    }
+  ],
+  "filter": "",
+  "loading": false
 }

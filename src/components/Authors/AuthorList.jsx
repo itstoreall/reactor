@@ -2,7 +2,7 @@ import { Component } from 'react';
 import { NavLink, Route, withRouter } from 'react-router-dom';
 import axios from 'axios';
 import BookList from '../Books/BookList';
-import reserveData from '../Books/reserveBooks.json';
+import reserveData from '../reserveData.json';
 import { ToastContainer } from 'react-toastify';
 import notify from '../Toastify';
 import s from './AuthorStyles.module.scss';

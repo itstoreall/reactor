@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import axios from 'axios';
 import { getBookDetails } from '../redux/books/actions';
 import BookDetails from '../components/Books/BookDetails';
-import reserveData from '../components/Books/reserveBooks.json';
+import reserveData from '../components/reserveData.json';
 import { ToastContainer } from 'react-toastify';
 import notify from '../components/Toastify';
 import s from './ViewStyles.module.scss';

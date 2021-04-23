@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import axios from 'axios';
-import reserveData from './reserveBooks.json';
+import reserveData from '../reserveData.json';
 import BookList from './BookList';
 import { ToastContainer } from 'react-toastify';
 import notify from '../../components/Toastify';

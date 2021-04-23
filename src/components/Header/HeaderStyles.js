@@ -6,9 +6,11 @@ export default createUseStyles({
     paddingLeft: 15,
     display: 'flex',
     alignItems: 'center',
+    margin: '0 auto',
+    maxWidth: 450,
     height: 60,
 
-    [`@media (min-width: ${refs.tablet}ps)`]: {
+    [`@media (min-width: ${refs.tablet}px)`]: {
       paddingLeft: 30,
     },
   },

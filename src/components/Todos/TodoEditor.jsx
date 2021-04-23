@@ -37,6 +37,7 @@ export default function TodoEditor({ onCloseModal }) {
       <label className="TodoEditor__textarea-label">
         <TextField
           className="TodoEditor__textarea"
+          autoComplete="off"
           value={message}
           onChange={handleChange}
           id="outlined-multiline-static"

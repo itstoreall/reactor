@@ -59,6 +59,13 @@
   color: $primaryColor;
 
   li {
+    &.strong {
+      padding-top: 20px;
+      font-weight: 600;
+      font-size: 18px;
+      color: #fff;
+    }
+
     &:not(:last-child) {
       margin-bottom: 5px;
     }

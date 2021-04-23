@@ -36,12 +36,17 @@ const booksPersistConfig = {
   storage,
 };
 
+const todosPersistConfig = {
+  key: 'todos',
+  storage,
+};
+
 const store = configureStore({
   // Root Reducer
   reducer: {
     navMenu: persistReducer(navMenuPersistConfig, navMenuReducer),
     books: persistReducer(booksPersistConfig, bookReducer),
-    todos: todosReducer,
+    todos: persistReducer(todosPersistConfig, todosReducer),
     // books: bookReducer,
   },
   middleware,

@@ -13,6 +13,8 @@ import {
   toggleCompletedSuccess,
   toggleCompletedError,
 } from './todos-actions';
+import reserveData from '../../components/reserveData.json';
+import notify from '../../components/Toastify';
 
 axios.defaults.baseURL = 'http://localhost:2222';
 
@@ -25,6 +27,11 @@ const fetchTodos = async dispatch => {
     dispatch(fetchTodosSuccess(data));
   } catch (error) {
     dispatch(fetchTodosError(error));
+    notify('error', 'Server is not available!');
+
+    window.localStorage['persist:todos'].includes(!'"items":"[]"')
+      ? JSON.parse(localStorage.getItem('todos'))
+      : dispatch(fetchTodosSuccess(reserveData.todos));
   }
 };
 
@@ -39,9 +46,11 @@ const addTodo = text => async dispatch => {
 
   try {
     const { data } = await axios.post('/todos', todo);
+    console.log(data); // {text: "Todo 9", completed: false, id: 8}
     dispatch(addTodoSuccess(data));
   } catch (error) {
     dispatch(addTodoError(error));
+    notify('error', 'To ADD you need a Server!');
   }
 };
 
@@ -54,6 +63,7 @@ const deleteTodo = id => async dispatch => {
     dispatch(deleteTodoSuccess(id));
   } catch (error) {
     dispatch(deleteTodoError(error));
+    dispatch(deleteTodoSuccess(id));
   }
 };
 
@@ -62,86 +72,19 @@ const toggleCompleted = ({ id, completed }) => async dispatch => {
   const update = { completed };
 
   dispatch(toggleCompletedRequest());
-
   try {
     const { data } = await axios.patch(`/todos/${id}`, update);
+
     dispatch(toggleCompletedSuccess(data));
   } catch (error) {
     toggleCompletedError(error);
+
+    let res = reserveData.todos.find(todo => todo.id === id);
+    res = { ...res, completed: completed };
+
+    dispatch(toggleCompletedSuccess(res));
   }
 };
 
 /* eslint-disable */
 export default { fetchTodos, addTodo, deleteTodo, toggleCompleted };
-
-/* ===============================================
-// ** Async axios
-
-import axios from 'axios';
-import {
-  fetchTodosRequest,
-  fetchTodosSuccess,
-  fetchTodosError,
-  addTodoRequest,
-  addTodoSuccess,
-  addTodoError,
-  deleteTodoRequest,
-  deleteTodoSuccess,
-  deleteTodoError,
-  toggleCompletedRequest,
-  toggleCompletedSuccess,
-  toggleCompletedError,
-} from './todos-actions';
-
-axios.defaults.baseURL = 'http://localhost:2222';
-
-// Fetch Todos
-const fetchTodos = dispatch => {
-  dispatch(fetchTodosRequest());
-
-  axios
-    .get('/todos')
-    .then(({ data }) => dispatch(fetchTodosSuccess(data)))
-    .catch(error => dispatch(fetchTodosError(error)));
-};
-
-// Add Todo
-const addTodo = text => dispatch => {
-  const todo = {
-    text,
-    completed: false,
-  };
-
-  // Start (sync)
-  dispatch(addTodoRequest());
-
-  axios
-    .post('/todos', todo)
-    .then(({ data }) => dispatch(addTodoSuccess(data)))
-    .catch(error => dispatch(addTodoError(error)));
-};
-
-// Delete Todo
-const deleteTodo = todoId => dispatch => {
-  dispatch(deleteTodoRequest());
-
-  axios
-    .delete(`/todos/${todoId}`)
-    .then(() => dispatch(deleteTodoSuccess(todoId)))
-    .catch(error => dispatch(deleteTodoError(error)));
-};
-
-// Toggle Completed
-const toggleCompleted = ({ id, completed }) => dispatch => {
-  const update = { completed };
-
-  dispatch(toggleCompletedRequest());
-
-  axios
-    .patch(`/todos/${id}`, update)
-    .then(({ data }) => dispatch(toggleCompletedSuccess(data)))
-    .catch(error => dispatch(toggleCompletedError(error)));
-};
-
-export default { fetchTodos, addTodo, deleteTodo, toggleCompleted };
------------------------------------------------ */

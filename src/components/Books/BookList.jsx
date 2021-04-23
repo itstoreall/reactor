@@ -1,7 +1,7 @@
 import { Link, withRouter } from 'react-router-dom';
 import BookPreview from './BookPreview';
 import s from './BookStyles.module.scss';
-import reserveAuthor from './reserveBooks.json';
+import reserveAuthor from '../reserveData.json';
 
 // Reuseble Component
 const BookList = ({ books, location }) => {

@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import shortid from 'shortid';
 import Todos from '../components/Todos';
 import todoSelectors from '../redux/todos/todos-selectors';
-// import './components/Todos/TodosStyles.scss';
+import { ToastContainer } from 'react-toastify';
 import s from './ViewStyles.module.scss';
 
 const TodoView = ({ location, history }) => {
@@ -23,20 +23,18 @@ const TodoView = ({ location, history }) => {
       </button>
       <div className={s.container}>
         <h1>
-          Todos View Redux
+          Todos
           {isLoadingTodos && <span className={s.Loading}> Loading...</span>}
         </h1>
         <Todos />
-
+        <ToastContainer />
         <ul className={s.useList}>
-          <li>Hooks:</li>
+          <li className={s.strong}>Hooks:</li>
           <li>useState</li>
           <li>useEffect</li>
           <li>useRef</li>
           <li>useCallback</li>
-        </ul>
-
-        <ul className={s.useList}>
+          <li className={s.strong}>Dependencies:</li>
           <li>use React - Prop Types</li>
           <li>use ESLint</li>
           <li>use Prettier</li>
