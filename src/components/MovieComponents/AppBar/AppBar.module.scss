@@ -1,0 +1,41 @@
+@import '../../styles/shared.scss';
+
+// Page Header
+.pageHeader {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(246, 246, 250);
+  box-shadow: $headerShadow;
+
+  .containerHeader {
+    padding: 5px;
+    width: 100%;
+    max-width: 880px;
+
+    .NavList {
+      display: flex;
+
+      & a:first-child {
+        margin-right: 4px;
+      }
+
+      .NavLink {
+        display: block;
+        padding: 10px 20px;
+        font-size: 20px;
+        color: white;
+        background-color: $navLink;
+        border-radius: 4px;
+
+        &:hover {
+          background-color: $navLink__hover;
+        }
+      }
+    }
+
+    .NavLink__active {
+      color: white;
+      background-color: $navLink__hover;
+    }
+  }
+}

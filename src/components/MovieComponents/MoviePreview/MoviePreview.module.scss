@@ -1,0 +1,33 @@
+.moviesDetailsWrap {
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: 1px solid #ccc;
+
+  img {
+    width: 250px;
+    height: 100%;
+  }
+
+  .moviesDetailsContent {
+    padding: 20px;
+    max-width: 600px;
+
+    h2,
+    h3,
+    p {
+      // display: block;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    span:nth-child(2) {
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+}

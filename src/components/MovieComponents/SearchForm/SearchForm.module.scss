@@ -1,0 +1,30 @@
+@import '../../styles/shared.scss';
+
+// Movies Page
+.moviesPageFormInput {
+  padding: 10px;
+  margin: 0 4px 25px 0;
+  border: 2px solid $formInput;
+  border-radius: 4px;
+
+  &:focus {
+    padding: 9px;
+    border: 3px solid $formInput__focus;
+    outline: none;
+  }
+}
+
+// Search Btn
+.moviesPageFormBtn {
+  padding: 12px 25px;
+  color: white;
+  background-color: $formBtn;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $formBtn__hover;
+  }
+}

@@ -11,10 +11,6 @@
 
   li {
     margin-bottom: 30px;
-    // &:not(:last-child) {
-    //   margin-bottom: 30px;
-    // }
-    // margin-bottom: 30px;
 
     @media screen and (min-width: 768px) {
       width: calc(50% - 10px);
@@ -86,7 +82,6 @@
   }
 
   .thumb {
-    // height: 220px;
     margin-bottom: 20px;
 
     @media screen and (min-width: 768px) {
