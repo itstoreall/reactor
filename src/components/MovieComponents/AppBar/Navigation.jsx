@@ -18,7 +18,7 @@ const Navigation = () => {
         className={s.NavLink}
         activeClassName={s.NavLink__active}
       >
-        Movies
+        Search
       </NavLink>
     </nav>
   );

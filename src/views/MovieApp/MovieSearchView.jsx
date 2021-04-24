@@ -5,7 +5,7 @@ import queryString from 'query-string';
 import api from '../../api/movieAPI';
 import PropTypes from 'prop-types';
 
-const MovieSearch = ({ location, match }) => {
+const MovieSearchView = ({ location, match }) => {
   const [movies, setMovies] = useState([]);
   const [query, setQuery] = useState(
     queryString.parse(location.search).query || '',
@@ -37,9 +37,9 @@ const MovieSearch = ({ location, match }) => {
   );
 };
 
-MovieSearch.propTypes = {
+MovieSearchView.propTypes = {
   location: PropTypes.object.isRequired,
   match: PropTypes.object.isRequired,
 };
 
-export default MovieSearch;
+export default MovieSearchView;

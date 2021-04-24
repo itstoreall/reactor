@@ -11,7 +11,7 @@ const TrendList = ({ trends, location }) => (
             <li key={trend.id}>
               <NavLink
                 to={{
-                  pathname: `/applications/movies/${trend.id}`,
+                  pathname: `/applications/movies/search/${trend.id}`,
                   state: { from: location },
                 }}
               >

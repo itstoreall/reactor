@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import s from './MoviePreview.module.scss';
+import s from './MovieDetailsStyles.module.scss';
 
-const MoviePreview = ({ state }) => {
+const MovieDetails = ({ state }) => {
   const {
     poster_path,
     title,
@@ -32,8 +32,8 @@ const MoviePreview = ({ state }) => {
   );
 };
 
-MoviePreview.propTypes = {
+MovieDetails.propTypes = {
   state: PropTypes.object.isRequired,
 };
 
-export default MoviePreview;
+export default MovieDetails;

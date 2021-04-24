@@ -1,12 +1,6 @@
 import { createUseStyles } from 'react-jss';
 import { refs } from './components/refs';
 
-// const primaryBg = '#2c3139';
-
-// const modile = 375; // *
-// const tablet = 768; // *
-// const desktop = 900;
-
 export default createUseStyles({
   App: {
     position: 'relative',

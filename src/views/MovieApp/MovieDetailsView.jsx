@@ -5,7 +5,7 @@ import s from './MovieStyles.module.scss';
 
 const MoviePreview = lazy(() =>
   import(
-    '../../components/MovieComponents/MoviePreview' /* webpackChunkName: "MoviePreview" */
+    '../../components/MovieComponents/MovieDetails' /* webpackChunkName: "MoviePreview" */
   ),
 );
 const Cast = lazy(() =>
@@ -40,10 +40,10 @@ const MovieDetailsPage = ({ history, location, match }) => {
   const handleGoBack = () => {
     location.state && location.state.query
       ? history.push({
-          pathname: '/movies',
+          pathname: '/applications/movies/search',
           search: `?query=${location.state.query}`,
         })
-      : history.push('/');
+      : history.push('/applications/movies');
   };
 
   return (
