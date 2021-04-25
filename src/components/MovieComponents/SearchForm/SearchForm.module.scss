@@ -5,6 +5,10 @@
   display: block;
   margin-bottom: 30px;
 
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+
   .moviesPageFormInput {
     padding: 10px;
     margin: 0 0 15px 0;
@@ -12,8 +16,12 @@
     border: 2px solid $formInput;
     border-radius: 4px;
 
+    @media screen and (min-width: 768px) {
+      margin: 0 10px 0 0;
+    }
+
     @media screen and (min-width: 900px) {
-      width: 410px;
+      width: 50%;
     }
 
     &:focus {
@@ -29,6 +37,7 @@
   display: block;
   padding: 12px 25px;
   width: 100%;
+  font-size: 20px;
   color: white;
   background-color: $formBtn;
   border-radius: 4px;
@@ -36,8 +45,8 @@
   outline: none;
   cursor: pointer;
 
-  @media screen and (min-width: 900px) {
-    width: 410px;
+  @media screen and (min-width: 768px) {
+    width: 250px;
   }
 
   &:hover {

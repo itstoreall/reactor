@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import s from './SearchForm.module.scss';
 
 const SearchForm = ({ onSubmit }) => {
-  const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState('batman');
 
   const handleChange = e => setInputValue(e.currentTarget.value);
 
@@ -19,6 +19,7 @@ const SearchForm = ({ onSubmit }) => {
       <input
         className={s.moviesPageFormInput}
         value={inputValue}
+        placeholder="Search by movie title"
         onChange={handleChange}
       />
       <button className={s.moviesPageFormBtn} type="submit">

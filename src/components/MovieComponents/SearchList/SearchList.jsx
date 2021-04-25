@@ -5,7 +5,7 @@ import s from './SearchListStyles.module.scss';
 
 const SearchList = ({ movies, pathname, query }) => (
   <ul className={s.SearchList}>
-    {movies.map(({ id, title }) => (
+    {movies.map(({ id, title, poster_path, vote_average }) => (
       <li key={id}>
         <NavLink
           to={{
@@ -15,7 +15,18 @@ const SearchList = ({ movies, pathname, query }) => (
             },
           }}
         >
-          {title}
+          <div className={s.previewCard}>
+            <div className={s.thumb}>
+              <img
+                src={`https://image.tmdb.org/t/p/w400/${poster_path}`}
+                alt={title}
+              />
+            </div>
+            <div className={s.meta}>
+              <h3>{title}</h3>
+              <span>{`User Score: ${vote_average * 10}%`}</span>
+            </div>
+          </div>
         </NavLink>
       </li>
     ))}
