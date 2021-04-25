@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://src/components/MovieComponents/Reviews/Reviews.module.scss"],"names":[],"mappings":"AAEA,uBAEI,cAAe,CACf,eAAgB","file":"Reviews.4801b5b4.chunk.css","sourcesContent":["@import '../styles/shared.scss';\n\n.list {\n  p {\n    font-size: 14px;\n    line-height: 1.5;\n  }\n}\n"]}
