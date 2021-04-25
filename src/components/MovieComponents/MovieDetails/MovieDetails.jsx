@@ -15,8 +15,10 @@ const MovieDetails = ({ state }) => {
 
   return (
     <div className={s.moviesDetailsWrap}>
-      <img src={poster} alt={title} width="250" />
-      <div className={s.moviesDetailsContent}>
+      <div className={s.thumb}>
+        <img src={poster} alt={title} />
+      </div>
+      <div className={s.meta}>
         <h2>
           {title} ({release_date.slice(0, 4)})
         </h2>

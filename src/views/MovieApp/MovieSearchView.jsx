@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
-import MovieList from '../../components/MovieComponents/MovieList';
+import SearchList from '../../components/MovieComponents/SearchList';
 import SearchForm from '../../components/MovieComponents/SearchForm';
 import queryString from 'query-string';
 import api from '../../api/movieAPI';
 import PropTypes from 'prop-types';
+import s from './MovieStyles.module.scss';
 
 const MovieSearchView = ({ location, match }) => {
   const [movies, setMovies] = useState([]);
@@ -26,8 +27,12 @@ const MovieSearchView = ({ location, match }) => {
 
   return (
     <>
-      <SearchForm query={query} onSubmit={handleMovieSearch} />
-      <MovieList
+      <SearchForm
+        className={s.SearchForm}
+        query={query}
+        onSubmit={handleMovieSearch}
+      />
+      <SearchList
         match={match}
         movies={movies}
         pathname={location.pathname}

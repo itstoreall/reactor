@@ -1,4 +1,5 @@
 import { withRouter } from 'react-router-dom';
+// import Breadcrumbs from '../Breadcrumbs';
 import Navigation from './Navigation';
 import s from './AppBar.module.scss';
 
@@ -14,6 +15,7 @@ const AppBar = ({ location }) => {
           <h1>Movie description</h1>
         )}
 
+        {/* <Breadcrumbs /> */}
         <Navigation />
       </div>
     </header>

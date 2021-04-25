@@ -1,9 +1,10 @@
 import React from 'react';
 import { NavLink, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import s from './SearchListStyles.module.scss';
 
-const MovieList = ({ movies, pathname, query }) => (
-  <ul className="linksList">
+const SearchList = ({ movies, pathname, query }) => (
+  <ul className={s.SearchList}>
     {movies.map(({ id, title }) => (
       <li key={id}>
         <NavLink
@@ -21,10 +22,10 @@ const MovieList = ({ movies, pathname, query }) => (
   </ul>
 );
 
-MovieList.propTypes = {
+SearchList.propTypes = {
   movies: PropTypes.arrayOf(PropTypes.object).isRequired,
   pathname: PropTypes.string.isRequired,
   query: PropTypes.string.isRequired,
 };
 
-export default withRouter(MovieList);
+export default withRouter(SearchList);

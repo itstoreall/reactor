@@ -1,9 +1,10 @@
 import React from 'react';
 import { NavLink, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import s from './TrendListStyles.module.scss';
 
 const TrendList = ({ trends, location }) => (
-  <ul className="linksList">
+  <ul className={s.TrendList}>
     {trends.length > 0 &&
       trends.map(
         trend =>

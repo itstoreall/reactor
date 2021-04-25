@@ -1,28 +1,44 @@
 @import '../../styles/shared.scss';
 
-// Movies Page
-.moviesPageFormInput {
-  padding: 10px;
-  margin: 0 4px 25px 0;
-  border: 2px solid $formInput;
-  border-radius: 4px;
+// Search Form
+.SearchForm {
+  display: block;
+  margin-bottom: 30px;
 
-  &:focus {
-    padding: 9px;
-    border: 3px solid $formInput__focus;
-    outline: none;
+  .moviesPageFormInput {
+    padding: 10px;
+    margin: 0 0 15px 0;
+    width: 100%;
+    border: 2px solid $formInput;
+    border-radius: 4px;
+
+    @media screen and (min-width: 900px) {
+      width: 410px;
+    }
+
+    &:focus {
+      padding: 9px;
+      border: 3px solid $formInput__focus;
+      outline: none;
+    }
   }
 }
 
 // Search Btn
 .moviesPageFormBtn {
+  display: block;
   padding: 12px 25px;
+  width: 100%;
   color: white;
   background-color: $formBtn;
   border-radius: 4px;
   border: none;
   outline: none;
   cursor: pointer;
+
+  @media screen and (min-width: 900px) {
+    width: 410px;
+  }
 
   &:hover {
     background-color: $formBtn__hover;

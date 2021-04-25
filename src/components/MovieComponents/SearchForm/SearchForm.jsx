@@ -15,7 +15,7 @@ const SearchForm = ({ onSubmit }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className={s.SearchForm} onSubmit={handleSubmit}>
       <input
         className={s.moviesPageFormInput}
         value={inputValue}
