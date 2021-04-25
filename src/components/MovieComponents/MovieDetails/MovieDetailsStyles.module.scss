@@ -55,9 +55,13 @@
       line-height: 1.4;
     }
 
-    span:nth-child(2) {
-      display: block;
-      margin-bottom: 20px;
+    span {
+      color: $primaryColor;
+
+      &:nth-child(2) {
+        display: block;
+        margin-bottom: 20px;
+      }
     }
   }
 }

@@ -17,6 +17,7 @@ class Books extends Component {
       this.setState({ books: data });
       notify('success', 'Successful downloading!');
       // throw new Error();
+      
     } catch (error) {
       notify('error', 'Server is not available!');
       this.setState({ books: reserveData.books });
