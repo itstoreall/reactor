@@ -1,9 +1,9 @@
 import { withRouter } from 'react-router-dom';
+import AppBar from '../components/Books/AppBar';
 import Books from '../components/Books';
 import s from './ViewStyles.module.scss';
 
 const BookView = ({ location, history }) => {
-
   const handleGoBack = () => {
     location.state && location.state.from
       ? history.push(location.state.from)
@@ -13,10 +13,11 @@ const BookView = ({ location, history }) => {
   return (
     <>
       <section className={s.section}>
+        <h1>Books</h1>
         <button className={s.goBackBtn} type="button" onClick={handleGoBack}>
           &#8592; Go back
         </button>
-        <h1>Books</h1>
+        <AppBar />
         <Books />
       </section>
 

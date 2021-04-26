@@ -6,8 +6,8 @@ const HomeView = lazy(() =>
 const ApplicationView = lazy(() =>
   import('../views/ApplicationView' /*webpackChunkName: 'Applications'*/),
 );
-// const MovieDetailsView = lazy(() =>
-//   import('../views/MovieApp/MovieDetailsView' /*webpackChunkName: 'Movies'*/),
+// const BookList = lazy(() =>
+//   import('../components/Books/BookList' /*webpackChunkName: 'BookList'*/),
 // );
 const MovieApp = lazy(() =>
   import('../views/MovieApp' /*webpackChunkName: 'Movies'*/),
@@ -48,10 +48,24 @@ export const routes = [
     component: MovieApp,
     showInMenu: false,
   },
+  // {
+  //   path: '/applications/books/authors/:bookId',
+  //   label: 'Author Books',
+  //   component: AuthorView,
+  //   showInMenu: false,
+  // },
+  {
+    path: '/applications/books/authors',
+    label: 'Authors',
+    component: AuthorView,
+    // exact: true,
+    showInMenu: false,
+  },
   {
     path: '/applications/books/:bookId',
     label: 'Book Details',
     component: BookDetailsView,
+    // exact: true,
     showInMenu: false,
   },
   {
@@ -64,12 +78,6 @@ export const routes = [
     path: '/applications/todos',
     label: 'Todos',
     component: TodoView,
-  },
-  {
-    path: '/applications/authors',
-    label: 'Authors',
-    component: AuthorView,
-    showInMenu: true,
   },
   {
     path: '/applications',

@@ -2,33 +2,40 @@ import { withRouter } from 'react-router-dom';
 import s from './BreadcrumbsStyles.module.scss';
 
 const Breadcrumbs = ({ location, history }) => {
-  const handleBreadCrumps = e =>
-    e.target.innerText === 'apps'
-      ? history.push('/applications')
-      : history.push(`/applications/movies`);
+  const handleApps = () => {
+    location.state && location.state.from
+      ? history.push(location.state.from)
+      : history.push('/applications');
+  };
+
+  const handleBreadCrumps = e => {
+    e.target.name === 'trends'
+      ? history.push(`/applications/movies`)
+      : e.target.name === 'apps'
+      ? history.push(`/applications`)
+      : history.push(location.state.from);
+  };
 
   return (
     <div className={s.breadcrumbs}>
       {location.pathname === '/applications/movies/search' ? (
         <>
-          <button type="button" onClick={handleBreadCrumps}>
-            apps
+          <button name="apps" type="button" onClick={handleBreadCrumps}>
+            Apps
           </button>
           <span>&#8594;</span>
-          <button type="button" onClick={handleBreadCrumps}>
-            trends
+          <button name="trends" type="button" onClick={handleBreadCrumps}>
+            Trends
           </button>
           <span>&#8594;</span>
-          <button type="button">search</button>
+          <button name="search" type="button">
+            Search
+          </button>
         </>
       ) : location.pathname === '/applications/movies' ? (
-        <>
-          <button type="button" onClick={handleBreadCrumps}>
-            apps
-          </button>
-          <span>&#8594;</span>
-          <button type="button">trends</button>
-        </>
+        <button className={s.appsBtn} type="button" onClick={handleApps}>
+          &#8592; Apps
+        </button>
       ) : null}
     </div>
   );

@@ -28,4 +28,9 @@
     color: $primaryColor;
     cursor: default;
   }
+
+  & button.appsBtn {
+    color: $linkColor;
+    cursor: pointer;
+  }
 }

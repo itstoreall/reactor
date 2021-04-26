@@ -19,14 +19,14 @@ const TodoView = ({ location, history }) => {
   return (
     <>
       <section className={s.section}>
-        <button className={s.goBackBtn} type="button" onClick={handleGoBack}>
-          &#8592; Go back
-        </button>
         <div className={s.container}>
           <h1>
             Todos
             {isLoadingTodos && <span className={s.Loading}> Loading...</span>}
           </h1>
+          <button className={s.goBackBtn} type="button" onClick={handleGoBack}>
+            &#8592; Go back
+          </button>
           <Todos />
           <ToastContainer />
         </div>

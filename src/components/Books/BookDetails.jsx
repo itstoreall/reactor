@@ -1,7 +1,7 @@
 import errorImg from './error.jpg';
 import s from './BookStyles.module.scss';
 
-export default function BookDetails({ bookDetails, reserveData }) {
+export default function BookDetails({ bookDetails }) {
   const { imgUrl, title, genre, author, descr } = bookDetails;
 
   return (

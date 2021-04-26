@@ -1,10 +1,53 @@
 import { Component } from 'react';
+import axios from 'axios';
+import reserveData from '../../reserveData.json';
+import AuthorList from './AuthorList';
+import { ToastContainer } from 'react-toastify';
+import notify from '../../Toastify';
+import s from './AuthorStyles.module.scss';
+
+class Authors extends Component {
+  state = {
+    authors: [],
+  };
+
+  async componentDidMount() {
+    try {
+      const { data } = await axios.get(
+        `http://localhost:2222/authors?_embed=books`,
+      );
+
+      this.setState({ authors: data });
+      notify('success', 'Successful downloading!');
+      // throw new Error();
+    } catch (error) {
+      notify('error', 'Server is not available!');
+      this.setState({ authors: reserveData.authors });
+    }
+  }
+
+  render() {
+    const { authors } = this.state;
+
+    return (
+      <div className={s.containerMain}>
+        <AuthorList authors={authors} />
+        <ToastContainer className={s.toast} />
+      </div>
+    );
+  }
+}
+
+export default Authors;
+
+/*
+import { Component } from 'react';
 import { NavLink, Route, withRouter } from 'react-router-dom';
 import axios from 'axios';
-import BookList from '../Books/BookList';
-import reserveData from '../reserveData.json';
+import BookList from '../BookList';
+import reserveData from '../../reserveData.json';
 import { ToastContainer } from 'react-toastify';
-import notify from '../Toastify';
+import notify from '../../Toastify';
 import s from './AuthorStyles.module.scss';
 
 class AuthorList extends Component {
@@ -30,6 +73,9 @@ class AuthorList extends Component {
   render() {
     const { match } = this.props;
     const { authors } = this.state;
+    console.log('authors', authors);
+    console.log('params', match.params);
+    console.log('match.path', match.path);
 
     return (
       <div className={s.autorListWrap}>
@@ -53,12 +99,16 @@ class AuthorList extends Component {
 
         <Route
           path={`${match.path}/:authorId`}
+          // path={`${match.path}/:authorId`}
           render={props => {
             const bookId = Number(props.match.params.authorId);
             const author = authors.find(({ id }) => id === bookId);
             const reserveAuthor = reserveData.authors.find(
               ({ id }) => id === bookId,
             );
+
+            console.log('bookId', bookId);
+            console.log('author', author);
 
             return (
               author && (
@@ -69,11 +119,11 @@ class AuthorList extends Component {
                     books={author.books}
                     reserveAuthor={reserveAuthor}
                   />
-                  {/* <AuthorBooks
+                  <AuthorBooks
                     {...props}
                     books={author.books}
                     reserveAuthor={reserveAuthor}
-                  /> */}
+                  />
                 </div>
               )
             );
@@ -86,3 +136,4 @@ class AuthorList extends Component {
 }
 
 export default withRouter(AuthorList);
+*/

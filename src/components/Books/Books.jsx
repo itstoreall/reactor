@@ -14,10 +14,10 @@ class Books extends Component {
   async componentDidMount() {
     try {
       const { data } = await axios.get('http://localhost:2222/books');
+
       this.setState({ books: data });
       notify('success', 'Successful downloading!');
       // throw new Error();
-      
     } catch (error) {
       notify('error', 'Server is not available!');
       this.setState({ books: reserveData.books });
@@ -28,10 +28,10 @@ class Books extends Component {
     const { books } = this.state;
 
     return (
-      <>
+      <div className={s.containerMain}>
         {books.length !== 0 && <BookList books={books} />}
         <ToastContainer className={s.toast} />
-      </>
+      </div>
     );
   }
 }

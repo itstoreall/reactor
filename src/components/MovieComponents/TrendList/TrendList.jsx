@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import s from './TrendListStyles.module.scss';
 
 const TrendList = ({ trends, location }) => {
-  console.log(trends[2]);
   return (
     <ul className={s.TrendList}>
       {trends.length > 0 &&
