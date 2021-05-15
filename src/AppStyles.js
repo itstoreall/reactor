@@ -9,9 +9,9 @@ export default createUseStyles({
     margin: '0 auto',
     // backgroundColor: refs.primaryBg,
 
-    [`@media (min-width: ${refs.desktop}px)`]: {
-      maxWidth: 1440,
-    },
+    // [`@media (min-width: ${refs.desktop}px)`]: {
+    //   maxWidth: 1440,
+    // },
   },
   NavMenu: {
     position: 'relative',

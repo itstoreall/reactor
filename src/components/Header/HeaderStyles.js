@@ -8,9 +8,10 @@ export default createUseStyles({
     alignItems: 'center',
     margin: '0 auto',
     height: 60,
+    width: '100%',
 
     [`@media (max-width: 767px)`]: {
-      maxWidth: 450,
+      // maxWidth: 450,
     },
 
     [`@media (min-width: ${refs.tablet}px)`]: {
@@ -18,7 +19,7 @@ export default createUseStyles({
     },
 
     [`@media (min-width: ${refs.desktop}px)`]: {
-      width: '100%',
+      // width: '100%',
       // maxWidth: 1440,
     },
   },

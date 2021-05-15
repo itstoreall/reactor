@@ -42,14 +42,6 @@ const ApplicationItem = ({ alt, s }) => {
             alt={alt}
           />
         </picture>
-
-        {/* <div className="product-overlay">
-          <p className="hover-text">
-            Технокряк это современная площадка распространения коронавируса.
-            Компании используют эту платформу для цифрового шпионажа и атак на
-            защищённые сервера конкурентов.
-          </p>
-        </div> */}
       </div>
       <div className={s.meta}>
         <h3>Application</h3>

@@ -1,5 +1,11 @@
 # Reactor
 
+v 2.0.0
+
+**_Use:_**
+
+> End of Reactor v 2.0.0
+
 **_Use:_**
 
 - create-react-app
@@ -27,4 +33,4 @@
 - classnames
 - shortid
 
-> End of Reactor
+> End of Reactor v 1.0.1

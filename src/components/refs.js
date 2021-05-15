@@ -1,5 +1,5 @@
 export const refs = {
-  // Viewport
+  // Viewport (Not to change)
   modile: '375',
   tablet: '768',
   desktop: '900',

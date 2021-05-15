@@ -1,25 +1,42 @@
 // import { responsiveFontSizes } from '@material-ui/core';
 import { createUseStyles } from 'react-jss';
-// import { refs } from '../refs';
+import { refs } from '../refs';
 
 export default createUseStyles({
   Applications: {
     '& > ul': {
       display: 'flex',
       flexWrap: 'wrap',
-      backgroundColor: 'red',
+      justifyContent: 'space-between',
+
       '& > li': {
-        backgroundColor: 'green',
-        '&:not(:last-child)': {
-          marginBottom: 30,
+        [`@media (max-width: 767px)`]: {
+          '&:not(:last-child)': {
+            marginBottom: 30,
+          },
+        },
+
+        [`@media (min-width: ${refs.tablet}px) and (max-width: 899px)`]: {
+          width: 'calc(50% - 15px)',
+          marginBottom: 0,
+
+          '&:not(:nth-last-child(-n + 2))': {
+            marginBottom: 30,
+          },
+        },
+
+        [`@media (min-width: ${refs.desktop}px)`]: {
+          width: 'calc(33% - 20px)',
+
+          '&:not(:nth-last-child(-n + 3))': {
+            marginBottom: 30,
+          },
         },
       },
     },
   },
 
-  thumb: {
-    backgroundColor: 'red',
-  },
+  thumb: {},
 
   image: {
     display: 'block',
