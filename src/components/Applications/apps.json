@@ -3,7 +3,38 @@
     {
       "id": 1,
       "name": "Phonebook",
-      "url": "https://itstoreall.github.io/goit-react-hw-09-phonebook/#/"
+      "url": "https://itstoreall.github.io/goit-react-hw-09-phonebook/#/",
+      "alt": "Phonebook application"
+    },
+    {
+      "id": 2,
+      "name": "Phonebook",
+      "url": "https://itstoreall.github.io/goit-react-hw-09-phonebook/#/",
+      "alt": "Phonebook application"
+    },
+    {
+      "id": 3,
+      "name": "Phonebook",
+      "url": "https://itstoreall.github.io/goit-react-hw-09-phonebook/#/",
+      "alt": "Phonebook application"
+    },
+    {
+      "id": 4,
+      "name": "Phonebook",
+      "url": "https://itstoreall.github.io/goit-react-hw-09-phonebook/#/",
+      "alt": "Phonebook application"
+    },
+    {
+      "id": 5,
+      "name": "Phonebook",
+      "url": "https://itstoreall.github.io/goit-react-hw-09-phonebook/#/",
+      "alt": "Phonebook application"
+    },
+    {
+      "id": 6,
+      "name": "Phonebook",
+      "url": "https://itstoreall.github.io/goit-react-hw-09-phonebook/#/",
+      "alt": "Phonebook application"
     }
   ]
 }
