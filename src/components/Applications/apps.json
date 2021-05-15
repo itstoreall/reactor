@@ -1,7 +1,9 @@
 {
   "apps": [
-    { "id": 1, "name": "Movies", "url": "movies" },
-    { "id": 2, "name": "Books", "url": "books" },
-    { "id": 3, "name": "Todos", "url": "todos" }
+    {
+      "id": 1,
+      "name": "Phonebook",
+      "url": "https://itstoreall.github.io/goit-react-hw-09-phonebook/#/"
+    }
   ]
 }

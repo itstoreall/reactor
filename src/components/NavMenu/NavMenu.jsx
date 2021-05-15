@@ -22,7 +22,7 @@ const NavMenu = ({ visible, toggleVisible }) => {
         type="button"
         onClick={handleNavMenu}
       >
-        {visible ? 'Hide menu' : 'Show menu'}
+        {visible ? 'Close' : 'Menu'}
       </button>
     </>
   );

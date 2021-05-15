@@ -17,6 +17,14 @@ export default createUseStyles({
     // [`@media (min-width: ${refs.tablet}px)`]: {},
   },
 
+  thumb: {
+    backgroundColor: 'red',
+
+    '& > img': {
+      display: 'block',
+    },
+  },
+
   list: {
     marginBottom: 50,
   },

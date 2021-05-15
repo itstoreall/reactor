@@ -5,7 +5,7 @@ export default createUseStyles({
   Content: {
     // flex: 1,
     padding: 15,
-    height: 'calc(100vh - 60px)',
+    // height: 'calc(100vh - 60px)',
     // overflow: 'scroll',
 
     [`@media (max-width: 767px)`]: {
@@ -21,7 +21,7 @@ export default createUseStyles({
   NavMenu: {
     // flex: 1,
     padding: 15,
-    height: 'calc(100vh - 60px)',
+    // height: 'calc(100vh - 60px)',
     overflow: 'hidden',
     // overflow: 'scroll',
 

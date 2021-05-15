@@ -12,8 +12,6 @@ import {
 import storage from 'redux-persist/lib/storage'; // link to localStorage
 // import logger from 'redux-logger';
 import navMenuReducer from './navMenu/reducer';
-import bookReducer from './books/reducer';
-import { todosReducer } from './todos';
 
 // Middleware
 const middleware = [
@@ -31,23 +29,10 @@ const navMenuPersistConfig = {
   storage,
 };
 
-const booksPersistConfig = {
-  key: 'bookDetails',
-  storage,
-};
-
-const todosPersistConfig = {
-  key: 'todos',
-  storage,
-};
-
 const store = configureStore({
   // Root Reducer
   reducer: {
     navMenu: persistReducer(navMenuPersistConfig, navMenuReducer),
-    books: persistReducer(booksPersistConfig, bookReducer),
-    todos: persistReducer(todosPersistConfig, todosReducer),
-    // books: bookReducer,
   },
   middleware,
   devTools: process.env.NODE_ENV !== 'production',

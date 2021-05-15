@@ -15,18 +15,17 @@ export default createUseStyles({
       width: 220,
     },
   },
+
   // NavMenu
   NavMenu: {
     position: 'relative',
-    // top: 0,
-    // right: 0,
   },
 
   navMenuButton: {
     position: 'fixed',
     top: 11,
     right: 10,
-    width: 120,
+    width: 84,
     padding: {
       top: 10,
       left: 10,
@@ -35,6 +34,7 @@ export default createUseStyles({
     },
     fontSize: 14,
     fontWeight: 500,
+    letterSpacing: 1,
     textTransform: 'uppercase',
     cursor: 'pointer',
     color: refs.primaryColor,
@@ -54,25 +54,26 @@ export default createUseStyles({
     position: 'fixed',
     top: 11,
     right: 10,
-    width: 120,
+    width: 84,
     padding: {
-      top: 12,
-      left: 12,
-      right: 12,
-      bottom: 12,
+      top: 10,
+      left: 10,
+      right: 10,
+      bottom: 10,
     },
     fontSize: 14,
     fontWeight: 500,
     textTransform: 'uppercase',
     cursor: 'pointer',
-    color: refs.primaryWhiteColor,
-    backgroundColor: refs.primaryBg,
-    border: 'none',
+    color: refs.primaryBg,
+    backgroundColor: 'transparent',
+    border: `2px solid ${refs.primaryBg}`,
     borderRadius: 4,
     outline: 'none',
 
     '&:hover': {
-      backgroundColor: refs.accentBg,
+      backgroundColor: refs.primaryBg,
+      color: refs.primaryWhiteColor,
     },
   },
 
@@ -105,11 +106,11 @@ export default createUseStyles({
   },
 
   link: {
-    backgroundColor: 'inherit',
     textDecoration: 'none',
     padding: 15,
     fontSize: 22,
     color: refs.darkColor,
+    backgroundColor: 'inherit',
     borderRadius: 4,
 
     [`@media (min-width: ${refs.tablet}px)`]: {
@@ -122,7 +123,7 @@ export default createUseStyles({
 
     '&:hover': {
       color: refs.primaryWhiteColor,
-      backgroundColor: refs.accentBg,
+      backgroundColor: refs.primaryBg,
     },
   },
 
