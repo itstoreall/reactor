@@ -97,22 +97,31 @@ export default createUseStyles({
   meta: {
     '& h3': {
       marginBottom: 10,
-      fontSize: 22,
+      fontSize: 24,
+
+      [`@media (min-width: ${refs.tablet}px)`]: {
+        fontSize: 20,
+      },
     },
 
     '& p': {
       marginBottom: 15,
       fontSize: 18,
       color: refs.primaryColor,
+
+      [`@media (min-width: ${refs.tablet}px)`]: {
+        fontSize: 14,
+      },
     },
 
     '& a': {
       paddingRight: 10,
-      // fontSize: 14,
+      fontSize: 20,
       fontWeight: 600,
-      // textTransform: 'uppercase',
-      // border: '2px solid',
-      // borderRadius: 3,
+
+      [`@media (min-width: ${refs.tablet}px)`]: {
+        fontSize: 16,
+      },
 
       '&:hover': {
         color: refs.primaryWhiteColor,
@@ -120,7 +129,11 @@ export default createUseStyles({
 
       '&:not(:last-child)': {
         marginRight: 10,
-        borderRight: '1px solid ',
+        borderRight: `1px solid ${refs.primaryColor}`,
+
+        '&:hover': {
+          borderRight: `1px solid ${refs.primaryColor}`,
+        },
       },
     },
   },

@@ -9,10 +9,15 @@ const Applications = () => {
   return (
     <div className={s.Applications}>
       <ul>
-        {apps.map(({ id, alt, title, overlayText, page, source }) => (
+        {apps.map(({ id, src, alt, title, overlayText, page, source }) => (
           <li key={id}>
             <div className={s.appItem}>
-              <ApplicationThumb s={s} alt={alt} hoverText={overlayText} />
+              <ApplicationThumb
+                s={s}
+                src={src}
+                alt={alt}
+                hoverText={overlayText}
+              />
               <ApplicationMeta
                 s={s}
                 title={title}

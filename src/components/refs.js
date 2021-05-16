@@ -8,6 +8,7 @@ export const refs = {
   primaryColor: '#9697b6',
   darkColor: '#212225',
   primaryWhiteColor: '#fff',
+  linkColor: '#6ecab6',
 
   // Backgrounds
   primaryBg: '#2c3139',
