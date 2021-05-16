@@ -2,7 +2,7 @@ import images from './images';
 
 const ApplicationItem = ({ alt, s }) => {
   return (
-    <>
+    <div className={s.appItem}>
       <div className={s.thumb}>
         <picture>
           <source
@@ -42,6 +42,14 @@ const ApplicationItem = ({ alt, s }) => {
             alt={alt}
           />
         </picture>
+
+        <div className={s.overlay}>
+          <p>
+            Технокряк это современная площадка распространения коронавируса.
+            Компании используют эту платформу для цифрового шпионажа и атак на
+            защищённые сервера конкурентов.
+          </p>
+        </div>
       </div>
       <div className={s.meta}>
         <h3>Application</h3>
@@ -49,7 +57,7 @@ const ApplicationItem = ({ alt, s }) => {
         <a href="/">Page</a>
         <a href="/">Source</a>
       </div>
-    </>
+    </div>
   );
 };
 

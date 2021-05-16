@@ -15,10 +15,11 @@ export default createUseStyles({
 
     [`@media (min-width: ${refs.tablet}px)`]: {
       padding: 30,
+      maxWidth: 768,
     },
 
     [`@media (min-width: ${refs.desktop}px)`]: {
-      maxWidth: 1440,
+      maxWidth: 1200,
     },
   },
 

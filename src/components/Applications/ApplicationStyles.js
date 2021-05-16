@@ -10,6 +10,8 @@ export default createUseStyles({
       justifyContent: 'space-between',
 
       '& > li': {
+        maxWidth: 450,
+
         [`@media (max-width: 767px)`]: {
           '&:not(:last-child)': {
             marginBottom: 30,
@@ -17,8 +19,9 @@ export default createUseStyles({
         },
 
         [`@media (min-width: ${refs.tablet}px) and (max-width: 899px)`]: {
-          width: 'calc(50% - 15px)',
           marginBottom: 0,
+          width: 'calc(50% - 15px)',
+          maxWidth: 354,
 
           '&:not(:nth-last-child(-n + 2))': {
             marginBottom: 30,
@@ -26,7 +29,8 @@ export default createUseStyles({
         },
 
         [`@media (min-width: ${refs.desktop}px)`]: {
-          width: 'calc(33% - 20px)',
+          width: 'calc(33% - 15px)',
+          maxWidth: 370,
 
           '&:not(:nth-last-child(-n + 3))': {
             marginBottom: 30,
@@ -36,51 +40,58 @@ export default createUseStyles({
     },
   },
 
-  thumb: {},
+  thumb: {
+    position: 'relative',
+    overflow: 'hidden',
 
-  image: {
-    display: 'block',
-    width: '100%',
+    '& img': {
+      display: 'block',
+      width: '100%',
+    },
+
+    '&:hover div, &:focus div': {
+      transform: 'translateY(0)',
+      opacity: 1,
+    },
+
+    // Overlay
+    '& > div': {
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      display: 'flex',
+      alignItems: 'center',
+      height: '100%',
+      backgroundColor: 'rgba(33, 150, 243, 0.9)',
+
+      transform: 'translateY(100%)',
+      transition:
+        'transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1)',
+      opacity: 0,
+
+      // Text inside overlay
+      '& p': {
+        paddingLeft: 24,
+        paddingRight: 24,
+        paddingBottom: 10,
+        transform: 'opacity',
+        transition: 'opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms',
+        opacity: 0,
+        cursor: 'default',
+      },
+    },
+
+    // Text inside hovered overlay
+    '&:hover p': {
+      opacity: 1,
+    },
   },
 
   meta: {
     '& h3': {},
     '& p': {},
   },
-
-  // list: {
-  //   marginBottom: 50,
-  // },
-
-  // item: {
-  //   marginBottom: 10,
-
-  //   '& a': {
-  //     fontSize: 22,
-  //   },
-  // },
 });
-
-// .portfolio-list {
-//   margin-bottom: -30px;
-
-//   > .item {
-//     margin-bottom: 30px;
-//   }
-// }
-
-// Product
-
-// .product {
-//   display: block;
-//   text-decoration: none;
-//   @include transition(box-shadow);
-
-//   &:hover {
-//     box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
-//       0px 1px 1px rgba(0, 0, 0, 0.12);
-//   }
-// }
 
 // // Thumb
 
