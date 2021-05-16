@@ -14,7 +14,7 @@ export default createUseStyles({
 
         [`@media (max-width: 767px)`]: {
           '&:not(:last-child)': {
-            marginBottom: 30,
+            marginBottom: 40,
           },
         },
 
@@ -40,9 +40,11 @@ export default createUseStyles({
     },
   },
 
+  // Thumb
   thumb: {
     position: 'relative',
     overflow: 'hidden',
+    marginBottom: 15,
 
     '& img': {
       display: 'block',
@@ -61,8 +63,9 @@ export default createUseStyles({
       left: 0,
       display: 'flex',
       alignItems: 'center',
+      width: '100%',
       height: '100%',
-      backgroundColor: 'rgba(33, 150, 243, 0.9)',
+      backgroundColor: 'rgba(255, 255, 0, 0.9)',
 
       transform: 'translateY(100%)',
       transition:
@@ -71,11 +74,14 @@ export default createUseStyles({
 
       // Text inside overlay
       '& p': {
-        paddingLeft: 24,
-        paddingRight: 24,
+        paddingLeft: 30,
+        paddingRight: 30,
         paddingBottom: 10,
+        fontSize: 14,
+        lineHeight: 1.4,
+        color: refs.darkColor,
         transform: 'opacity',
-        transition: 'opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms',
+        transition: 'opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 100ms',
         opacity: 0,
         cursor: 'default',
       },
@@ -87,134 +93,35 @@ export default createUseStyles({
     },
   },
 
+  // Meta
   meta: {
-    '& h3': {},
-    '& p': {},
+    '& h3': {
+      marginBottom: 10,
+      fontSize: 22,
+    },
+
+    '& p': {
+      marginBottom: 15,
+      fontSize: 18,
+      color: refs.primaryColor,
+    },
+
+    '& a': {
+      paddingRight: 10,
+      // fontSize: 14,
+      fontWeight: 600,
+      // textTransform: 'uppercase',
+      // border: '2px solid',
+      // borderRadius: 3,
+
+      '&:hover': {
+        color: refs.primaryWhiteColor,
+      },
+
+      '&:not(:last-child)': {
+        marginRight: 10,
+        borderRight: '1px solid ',
+      },
+    },
   },
 });
-
-// // Thumb
-
-// .product-thumb {
-//   position: relative;
-//   overflow: hidden;
-
-//   .product-overlay {
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     height: 100%;
-//     background-color: rgba(33, 150, 243, 0.9);
-
-//     transform: translateY(100%);
-//     transition: transform 250ms $timing-function, opacity 250ms $timing-function;
-//     opacity: 0;
-
-//     .product:hover &,
-//     .product:focus & {
-//       transform: translateY(0);
-//       opacity: 1;
-//     }
-
-//     .hover-text {
-//       display: flex;
-//       align-items: center;
-
-//       height: 100%;
-//       padding-left: 24px;
-//       padding-right: 24px;
-
-//       margin-top: 0;
-//       margin-bottom: 0;
-//       font-size: 18px;
-//       line-height: 1.56;
-//       color: #ffffff;
-
-//       transform: opacity;
-//       transition: opacity 250ms $timing-function 250ms;
-//       opacity: 0;
-
-//       .product:hover &,
-//       .product:focus & {
-//         opacity: 1;
-//       }
-//     }
-//   }
-// }
-
-// // Meta
-
-// .product-meta {
-//   padding-top: 20px;
-//   padding-right: 24px;
-//   padding-bottom: 20px;
-//   padding-left: 24px;
-
-//   border-left: 1px solid #eeeeee;
-//   border-right: 1px solid #eeeeee;
-//   border-bottom: 1px solid #eeeeee;
-
-//   .title {
-//     margin-top: 0;
-//     margin-bottom: 4px;
-//     font-size: 18px;
-//     line-height: 2;
-//     letter-spacing: 0.06em;
-//     text-align: left;
-//     color: $secondary-text-color;
-//     white-space: nowrap;
-//     overflow: hidden;
-//     text-overflow: ellipsis;
-//   }
-
-//   .text {
-//     margin-top: 0;
-//     margin-bottom: 0;
-//     font-size: 16px;
-//     line-height: 1.87;
-//     color: $primary-text-color;
-//   }
-// }
-
-// // Media 768px
-
-// @media screen and (min-width: 768px) {
-//   .filter-list {
-//     display: flex;
-//     justify-content: center;
-//     margin-bottom: 30px;
-//   }
-
-//   .portfolio-list {
-//     display: flex;
-//     flex-wrap: wrap;
-
-//     @media screen and (max-width: 1199px) {
-//       > .item {
-//         width: calc((100% - 30px) / 2);
-//       }
-
-//       > .item:not(:nth-child(2n)) {
-//         margin-right: 30px;
-//       }
-//     }
-//   }
-// }
-
-// // Media 1200px
-
-// @media screen and (min-width: 1200px) {
-//   .filter-list {
-//     margin-bottom: 50px;
-//   }
-
-//   .portfolio-list {
-//     > .item {
-//       width: calc((100% - 60px) / 3);
-
-//       &:not(:nth-child(3n)) {
-//         margin-right: 30px;
-//       }
-//     }
-//   }
-// }

@@ -1,18 +1,36 @@
-// import { NavLink, withRouter } from 'react-router-dom';
 import useStyles from './ApplicationStyles';
-import ApplicationItem from './ApplicationItem';
-// import images from './images';
+import ApplicationThumb from './ApplicationThumb';
+import ApplicationMeta from './ApplicationMeta';
 import { apps } from './apps.json';
 
-const Applications = ({ location, match }) => {
+const Applications = () => {
   const s = useStyles();
 
   return (
     <div className={s.Applications}>
       <ul>
-        {apps.map(({ id, alt }) => (
+        {apps.map(({ id, alt, title, overlayText, page, source }) => (
           <li key={id}>
-            <ApplicationItem alt={alt} s={s} />
+            <div className={s.appItem}>
+              <ApplicationThumb s={s} alt={alt} hoverText={overlayText} />
+              <ApplicationMeta
+                s={s}
+                title={title}
+                page={page}
+                source={source}
+              />
+
+              {/* <div className={s.meta}>
+                <h3>{title}</h3>
+                <p>About application</p>
+                <a href={page} target="_blank" rel="noreferrer">
+                  Page
+                </a>
+                <a href={source} target="_blank" rel="noreferrer">
+                  Source
+                </a>
+              </div> */}
+            </div>
           </li>
         ))}
       </ul>
@@ -21,18 +39,3 @@ const Applications = ({ location, match }) => {
 };
 
 export default Applications;
-
-// // <li key={id} className={s.item}>
-//   <div className={s.thumb}>
-//     <img src={images.phonebook} alt="phonebook" />
-//   </div>
-//   <div className={s.meta}>
-//     <a href={url} target="_blank" rel="noreferrer">
-//       {name}
-//     </a>
-//     <a href={url} target="_blank" rel="noreferrer">
-//       {name}
-//     </a>
-//   </div>
-// </li>
-// ))}

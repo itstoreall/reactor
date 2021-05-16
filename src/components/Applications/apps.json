@@ -4,55 +4,91 @@
       "id": 1,
       "name": "Phonebook",
       "url": "https://itstoreall.github.io/goit-react-hw-09-phonebook/#/",
-      "alt": "Phonebook application"
+      "alt": "Phonebook application",
+      "title": "Phonebook",
+      "overlayText": "Это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов",
+      "page": "https://itstoreall.github.io/goit-react-hw-09-phonebook/#/",
+      "source": "https://github.com/itstoreall/goit-react-hw-09-phonebook"
     },
     {
       "id": 2,
-      "name": "Phonebook",
+      "name": "",
       "url": "https://itstoreall.github.io/goit-react-hw-09-phonebook/#/",
-      "alt": "Phonebook application"
+      "alt": "Application image",
+      "title": "Application",
+      "overlayText": "Application description",
+      "page": "",
+      "source": ""
     },
     {
       "id": 3,
-      "name": "Phonebook",
+      "name": "",
       "url": "https://itstoreall.github.io/goit-react-hw-09-phonebook/#/",
-      "alt": "Phonebook application"
+      "alt": "Application image",
+      "title": "Application",
+      "overlayText": "Application description",
+      "page": "",
+      "source": ""
     },
     {
       "id": 4,
-      "name": "Phonebook",
+      "name": "",
       "url": "https://itstoreall.github.io/goit-react-hw-09-phonebook/#/",
-      "alt": "Phonebook application"
+      "alt": "Application image",
+      "title": "Application",
+      "overlayText": "Application description",
+      "page": "",
+      "source": ""
     },
     {
       "id": 5,
-      "name": "Phonebook",
+      "name": "",
       "url": "https://itstoreall.github.io/goit-react-hw-09-phonebook/#/",
-      "alt": "Phonebook application"
+      "alt": "Application image",
+      "title": "Application",
+      "overlayText": "Application description",
+      "page": "",
+      "source": ""
     },
     {
       "id": 6,
-      "name": "Phonebook",
+      "name": "",
       "url": "https://itstoreall.github.io/goit-react-hw-09-phonebook/#/",
-      "alt": "Phonebook application"
+      "alt": "Application image",
+      "title": "Application",
+      "overlayText": "Application description",
+      "page": "",
+      "source": ""
     },
     {
       "id": 7,
-      "name": "Phonebook",
+      "name": "",
       "url": "https://itstoreall.github.io/goit-react-hw-09-phonebook/#/",
-      "alt": "Phonebook application"
+      "alt": "Application image",
+      "title": "Application",
+      "overlayText": "Application description",
+      "page": "",
+      "source": ""
     },
     {
       "id": 8,
-      "name": "Phonebook",
+      "name": "",
       "url": "https://itstoreall.github.io/goit-react-hw-09-phonebook/#/",
-      "alt": "Phonebook application"
+      "alt": "Application image",
+      "title": "Application",
+      "overlayText": "Application description",
+      "page": "",
+      "source": ""
     },
     {
       "id": 9,
-      "name": "Phonebook",
+      "name": "",
       "url": "https://itstoreall.github.io/goit-react-hw-09-phonebook/#/",
-      "alt": "Phonebook application"
+      "alt": "Application image",
+      "title": "Application",
+      "overlayText": "Application description",
+      "page": "",
+      "source": ""
     }
   ]
 }
