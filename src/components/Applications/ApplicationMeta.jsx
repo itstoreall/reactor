@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 
-const ApplicationMeta = ({ s, title, page, source }) => {
+const ApplicationMeta = ({ s, title, description, page, source }) => {
   return (
     <div className={s.meta}>
       <h3>{title}</h3>
-      <p>About application</p>
+      <p>{description}</p>
       <a href={page} target="_blank" rel="noreferrer">
         Page
       </a>

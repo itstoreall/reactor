@@ -14,7 +14,7 @@ export default createUseStyles({
 
         [`@media (max-width: 767px)`]: {
           '&:not(:last-child)': {
-            marginBottom: 40,
+            marginBottom: 75,
           },
         },
 
@@ -65,7 +65,7 @@ export default createUseStyles({
       alignItems: 'center',
       width: '100%',
       height: '100%',
-      backgroundColor: 'rgba(255, 255, 0, 0.9)',
+      backgroundColor: refs.primaryYellow,
 
       transform: 'translateY(100%)',
       transition:

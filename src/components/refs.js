@@ -15,4 +15,5 @@ export const refs = {
   secondatyBg: '#353a44',
   darkBg: '#212225',
   accentBg: '#9697b6',
+  primaryYellow: '#ffe13a',
 };

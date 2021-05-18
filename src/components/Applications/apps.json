@@ -1,10 +1,11 @@
 {
   "apps": [
     {
-      "id": 1,
+      "id": "phonebook",
       "name": "phonebook",
       "alt": "Phonebook application",
       "title": "Phonebook",
+      "description": "About the application",
       "overlayText": "Это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов",
       "page": "https://itstoreall.github.io/goit-react-hw-09-phonebook/#/",
       "source": "https://github.com/itstoreall/goit-react-hw-09-phonebook",
@@ -24,10 +25,11 @@
       ]
     },
     {
-      "id": 2,
+      "id": "movies",
       "name": "movies",
       "alt": "Movies application",
       "title": "Movies",
+      "description": "About the application",
       "overlayText": "Это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов",
       "page": "https://its-react-movies.netlify.app/",
       "source": "https://github.com/itstoreall/goit-react-hw-04-movies",
@@ -47,10 +49,35 @@
       ]
     },
     {
-      "id": 3,
+      "id": "todos",
+      "name": "todos",
+      "alt": "Todos application",
+      "title": "Todos",
+      "description": "About the application",
+      "overlayText": "Это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов",
+      "page": "https://itstoreall.github.io/todos/#/",
+      "source": "https://github.com/itstoreall/todos",
+      "src": [
+        "mob_todos_450_wp",
+        "mob_todos_900_wp",
+        "mob_todos_450",
+        "mob_todos_900",
+        "tab_todos_354_wp",
+        "tab_todos_708_wp",
+        "tab_todos_354",
+        "tab_todos_708",
+        "desk_todos_370_wp",
+        "desk_todos_740_wp",
+        "desk_todos_370",
+        "desk_todos_740"
+      ]
+    },
+    {
+      "id": "image_finder",
       "name": "image_finder",
       "alt": "Image finder application",
       "title": "Image finder",
+      "description": "About the application",
       "overlayText": "Это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов",
       "page": "https://itstoreall.github.io/goit-react-hw-03-image-finder/",
       "source": "https://github.com/itstoreall/goit-react-hw-03-image-finder",
@@ -70,72 +97,51 @@
       ]
     },
     {
-      "id": 4,
-      "name": "phonebook",
-      "alt": "Phonebook application",
-      "title": "Phonebook",
-      "overlayText": "Это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов",
-      "page": "https://itstoreall.github.io/goit-react-hw-09-phonebook/#/",
-      "source": "https://github.com/itstoreall/goit-react-hw-09-phonebook",
-      "src": [
-        "mob_phonebook_450_wp",
-        "mob_phonebook_900_wp",
-        "mob_phonebook_450",
-        "mob_phonebook_900",
-        "tab_phonebook_354_wp",
-        "tab_phonebook_708_wp",
-        "tab_phonebook_354",
-        "tab_phonebook_708",
-        "desk_phonebook_370_wp",
-        "desk_phonebook_740_wp",
-        "desk_phonebook_370",
-        "desk_phonebook_740"
-      ]
-    },
-    {
-      "id": 5,
-      "name": "movies",
-      "alt": "Movies application",
-      "title": "Movies",
-      "overlayText": "Это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов",
-      "page": "https://its-react-movies.netlify.app/",
-      "source": "https://github.com/itstoreall/goit-react-hw-04-movies",
-      "src": [
-        "mob_movies_450_wp",
-        "mob_movies_900_wp",
-        "mob_movies_450",
-        "mob_movies_900",
-        "tab_movies_354_wp",
-        "tab_movies_708_wp",
-        "tab_movies_354",
-        "tab_movies_708",
-        "desk_movies_370_wp",
-        "desk_movies_740_wp",
-        "desk_movies_370",
-        "desk_movies_740"
-      ]
-    },
-    {
-      "id": 6,
-      "name": "image_finder",
-      "alt": "Image finder application",
-      "title": "Image finder",
+      "id": "feedback",
+      "name": "feedback",
+      "alt": "Feedback application",
+      "title": "Feedback",
+      "description": "About the application",
       "overlayText": "Это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов",
       "page": "https://itstoreall.github.io/goit-react-hw-03-image-finder/",
       "source": "https://github.com/itstoreall/goit-react-hw-03-image-finder",
       "src": [
-        "mob_imgFinder_450_wp",
-        "mob_imgFinder_900_wp",
-        "mob_imgFinder_450",
-        "mob_imgFinder_900",
-        "tab_imgFinder_354_wp",
-        "tab_imgFinder_708_wp",
-        "tab_imgFinder_354",
-        "tab_imgFinder_708",
-        "desk_imgFinder_370_wp",
-        "desk_imgFinder_740_wp",
-        "desk_imgFinder_370",
-        "desk_imgFinder_740"
+        "mob_feedback_450_wp",
+        "mob_feedback_900_wp",
+        "mob_feedback_450",
+        "mob_feedback_900",
+        "tab_feedback_354_wp",
+        "tab_feedback_708_wp",
+        "tab_feedback_354",
+        "tab_feedback_708",
+        "desk_feedback_370_wp",
+        "desk_feedback_740_wp",
+        "desk_feedback_370",
+        "desk_feedback_740"
+      ]
+    },
+    {
+      "id": "oktotrade",
+      "name": "oktotrade",
+      "alt": "Oktotrade - business card website",
+      "title": "Business card website",
+      "description": "About the website",
+      "overlayText": "Это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов",
+      "page": "https://itstoreall.github.io/oktotrade/",
+      "source": "https://github.com/itstoreall/oktotrade",
+      "src": [
+        "mob_oktotrade_450_wp",
+        "mob_oktotrade_900_wp",
+        "mob_oktotrade_450",
+        "mob_oktotrade_900",
+        "tab_oktotrade_354_wp",
+        "tab_oktotrade_708_wp",
+        "tab_oktotrade_354",
+        "tab_oktotrade_708",
+        "desk_oktotrade_370_wp",
+        "desk_oktotrade_740_wp",
+        "desk_oktotrade_370",
+        "desk_oktotrade_740"
       ]
     }
   ]
