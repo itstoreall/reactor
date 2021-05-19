@@ -1,4 +1,5 @@
-import TechIcons from './TechIcons';
+import photo from './serhiistanislav_900.jpg';
+import TechIconList from './TechIconList';
 import useStyles from './SummaryStyles';
 
 const Summary = () => {
@@ -6,19 +7,14 @@ const Summary = () => {
 
   return (
     <>
-      <TechIcons />
-      <div className={s.container}>
-        <aside className="left-side">
-          <img
-            className="photo"
-            src="images/photo.jpg"
-            alt="Моя фотография"
-            width="370"
-          />
+      <TechIconList />
+      <div className={s.summaryWrap}>
+        <aside>
+          <img src={photo} alt="Serhii Stanislav" width="250" height="250" />
           <section className="contacts">
-            <h2 className="contacts-title">Contacts</h2>
+            <h2 className="contacts-title">Contacts:</h2>
 
-            <ul className="contacts-list">
+            <ul className={s.contactList}>
               <li className="contacts-item">
                 Phone:
                 <a href="tel:+380951111111" className="contacts-link">
@@ -59,9 +55,10 @@ const Summary = () => {
             </a>
           </section>
         </aside>
+
         <div className="right-side">
           <section className="bio">
-            <h1 className="bio-title">Anton Chornyi</h1>
+            <h1 className="bio-title">Serhii Stanislav</h1>
             <p className="bio-occupation">Front-end developer</p>
             <p className="bio-about">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet odio
