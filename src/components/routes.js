@@ -3,6 +3,9 @@ import { lazy } from 'react';
 const HomeView = lazy(() =>
   import('../views/HomeView' /*webpackChunkName: 'Home'*/),
 );
+const SummaryView = lazy(() =>
+  import('../views/SummaryView' /*webpackChunkName: 'Summary'*/),
+);
 const ApplicationView = lazy(() =>
   import('../views/ApplicationView' /*webpackChunkName: 'Applications'*/),
 );
@@ -19,10 +22,15 @@ export const routes = [
     showInMenu: true,
   },
   {
+    path: '/summary',
+    label: 'Summary',
+    component: SummaryView,
+    showInMenu: true,
+  },
+  {
     path: '/applications',
     label: 'Applications',
     component: ApplicationView,
-    exact: true,
     showInMenu: true,
   },
   {
