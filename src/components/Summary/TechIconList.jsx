@@ -6,7 +6,7 @@ const TechIconList = () => {
   const s = useStyles();
 
   return (
-    <ul className={s.techIcons}>
+    <ul className={s.TechIconList}>
       {techIcons.map(icon => {
         return <TechIconItem key={icon} icon={icon} />;
       })}

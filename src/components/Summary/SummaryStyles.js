@@ -3,33 +3,40 @@ import { refs } from '../refs';
 
 export default createUseStyles({
   // Tech Icons
-  techIcons: {
+  TechIconList: {
     display: 'flex',
+    marginBottom: 50,
 
     '& li': { marginRight: 15 },
     '& svg': { width: 30, height: 30, fill: refs.primaryYellow },
   },
 
   // Summary
-  summaryWrap: {
+  SummaryContent: {
     display: 'flex',
     marginLeft: 'auto',
     marginRight: 'auto',
-    backgroundColor: 'skyblue',
+    // backgroundColor: 'skyblue',
     // box-shadow: 5px 8.66px 20px 0px rgba(0, 0, 0, 0.15);
 
+    // Aside
     '& aside': {
-      backgroundColor: '#1e2939',
+      width: 300,
+      marginRight: 50,
+      borderRight: '1px solid #fff',
+      overflow: 'scroll',
+      // backgroundColor: '#1e2939',
 
-      '& img': { borderRadius: '50%' },
+      '& img': { borderRadius: '50%', marginBottom: 30 },
       '& h2': { marginBottom: 15, fontSize: 22, fontWeight: 600 },
-      '& ul': {
-        marginBottom: 30,
-
-        '& li': {
-          marginBottom: 10,
-        },
-      },
+      '& ul': { marginBottom: 30, '& li': { marginBottom: 10 } },
     },
+  },
+
+  // About Me
+  aboutMe: {
+    width: 700,
+
+    '& h1': { marginBottom: 140 },
   },
 });
