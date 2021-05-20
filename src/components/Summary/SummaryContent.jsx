@@ -1,15 +1,29 @@
+import { useMediaQuery } from '@material-ui/core';
 import photo from './serhiistanislav_900.jpg';
+import { refs } from '../refs';
 import TechIconList from './TechIconList';
 import useStyles from './SummaryStyles';
 
 const SummaryContent = () => {
   const s = useStyles();
 
+  const handleMinWidth = width => {
+    return `(min-width:${width}px) `;
+  };
+
+  const handleMaxWidth = width => {
+    return `(max-width:${width}px) `;
+  };
+
+  // const isBigScreen = useMediaQuery(`(max-width:${refs.tabletMax}px)`);
+  const desktop = useMediaQuery(handleMinWidth(refs.desktop));
+  const desktopMax = useMediaQuery(handleMaxWidth(refs.desktopMax));
+
   return (
     <div className={s.SummaryContent}>
       <aside>
         <img src={photo} alt="Serhii Stanislav" width="250" height="250" />
-
+        {desktopMax && <TechIconList />}
         <section className="contacts">
           <h2>Contacts:</h2>
           <ul className={s.contactList}>
@@ -25,7 +39,6 @@ const SummaryContent = () => {
             </li>
           </ul>
         </section>
-
         <section className="skills">
           <h2>Tech skills:</h2>
           <ul>
@@ -37,7 +50,6 @@ const SummaryContent = () => {
             <li>Node.js</li>
           </ul>
         </section>
-
         <section className="skills">
           <h2>Soft skills:</h2>
           <ul>
@@ -47,7 +59,6 @@ const SummaryContent = () => {
             <li>Teamwork</li>
           </ul>
         </section>
-
         <div className="widget">
           <a href="./resume.zip" download>
             Скачать резюме
@@ -56,7 +67,7 @@ const SummaryContent = () => {
       </aside>
 
       <div className={s.aboutMe}>
-        <TechIconList />
+        {desktop && <TechIconList />}
         <section>
           <h1>Serhii Stanislav</h1>
           <b>Front-end developer</b>

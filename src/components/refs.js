@@ -4,6 +4,10 @@ export const refs = {
   tablet: '768',
   desktop: '900',
 
+  modileMax: '374',
+  tabletMax: '767',
+  desktopMax: '899',
+
   // Colors
   primaryColor: '#9697b6',
   darkColor: '#212225',
