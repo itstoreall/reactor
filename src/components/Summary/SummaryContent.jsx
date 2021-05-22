@@ -7,24 +7,40 @@ import useStyles from './SummaryStyles';
 const SummaryContent = () => {
   const s = useStyles();
 
-  const handleMinWidth = width => {
-    return `(min-width:${width}px) `;
-  };
-
   const handleMaxWidth = width => {
     return `(max-width:${width}px) `;
   };
 
-  // const isBigScreen = useMediaQuery(`(max-width:${refs.tabletMax}px)`);
-  const desktop = useMediaQuery(handleMinWidth(refs.desktop));
+  const handleMinWidth = width => {
+    return `(min-width:${width}px) `;
+  };
+
+  const modilePlusMax = useMediaQuery(handleMaxWidth(refs.modilePlusMax));
+  const modilePlus = useMediaQuery(handleMinWidth(refs.modilePlus));
   const desktopMax = useMediaQuery(handleMaxWidth(refs.desktopMax));
+  const desktop = useMediaQuery(handleMinWidth(refs.desktop));
 
   return (
     <div className={s.SummaryContent}>
       <aside>
-        <img src={photo} alt="Serhii Stanislav" width="250" height="250" />
-        {desktopMax && <TechIconList />}
-        <section className="contacts">
+        <section className={s.avatar}>
+          {modilePlusMax ? (
+            <img src={photo} alt="Serhii Stanislav" width="250" height="250" />
+          ) : modilePlus ? (
+            <img src={photo} alt="Serhii Stanislav" width="270" height="270" />
+          ) : null}
+
+          {desktopMax && (
+            <>
+              <h1>Serhii Stanislav</h1>
+              <b>Front-end developer</b>
+            </>
+          )}
+
+          {desktopMax && <TechIconList />}
+        </section>
+
+        <section className={s.contacts}>
           <h2>Contacts:</h2>
           <ul className={s.contactList}>
             <li>
@@ -39,38 +55,49 @@ const SummaryContent = () => {
             </li>
           </ul>
         </section>
-        <section className="skills">
-          <h2>Tech skills:</h2>
-          <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>Git</li>
-            <li>JavaScript</li>
-            <li>React</li>
-            <li>Node.js</li>
-          </ul>
-        </section>
-        <section className="skills">
-          <h2>Soft skills:</h2>
-          <ul>
-            <li>Scrum</li>
-            <li>Agile</li>
-            <li>GTD</li>
-            <li>Teamwork</li>
-          </ul>
-        </section>
-        <div className="widget">
-          <a href="./resume.zip" download>
-            Скачать резюме
-          </a>
+
+        <div className={s.skillsWrap}>
+          <section className="skills">
+            <h2>Tech skills:</h2>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Git</li>
+              <li>JavaScript</li>
+              <li>React</li>
+              <li>Node.js</li>
+            </ul>
+          </section>
+
+          <section className="skills">
+            <h2>Soft skills:</h2>
+            <ul>
+              <li>Scrum</li>
+              <li>Agile</li>
+              <li>GTD</li>
+              <li>Teamwork</li>
+            </ul>
+          </section>
         </div>
+
+        {desktop && (
+          <div className="widget">
+            <a href="./resume.zip" download>
+              Скачать резюме
+            </a>
+          </div>
+        )}
       </aside>
 
       <div className={s.aboutMe}>
         {desktop && <TechIconList />}
         <section>
-          <h1>Serhii Stanislav</h1>
-          <b>Front-end developer</b>
+          {desktop && (
+            <>
+              <h1>Serhii Stanislav</h1>
+              <b>Front-end developer</b>
+            </>
+          )}
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet odio
             adipisci illo, earum atque quae, sequi magni consectetur sit
