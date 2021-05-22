@@ -12,6 +12,10 @@ export default createUseStyles({
     '& li': {
       '&:not(:last-child)': {
         marginRight: 15,
+
+        [`@media (min-width: ${refs.tablet}px) and (max-width: ${refs.desktopMax}px)`]: {
+          marginRight: 25,
+        },
       },
     },
 
@@ -25,10 +29,15 @@ export default createUseStyles({
         height: 35,
       },
 
-      // [`@media (min-width: ${refs.modilePlus}px)`]: {
-      //   width: 45,
-      //   height: 45,
-      // },
+      [`@media (min-width: ${refs.modilePlus}px)`]: {
+        width: 43,
+        height: 43,
+      },
+
+      [`@media (min-width: ${refs.tablet}px) and (max-width: ${refs.desktopMax}px)`]: {
+        width: 50,
+        height: 50,
+      },
     },
   },
 
@@ -45,6 +54,11 @@ export default createUseStyles({
 
     // Aside
     '& aside': {
+      [`@media (min-width: ${refs.tablet}px)`]: {
+        display: 'flex',
+        flexWrap: 'wrap',
+      },
+
       // [`@media (min-width: ${refs.desktop}px)`]: {
       //   // width: 300,
       //   marginRight: 50,
@@ -96,6 +110,14 @@ export default createUseStyles({
     paddingBottom: 40,
     borderBottom: `1px solid ${refs.secondatyBg}`,
 
+    [`@media (min-width: ${refs.tablet}px)`]: {
+      width: '100%',
+    },
+
+    [`@media (min-width: ${refs.tablet}px) and (max-width: ${refs.desktopMax}px)`]: {
+      paddingBottom: 60,
+    },
+
     '& img': {
       display: 'block',
       margin: '0 auto',
@@ -104,8 +126,8 @@ export default createUseStyles({
     },
 
     '& h1': {
-      textAlign: 'center',
       marginBottom: 10,
+      textAlign: 'center',
     },
 
     '& b': {
@@ -114,6 +136,11 @@ export default createUseStyles({
       fontSize: 22,
       fontWeight: 500,
       textAlign: 'center',
+      color: refs.secondaryWhiteColor,
+
+      [`@media (min-width: ${refs.tablet}px) and (max-width: ${refs.desktopMax}px)`]: {
+        marginBottom: 50,
+      },
     },
 
     // '& h2': {
@@ -141,6 +168,11 @@ export default createUseStyles({
     padding: '30px 0',
     borderBottom: `1px solid ${refs.secondatyBg}`,
 
+    [`@media (min-width: ${refs.tablet}px) and (max-width: ${refs.desktopMax}px)`]: {
+      width: 300,
+      borderRight: `1px solid ${refs.secondatyBg}`,
+    },
+
     '& h2': {
       marginBottom: 20,
       fontSize: 20,
@@ -163,6 +195,10 @@ export default createUseStyles({
 
         '&:not(:last-child)': {
           marginBottom: 10,
+
+          [`@media (min-width: ${refs.tablet}px) and (max-width: ${refs.desktopMax}px)`]: {
+            marginBottom: 20,
+          },
         },
 
         [`@media (min-width: ${refs.modile}px)`]: {
@@ -175,8 +211,14 @@ export default createUseStyles({
 
         '& a': {
           paddingLeft: 10,
-          // fontSize: 18,
           fontWeight: 400,
+
+          [`@media (min-width: ${refs.tablet}px) and (max-width: ${refs.desktopMax}px)`]: {
+            display: 'block',
+            paddingTop: 7,
+            paddingLeft: 0,
+            fontSize: 20,
+          },
 
           // [`@media (min-width: ${refs.modile}px)`]: {
           //   // fontSize: 22,
@@ -196,15 +238,30 @@ export default createUseStyles({
 
       '& section:first-child': {
         marginRight: 20,
+
+        [`@media (min-width: ${refs.tablet}px) and (max-width: ${refs.desktopMax}px)`]: {
+          paddingLeft: 20,
+        },
       },
     },
 
     '& section': {
       width: '50%',
 
+      [`@media (min-width: ${refs.tablet}px) and (max-width: ${refs.desktop}px)`]: {
+        width: 190,
+      },
+
       '&:not(:last-child)': {
         // paddingRight: 30,
-        borderRight: `1px solid ${refs.secondatyBg}`,
+
+        [`@media (max-width: ${refs.modileMax}px)`]: {
+          marginBottom: 30,
+        },
+
+        [`@media (min-width: ${refs.modile}px)`]: {
+          borderRight: `1px solid ${refs.secondatyBg}`,
+        },
       },
     },
 

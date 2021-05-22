@@ -17,6 +17,7 @@ const SummaryContent = () => {
 
   const modilePlusMax = useMediaQuery(handleMaxWidth(refs.modilePlusMax));
   const modilePlus = useMediaQuery(handleMinWidth(refs.modilePlus));
+  const tablet = useMediaQuery(handleMinWidth(refs.tablet));
   const desktopMax = useMediaQuery(handleMaxWidth(refs.desktopMax));
   const desktop = useMediaQuery(handleMinWidth(refs.desktop));
 
@@ -45,10 +46,12 @@ const SummaryContent = () => {
           <ul className={s.contactList}>
             <li>
               Phone:
+              {tablet && <br />}
               <a href="tel:+380950000000">+38 000 000 00 00</a>
             </li>
             <li>
               E-mail:
+              {tablet && <br />}
               <a href="mailto:serhiistanislav@gmail.com">
                 serhiistanislav@gmail.com
               </a>
