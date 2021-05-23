@@ -46,12 +46,12 @@ const SummaryContent = () => {
           <ul className={s.contactList}>
             <li>
               Phone:
-              {tablet && <br />}
-              <a href="tel:+380950000000">+38 000 000 00 00</a>
+              {tablet && !desktop && <br />}
+              <a href="tel:+380950000000">+38 (000) 000 0000</a>
             </li>
             <li>
-              E-mail:
-              {tablet && <br />}
+              E-&nbsp;mail:
+              {tablet && !desktop && <br />}
               <a href="mailto:serhiistanislav@gmail.com">
                 serhiistanislav@gmail.com
               </a>

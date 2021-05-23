@@ -5,9 +5,10 @@ export default createUseStyles({
   // Tech Icons
   TechIconList: {
     display: 'flex',
-    justifyContent: 'center',
-    // paddingBottom: 40,
-    // marginBottom: 40,
+
+    [`@media (max-width: ${refs.desktopMax}px)`]: {
+      justifyContent: 'center',
+    },
 
     '& li': {
       '&:not(:last-child)': {
@@ -38,91 +39,56 @@ export default createUseStyles({
         width: 50,
         height: 50,
       },
+
+      [`@media (min-width: ${refs.desktop}px)`]: {
+        width: 35,
+      },
     },
   },
 
   // Summary
   SummaryContent: {
     // backgroundColor: 'skyblue',
-    // [`@media (min-width: ${refs.desktop}px)`]: {
-    //   display: 'flex',
-    //   marginLeft: 'auto',
-    //   marginRight: 'auto',
-    // },
+    [`@media (min-width: ${refs.desktop}px)`]: {
+      display: 'flex',
+    },
     // backgroundColor: 'skyblue',
     // box-shadow: 5px 8.66px 20px 0px rgba(0, 0, 0, 0.15);
 
     // Aside
     '& aside': {
-      [`@media (min-width: ${refs.tablet}px)`]: {
+      [`@media (min-width: ${refs.tablet}px) and (max-width: ${refs.desktopMax}px)`]: {
         display: 'flex',
         flexWrap: 'wrap',
       },
 
-      // [`@media (min-width: ${refs.desktop}px)`]: {
-      //   // width: 300,
-      //   marginRight: 50,
-      //   borderRight: '1px solid #fff',
-      //   overflow: 'scroll',
-      //   // backgroundColor: '#1e2939',
-      // },
-      //   // Photo (image)
-      //   '& img': {
-      //     display: 'block',
-      //     margin: '0 auto',
-      //     borderRadius: '50%',
-      //     marginBottom: 30,
-      //   },
-      //   '& h1': {
-      //     textAlign: 'center',
-      //     marginBottom: 10,
-      //   },
-      //   '& b': {
-      //     display: 'block',
-      //     marginBottom: 30,
-      //     fontSize: 22,
-      //     fontWeight: 500,
-      //     textAlign: 'center',
-      //   },
-      //   // '& h2': {
-      //   //   marginBottom: 15,
-      //   //   fontSize: 26,
-      //   //   fontWeight: 600,
-      //   // },
-      //   '& ul': {
-      //     // paddingBottom: 20,
-      //     // marginBottom: 20,
-      //     // [`@media (min-width: ${refs.modile}px)`]: {
-      //     //   paddingBottom: 25,
-      //     //   marginBottom: 25,
-      //     // },
-      //     // [`@media (min-width: ${refs.modilePlus}px)`]: {
-      //     //   paddingBottom: 30,
-      //     //   marginBottom: 30,
-      //     // },
-      //   },
-      // },
+      [`@media (min-width: ${refs.desktop}px)`]: {
+        paddingRight: 50,
+        width: 320,
+        borderRight: `1px solid ${refs.secondaryBg}`,
+        // backgroundColor: '#1e2939',
+      },
     },
   },
 
   // Avatar (section)
   avatar: {
     paddingBottom: 40,
-    borderBottom: `1px solid ${refs.secondatyBg}`,
-
-    [`@media (min-width: ${refs.tablet}px)`]: {
-      width: '100%',
-    },
+    borderBottom: `1px solid ${refs.secondaryBg}`,
 
     [`@media (min-width: ${refs.tablet}px) and (max-width: ${refs.desktopMax}px)`]: {
       paddingBottom: 60,
+      width: '100%',
     },
 
     '& img': {
       display: 'block',
-      margin: '0 auto',
       borderRadius: '50%',
-      marginBottom: 30,
+      // marginBottom: 30,
+
+      [`@media (max-width: ${refs.desktopMax}px)`]: {
+        margin: '0 auto 30px',
+      },
     },
 
     '& h1': {
@@ -142,35 +108,16 @@ export default createUseStyles({
         marginBottom: 50,
       },
     },
-
-    // '& h2': {
-    //   marginBottom: 15,
-    //   fontSize: 26,
-    //   fontWeight: 600,
-    // },
-
-    '& ul': {
-      // paddingBottom: 20,
-      // marginBottom: 20,
-      // [`@media (min-width: ${refs.modile}px)`]: {
-      //   paddingBottom: 25,
-      //   marginBottom: 25,
-      // },
-      // [`@media (min-width: ${refs.modilePlus}px)`]: {
-      //   paddingBottom: 30,
-      //   marginBottom: 30,
-      // },
-    },
   },
 
   // Contacts (section)
   contacts: {
     padding: '30px 0',
-    borderBottom: `1px solid ${refs.secondatyBg}`,
+    borderBottom: `1px solid ${refs.secondaryBg}`,
 
     [`@media (min-width: ${refs.tablet}px) and (max-width: ${refs.desktopMax}px)`]: {
       width: 300,
-      borderRight: `1px solid ${refs.secondatyBg}`,
+      borderRight: `1px solid ${refs.secondaryBg}`,
     },
 
     '& h2': {
@@ -185,12 +132,14 @@ export default createUseStyles({
       [`@media (min-width: ${refs.modilePlus}px)`]: {
         fontSize: 26,
       },
+
+      [`@media (min-width: ${refs.desktop}px)`]: {
+        fontSize: 22,
+      },
     },
 
     '& ul': {
       '& li': {
-        // fontSize: 16,
-        // fontWeight: 600,
         color: refs.secondaryWhiteColor,
 
         '&:not(:last-child)': {
@@ -209,6 +158,10 @@ export default createUseStyles({
           fontSize: 22,
         },
 
+        [`@media (min-width: ${refs.desktop}px)`]: {
+          fontSize: 16,
+        },
+
         '& a': {
           paddingLeft: 10,
           fontWeight: 400,
@@ -219,10 +172,6 @@ export default createUseStyles({
             paddingLeft: 0,
             fontSize: 20,
           },
-
-          // [`@media (min-width: ${refs.modile}px)`]: {
-          //   // fontSize: 22,
-          // },
         },
       },
     },
@@ -231,39 +180,47 @@ export default createUseStyles({
   // Skills (div)
   skillsWrap: {
     padding: '30px 0',
-    borderBottom: `1px solid ${refs.secondatyBg}`,
+    borderBottom: `1px solid ${refs.secondaryBg}`,
 
-    [`@media (min-width: ${refs.modile}px)`]: {
+    [`@media (min-width: ${refs.modile}px) and (max-width: ${refs.desktopMax}px)`]: {
       display: 'flex',
 
-      '& section:first-child': {
-        marginRight: 20,
+      '& section': {
+        width: '50%',
+      },
+    },
 
+    [`@media (min-width: ${refs.tablet}px) and (max-width: ${refs.desktopMax}px)`]: {
+      padding: 0,
+    },
+
+    '& section': {
+      [`@media (min-width: ${refs.tablet}px) and (max-width: ${refs.desktopMax}px)`]: {
+        width: 190,
+        padding: '30px 0',
+      },
+
+      '&:not(:last-child)': {
+        marginBottom: 30,
+        [`@media (min-width: ${refs.modile}px) and (max-width: ${refs.desktopMax}px)`]: {
+          marginBottom: 0,
+          borderRight: `1px solid ${refs.secondaryBg}`,
+        },
+      },
+
+      '&:last-child': {
+        [`@media (min-width: ${refs.modile}px) and (max-width: ${refs.desktopMax}px)`]: {
+          paddingLeft: 20,
+        },
+      },
+
+      '&:first-child': {
         [`@media (min-width: ${refs.tablet}px) and (max-width: ${refs.desktopMax}px)`]: {
           paddingLeft: 20,
         },
       },
     },
-
-    '& section': {
-      width: '50%',
-
-      [`@media (min-width: ${refs.tablet}px) and (max-width: ${refs.desktop}px)`]: {
-        width: 190,
-      },
-
-      '&:not(:last-child)': {
-        // paddingRight: 30,
-
-        [`@media (max-width: ${refs.modileMax}px)`]: {
-          marginBottom: 30,
-        },
-
-        [`@media (min-width: ${refs.modile}px)`]: {
-          borderRight: `1px solid ${refs.secondatyBg}`,
-        },
-      },
-    },
+    // backgroundColor: 'skyblue',
 
     '& h2': {
       marginBottom: 20,
@@ -277,21 +234,35 @@ export default createUseStyles({
       [`@media (min-width: ${refs.modilePlus}px)`]: {
         fontSize: 26,
       },
+
+      [`@media (min-width: ${refs.desktop}px)`]: {
+        fontSize: 22,
+      },
     },
 
     '& ul': {
       '& li': {
-        marginBottom: 7,
         fontSize: 20,
         color: refs.secondaryWhiteColor,
+
+        [`@media (min-width: ${refs.desktop}px)`]: {
+          fontSize: 16,
+        },
+
+        '&:not(:last-child)': {
+          marginBottom: 7,
+        },
       },
     },
   },
 
   // About Me
   aboutMe: {
-    // [`@media (min-width: ${refs.desktop}px)`]: { width: 700 },
+    [`@media (min-width: ${refs.desktop}px)`]: {
+      paddingLeft: 50,
+      width: 550,
+    },
 
-    '& h1': { marginBottom: 140 },
+    // '& h1': { marginBottom: 140 },
   },
 });
