@@ -47,7 +47,7 @@ const SummaryContent = () => {
             <li>
               Phone:
               {tablet && !desktop && <br />}
-              <a href="tel:+380950000000">+38 (000) 000 0000</a>
+              <a href="tel:+380950000000">+38 (000) 525 5252</a>
             </li>
             <li>
               E-&nbsp;mail:
@@ -84,7 +84,7 @@ const SummaryContent = () => {
         </div>
 
         {desktop && (
-          <div className="widget">
+          <div className={s.downloadSummary}>
             <a href="./resume.zip" download>
               Скачать резюме
             </a>
@@ -94,7 +94,8 @@ const SummaryContent = () => {
 
       <div className={s.aboutMe}>
         {desktop && <TechIconList />}
-        <section>
+
+        <section className={s.enter}>
           {desktop && (
             <>
               <h1>Serhii Stanislav</h1>
@@ -111,7 +112,6 @@ const SummaryContent = () => {
 
         <section className="projects">
           <h2 className="projects-title">Projects</h2>
-
           <ul className="projects-list">
             <li>
               <a
@@ -142,7 +142,6 @@ const SummaryContent = () => {
 
         <section className="jobs">
           <h2 className="jobs-title">Employment history</h2>
-
           <h3 className="jobs-occupation">
             Front-end developer at <span className="accent">Freelance</span>
           </h3>

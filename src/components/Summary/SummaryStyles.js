@@ -5,9 +5,14 @@ export default createUseStyles({
   // Tech Icons
   TechIconList: {
     display: 'flex',
+    // backgroundColor: 'skyblue',
 
     [`@media (max-width: ${refs.desktopMax}px)`]: {
       justifyContent: 'center',
+    },
+
+    [`@media (min-width: ${refs.desktop}px)`]: {
+      marginBottom: 50,
     },
 
     '& li': {
@@ -51,12 +56,15 @@ export default createUseStyles({
     // backgroundColor: 'skyblue',
     [`@media (min-width: ${refs.desktop}px)`]: {
       display: 'flex',
+      justifyContent: 'center',
     },
     // backgroundColor: 'skyblue',
     // box-shadow: 5px 8.66px 20px 0px rgba(0, 0, 0, 0.15);
 
     // Aside
     '& aside': {
+      marginBottom: 30,
+
       [`@media (min-width: ${refs.tablet}px) and (max-width: ${refs.desktopMax}px)`]: {
         display: 'flex',
         flexWrap: 'wrap',
@@ -66,7 +74,7 @@ export default createUseStyles({
         paddingRight: 50,
         width: 320,
         borderRight: `1px solid ${refs.secondaryBg}`,
-        // backgroundColor: '#1e2939',
+        backgroundColor: '#1e2939',
       },
     },
   },
@@ -256,6 +264,12 @@ export default createUseStyles({
     },
   },
 
+  // Download Summary (div)
+  downloadSummary: {
+    // backgroundColor: 'skyblue',
+    padding: '30px 0',
+  },
+
   // About Me
   aboutMe: {
     [`@media (min-width: ${refs.desktop}px)`]: {
@@ -263,6 +277,69 @@ export default createUseStyles({
       width: 550,
     },
 
-    // '& h1': { marginBottom: 140 },
+    '& section': {
+      '&:not(:last-child)': {
+        marginBottom: 40,
+      },
+
+      '& h1': {
+        marginBottom: 10,
+      },
+
+      '& b': {
+        display: 'block',
+        marginBottom: 30,
+        fontSize: 22,
+        fontWeight: 500,
+        color: refs.secondaryWhiteColor,
+      },
+
+      '& h2': {
+        marginBottom: 20,
+      },
+
+      '& h3': {
+        marginBottom: 20,
+        lineHeight: 1.6,
+      },
+
+      '& ul': {
+        paddingLeft: 30,
+        marginBottom: 30,
+        listStyleType: 'disc',
+
+        '& li': {
+          marginBottom: 10,
+        },
+      },
+
+      '& p': {
+        marginBottom: 20,
+        lineHeight: 1.6,
+        // backgroundColor: 'skyblue',
+      },
+    },
   },
+
+  // Name (section)
+  // enter: {
+  //   '& h1': {
+  //     marginBottom: 10,
+  //   },
+
+  //   '& b': {
+  //     display: 'block',
+  //     marginBottom: 30,
+  //     fontSize: 22,
+  //     fontWeight: 500,
+  //     color: refs.secondaryWhiteColor,
+  //   },
+
+  //   // '& p': { backgroundColor: 'skyblue' },
+  // },
+
+  // '& h2': { backgroundColor: 'red' },
+  // '& h3': { backgroundColor: 'orange' },
+  // '& p': { backgroundColor: 'skyblue' },
+  // '& ul li': { backgroundColor: 'green', marginBottom: 40 },
 });
