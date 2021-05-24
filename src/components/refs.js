@@ -1,12 +1,12 @@
 export const refs = {
   // Viewport (Not to change)
-  modile: '375',
-  modilePlus: '414',
+  mobile: '375',
+  mobilePlus: '414',
   tablet: '768',
   desktop: '900',
 
-  modileMax: '374',
-  modilePlusMax: '413',
+  mobileMax: '374',
+  mobilePlusMax: '413',
   tabletMax: '767',
   desktopMax: '899',
 

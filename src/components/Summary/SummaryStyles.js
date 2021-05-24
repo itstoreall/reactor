@@ -30,12 +30,12 @@ export default createUseStyles({
       height: 30,
       fill: refs.primaryYellow,
 
-      [`@media (min-width: ${refs.modile}px)`]: {
+      [`@media (min-width: ${refs.mobile}px)`]: {
         width: 35,
         height: 35,
       },
 
-      [`@media (min-width: ${refs.modilePlus}px)`]: {
+      [`@media (min-width: ${refs.mobilePlus}px)`]: {
         width: 43,
         height: 43,
       },
@@ -74,7 +74,7 @@ export default createUseStyles({
         paddingRight: 50,
         width: 320,
         borderRight: `1px solid ${refs.secondaryBg}`,
-        backgroundColor: '#1e2939',
+        // backgroundColor: '#1e2939',
       },
     },
   },
@@ -84,19 +84,31 @@ export default createUseStyles({
     paddingBottom: 40,
     borderBottom: `1px solid ${refs.secondaryBg}`,
 
+    [`@media (min-width: ${refs.mobile}px)`]: {
+      minHeight: 460,
+    },
+
+    [`@media (min-width: ${refs.mobilePlus}px)`]: {
+      minHeight: 490,
+    },
+
     [`@media (min-width: ${refs.tablet}px) and (max-width: ${refs.desktopMax}px)`]: {
       paddingBottom: 60,
       width: '100%',
+      minHeight: 540,
     },
 
     '& img': {
       display: 'block',
       borderRadius: '50%',
-      // marginBottom: 30,
 
       [`@media (max-width: ${refs.desktopMax}px)`]: {
         margin: '0 auto 30px',
       },
+    },
+
+    [`@media (min-width: ${refs.desktop}px)`]: {
+      minHeight: 310,
     },
 
     '& h1': {
@@ -133,11 +145,11 @@ export default createUseStyles({
       fontSize: 20,
       fontWeight: 600,
 
-      [`@media (min-width: ${refs.modile}px)`]: {
+      [`@media (min-width: ${refs.mobile}px)`]: {
         fontSize: 24,
       },
 
-      [`@media (min-width: ${refs.modilePlus}px)`]: {
+      [`@media (min-width: ${refs.mobilePlus}px)`]: {
         fontSize: 26,
       },
 
@@ -158,11 +170,11 @@ export default createUseStyles({
           },
         },
 
-        [`@media (min-width: ${refs.modile}px)`]: {
+        [`@media (min-width: ${refs.mobile}px)`]: {
           fontSize: 20,
         },
 
-        [`@media (min-width: ${refs.modilePlus}px)`]: {
+        [`@media (min-width: ${refs.mobilePlus}px)`]: {
           fontSize: 22,
         },
 
@@ -194,7 +206,7 @@ export default createUseStyles({
     padding: '30px 0',
     borderBottom: `1px solid ${refs.secondaryBg}`,
 
-    [`@media (min-width: ${refs.modile}px) and (max-width: ${refs.desktopMax}px)`]: {
+    [`@media (min-width: ${refs.mobile}px) and (max-width: ${refs.desktopMax}px)`]: {
       display: 'flex',
 
       '& section': {
@@ -214,14 +226,14 @@ export default createUseStyles({
 
       '&:not(:last-child)': {
         marginBottom: 30,
-        [`@media (min-width: ${refs.modile}px) and (max-width: ${refs.desktopMax}px)`]: {
+        [`@media (min-width: ${refs.mobile}px) and (max-width: ${refs.desktopMax}px)`]: {
           marginBottom: 0,
           borderRight: `1px solid ${refs.secondaryBg}`,
         },
       },
 
       '&:last-child': {
-        [`@media (min-width: ${refs.modile}px) and (max-width: ${refs.desktopMax}px)`]: {
+        [`@media (min-width: ${refs.mobile}px) and (max-width: ${refs.desktopMax}px)`]: {
           paddingLeft: 20,
         },
       },
@@ -239,11 +251,11 @@ export default createUseStyles({
       fontSize: 22,
       fontWeight: 600,
 
-      [`@media (min-width: ${refs.modile}px)`]: {
+      [`@media (min-width: ${refs.mobile}px)`]: {
         fontSize: 24,
       },
 
-      [`@media (min-width: ${refs.modilePlus}px)`]: {
+      [`@media (min-width: ${refs.mobilePlus}px)`]: {
         fontSize: 26,
       },
 
@@ -339,26 +351,4 @@ export default createUseStyles({
       },
     },
   },
-
-  // Name (section)
-  // enter: {
-  //   '& h1': {
-  //     marginBottom: 10,
-  //   },
-
-  //   '& b': {
-  //     display: 'block',
-  //     marginBottom: 30,
-  //     fontSize: 22,
-  //     fontWeight: 500,
-  //     color: refs.secondaryWhiteColor,
-  //   },
-
-  //   // '& p': { backgroundColor: 'skyblue' },
-  // },
-
-  // '& h2': { backgroundColor: 'red' },
-  // '& h3': { backgroundColor: 'orange' },
-  // '& p': { backgroundColor: 'skyblue' },
-  // '& ul li': { backgroundColor: 'green', marginBottom: 40 },
 });

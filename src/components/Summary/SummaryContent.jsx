@@ -15,8 +15,8 @@ const SummaryContent = () => {
     return `(min-width:${width}px) `;
   };
 
-  const modilePlusMax = useMediaQuery(handleMaxWidth(refs.modilePlusMax));
-  const modilePlus = useMediaQuery(handleMinWidth(refs.modilePlus));
+  const mobilePlusMax = useMediaQuery(handleMaxWidth(refs.mobilePlusMax));
+  const mobilePlus = useMediaQuery(handleMinWidth(refs.mobilePlus));
   const tablet = useMediaQuery(handleMinWidth(refs.tablet));
   const desktopMax = useMediaQuery(handleMaxWidth(refs.desktopMax));
   const desktop = useMediaQuery(handleMinWidth(refs.desktop));
@@ -25,9 +25,9 @@ const SummaryContent = () => {
     <div className={s.SummaryContent}>
       <aside>
         <section className={s.avatar}>
-          {modilePlusMax ? (
+          {mobilePlusMax ? (
             <img src={photo} alt="Serhii Stanislav" width="250" height="250" />
-          ) : modilePlus ? (
+          ) : mobilePlus ? (
             <img src={photo} alt="Serhii Stanislav" width="270" height="270" />
           ) : null}
 

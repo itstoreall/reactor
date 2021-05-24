@@ -11,19 +11,19 @@ export default createUseStyles({
       '& > li': {
         maxWidth: 450,
 
-        [`@media (max-width: 767px)`]: {
+        [`@media (max-width: ${refs.tabletMax}px)`]: {
           '&:not(:last-child)': {
-            marginBottom: 75,
+            marginBottom: 50,
           },
         },
 
-        [`@media (min-width: ${refs.tablet}px) and (max-width: 899px)`]: {
+        [`@media (min-width: ${refs.tablet}px) and (max-width: ${refs.desktopMax}px)`]: {
           marginBottom: 0,
           width: 'calc(50% - 15px)',
           maxWidth: 354,
 
           '&:not(:nth-last-child(-n + 2))': {
-            marginBottom: 30,
+            marginBottom: 40,
           },
         },
 
@@ -32,7 +32,7 @@ export default createUseStyles({
           maxWidth: 370,
 
           '&:not(:nth-last-child(-n + 3))': {
-            marginBottom: 30,
+            marginBottom: 40,
           },
         },
       },
