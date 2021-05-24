@@ -111,71 +111,37 @@ const SummaryContent = () => {
         </section>
 
         <section className="projects">
-          <h2 className="projects-title">Projects</h2>
-          <ul className="projects-list">
+          <h2>Projects</h2>
+          <ul>
             <li>
-              <a
-                href="https://itstoreall.github.io/goit-react-hw-09-phonebook/#/"
-                className="projects-link"
-              >
-                Phonebook
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://its-react-movies.netlify.app/"
-                className="projects-link"
-              >
-                Movies
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://itstoreall.github.io/goit-react-hw-03-image-finder/"
-                className="projects-link"
-              >
-                Image finder
+              <a href="reactor#/applications" target="_blank">
+                See projects
               </a>
             </li>
           </ul>
         </section>
 
         <section className="jobs">
-          <h2 className="jobs-title">Employment history</h2>
-          <h3 className="jobs-occupation">
-            Front-end developer at <span className="accent">Freelance</span>
+          <h2>Employment history</h2>
+          <h3>
+            Front-end developer at <span>Freelance</span>
           </h3>
-          <p className="jobs-time">September 2019 - up to now</p>
-          <ul className="experience">
-            <li className="experience-item">Lorem ipsum dolor sit amet.</li>
-            <li className="experience-item">
-              Quaerat corrupti eum harum eveniet?
-            </li>
-            <li className="experience-item">Sit quasi libero facilis ea?</li>
+          <p>September 2020 - up to now</p>
+          <ul>
+            <li>Website development</li>
+            <li>SPA development (React/Redux)</li>
+            <li>REST API</li>
+            <li>Teamwork</li>
           </ul>
 
           <h3 className="jobs-occupation">
-            Front-end developer at <span className="accent">Freelance</span>
+            Web Designer at <span>Freelance</span>
           </h3>
-          <p className="jobs-time">September 2019 - up to now</p>
-          <ul className="experience">
-            <li className="experience-item">Lorem ipsum dolor sit amet.</li>
-            <li className="experience-item">
-              Quaerat corrupti eum harum eveniet?
-            </li>
-            <li className="experience-item">Sit quasi libero facilis ea?</li>
-          </ul>
-
-          <h3 className="jobs-occupation">
-            Front-end developer at <span className="accent">Freelance</span>
-          </h3>
-          <p className="jobs-time">September 2019 - up to now</p>
-          <ul className="experience">
-            <li className="experience-item">Lorem ipsum dolor sit amet.</li>
-            <li className="experience-item">
-              Quaerat corrupti eum harum eveniet?
-            </li>
-            <li className="experience-item">Sit quasi libero facilis ea?</li>
+          <p>December 2014 - August 2020</p>
+          <ul>
+            <li>Landing page development</li>
+            <li>Website development (Adobe Muse)</li>
+            <li>HTML/CSS layout</li>
           </ul>
         </section>
 
@@ -200,6 +166,12 @@ const SummaryContent = () => {
             Basic HTML/CSS, <span>GoIT Course</span>
           </h3>
           <p>May - August 2020</p>
+
+          <h3>
+            Web Design (Adobe Muse),{' '}
+            <span>Computer Academy «Kademika» Course</span>
+          </h3>
+          <p>October - January 2016</p>
 
           <h3>
             Practical psychology,{' '}

@@ -180,6 +180,10 @@ export default createUseStyles({
             paddingLeft: 0,
             fontSize: 20,
           },
+
+          '&:hover': {
+            color: refs.primaryWhiteColor,
+          },
         },
       },
     },
@@ -268,6 +272,10 @@ export default createUseStyles({
   downloadSummary: {
     // backgroundColor: 'skyblue',
     padding: '30px 0',
+
+    '& a:hover': {
+      color: refs.primaryWhiteColor,
+    },
   },
 
   // About Me
@@ -324,6 +332,10 @@ export default createUseStyles({
         lineHeight: 1.6,
         color: refs.secondaryWhiteColor,
         // backgroundColor: 'skyblue',
+      },
+
+      '& a:hover': {
+        color: refs.primaryWhiteColor,
       },
     },
   },
