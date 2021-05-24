@@ -180,20 +180,39 @@ const SummaryContent = () => {
         </section>
 
         <section className="education">
-          <h2 className="education-title">Education</h2>
+          <h2>Education</h2>
+          <h3>
+            Node.js , <span>GoIT Course</span>
+          </h3>
+          <p>April - June 2021</p>
 
-          <h3 className="education-degree">
-            Management,
-            <span className="accent">
-              Kharkiv National University of Radioelectronics
+          <h3>
+            React , <span>GoIT Course</span>
+          </h3>
+          <p>January - April 2021</p>
+
+          <h3>
+            Basic JavaScript , <span>GoIT Course</span>
+          </h3>
+          <p>September - December 2020</p>
+
+          <h3>
+            Basic HTML/CSS, <span>GoIT Course</span>
+          </h3>
+          <p>May - August 2020</p>
+
+          <h3>
+            Practical psychology,{' '}
+            <span>
+              Open International University of Human Development «Ukraine»
             </span>
           </h3>
-          <p className="education-time">Septermber 2009 - June 2014</p>
+          <p>Septermber 2006 - June 2011</p>
 
-          <h3 className="education-degree">
-            Full Stack Developer, <span className="accent">GoIT Courses</span>
+          <h3>
+            Computer graphics design, <span>Pro Course</span>
           </h3>
-          <p className="education-time">April - November 2020</p>
+          <p>June - August 2004</p>
         </section>
       </div>
     </div>

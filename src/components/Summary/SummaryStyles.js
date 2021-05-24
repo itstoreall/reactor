@@ -299,14 +299,20 @@ export default createUseStyles({
       },
 
       '& h3': {
-        marginBottom: 20,
-        lineHeight: 1.6,
+        marginBottom: 10,
+        lineHeight: 1.4,
+        fontWeight: 600,
+
+        '& span': {
+          color: refs.primaryColor,
+        },
       },
 
       '& ul': {
         paddingLeft: 30,
         marginBottom: 30,
         listStyleType: 'disc',
+        color: refs.secondaryWhiteColor,
 
         '& li': {
           marginBottom: 10,
@@ -316,6 +322,7 @@ export default createUseStyles({
       '& p': {
         marginBottom: 20,
         lineHeight: 1.6,
+        color: refs.secondaryWhiteColor,
         // backgroundColor: 'skyblue',
       },
     },
