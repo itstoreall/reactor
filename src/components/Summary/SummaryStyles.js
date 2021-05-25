@@ -22,6 +22,10 @@ export default createUseStyles({
         [`@media (min-width: ${refs.tablet}px) and (max-width: ${refs.desktopMax}px)`]: {
           marginRight: 25,
         },
+
+        [`@media (min-width: ${refs.desktop}px)`]: {
+          marginRight: 20,
+        },
       },
     },
 

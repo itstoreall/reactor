@@ -103,10 +103,9 @@ const SummaryContent = () => {
             </>
           )}
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet odio
-            adipisci illo, earum atque quae, sequi magni consectetur sit
-            perferendis sunt laborum ipsum quas. A incidunt temporibus aut harum
-            ad.
+            Hello! I write code and improve my skills every day. Today I am
+            looking for a developer job for remote work. I would like to be part
+            of the team to create cool projects
           </p>
         </section>
 
@@ -139,8 +138,8 @@ const SummaryContent = () => {
           </h3>
           <p>December 2014 - August 2020</p>
           <ul>
-            <li>Landing page development</li>
-            <li>Website development (Adobe Muse)</li>
+            <li>Website development (Webflow)</li>
+            <li>Landing page development (Adobe Muse)</li>
             <li>HTML/CSS layout</li>
           </ul>
         </section>
@@ -148,7 +147,7 @@ const SummaryContent = () => {
         <section className="education">
           <h2>Education</h2>
           <h3>
-            Node.js , <span>GoIT Course</span>
+            Node.js (Basic) , <span>GoIT Course</span>
           </h3>
           <p>April - June 2021</p>
 
@@ -158,12 +157,12 @@ const SummaryContent = () => {
           <p>January - April 2021</p>
 
           <h3>
-            Basic JavaScript , <span>GoIT Course</span>
+            JavaScript (Basic) , <span>GoIT Course</span>
           </h3>
           <p>September - December 2020</p>
 
           <h3>
-            Basic HTML/CSS, <span>GoIT Course</span>
+            HTML/CSS (Basic), <span>GoIT Course</span>
           </h3>
           <p>May - August 2020</p>
 

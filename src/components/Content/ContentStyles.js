@@ -6,16 +6,26 @@ export default createUseStyles({
     padding: 15,
     margin: '0 auto',
 
-    [`@media (max-width: 767px)`]: {
-      maxWidth: 450,
+    [`@media (min-width: ${refs.mobile}px)`]: {
+      width: 375,
+    },
+
+    [`@media (min-width: ${refs.mobilePlus}px)`]: {
+      width: 414,
     },
 
     [`@media (min-width: ${refs.tablet}px)`]: {
       padding: 30,
-      maxWidth: 768,
+      width: 768,
     },
 
     [`@media (min-width: ${refs.desktop}px)`]: {
+      width: '100%',
+      maxWidth: 900,
+    },
+
+    [`@media (min-width: ${refs.desktopBig}px)`]: {
+      width: '100%',
       maxWidth: 1200,
     },
   },

@@ -2,15 +2,16 @@ import { createUseStyles } from 'react-jss';
 import { refs } from '../refs';
 
 export default createUseStyles({
+  // Applications (div)
   Applications: {
+    // backgroundColor: 'skyblue',
+
     '& > ul': {
       display: 'flex',
       flexWrap: 'wrap',
-      justifyContent: 'space-between',
+      // justifyContent: 'space-between',
 
       '& > li': {
-        maxWidth: 450,
-
         [`@media (max-width: ${refs.tabletMax}px)`]: {
           '&:not(:last-child)': {
             marginBottom: 50,
@@ -20,7 +21,11 @@ export default createUseStyles({
         [`@media (min-width: ${refs.tablet}px) and (max-width: ${refs.desktopMax}px)`]: {
           marginBottom: 0,
           width: 'calc(50% - 15px)',
-          maxWidth: 354,
+          // maxWidth: 354,
+
+          '&:not(:nth-child(2n))': {
+            marginRight: 30,
+          },
 
           '&:not(:nth-last-child(-n + 2))': {
             marginBottom: 40,
@@ -29,10 +34,21 @@ export default createUseStyles({
 
         [`@media (min-width: ${refs.desktop}px)`]: {
           width: 'calc(33% - 15px)',
-          maxWidth: 370,
+
+          '&:not(:nth-child(3n))': {
+            marginRight: 26,
+          },
 
           '&:not(:nth-last-child(-n + 3))': {
             marginBottom: 40,
+          },
+        },
+
+        [`@media (min-width: ${refs.desktopBig}px)`]: {
+          width: 'calc(33% - 15px)',
+
+          '&:not(:nth-child(3n))': {
+            marginRight: 27,
           },
         },
       },
@@ -44,6 +60,26 @@ export default createUseStyles({
     position: 'relative',
     overflow: 'hidden',
     marginBottom: 15,
+
+    [`@media (min-width: ${refs.mobile}px)`]: {
+      height: 189,
+    },
+
+    [`@media (min-width: ${refs.mobilePlus}px)`]: {
+      height: 210,
+    },
+
+    [`@media (min-width: ${refs.tablet}px)`]: {
+      height: 185,
+    },
+
+    [`@media (min-width: ${refs.desktop}px)`]: {
+      height: 143,
+    },
+
+    [`@media (min-width: ${refs.desktopBig}px)`]: {
+      height: 197,
+    },
 
     '& img': {
       display: 'block',

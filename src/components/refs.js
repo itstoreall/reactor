@@ -4,6 +4,7 @@ export const refs = {
   mobilePlus: '414',
   tablet: '768',
   desktop: '900',
+  desktopBig: '1200',
 
   mobileMax: '374',
   mobilePlusMax: '413',
