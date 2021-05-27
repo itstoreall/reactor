@@ -3,11 +3,11 @@ import { lazy } from 'react';
 const HomeView = lazy(() =>
   import('../views/HomeView' /*webpackChunkName: 'Home'*/),
 );
-const SummaryView = lazy(() =>
-  import('../views/SummaryView' /*webpackChunkName: 'Summary'*/),
+const ResumeView = lazy(() =>
+  import('../views/ResumeView' /*webpackChunkName: 'Resume'*/),
 );
-const ApplicationView = lazy(() =>
-  import('../views/ApplicationView' /*webpackChunkName: 'Applications'*/),
+const PortfolioView = lazy(() =>
+  import('../views/PortfolioView' /*webpackChunkName: 'Portfolio'*/),
 );
 const ContactsView = lazy(() =>
   import('../views/ContactView' /*webpackChunkName: 'Contacts'*/),
@@ -22,15 +22,15 @@ export const routes = [
     showInMenu: true,
   },
   {
-    path: '/summary',
-    label: 'Summary',
-    component: SummaryView,
+    path: '/resume',
+    label: 'Resume',
+    component: ResumeView,
     showInMenu: true,
   },
   {
-    path: '/applications',
-    label: 'Applications',
-    component: ApplicationView,
+    path: '/portfolio',
+    label: 'Portfolio',
+    component: PortfolioView,
     showInMenu: true,
   },
   {

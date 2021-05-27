@@ -9,11 +9,7 @@ const Content = ({ visible }) => {
 
   return (
     <div className={visible ? s.NavMenu : s.Content}>
-      <Suspense
-        fallback={
-          <p className={s.Loading}>......................... Suspense</p>
-        }
-      >
+      <Suspense fallback={<p className={s.Loading}>LOADING...</p>}>
         <Switch>
           {routes.map(({ path, exact, component: Component }) => (
             <Route key={path} path={path} exact={exact} component={Component} />

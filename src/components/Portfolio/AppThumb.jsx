@@ -3,7 +3,7 @@
 import PropTypes from 'prop-types';
 import images from './images';
 
-const ApplicationThumb = ({ s, src, alt, hoverText }) => {
+const AppThumb = ({ s, src, alt, hoverText }) => {
   return (
     <div className={s.thumb}>
       <picture>
@@ -59,11 +59,11 @@ const ApplicationThumb = ({ s, src, alt, hoverText }) => {
   );
 };
 
-ApplicationThumb.propTypes = {
+AppThumb.propTypes = {
   s: PropTypes.object.isRequired,
   src: PropTypes.arrayOf(PropTypes.string).isRequired,
   alt: PropTypes.string.isRequired,
   hoverText: PropTypes.string.isRequired,
 };
 
-export default ApplicationThumb;
+export default AppThumb;

@@ -1,5 +1,5 @@
 import TechIconItem from './TechIconItem';
-import useStyles from './SummaryStyles';
+import useStyles from './ResumeStyles';
 
 const TechIconList = () => {
   const techIcons = ['#react', '#redux', '#nodejs', '#js', '#sass', '#html'];

@@ -1,9 +1,9 @@
-import useStyles from './ApplicationStyles';
-import ApplicationThumb from './ApplicationThumb';
-import ApplicationMeta from './ApplicationMeta';
+import useStyles from './PortfolioStyles';
+import AppThumb from './AppThumb';
+import AppMeta from './AppMeta';
 import { apps } from './apps.json';
 
-const Applications = () => {
+const Portfolio = () => {
   const s = useStyles();
 
   return (
@@ -13,13 +13,8 @@ const Applications = () => {
           ({ id, src, alt, title, description, overlayText, page, source }) => (
             <li key={id}>
               <div className={s.appItem}>
-                <ApplicationThumb
-                  s={s}
-                  src={src}
-                  alt={alt}
-                  hoverText={overlayText}
-                />
-                <ApplicationMeta
+                <AppThumb s={s} src={src} alt={alt} hoverText={overlayText} />
+                <AppMeta
                   s={s}
                   title={title}
                   description={description}
@@ -35,4 +30,4 @@ const Applications = () => {
   );
 };
 
-export default Applications;
+export default Portfolio;

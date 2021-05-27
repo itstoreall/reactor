@@ -2,7 +2,7 @@ import { useMediaQuery } from '@material-ui/core';
 import photo from './serhiistanislav_900.jpg';
 import { refs } from '../refs';
 import TechIconList from './TechIconList';
-import useStyles from './SummaryStyles';
+import useStyles from './ResumeStyles';
 
 const SummaryContent = () => {
   const s = useStyles();
@@ -85,7 +85,7 @@ const SummaryContent = () => {
 
         {desktop && (
           <div className={s.downloadSummary}>
-            <a href="./resume.zip" download>
+            <a href="https://fs13.fex.net:443/download/3355547970" download>
               Скачать резюме
             </a>
           </div>

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const ApplicationMeta = ({ s, title, description, page, source }) => {
+const AppMeta = ({ s, title, description, page, source }) => {
   return (
     <div className={s.meta}>
       <h3>{title}</h3>
@@ -15,11 +15,11 @@ const ApplicationMeta = ({ s, title, description, page, source }) => {
   );
 };
 
-ApplicationMeta.propTypes = {
+AppMeta.propTypes = {
   s: PropTypes.object.isRequired,
   title: PropTypes.string.isRequired,
   page: PropTypes.string.isRequired,
   source: PropTypes.string.isRequired,
 };
 
-export default ApplicationMeta;
+export default AppMeta;

@@ -50,6 +50,14 @@ export default createUseStyles({
   },
 
   Loading: {
-    color: 'tomato',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '100%',
+    height: 'calc(100vh - 180px)',
+    fontSize: 18,
+    fontWeight: 600,
+    letterSpacing: 3,
+    color: refs.primaryColor,
   },
 });
