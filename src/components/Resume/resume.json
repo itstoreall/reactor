@@ -1,0 +1,77 @@
+{
+  "avatar": {
+    "name": "Serhii Stanislav",
+    "position": "Front-end developer"
+  },
+  "contacts": {
+    "phone": "+38 (000) 525 5252",
+    "phone_href": "tel:+380950000000",
+    "email": "serhiistanislav@gmail.com",
+    "email_href": "mailto:serhiistanislav@gmail.com"
+  },
+  "skills": {
+    "tech": ["HTML", "CSS", "Git", "JavaScript", "React", "Node.js"],
+    "soft": ["Scrum", "Agile", "GTD", "Teamwork"]
+  },
+  "summary": "Hello! I write code and improve my skills every day. Today I am looking for a developer job for remote work. I would like to be part of the team to create cool projects",
+  "jobs": [
+    {
+      "position": "Front-end developer",
+      "company": "at Freelance",
+      "date": "September 2020 - up to now",
+      "specialization": [
+        "Website development",
+        "SPA development (React/Redux)",
+        "REST API",
+        "Teamwork"
+      ]
+    },
+    {
+      "position": "Web Designer",
+      "company": "at Freelance",
+      "date": "December 2014 - August 2020",
+      "specialization": [
+        "Website development (Webflow)",
+        "Landing page development (Adobe Muse)",
+        "HTML/CSS layout"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "subject": "Node.js (Basic)",
+      "institute": "GoIT Course",
+      "date": "April - June 2021"
+    },
+    {
+      "subject": "React",
+      "institute": "GoIT Course",
+      "date": "January - April 2021"
+    },
+    {
+      "subject": "JavaScript (Basic)",
+      "institute": "GoIT Course",
+      "date": "September - December 2020"
+    },
+    {
+      "subject": "HTML/CSS (Basic)",
+      "institute": "GoIT Course",
+      "date": "May - August 2020"
+    },
+    {
+      "subject": "Web Design (Adobe Muse)",
+      "institute": "Computer Academy «Kademika» Course",
+      "date": "Septermber 2006 - June 2011"
+    },
+    {
+      "subject": "Practical psychology",
+      "institute": "Open International University of Human Development «Ukraine»",
+      "date": "Septermber 2006 - June 2011"
+    },
+    {
+      "subject": "Computer graphics design",
+      "institute": "Pro Course",
+      "date": "June - August 2004"
+    }
+  ]
+}

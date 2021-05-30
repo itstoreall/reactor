@@ -87,6 +87,7 @@ export default createUseStyles({
   avatar: {
     paddingBottom: 40,
     borderBottom: `1px solid ${refs.secondaryBg}`,
+    // backgroundColor: '#1e2939',
 
     [`@media (min-width: ${refs.mobile}px)`]: {
       minHeight: 460,
@@ -284,8 +285,8 @@ export default createUseStyles({
     },
   },
 
-  // Download Summary (div)
-  downloadSummary: {
+  // Download Resume (div)
+  downloadResume: {
     // backgroundColor: 'skyblue',
     padding: '30px 0',
 
