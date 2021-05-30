@@ -96,8 +96,9 @@ export default createUseStyles({
       position: 'absolute',
       top: 0,
       left: 0,
-      display: 'flex',
-      alignItems: 'center',
+      // display: 'flex',
+      // alignItems: 'center',
+      padding: 30,
       width: '100%',
       height: '100%',
       backgroundColor: refs.primaryYellow,
@@ -106,11 +107,20 @@ export default createUseStyles({
       transition:
         'transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1)',
       opacity: 0,
+      overflow: 'scroll',
+
+      '& h3': {
+        display: 'block',
+        color: refs.darkColor,
+        // paddingLeft: 30,
+        paddingBottom: 10,
+      },
 
       // Text inside overlay
-      '& p': {
-        paddingLeft: 30,
-        paddingRight: 30,
+      '& span': {
+        display: 'block',
+        // paddingLeft: 30,
+        // paddingRight: 30,
         paddingBottom: 10,
         fontSize: 14,
         lineHeight: 1.4,
@@ -123,7 +133,7 @@ export default createUseStyles({
     },
 
     // Text inside hovered overlay
-    '&:hover p': {
+    '&:hover span': {
       opacity: 1,
     },
   },

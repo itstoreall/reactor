@@ -10,7 +10,7 @@ import ContentJobs from './ContentJobs';
 import ContentEducation from './ContentEducation';
 import TechIconList from './TechIconList';
 import useStyles from './ResumeStyles';
-import resume from './resume.json';
+import resumeInfo from './resume_info.json';
 
 const SummaryContent = () => {
   const s = useStyles();
@@ -35,19 +35,23 @@ const SummaryContent = () => {
           mobilePlusMax={mobilePlusMax}
           mobilePlus={mobilePlus}
           desktopMax={desktopMax}
-          resume={resume}
+          resume={resumeInfo}
         />
-        <ContentContacts tablet={tablet} desktop={desktop} resume={resume} />
-        <ContentSkills resume={resume} />
+        <ContentContacts
+          tablet={tablet}
+          desktop={desktop}
+          resume={resumeInfo}
+        />
+        <ContentSkills resume={resumeInfo} />
         {desktop && <DownloadResume />}
       </aside>
 
       <div className={s.aboutMe}>
         {desktop && <TechIconList />}
-        <ContentSummary desktop={desktop} resume={resume} />
+        <ContentSummary desktop={desktop} resume={resumeInfo} />
         <ContentProjects />
-        <ContentJobs resume={resume} />
-        <ContentEducation resume={resume} />
+        <ContentJobs resume={resumeInfo} />
+        <ContentEducation resume={resumeInfo} />
       </div>
     </div>
   );

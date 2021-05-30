@@ -13,7 +13,7 @@ const Portfolio = () => {
           ({ id, src, alt, title, description, overlayText, page, source }) => (
             <li key={id}>
               <div className={s.appItem}>
-                <AppThumb s={s} src={src} alt={alt} hoverText={overlayText} />
+                <AppThumb s={s} src={src} alt={alt} overlayText={overlayText} />
                 <AppMeta
                   s={s}
                   title={title}

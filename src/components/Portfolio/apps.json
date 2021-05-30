@@ -6,7 +6,24 @@
       "alt": "Phonebook application",
       "title": "Phonebook",
       "description": "About the application",
-      "overlayText": "Это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов",
+      "overlayText": [
+        "axios",
+        "eslint",
+        "gh-pages",
+        "json-server",
+        "material-ui",
+        "modern-normalize",
+        "node-sass",
+        "prettier",
+        "prop-types",
+        "react-redux",
+        "react-router-dom",
+        "redux",
+        "redux-devtools-extension",
+        "redux-logger",
+        "redux toolkit",
+        "reselect (from toolkit)"
+      ],
       "page": "https://itstoreall.github.io/goit-react-hw-09-phonebook/#/",
       "source": "https://github.com/itstoreall/goit-react-hw-09-phonebook",
       "src": [
@@ -30,7 +47,7 @@
       "alt": "Movies application",
       "title": "Movies",
       "description": "About the application",
-      "overlayText": "Это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов",
+      "overlayText": [],
       "page": "https://its-react-movies.netlify.app/",
       "source": "https://github.com/itstoreall/goit-react-hw-04-movies",
       "src": [
@@ -54,7 +71,7 @@
       "alt": "Todos application",
       "title": "Todos",
       "description": "About the application",
-      "overlayText": "Это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов",
+      "overlayText": [],
       "page": "https://itstoreall.github.io/todos/#/",
       "source": "https://github.com/itstoreall/todos",
       "src": [
@@ -78,7 +95,7 @@
       "alt": "Image finder application",
       "title": "Image finder",
       "description": "About the application",
-      "overlayText": "Это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов",
+      "overlayText": [],
       "page": "https://itstoreall.github.io/goit-react-hw-03-image-finder/",
       "source": "https://github.com/itstoreall/goit-react-hw-03-image-finder",
       "src": [
@@ -102,7 +119,7 @@
       "alt": "Feedback application",
       "title": "Feedback",
       "description": "About the application",
-      "overlayText": "Это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов",
+      "overlayText": [],
       "page": "https://itstoreall.github.io/goit-react-hw-03-image-finder/",
       "source": "https://github.com/itstoreall/goit-react-hw-03-image-finder",
       "src": [
@@ -126,7 +143,7 @@
       "alt": "Oktotrade - business card website",
       "title": "Business card website",
       "description": "About the website",
-      "overlayText": "Это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов",
+      "overlayText": [],
       "page": "https://itstoreall.github.io/oktotrade/",
       "source": "https://github.com/itstoreall/oktotrade",
       "src": [

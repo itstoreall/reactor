@@ -3,7 +3,7 @@
 import PropTypes from 'prop-types';
 import images from './images';
 
-const AppThumb = ({ s, src, alt, hoverText }) => {
+const AppThumb = ({ s, src, alt, overlayText }) => {
   return (
     <div className={s.thumb}>
       <picture>
@@ -53,7 +53,12 @@ const AppThumb = ({ s, src, alt, hoverText }) => {
       </picture>
 
       <div>
-        <p>{hoverText}</p>
+        <h3>Used:</h3>
+        {overlayText.map(el => (
+          <span key={el}>{el}</span>
+        ))}
+
+        {/* <p>{hoverText}</p> */}
       </div>
     </div>
   );
@@ -63,7 +68,7 @@ AppThumb.propTypes = {
   s: PropTypes.object.isRequired,
   src: PropTypes.arrayOf(PropTypes.string).isRequired,
   alt: PropTypes.string.isRequired,
-  hoverText: PropTypes.string.isRequired,
+  overlayText: PropTypes.array.isRequired,
 };
 
 export default AppThumb;
