@@ -3,7 +3,7 @@
 import PropTypes from 'prop-types';
 import images from './images';
 
-const AppThumb = ({ s, src, alt, overlayText }) => {
+const AppThumb = ({ s, src, alt, requires, overlayText }) => {
   return (
     <div className={s.thumb}>
       <picture>
@@ -53,10 +53,13 @@ const AppThumb = ({ s, src, alt, overlayText }) => {
       </picture>
 
       <div>
-        <h3>Used:</h3>
-        {overlayText.map(el => (
-          <span key={el}>{el}</span>
-        ))}
+        <h3>Used in the project:</h3>
+        {requires !== '' && <b>{requires}</b>}
+        <ul>
+          {overlayText.map(el => (
+            <li key={el}>{el}</li>
+          ))}
+        </ul>
 
         {/* <p>{hoverText}</p> */}
       </div>

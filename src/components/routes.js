@@ -1,26 +1,26 @@
 import { lazy } from 'react';
 
-const HomeView = lazy(() =>
-  import('../views/HomeView' /*webpackChunkName: 'Home'*/),
-);
+// const HomeView = lazy(() =>
+//   import('../views/HomeView' /*webpackChunkName: 'Home'*/),
+// );
 const ResumeView = lazy(() =>
   import('../views/ResumeView' /*webpackChunkName: 'Resume'*/),
 );
 const PortfolioView = lazy(() =>
   import('../views/PortfolioView' /*webpackChunkName: 'Portfolio'*/),
 );
-const ContactsView = lazy(() =>
-  import('../views/ContactView' /*webpackChunkName: 'Contacts'*/),
-);
+// const ContactsView = lazy(() =>
+//   import('../views/ContactView' /*webpackChunkName: 'Contacts'*/),
+// );
 
 export const routes = [
-  {
-    path: '/',
-    label: 'Home',
-    component: HomeView,
-    exact: true,
-    showInMenu: true,
-  },
+  // {
+  //   path: '/',
+  //   label: 'Home',
+  //   component: HomeView,
+  //   exact: true,
+  //   showInMenu: false,
+  // },
   {
     path: '/resume',
     label: 'Resume',
@@ -33,10 +33,10 @@ export const routes = [
     component: PortfolioView,
     showInMenu: true,
   },
-  {
-    path: '/contacts',
-    label: 'Contacts',
-    component: ContactsView,
-    showInMenu: true,
-  },
+  // {
+  //   path: '/contacts',
+  //   label: 'Contacts',
+  //   component: ContactsView,
+  //   showInMenu: false,
+  // },
 ];

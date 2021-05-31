@@ -14,7 +14,7 @@ const Content = ({ visible }) => {
           {routes.map(({ path, exact, component: Component }) => (
             <Route key={path} path={path} exact={exact} component={Component} />
           ))}
-          <Redirect to="/" />
+          <Redirect to="/resume" />
         </Switch>
       </Suspense>
     </div>

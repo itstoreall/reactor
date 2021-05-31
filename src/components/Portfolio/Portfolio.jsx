@@ -10,10 +10,26 @@ const Portfolio = () => {
     <div className={s.Applications}>
       <ul>
         {apps.map(
-          ({ id, src, alt, title, description, overlayText, page, source }) => (
+          ({
+            id,
+            src,
+            alt,
+            title,
+            description,
+            requires,
+            overlayText,
+            page,
+            source,
+          }) => (
             <li key={id}>
               <div className={s.appItem}>
-                <AppThumb s={s} src={src} alt={alt} overlayText={overlayText} />
+                <AppThumb
+                  s={s}
+                  src={src}
+                  alt={alt}
+                  requires={requires}
+                  overlayText={overlayText}
+                />
                 <AppMeta
                   s={s}
                   title={title}

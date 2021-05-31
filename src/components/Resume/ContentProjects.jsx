@@ -4,7 +4,7 @@ const ContentProjects = () => {
       <h2>Projects</h2>
       <ul>
         <li>
-          <a href="reactor#/portfolio" target="_blank">
+          <a href="#/portfolio" target="_blank">
             See projects
           </a>
         </li>

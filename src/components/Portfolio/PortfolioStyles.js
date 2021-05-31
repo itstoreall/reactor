@@ -14,7 +14,7 @@ export default createUseStyles({
       '& > li': {
         [`@media (max-width: ${refs.tabletMax}px)`]: {
           '&:not(:last-child)': {
-            marginBottom: 50,
+            marginBottom: 60,
           },
         },
 
@@ -111,29 +111,43 @@ export default createUseStyles({
 
       '& h3': {
         display: 'block',
+        paddingBottom: 15,
+        fontSize: 20,
         color: refs.darkColor,
-        // paddingLeft: 30,
-        paddingBottom: 10,
+      },
+
+      '& b': {
+        display: 'block',
+        // paddingBottom: 15,
+        marginBottom: 15,
+        fontSize: 14,
+        color: 'red',
       },
 
       // Text inside overlay
-      '& span': {
-        display: 'block',
-        // paddingLeft: 30,
+      '& ul': {
+        // backgroundColor: 'skyblue',
+        // display: 'block',
+        paddingLeft: 20,
         // paddingRight: 30,
-        paddingBottom: 10,
-        fontSize: 14,
-        lineHeight: 1.4,
+        // paddingBottom: 10,
+        listStyle: 'disc',
+        fontSize: 16,
+        // lineHeight: 1.4,
         color: refs.darkColor,
         transform: 'opacity',
         transition: 'opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 100ms',
         opacity: 0,
-        cursor: 'default',
+        // cursor: 'default',
+
+        '& li': {
+          marginBottom: 7,
+        },
       },
     },
 
     // Text inside hovered overlay
-    '&:hover span': {
+    '&:hover ul': {
       opacity: 1,
     },
   },
@@ -150,12 +164,17 @@ export default createUseStyles({
     },
 
     '& p': {
-      marginBottom: 15,
-      fontSize: 18,
-      color: refs.primaryColor,
+      marginBottom: 10,
+      fontSize: 16,
+      lineHeight: 1.6,
+      color: refs.secondaryWhiteColor,
 
       [`@media (min-width: ${refs.tablet}px)`]: {
         fontSize: 14,
+      },
+
+      [`@media (min-width: ${refs.desktop}px)`]: {
+        lineHeight: 1.4,
       },
     },
 

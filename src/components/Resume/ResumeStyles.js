@@ -118,6 +118,7 @@ export default createUseStyles({
 
     '& h1': {
       marginBottom: 10,
+      fontWeight: 600,
       textAlign: 'center',
     },
 
@@ -309,6 +310,7 @@ export default createUseStyles({
 
       '& h1': {
         marginBottom: 10,
+        fontWeight: 600,
       },
 
       '& b': {
@@ -321,6 +323,8 @@ export default createUseStyles({
 
       '& h2': {
         marginBottom: 20,
+        // fontSize: 20,
+        fontWeight: 600,
       },
 
       '& h3': {
