@@ -1,6 +1,10 @@
+import useStyles from './ResumeStyles';
+
 const ContentEducation = ({ resume }) => {
+  const s = useStyles();
+
   return (
-    <section>
+    <section className={s.education}>
       <h2>Education</h2>
       {resume.education.map(({ subject, institute, date }) => (
         <div key={subject}>

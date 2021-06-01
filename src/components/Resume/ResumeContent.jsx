@@ -8,6 +8,7 @@ import ContentSummary from './ContentSummary';
 import ContentProjects from './ContentProjects';
 import ContentJobs from './ContentJobs';
 import ContentEducation from './ContentEducation';
+import ContentLanguages from './ContentLanguages';
 import TechIconList from './TechIconList';
 import useStyles from './ResumeStyles';
 import resumeInfo from './resume_info.json';
@@ -43,15 +44,17 @@ const SummaryContent = () => {
           resume={resumeInfo}
         />
         <ContentSkills resume={resumeInfo} />
+
         {desktop && <DownloadResume />}
       </aside>
 
       <div className={s.aboutMe}>
-        {desktop && <TechIconList />}
+        {desktop && <TechIconList techIcons={resumeInfo.techIcons} />}
         <ContentSummary desktop={desktop} resume={resumeInfo} />
         <ContentProjects />
         <ContentJobs resume={resumeInfo} />
         <ContentEducation resume={resumeInfo} />
+        <ContentLanguages resume={resumeInfo} />
       </div>
     </div>
   );

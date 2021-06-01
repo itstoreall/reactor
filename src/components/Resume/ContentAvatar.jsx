@@ -21,7 +21,7 @@ const ContentAvatar = ({ mobilePlusMax, mobilePlus, desktopMax, resume }) => {
         </>
       )}
 
-      {desktopMax && <TechIconList />}
+      {desktopMax && <TechIconList techIcons={resume.techIcons} />}
     </section>
   );
 };

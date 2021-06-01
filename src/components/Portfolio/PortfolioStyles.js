@@ -74,7 +74,7 @@ export default createUseStyles({
     },
 
     [`@media (min-width: ${refs.desktop}px)`]: {
-      height: 143,
+      height: 163,
     },
 
     [`@media (min-width: ${refs.desktopBig}px)`]: {
@@ -168,6 +168,13 @@ export default createUseStyles({
       fontSize: 16,
       lineHeight: 1.6,
       color: refs.secondaryWhiteColor,
+
+      // ...
+
+      display: '-webkit-box',
+      '-webkit-line-clamp': 2,
+      '-webkit-box-orient': 'vertical',
+      overflow: 'hidden',
 
       [`@media (min-width: ${refs.tablet}px)`]: {
         fontSize: 14,

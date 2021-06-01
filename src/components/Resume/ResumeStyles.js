@@ -19,6 +19,10 @@ export default createUseStyles({
       '&:not(:last-child)': {
         marginRight: 15,
 
+        [`@media (min-width: ${refs.mobile}px and (max-width: ${refs.mobileMax}px))`]: {
+          marginRight: 20,
+        },
+
         [`@media (min-width: ${refs.tablet}px) and (max-width: ${refs.desktopMax}px)`]: {
           marginRight: 25,
         },
@@ -165,6 +169,8 @@ export default createUseStyles({
     },
 
     '& ul': {
+      marginBottom: 30,
+
       '& li': {
         color: refs.secondaryWhiteColor,
 
@@ -202,6 +208,38 @@ export default createUseStyles({
           '&:hover': {
             color: refs.primaryWhiteColor,
           },
+        },
+      },
+    },
+  },
+
+  // Social Icons
+  socialList: {
+    display: 'flex',
+
+    '& span:not(:last-child)': {
+      marginRight: 25,
+
+      [`@media (min-width: ${refs.tablet}px)`]: {
+        marginRight: 20,
+      },
+    },
+
+    '& span a': {
+      display: 'block',
+
+      '& svg': {
+        fill: refs.primaryColor,
+        width: 30,
+        height: 30,
+
+        [`@media (min-width: ${refs.desktop}px)`]: {
+          width: 25,
+          height: 25,
+        },
+
+        '&:hover': {
+          fill: refs.primaryWhiteColor,
         },
       },
     },
@@ -280,7 +318,7 @@ export default createUseStyles({
         },
 
         '&:not(:last-child)': {
-          marginBottom: 7,
+          marginBottom: 10,
         },
       },
     },
@@ -322,7 +360,7 @@ export default createUseStyles({
       },
 
       '& h2': {
-        marginBottom: 20,
+        marginBottom: 30,
         // fontSize: 20,
         fontWeight: 600,
       },
@@ -358,6 +396,13 @@ export default createUseStyles({
       '& a:hover': {
         color: refs.primaryWhiteColor,
       },
+    },
+  },
+
+  // Education (section)
+  education: {
+    '& div p': {
+      marginBottom: 30,
     },
   },
 });

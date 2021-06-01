@@ -1,13 +1,36 @@
 {
+  "techIcons": ["#react", "#redux", "#nodejs", "#js", "#sass", "#html"],
   "avatar": {
     "name": "Serhii Stanislav",
-    "position": "Front-end developer"
+    "position": "Front-end Developer"
   },
   "contacts": {
-    "phone": "+38 (000) 525 5252",
-    "phone_href": "tel:+380950000000",
+    "phone": "+38 (067) 518 3309",
+    "phone_href": "tel:+380675183309",
     "email": "serhiistanislav@gmail.com",
-    "email_href": "mailto:serhiistanislav@gmail.com"
+    "email_href": "mailto:serhiistanislav@gmail.com",
+    "social": [
+      {
+        "title": "Telegram",
+        "icon": "#telegram",
+        "link": "https://t.me/serhiistanislav"
+      },
+      {
+        "title": "Facebook",
+        "icon": "#fb",
+        "link": "https://www.facebook.com/SerhiiStanislav/"
+      },
+      {
+        "title": "GitHub",
+        "icon": "#github",
+        "link": "https://github.com/itstoreall"
+      },
+      {
+        "title": "Linkedin",
+        "icon": "#in",
+        "link": "https://www.linkedin.com/in/serhiistanislav/"
+      }
+    ]
   },
   "skills": {
     "tech": ["HTML", "CSS", "Git", "JavaScript", "React", "Node.js"],
@@ -73,5 +96,6 @@
       "institute": "Pro Course",
       "date": "June - August 2004"
     }
-  ]
+  ],
+  "languages": ["English (Beginner)", "Ukrainian (Native)", "Russian (Native)"]
 }

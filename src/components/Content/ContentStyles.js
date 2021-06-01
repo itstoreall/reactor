@@ -20,11 +20,13 @@ export default createUseStyles({
     },
 
     [`@media (min-width: ${refs.desktop}px)`]: {
+      padding: 30,
       width: '100%',
-      maxWidth: 900,
+      maxWidth: 1200,
     },
 
     [`@media (min-width: ${refs.desktopBig}px)`]: {
+      padding: 30,
       width: '100%',
       maxWidth: 1200,
     },
@@ -45,6 +47,8 @@ export default createUseStyles({
     },
 
     [`@media (min-width: ${refs.desktop}px)`]: {
+      padding: 30,
+      width: '100%',
       maxWidth: 1200,
     },
   },

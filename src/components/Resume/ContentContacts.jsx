@@ -1,7 +1,8 @@
+import ContentContactSocial from './ContentContactSocial';
 import useStyles from './ResumeStyles';
 
 const ContentContacts = ({ tablet, desktop, resume }) => {
-  const { phone, phone_href, email, email_href } = resume.contacts;
+  const { phone, phone_href, email, social, email_href } = resume.contacts;
   const s = useStyles();
 
   return (
@@ -13,12 +14,24 @@ const ContentContacts = ({ tablet, desktop, resume }) => {
           {tablet && !desktop && <br />}
           <a href={phone_href}>{phone}</a>
         </li>
+
         <li>
           E-&nbsp;mail:
           {tablet && !desktop && <br />}
           <a href={email_href}>{email}</a>
         </li>
       </ul>
+
+      <div className={s.socialList}>
+        {social.map(({ title, icon, link }) => (
+          <ContentContactSocial
+            key={title}
+            title={title}
+            icon={icon}
+            link={link}
+          />
+        ))}
+      </div>
     </section>
   );
 };
