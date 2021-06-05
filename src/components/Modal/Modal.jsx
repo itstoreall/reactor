@@ -1,10 +1,10 @@
-// Reused Modal
 import React, { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import './Modal.scss';
 
 const reusedModalRoot = document.querySelector('#modal-root');
 
+// Reused Modal
 export default function Modal({ children, onClose }) {
   // Close by ESC
   useEffect(() => {

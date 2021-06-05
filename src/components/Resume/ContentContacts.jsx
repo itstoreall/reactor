@@ -16,7 +16,7 @@ const ContentContacts = ({ tablet, desktop, resume }) => {
         </li>
 
         <li>
-          E-&nbsp;mail:
+          E-mail:
           {tablet && !desktop && <br />}
           <a href={email_href}>{email}</a>
         </li>

@@ -1,46 +1,45 @@
 @import 'styles/shared.scss';
 
-// Section
-.section {
-  padding: 0 0 30px 0;
-  color: #e0e0e0;
+// article {
+//   padding: 0 0 30px 0;
+//   color: #e0e0e0;
 
-  // *
-  .goBackBtn,
-  .breadcrumbs > button {
-    font-size: 20px;
-    color: $linkColor;
-    cursor: pointer;
-  }
+//   // *
+//   .goBackBtn,
+//   .breadcrumbs > button {
+//     font-size: 20px;
+//     color: $linkColor;
+//     cursor: pointer;
+//   }
 
-  // Go Back Button
-  .goBackBtn {
-    padding: 0;
-    background-color: transparent;
-    border: none;
-    margin-bottom: 20px;
-  }
+//   // Go Back Button
+//   .goBackBtn {
+//     padding: 0;
+//     background-color: transparent;
+//     border: none;
+//     margin-bottom: 20px;
+//   }
 
-  & > h1 {
-    margin-bottom: 40px;
-  }
+//   & > h1 {
+//     margin-bottom: 40px;
+//   }
 
-  // Todos Container
-  .container {
-    margin: 0 auto;
+//   // Todos Container
+//   .container {
+//     margin: 0 auto;
 
-    .Loading {
-      font-weight: 200;
-      color: rgb(154, 149, 201);
-      letter-spacing: 1.3px;
-    }
-  }
+//     .Loading {
+//       font-weight: 200;
+//       color: rgb(154, 149, 201);
+//       letter-spacing: 1.3px;
+//     }
+//   }
 
-  // Any Links
-  a {
-    color: $linkColor;
-  }
-}
+//   // Any Links
+//   a {
+//     color: $linkColor;
+//   }
+// }
 
 // Use List
 .useList {

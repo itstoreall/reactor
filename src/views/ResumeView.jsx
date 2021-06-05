@@ -1,11 +1,11 @@
 import Resume from '../components/Resume';
-import s from './ViewStyles.module.scss';
+import './ViewStyles.module.scss';
 
 const ResumeView = () => {
   return (
-    <section className={s.section}>
+    <>
       <Resume />
-    </section>
+    </>
   );
 };
 

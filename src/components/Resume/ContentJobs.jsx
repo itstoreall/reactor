@@ -1,10 +1,13 @@
+import useStyles from './ResumeStyles';
+
 const ContentJobs = ({ resume }) => {
+  const s = useStyles();
 
   return (
-    <section>
+    <section className={s.jobs}>
       <h2>Employment history</h2>
       {resume.jobs.map(({ position, company, date, specialization }) => (
-        <div key={date}>
+        <div key={date} className={s.jobListWrap}>
           <h3>
             {position} <span>{company}</span>
           </h3>

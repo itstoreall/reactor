@@ -35,16 +35,40 @@ ul {
   margin: 0;
 }
 
+h1,
+h2,
+h3 {
+  color: $textWhiteColor;
+}
+
 h1 {
   font-size: 32px;
-  color: $textWhiteColor;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 600;
 }
 
 a {
   text-decoration: none;
+  color: $linkColor;
   cursor: pointer;
 }
 
 ul {
   list-style: none;
+}
+
+.root {
+  @media screen and (min-width: 900px) {
+    height: 100vh;
+    overflow: hidden;
+  }
 }

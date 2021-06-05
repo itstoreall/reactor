@@ -8,11 +8,17 @@ const ContentAvatar = ({ mobilePlusMax, mobilePlus, desktopMax, resume }) => {
 
   return (
     <section className={s.avatar}>
-      {mobilePlusMax ? (
-        <img src={photo} alt="Serhii Stanislav" width="250" height="250" />
+      <img
+        src={photo}
+        alt="primaryContentSerhii Stanislav"
+        width="250"
+        height="250"
+      />
+      {/* {mobilePlusMax ? (
+        <img src={photo} alt="primaryContentSerhii Stanislav" width="250" height="250" />
       ) : mobilePlus ? (
         <img src={photo} alt="Serhii Stanislav" width="270" height="270" />
-      ) : null}
+      ) : null} */}
 
       {desktopMax && (
         <>

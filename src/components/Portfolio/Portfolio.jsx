@@ -7,7 +7,7 @@ const Portfolio = () => {
   const s = useStyles();
 
   return (
-    <div className={s.Applications}>
+    <section className={s.Portfolio}>
       <ul>
         {apps.map(
           ({
@@ -42,7 +42,7 @@ const Portfolio = () => {
           ),
         )}
       </ul>
-    </div>
+    </section>
   );
 };
 

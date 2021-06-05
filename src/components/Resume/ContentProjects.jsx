@@ -4,7 +4,7 @@ const ContentProjects = () => {
       <h2>Projects</h2>
       <ul>
         <li>
-          <a href="#/portfolio">to see my projects</a>
+          <a href="#/portfolio">see projects</a>
         </li>
       </ul>
     </section>

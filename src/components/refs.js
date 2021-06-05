@@ -10,6 +10,7 @@ export const refs = {
   mobilePlusMax: '413',
   tabletMax: '767',
   desktopMax: '899',
+  desktopBigMax: '1200',
 
   // Colors
   primaryColor: '#9697b6',

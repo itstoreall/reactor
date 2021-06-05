@@ -59,30 +59,48 @@ export default createUseStyles({
     },
   },
 
-  // Summary
-  SummaryContent: {
-    // backgroundColor: 'skyblue',
+  // Resume
+  ResumeContent: {
+    width: '100%',
     [`@media (min-width: ${refs.desktop}px)`]: {
       display: 'flex',
       justifyContent: 'center',
     },
     // backgroundColor: 'skyblue',
     // box-shadow: 5px 8.66px 20px 0px rgba(0, 0, 0, 0.15);
+  },
 
-    // Aside
-    '& aside': {
-      marginBottom: 30,
+  // Aside
+  aside: {
+    padding: {
+      top: 30,
+      // bottom: 30,
+    },
+    marginBottom: 30,
 
-      [`@media (min-width: ${refs.tablet}px) and (max-width: ${refs.desktopMax}px)`]: {
-        display: 'flex',
-        flexWrap: 'wrap',
+    [`@media (min-width: ${refs.tablet}px) and (max-width: ${refs.desktopMax}px)`]: {
+      display: 'flex',
+      flexWrap: 'wrap',
+    },
+
+    [`@media (min-width: ${refs.desktop}px)`]: {
+      padding: {
+        top: 40,
+        right: 50,
+        bottom: 50,
       },
+      width: 320,
+      height: 'calc(100vh - 60px)',
+      borderRight: `1px solid ${refs.secondaryBg}`,
+      overflow: 'scroll',
 
-      [`@media (min-width: ${refs.desktop}px)`]: {
-        paddingRight: 50,
-        width: 320,
-        borderRight: `1px solid ${refs.secondaryBg}`,
-        // backgroundColor: '#1e2939',
+      // Hide scrollbar for IE, Edge and Firefox
+      '-ms-overflow-style': 'none',
+      'scrollbar-width': 'none',
+
+      // Hide scrollbar for Chrome, Safari and Opera
+      '&::-webkit-scrollbar': {
+        display: 'none',
       },
     },
   },
@@ -117,11 +135,12 @@ export default createUseStyles({
     },
 
     [`@media (min-width: ${refs.desktop}px)`]: {
-      minHeight: 310,
+      minHeight: 290,
     },
 
     '& h1': {
       marginBottom: 10,
+      fontSize: 32,
       fontWeight: 600,
       textAlign: 'center',
     },
@@ -152,7 +171,7 @@ export default createUseStyles({
 
     '& h2': {
       marginBottom: 20,
-      fontSize: 20,
+      fontSize: 24,
       fontWeight: 600,
 
       [`@media (min-width: ${refs.mobile}px)`]: {
@@ -288,7 +307,6 @@ export default createUseStyles({
         },
       },
     },
-    // backgroundColor: 'skyblue',
 
     '& h2': {
       marginBottom: 20,
@@ -326,7 +344,6 @@ export default createUseStyles({
 
   // Download Resume (div)
   downloadResume: {
-    // backgroundColor: 'skyblue',
     padding: '30px 0',
 
     '& a:hover': {
@@ -334,11 +351,26 @@ export default createUseStyles({
     },
   },
 
-  // About Me
-  aboutMe: {
+  // Primary Content
+  primaryContent: {
     [`@media (min-width: ${refs.desktop}px)`]: {
-      paddingLeft: 50,
+      padding: {
+        top: 40,
+        left: 50,
+        bottom: 70,
+      },
       width: 550,
+      height: 'calc(100vh - 60px)',
+      overflow: 'scroll',
+
+      // Hide scrollbar for IE, Edge and Firefox
+      '-ms-overflow-style': 'none',
+      'scrollbar-width': 'none',
+
+      // Hide scrollbar for Chrome, Safari and Opera
+      '&::-webkit-scrollbar': {
+        display: 'none',
+      },
     },
 
     '& section': {
@@ -348,7 +380,6 @@ export default createUseStyles({
 
       '& h1': {
         marginBottom: 10,
-        fontWeight: 600,
       },
 
       '& b': {
@@ -361,14 +392,11 @@ export default createUseStyles({
 
       '& h2': {
         marginBottom: 30,
-        // fontSize: 20,
-        fontWeight: 600,
       },
 
       '& h3': {
         marginBottom: 10,
         lineHeight: 1.4,
-        fontWeight: 600,
 
         '& span': {
           color: refs.primaryColor,
@@ -377,12 +405,12 @@ export default createUseStyles({
 
       '& ul': {
         paddingLeft: 30,
-        marginBottom: 30,
         listStyleType: 'disc',
         color: refs.secondaryWhiteColor,
 
         '& li': {
-          marginBottom: 10,
+          marginBottom: 5,
+          lineHeight: 1.4,
         },
       },
 
@@ -390,7 +418,6 @@ export default createUseStyles({
         marginBottom: 20,
         lineHeight: 1.6,
         color: refs.secondaryWhiteColor,
-        // backgroundColor: 'skyblue',
       },
 
       '& a:hover': {
@@ -402,6 +429,13 @@ export default createUseStyles({
   // Education (section)
   education: {
     '& div p': {
+      marginBottom: 30,
+    },
+  },
+
+  // Jobs
+  jobListWrap: {
+    '&:not(:last-child)': {
       marginBottom: 30,
     },
   },

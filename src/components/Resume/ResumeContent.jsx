@@ -13,7 +13,7 @@ import TechIconList from './TechIconList';
 import useStyles from './ResumeStyles';
 import resumeInfo from './resume_info.json';
 
-const SummaryContent = () => {
+const ResumeContent = () => {
   const s = useStyles();
 
   // useMediaQuery
@@ -30,8 +30,8 @@ const SummaryContent = () => {
   const desktop = useMediaQuery(handleMinWidth(refs.desktop));
 
   return (
-    <div className={s.SummaryContent}>
-      <aside>
+    <div className={s.ResumeContent}>
+      <aside className={s.aside}>
         <ContentAvatar
           mobilePlusMax={mobilePlusMax}
           mobilePlus={mobilePlus}
@@ -48,7 +48,7 @@ const SummaryContent = () => {
         {desktop && <DownloadResume />}
       </aside>
 
-      <div className={s.aboutMe}>
+      <div className={s.primaryContent}>
         {desktop && <TechIconList techIcons={resumeInfo.techIcons} />}
         <ContentSummary desktop={desktop} resume={resumeInfo} />
         <ContentProjects />
@@ -60,4 +60,4 @@ const SummaryContent = () => {
   );
 };
 
-export default SummaryContent;
+export default ResumeContent;

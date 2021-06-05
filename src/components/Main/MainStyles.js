@@ -2,33 +2,46 @@ import { createUseStyles } from 'react-jss';
 import { refs } from '../refs';
 
 export default createUseStyles({
-  Content: {
-    padding: 15,
+  // Article (article)
+  article: {
+    margin: '0 auto',
+
+    '& h1': {
+      fontSize: 32,
+      marginBottom: 40,
+    },
+  },
+
+  // Container (div)
+  container: {
+    padding: {
+      left: 15,
+      right: 15,
+    },
     margin: '0 auto',
 
     [`@media (min-width: ${refs.mobile}px)`]: {
-      width: 375,
+      width: Number(refs.mobile),
     },
 
     [`@media (min-width: ${refs.mobilePlus}px)`]: {
-      width: 414,
+      width: Number(refs.mobilePlus),
     },
 
     [`@media (min-width: ${refs.tablet}px)`]: {
-      padding: 30,
-      width: 768,
+      padding: {
+        left: 30,
+        right: 30,
+      },
+      width: Number(refs.tablet),
     },
 
     [`@media (min-width: ${refs.desktop}px)`]: {
-      padding: 30,
-      width: '100%',
-      maxWidth: 1200,
+      width: Number(refs.desktop),
     },
 
     [`@media (min-width: ${refs.desktopBig}px)`]: {
-      padding: 30,
-      width: '100%',
-      maxWidth: 1200,
+      width: Number(refs.desktopBig),
     },
   },
 
@@ -53,7 +66,7 @@ export default createUseStyles({
     },
   },
 
-  Loading: {
+  loading: {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',

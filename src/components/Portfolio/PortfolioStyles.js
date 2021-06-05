@@ -2,14 +2,13 @@ import { createUseStyles } from 'react-jss';
 import { refs } from '../refs';
 
 export default createUseStyles({
-  // Applications (div)
-  Applications: {
+  // Portfolio (section)
+  Portfolio: {
     // backgroundColor: 'skyblue',
 
     '& > ul': {
       display: 'flex',
       flexWrap: 'wrap',
-      // justifyContent: 'space-between',
 
       '& > li': {
         [`@media (max-width: ${refs.tabletMax}px)`]: {
@@ -20,8 +19,7 @@ export default createUseStyles({
 
         [`@media (min-width: ${refs.tablet}px) and (max-width: ${refs.desktopMax}px)`]: {
           marginBottom: 0,
-          width: 'calc(50% - 15px)',
-          // maxWidth: 354,
+          width: 339,
 
           '&:not(:nth-child(2n))': {
             marginRight: 30,
@@ -33,23 +31,19 @@ export default createUseStyles({
         },
 
         [`@media (min-width: ${refs.desktop}px)`]: {
-          width: 'calc(33% - 15px)',
+          width: 260,
 
           '&:not(:nth-child(3n))': {
-            marginRight: 26,
+            marginRight: 30,
           },
 
           '&:not(:nth-last-child(-n + 3))': {
-            marginBottom: 40,
+            marginBottom: 50,
           },
         },
 
         [`@media (min-width: ${refs.desktopBig}px)`]: {
-          width: 'calc(33% - 15px)',
-
-          '&:not(:nth-child(3n))': {
-            marginRight: 27,
-          },
+          width: 360,
         },
       },
     },
@@ -74,7 +68,7 @@ export default createUseStyles({
     },
 
     [`@media (min-width: ${refs.desktop}px)`]: {
-      height: 163,
+      height: 142,
     },
 
     [`@media (min-width: ${refs.desktopBig}px)`]: {
@@ -91,7 +85,7 @@ export default createUseStyles({
       opacity: 1,
     },
 
-    // Overlay
+    // Overlay (div)
     '& > div': {
       position: 'absolute',
       top: 0,
@@ -114,11 +108,14 @@ export default createUseStyles({
         paddingBottom: 15,
         fontSize: 20,
         color: refs.darkColor,
+
+        [`@media (min-width: ${refs.desktop}px) and (max-width: ${refs.desktopBigMax}px)`]: {
+          fontSize: 18,
+        },
       },
 
       '& b': {
         display: 'block',
-        // paddingBottom: 15,
         marginBottom: 15,
         fontSize: 14,
         color: 'red',
@@ -126,19 +123,18 @@ export default createUseStyles({
 
       // Text inside overlay
       '& ul': {
-        // backgroundColor: 'skyblue',
-        // display: 'block',
         paddingLeft: 20,
-        // paddingRight: 30,
-        // paddingBottom: 10,
         listStyle: 'disc',
         fontSize: 16,
-        // lineHeight: 1.4,
-        color: refs.darkColor,
+        lineHeight: 1.4,
         transform: 'opacity',
         transition: 'opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 100ms',
         opacity: 0,
-        // cursor: 'default',
+        cursor: 'default',
+
+        [`@media (min-width: ${refs.desktop}px) and (max-width: ${refs.desktopBigMax}px)`]: {
+          fontSize: 14,
+        },
 
         '& li': {
           marginBottom: 7,

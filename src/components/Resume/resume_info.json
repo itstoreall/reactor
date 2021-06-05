@@ -5,6 +5,10 @@
     "position": "Front-end Developer"
   },
   "contacts": {
+    "icon": {
+      "phone": "#phone",
+      "email": "#email"
+    },
     "phone": "+38 (067) 518 3309",
     "phone_href": "tel:+380675183309",
     "email": "serhiistanislav@gmail.com",
@@ -33,8 +37,17 @@
     ]
   },
   "skills": {
-    "tech": ["HTML", "CSS", "Git", "JavaScript", "React", "Node.js"],
-    "soft": ["Scrum", "Agile", "GTD", "Teamwork"]
+    "tech": [
+      "HTML",
+      "CSS",
+      "Git",
+      "JavaScript",
+      "React",
+      "Node.js",
+      "Scrum",
+      "Agile"
+    ],
+    "soft": ["GTD", "Teamwork"]
   },
   "summary": "Hello! I write code and improve my skills every day. Today I am looking for a developer job for remote work. I would like to be part of the team to create cool projects",
   "jobs": [
@@ -56,7 +69,7 @@
       "specialization": [
         "Website development (Webflow)",
         "Landing page development (Adobe Muse)",
-        "HTML/CSS layout"
+        "Layout HTML/CSS"
       ]
     }
   ],
