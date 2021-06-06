@@ -417,28 +417,39 @@ export default createUseStyles({
         },
       },
 
-      '& p': {
-        marginBottom: 20,
-        lineHeight: 1.6,
-        color: refs.secondaryWhiteColor,
-      },
-
       '& a:hover': {
         color: refs.primaryWhiteColor,
       },
     },
   },
 
-  // Education (section)
-  education: {
-    '& div p': {
+  // Summary (p)
+  summary: {
+    lineHeight: 1.6,
+    color: refs.secondaryWhiteColor,
+  },
+
+  // Date (p)
+  date: {
+    fontSize: 15,
+    fontStyle: 'italic',
+    color: refs.trinityWhiteColor,
+  },
+
+  // Job List Wrap (div)
+  jobListWrap: {
+    '&:not(:last-child)': {
       marginBottom: 30,
+    },
+
+    '& p': {
+      marginBottom: 20,
     },
   },
 
-  // Jobs
-  jobListWrap: {
-    '&:not(:last-child)': {
+  // Education (section)
+  education: {
+    '& div': {
       marginBottom: 30,
     },
   },

@@ -10,7 +10,7 @@ const Main = ({ visible, location }) => {
   return (
     // <main className={visible ? s.NavMenu : s.Main}>
     <main className={s.Main}>
-      <article>
+      <article className={s.article}>
         <div className={s.container}>
           <Suspense fallback={<p className={s.loading}>LOADING...</p>}>
             <Switch>

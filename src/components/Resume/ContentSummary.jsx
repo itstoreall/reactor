@@ -15,7 +15,7 @@ const ContentSummary = ({ desktop, resume }) => {
           <b>{position}</b>
         </>
       )}
-      <p>{summary}</p>
+      <p className={s.summary}>{summary}</p>
     </section>
   );
 };

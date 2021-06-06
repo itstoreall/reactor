@@ -17,6 +17,7 @@ export const refs = {
   darkColor: '#212225',
   primaryWhiteColor: '#ffffff',
   secondaryWhiteColor: '#ffffff96',
+  trinityWhiteColor: '#ffffff52',
   linkColor: '#6ecab6',
 
   // Backgrounds
@@ -26,4 +27,8 @@ export const refs = {
   accentBg: '#9697b6',
   // primaryYellow: '#ffe13a',
   primaryYellow: '#f7df1e',
+
+  // Shadows
+  $itemShadow: 'rgba(99, 99, 99, 0.5) 0px 2px 5px -1px',
+  $todoShadow: 'rgba(99, 99, 99, 0.5) 0px 2px 5px -1px',
 };

@@ -1,10 +1,10 @@
 const ContentProjects = () => {
   return (
     <section>
-      <h2>Projects</h2>
+      <h2>Project experience</h2>
       <ul>
         <li>
-          <a href="#/portfolio">see projects</a>
+          <a href="#/portfolio">See projects</a>
         </li>
       </ul>
     </section>

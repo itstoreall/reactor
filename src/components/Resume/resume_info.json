@@ -5,10 +5,6 @@
     "position": "Front-end Developer"
   },
   "contacts": {
-    "icon": {
-      "phone": "#phone",
-      "email": "#email"
-    },
     "phone": "+38 (067) 518 3309",
     "phone_href": "tel:+380675183309",
     "email": "serhiistanislav@gmail.com",
@@ -75,7 +71,7 @@
   ],
   "education": [
     {
-      "subject": "Node.js (Basic)",
+      "subject": "Node.js",
       "institute": "GoIT Course",
       "date": "April - June 2021"
     },
@@ -85,12 +81,12 @@
       "date": "January - April 2021"
     },
     {
-      "subject": "JavaScript (Basic)",
+      "subject": "JavaScript",
       "institute": "GoIT Course",
       "date": "September - December 2020"
     },
     {
-      "subject": "HTML/CSS (Basic)",
+      "subject": "HTML/CSS",
       "institute": "GoIT Course",
       "date": "May - August 2020"
     },

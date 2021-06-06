@@ -11,7 +11,7 @@ const ContentEducation = ({ resume }) => {
           <h3>
             {subject}, <span>{institute}</span>
           </h3>
-          <p>{date}</p>
+          <p className={s.date}>{date}</p>
         </div>
       ))}
     </section>

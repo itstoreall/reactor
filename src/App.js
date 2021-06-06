@@ -18,7 +18,7 @@ const App = ({ location, hidden, toggleOverflow }) => {
   });
 
   return (
-    <div className={hidden ? s.option_one : s.option_two}>
+    <div className={hidden ? s.AppOption_one : s.AppOption_two}>
       <Header />
       <Main />
       <NavMenu />

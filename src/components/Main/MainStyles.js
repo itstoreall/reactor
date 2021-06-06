@@ -3,21 +3,25 @@ import { refs } from '../refs';
 
 export default createUseStyles({
   // Article (article)
-  article: {
-    margin: '0 auto',
 
-    '& h1': {
-      fontSize: 32,
-      marginBottom: 40,
+  article: {
+    '& section > h1': {
+      // marginBottom: 40,
+      // color: 'pink',
     },
   },
 
+  // AppOption_one: {
+  //   '& h1': {
+  //     marginBottom: 40,
+  //     color: 'pink',
+  //   },
+  // },
+
   // Container (div)
   container: {
-    padding: {
-      left: 15,
-      right: 15,
-    },
+    paddingLeft: 15,
+    paddingRight: 15,
     margin: '0 auto',
 
     [`@media (min-width: ${refs.mobile}px)`]: {
@@ -29,10 +33,8 @@ export default createUseStyles({
     },
 
     [`@media (min-width: ${refs.tablet}px)`]: {
-      padding: {
-        left: 30,
-        right: 30,
-      },
+      paddingLeft: 30,
+      paddingRight: 30,
       width: Number(refs.tablet),
     },
 
@@ -45,26 +47,26 @@ export default createUseStyles({
     },
   },
 
-  NavMenu: {
-    padding: 15,
-    margin: '0 auto',
-    overflow: 'hidden',
+  // NavMenu: {
+  //   padding: 15,
+  //   margin: '0 auto',
+  //   overflow: 'hidden',
 
-    [`@media (max-width: 767px)`]: {
-      maxWidth: 450,
-    },
+  //   [`@media (max-width: 767px)`]: {
+  //     maxWidth: 450,
+  //   },
 
-    [`@media (min-width: ${refs.tablet}px)`]: {
-      padding: 30,
-      maxWidth: 768,
-    },
+  //   [`@media (min-width: ${refs.tablet}px)`]: {
+  //     padding: 30,
+  //     maxWidth: 768,
+  //   },
 
-    [`@media (min-width: ${refs.desktop}px)`]: {
-      padding: 30,
-      width: '100%',
-      maxWidth: 1200,
-    },
-  },
+  //   [`@media (min-width: ${refs.desktop}px)`]: {
+  //     padding: 30,
+  //     width: '100%',
+  //     maxWidth: 1200,
+  //   },
+  // },
 
   loading: {
     display: 'flex',

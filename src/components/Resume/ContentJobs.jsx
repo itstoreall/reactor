@@ -11,7 +11,7 @@ const ContentJobs = ({ resume }) => {
           <h3>
             {position} <span>{company}</span>
           </h3>
-          <p>{date}</p>
+          <p className={s.date}>{date}</p>
           <ul>
             {specialization?.map(el => (
               <li key={el}>{el}</li>

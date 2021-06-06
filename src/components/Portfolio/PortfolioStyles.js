@@ -54,6 +54,7 @@ export default createUseStyles({
     position: 'relative',
     overflow: 'hidden',
     marginBottom: 15,
+    borderRadius: 4,
 
     [`@media (min-width: ${refs.mobile}px)`]: {
       height: 189,
@@ -144,7 +145,7 @@ export default createUseStyles({
         },
 
         '& li': {
-          marginBottom: 7,
+          marginBottom: 5,
         },
       },
     },
