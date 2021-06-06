@@ -1,4 +1,4 @@
-@import 'styles/shared.scss';
+// @import '../styles/shared.scss';
 
 // article {
 //   padding: 0 0 30px 0;
@@ -42,32 +42,32 @@
 // }
 
 // Use List
-.useList {
-  padding: 30px 0;
-  border-top: 1px solid #666;
-  color: $primaryColor;
+// .useList {
+//   padding: 30px 0;
+//   border-top: 1px solid #666;
+//   color: $primaryColor;
 
-  li {
-    &:not(:last-child) {
-      margin-bottom: 5px;
-    }
+//   li {
+//     &:not(:last-child) {
+//       margin-bottom: 5px;
+//     }
 
-    &.strong {
-      padding-top: 20px;
-      margin-bottom: 15px;
-      font-weight: 600;
-      font-size: 18px;
-      color: #fff;
-    }
-  }
-}
+//     &.strong {
+//       padding-top: 20px;
+//       margin-bottom: 15px;
+//       font-weight: 600;
+//       font-size: 18px;
+//       color: #fff;
+//     }
+//   }
+// }
 
-.toast {
-  @media screen and (max-width: 479px) {
-    padding: 5px;
-  }
+// .toast {
+//   @media screen and (max-width: 479px) {
+//     padding: 5px;
+//   }
 
-  @media screen and (min-width: 480px) {
-    width: 300px;
-  }
-}
+//   @media screen and (min-width: 480px) {
+//     width: 300px;
+//   }
+// }

@@ -1,12 +1,5 @@
 import Resume from '../components/Resume';
-import './ViewStyles.module.scss';
 
-const ResumeView = () => {
-  return (
-    <>
-      <Resume />
-    </>
-  );
-};
+const ResumeView = () => <Resume />;
 
 export default ResumeView;

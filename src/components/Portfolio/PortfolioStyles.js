@@ -90,8 +90,6 @@ export default createUseStyles({
       position: 'absolute',
       top: 0,
       left: 0,
-      // display: 'flex',
-      // alignItems: 'center',
       padding: 30,
       width: '100%',
       height: '100%',
@@ -102,6 +100,15 @@ export default createUseStyles({
         'transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1)',
       opacity: 0,
       overflow: 'scroll',
+
+      // Hide scrollbar for IE, Edge and Firefox
+      '-ms-overflow-style': 'none',
+      'scrollbar-width': 'none',
+
+      // Hide scrollbar for Chrome, Safari and Opera
+      '&::-webkit-scrollbar': {
+        display: 'none',
+      },
 
       '& h3': {
         display: 'block',

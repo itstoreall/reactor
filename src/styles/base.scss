@@ -19,6 +19,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: $primaryBg;
   // overflow: hidden;
+
+  /*
+  // Hide scrollbar for IE, Edge and Firefox
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  // Hide scrollbar for Chrome, Safari and Opera
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  */
 }
 
 code {
@@ -64,11 +75,4 @@ a {
 
 ul {
   list-style: none;
-}
-
-.root {
-  @media screen and (min-width: 900px) {
-    height: 100vh;
-    overflow: hidden;
-  }
 }

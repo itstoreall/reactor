@@ -1,24 +1,35 @@
-// import { connect } from 'react-redux';
+import { useEffect } from 'react';
+import { connect } from 'react-redux';
+import { toggleOverflow } from '../src/redux/app/actions';
+import { withRouter } from 'react-router-dom';
+import appInfo from './app.json';
 import Header from './components/Header';
 import NavMenu from './components/NavMenu';
 import Main from './components/Main';
-// import useStyles from './AppStyles';
+import ResumeStyles from './AppStyles';
 
-const App = ({ visible }) => {
-  // const s = useStyles();
+const App = ({ location, hidden, toggleOverflow }) => {
+  const s = ResumeStyles();
+
+  useEffect(() => {
+    appInfo.location.map(url =>
+      location.pathname === url ? toggleOverflow(true) : toggleOverflow(false),
+    );
+  });
 
   return (
-    <>
+    <div className={hidden ? s.option_one : s.option_two}>
       <Header />
       <Main />
       <NavMenu />
-    </>
+    </div>
   );
 };
 
-// const mapState = state => ({
-//   visible: state.navMenu.visible,
-// });
+const mapState = state => ({
+  hidden: state.app.hidden,
+});
 
-// export default connect(mapState)(App);
-export default App;
+const mapDispatch = { toggleOverflow };
+
+export default connect(mapState, mapDispatch)(withRouter(App));

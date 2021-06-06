@@ -12,6 +12,7 @@ import {
 import storage from 'redux-persist/lib/storage'; // link to localStorage
 // import logger from 'redux-logger';
 import navMenuReducer from './navMenu/reducer';
+import appReducer from './app/reducer';
 
 // Middleware
 const middleware = [
@@ -29,10 +30,16 @@ const navMenuPersistConfig = {
   storage,
 };
 
+const appPersistConfig = {
+  key: 'app',
+  storage,
+};
+
 const store = configureStore({
   // Root Reducer
   reducer: {
     navMenu: persistReducer(navMenuPersistConfig, navMenuReducer),
+    app: persistReducer(appPersistConfig, appReducer),
   },
   middleware,
   devTools: process.env.NODE_ENV !== 'production',

@@ -1,17 +1,36 @@
 import { createUseStyles } from 'react-jss';
-// import { refs } from './components/refs';
+import { refs } from './components/refs';
 
 export default createUseStyles({
-  //
-  // NavMenu: {
-  //   position: 'relative',
-  //   minHeight: '100vh',
-  //   width: '100%',
-  //   margin: '0 auto',
-  //   overflow: 'hidden',
-  //   // backgroundColor: refs.primaryBg,
-  //   [`@media (min-width: ${refs.desktop}px)`]: {
-  //     maxWidth: 1440,
-  //   },
-  // },
+  option_one: {
+    height: '100vh',
+    overflow: 'scroll',
+
+    // Hide scrollbar for IE, Edge and Firefox
+    '-ms-overflow-style': 'none',
+    'scrollbar-width': 'none',
+
+    // Hide scrollbar for Chrome, Safari and Opera
+    '&::-webkit-scrollbar': {
+      display: 'none',
+    },
+
+    [`@media screen and (min-width: ${refs.desktop}px)`]: {
+      overflow: 'hidden',
+    },
+  },
+
+  option_two: {
+    height: '100vh',
+    overflow: 'scroll',
+
+    // Hide scrollbar for IE, Edge and Firefox
+    '-ms-overflow-style': 'none',
+    'scrollbar-width': 'none',
+
+    // Hide scrollbar for Chrome, Safari and Opera
+    '&::-webkit-scrollbar': {
+      display: 'none',
+    },
+  },
 });

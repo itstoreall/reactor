@@ -4,7 +4,7 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import { routes } from '../routes';
 import useStyles from './MainStyles';
 
-const Main = ({ visible }) => {
+const Main = ({ visible, location }) => {
   const s = useStyles();
 
   return (

@@ -1,5 +1,5 @@
 {
-  "apps": [
+  "projects": [
     {
       "id": "phonebook",
       "name": "phonebook",
@@ -199,6 +199,38 @@
     },
     {
       "id": "oktotrade",
+      "name": "oktotrade",
+      "alt": "Oktotrade - business card website",
+      "title": "Business card website",
+      "description": "It's just html/css layout with some JavaScript code. Template for simple Web-site",
+      "requires": "",
+      "overlayText": [
+        "html",
+        "sass",
+        "js",
+        "prettierrc",
+        "modern-normalize",
+        "picture (srcset)"
+      ],
+      "page": "https://itstoreall.github.io/oktotrade/",
+      "source": "https://github.com/itstoreall/oktotrade",
+      "src": [
+        "mob_oktotrade_450_wp",
+        "mob_oktotrade_900_wp",
+        "mob_oktotrade_450",
+        "mob_oktotrade_900",
+        "tab_oktotrade_354_wp",
+        "tab_oktotrade_708_wp",
+        "tab_oktotrade_354",
+        "tab_oktotrade_708",
+        "desk_oktotrade_370_wp",
+        "desk_oktotrade_740_wp",
+        "desk_oktotrade_370",
+        "desk_oktotrade_740"
+      ]
+    },
+    {
+      "id": "okt2otrade",
       "name": "oktotrade",
       "alt": "Oktotrade - business card website",
       "title": "Business card website",

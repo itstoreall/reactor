@@ -1,10 +1,6 @@
 # Reactor
 
-v 2.0.0
-
-**_Use:_**
-
-> End of Reactor v 2.0.0
+v2.1.1
 
 **_Use:_**
 
@@ -33,4 +29,4 @@ v 2.0.0
 - classnames
 - shortid
 
-> End of Reactor v 1.0.1
+>

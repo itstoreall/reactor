@@ -1,15 +1,16 @@
 import useStyles from './PortfolioStyles';
 import AppThumb from './AppThumb';
 import AppMeta from './AppMeta';
-import { apps } from './apps.json';
+import { projects } from './projects.json';
 
 const Portfolio = () => {
   const s = useStyles();
 
   return (
     <section className={s.Portfolio}>
+      <h1>Portfolio</h1>
       <ul>
-        {apps.map(
+        {projects.map(
           ({
             id,
             src,

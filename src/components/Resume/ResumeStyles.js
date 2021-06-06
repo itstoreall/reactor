@@ -409,8 +409,11 @@ export default createUseStyles({
         color: refs.secondaryWhiteColor,
 
         '& li': {
-          marginBottom: 5,
           lineHeight: 1.4,
+
+          '&:not(:last-child)': {
+            marginBottom: 5,
+          },
         },
       },
 
