@@ -45,7 +45,10 @@
     ],
     "soft": ["GTD", "Teamwork"]
   },
-  "summary": "Hello! I write code and improve my skills every day. Today I am looking for a developer job for remote work. I would like to be part of the team to create cool projects",
+  "downloadResume": {
+    "fexUrl": "https://fs7.fex.net:443/download/3394039776"
+  },
+  "summary": "Since 2015 I developed websites in Webflow at freelance. These were simple projects using HTML/CSS. At the beginning of 2020, I started my studies at the GoIT school, where I had experience in teamwork and coding for over a year. I prefer to use React, Redux and JavaScript in development. In the stack of these technologies, I can be most effective as a front-end developer for remote work",
   "jobs": [
     {
       "position": "Front-end developer",
@@ -93,7 +96,7 @@
     {
       "subject": "Web Design (Adobe Muse)",
       "institute": "Computer Academy «Kademika» Course",
-      "date": "Septermber 2006 - June 2011"
+      "date": "October - January 2016"
     },
     {
       "subject": "Practical psychology",
