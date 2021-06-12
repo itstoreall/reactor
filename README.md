@@ -11,6 +11,7 @@ v2.1.1
 - gh-pages
 - modern-normalize
 - node-sass
+- react-ga
 - react-jss
 - react-router-dom
 

@@ -7,15 +7,19 @@ import Header from './components/Header';
 import NavMenu from './components/NavMenu';
 import Main from './components/Main';
 import ResumeStyles from './AppStyles';
+import ReactGA from 'react-ga';
 
 const App = ({ location, hidden, toggleOverflow }) => {
   const s = ResumeStyles();
 
   useEffect(() => {
+    ReactGA.initialize('UA-199360185-1');
+    ReactGA.pageview(location.pathname);
+
     appInfo.location.map(url =>
       location.pathname === url ? toggleOverflow(true) : toggleOverflow(false),
     );
-  });
+  }, [location.pathname, toggleOverflow, location.search]);
 
   return (
     <div className={hidden ? s.AppOption_one : s.AppOption_two}>
