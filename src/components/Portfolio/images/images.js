@@ -1,3 +1,17 @@
+// Reactor
+import mob_reactor_450_wp from './mob_reactor_450_wp.webp';
+import mob_reactor_900_wp from './mob_reactor_900_wp.webp';
+import mob_reactor_450 from './mob_reactor_450.jpg';
+import mob_reactor_900 from './mob_reactor_900.jpg';
+import tab_reactor_354_wp from './tab_reactor_354_wp.webp';
+import tab_reactor_708_wp from './tab_reactor_708_wp.webp';
+import tab_reactor_354 from './tab_reactor_354.jpg';
+import tab_reactor_708 from './tab_reactor_708.jpg';
+import desk_reactor_370_wp from './desk_reactor_370_wp.webp';
+import desk_reactor_740_wp from './desk_reactor_740_wp.webp';
+import desk_reactor_370 from './desk_reactor_370.jpg';
+import desk_reactor_740 from './desk_reactor_740.jpg';
+
 // REST API
 import mob_restApi_450_wp from './mob_restApi_450_wp.webp';
 import mob_restApi_900_wp from './mob_restApi_900_wp.webp';
@@ -97,6 +111,20 @@ import desk_oktotrade_370 from './desk_oktotrade_370.jpg';
 import desk_oktotrade_740 from './desk_oktotrade_740.jpg';
 
 const images = {
+  // Reactor
+  mob_reactor_450_wp,
+  mob_reactor_900_wp,
+  mob_reactor_450,
+  mob_reactor_900,
+  tab_reactor_354_wp,
+  tab_reactor_708_wp,
+  tab_reactor_354,
+  tab_reactor_708,
+  desk_reactor_370_wp,
+  desk_reactor_740_wp,
+  desk_reactor_370,
+  desk_reactor_740,
+
   // REST API
   mob_restApi_450_wp,
   mob_restApi_900_wp,

@@ -18,6 +18,7 @@ export const refs = {
   primaryWhiteColor: '#ffffff',
   secondaryWhiteColor: '#ffffff96',
   trinityWhiteColor: '#ffffff52',
+  fourthWhiteColor: '#ffffff17',
   linkColor: '#6ecab6',
 
   // Backgrounds
@@ -29,6 +30,7 @@ export const refs = {
   primaryYellow: '#f7df1e',
 
   // Shadows
-  $itemShadow: 'rgba(99, 99, 99, 0.5) 0px 2px 5px -1px',
-  $todoShadow: 'rgba(99, 99, 99, 0.5) 0px 2px 5px -1px',
+  itemShadow: 'rgba(99, 99, 99, 0.5) 0px 2px 5px -1px',
+  // thumbShadow: 'rgba(99, 99, 99, 0.3) 0px 0px 10px 3px',
+  // thumbShadow: 'rgba(150, 151, 182, 0.1) 0px 5px 15px 1px',
 };

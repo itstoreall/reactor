@@ -49,12 +49,18 @@ export default createUseStyles({
     },
   },
 
-  // Thumb
+  // Thumb (div)
   thumb: {
     position: 'relative',
     overflow: 'hidden',
     marginBottom: 15,
     borderRadius: 4,
+    border: `2px solid ${refs.fourthWhiteColor}`,
+    boxShadow: refs.thumbShadow,
+
+    [`@media (max-width: ${refs.mobileMax}px)`]: {
+      height: '50vw',
+    },
 
     [`@media (min-width: ${refs.mobile}px)`]: {
       height: 189,
@@ -79,6 +85,10 @@ export default createUseStyles({
     '& img': {
       display: 'block',
       width: '100%',
+
+      [`@media (max-width: ${refs.mobileMax}px)`]: {
+        height: '50vw',
+      },
     },
 
     '&:hover div, &:focus div': {
@@ -94,7 +104,7 @@ export default createUseStyles({
       padding: 30,
       width: '100%',
       height: '100%',
-      backgroundColor: refs.primaryYellow,
+      backgroundColor: refs.primaryColor,
 
       transform: 'translateY(100%)',
       transition:
@@ -115,7 +125,7 @@ export default createUseStyles({
         display: 'block',
         paddingBottom: 15,
         fontSize: 20,
-        color: refs.darkColor,
+        color: refs.primaryWhiteColor,
 
         [`@media (min-width: ${refs.desktop}px) and (max-width: ${refs.desktopBigMax}px)`]: {
           fontSize: 18,
@@ -125,8 +135,8 @@ export default createUseStyles({
       '& b': {
         display: 'block',
         marginBottom: 15,
-        fontSize: 14,
-        color: 'red',
+        fontSize: 16,
+        color: 'pink',
       },
 
       // Text inside overlay
@@ -139,6 +149,7 @@ export default createUseStyles({
         transition: 'opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 100ms',
         opacity: 0,
         cursor: 'default',
+        color: refs.primaryWhiteColor,
 
         [`@media (min-width: ${refs.desktop}px) and (max-width: ${refs.desktopBigMax}px)`]: {
           fontSize: 14,

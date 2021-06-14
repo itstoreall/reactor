@@ -8,7 +8,7 @@ export default createUseStyles({
     right: 0,
     width: '100%',
     height: '100vh',
-    backgroundColor: refs.primaryYellow,
+    backgroundColor: refs.primaryColor,
     overflow: 'scroll',
 
     [`@media (min-width: ${refs.tablet}px)`]: {
@@ -44,9 +44,9 @@ export default createUseStyles({
     outline: 'none',
 
     '&:hover': {
-      backgroundColor: refs.primaryYellow,
+      backgroundColor: refs.primaryColor,
       color: refs.darkColor,
-      border: `2px solid ${refs.primaryYellow}`,
+      border: `2px solid ${refs.primaryColor}`,
     },
   },
 
