@@ -1,3 +1,17 @@
+// REST API
+import mob_restApi_450_wp from './mob_restApi_450_wp.webp';
+import mob_restApi_900_wp from './mob_restApi_900_wp.webp';
+import mob_restApi_450 from './mob_restApi_450.jpg';
+import mob_restApi_900 from './mob_restApi_900.jpg';
+import tab_restApi_354_wp from './tab_restApi_354_wp.webp';
+import tab_restApi_708_wp from './tab_restApi_708_wp.webp';
+import tab_restApi_354 from './tab_restApi_354.jpg';
+import tab_restApi_708 from './tab_restApi_708.jpg';
+import desk_restApi_370_wp from './desk_restApi_370_wp.webp';
+import desk_restApi_740_wp from './desk_restApi_740_wp.webp';
+import desk_restApi_370 from './desk_restApi_370.jpg';
+import desk_restApi_740 from './desk_restApi_740.jpg';
+
 // Phonebook
 import mob_phonebook_450_wp from './mob_phonebook_450_wp.webp';
 import mob_phonebook_900_wp from './mob_phonebook_900_wp.webp';
@@ -83,6 +97,20 @@ import desk_oktotrade_370 from './desk_oktotrade_370.jpg';
 import desk_oktotrade_740 from './desk_oktotrade_740.jpg';
 
 const images = {
+  // REST API
+  mob_restApi_450_wp,
+  mob_restApi_900_wp,
+  mob_restApi_450,
+  mob_restApi_900,
+  tab_restApi_354_wp,
+  tab_restApi_708_wp,
+  tab_restApi_354,
+  tab_restApi_708,
+  desk_restApi_370_wp,
+  desk_restApi_740_wp,
+  desk_restApi_370,
+  desk_restApi_740,
+
   // Phonebook
   mob_phonebook_450_wp,
   mob_phonebook_900_wp,

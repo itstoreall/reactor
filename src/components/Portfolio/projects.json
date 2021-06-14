@@ -1,6 +1,52 @@
 {
   "projects": [
     {
+      "id": "nodjs_reat_api",
+      "name": "nodjs_reat_api",
+      "alt": "Node.js REST API",
+      "title": "REST API",
+      "description": "App for working with a collection of contacts based on the Node.js, Express and the MongoDB database",
+      "requires": "",
+      "overlayText": [
+        "bcryptjs",
+        "cloudinary",
+        "cors",
+        "cross-env",
+        "dotenv",
+        "eslint",
+        "express",
+        "helmet",
+        "jest",
+        "jimp",
+        "joi",
+        "jsonwebtoken",
+        "mailgen",
+        "mongoose",
+        "mongoose-paginate-v2",
+        "morgan",
+        "multer",
+        "nodemailer",
+        "prettier",
+        "passport"
+      ],
+      "page": "",
+      "source": "https://github.com/itstoreall/nodejs-rest-api",
+      "src": [
+        "mob_restApi_450_wp",
+        "mob_restApi_900_wp",
+        "mob_restApi_450",
+        "mob_restApi_900",
+        "tab_restApi_354_wp",
+        "tab_restApi_708_wp",
+        "tab_restApi_354",
+        "tab_restApi_708",
+        "desk_restApi_370_wp",
+        "desk_restApi_740_wp",
+        "desk_restApi_370",
+        "desk_restApi_740"
+      ]
+    },
+    {
       "id": "phonebook",
       "name": "phonebook",
       "alt": "Phonebook application",

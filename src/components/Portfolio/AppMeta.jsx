@@ -5,9 +5,11 @@ const AppMeta = ({ s, title, description, page, source }) => {
     <div className={s.meta}>
       <h3>{title}</h3>
       <p>{description}</p>
-      <a href={page} target="_blank" rel="noreferrer">
-        Page
-      </a>
+      {page.length !== 0 && (
+        <a href={page} target="_blank" rel="noreferrer">
+          Page
+        </a>
+      )}
       <a href={source} target="_blank" rel="noreferrer">
         Source
       </a>
