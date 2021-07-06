@@ -204,6 +204,7 @@ export default createUseStyles({
       paddingRight: 10,
       fontSize: 20,
       fontWeight: 600,
+      transition: `all 500ms ${refs.cubicBezier}`,
 
       [`@media (min-width: ${refs.tablet}px)`]: {
         fontSize: 16,

@@ -1,5 +1,5 @@
 export const refs = {
-  // Viewport (Not to change)
+  // Viewport (Not to change) -------- *
   mobile: '375',
   mobilePlus: '414',
   tablet: '768',
@@ -10,7 +10,7 @@ export const refs = {
   mobilePlusMax: '413',
   tabletMax: '767',
   desktopMax: '899',
-  desktopBigMax: '1200',
+  desktopBigMax: '1200', // ---------- *
 
   // Colors
   primaryColor: '#9697b6',
@@ -26,11 +26,11 @@ export const refs = {
   secondaryBg: '#353a44',
   darkBg: '#212225',
   accentBg: '#9697b6',
-  // primaryYellow: '#ffe13a',
   primaryYellow: '#f7df1e',
 
   // Shadows
   itemShadow: 'rgba(99, 99, 99, 0.5) 0px 2px 5px -1px',
-  // thumbShadow: 'rgba(99, 99, 99, 0.3) 0px 0px 10px 3px',
-  // thumbShadow: 'rgba(150, 151, 182, 0.1) 0px 5px 15px 1px',
+
+  // Timing function
+  cubicBezier: 'cubic-bezier(0.4, 0, 0.2, 1)',
 };

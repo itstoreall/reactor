@@ -16,6 +16,8 @@ import resumeInfo from './resume_info.json';
 const ResumeContent = () => {
   const s = useStyles();
 
+  // const 
+
   // useMediaQuery
   const handleMaxWidth = width => {
     return `(max-width:${width}px) `;

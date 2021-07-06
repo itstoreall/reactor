@@ -7,7 +7,7 @@ import Header from './components/Header';
 import NavMenu from './components/NavMenu';
 import Main from './components/Main';
 import ResumeStyles from './AppStyles';
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga'; 
 
 const App = ({ location, hidden, toggleOverflow }) => {
   const s = ResumeStyles();

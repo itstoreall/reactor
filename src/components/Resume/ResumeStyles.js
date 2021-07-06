@@ -125,6 +125,12 @@ export default createUseStyles({
       minHeight: 540,
     },
 
+    [`@media (min-width: ${refs.desktop}px)`]: {
+      display: 'flex',
+      justifyContent: 'center',
+      minHeight: 290,
+    },
+    
     '& img': {
       display: 'block',
       borderRadius: '50%',
@@ -134,9 +140,6 @@ export default createUseStyles({
       },
     },
 
-    [`@media (min-width: ${refs.desktop}px)`]: {
-      minHeight: 290,
-    },
 
     '& h1': {
       marginBottom: 10,
