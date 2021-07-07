@@ -1,5 +1,5 @@
 import Portfolio from '../components/Portfolio';
-import './ViewStyles.module.scss';
+// import './ViewStyles.module.scss';
 
 const PortfolioView = () => <Portfolio />;
 

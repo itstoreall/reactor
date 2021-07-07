@@ -1,10 +1,20 @@
+import { useEffect } from 'react';
 import useStyles from './PortfolioStyles';
 import AppThumb from './AppThumb';
 import AppMeta from './AppMeta';
 import { projects } from './projects.json';
+import { getAllProjects } from '../utils/projectsAPI';
+
+const { log } = console;
 
 const Portfolio = () => {
   const s = useStyles();
+
+  useEffect(() => {
+    getAllProjects()
+      .then(result => log(result))
+      .catch(err => log(err.message));
+  }, []);
 
   return (
     <section className={s.Portfolio}>

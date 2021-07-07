@@ -9,6 +9,9 @@ const ResumeView = lazy(() =>
 const PortfolioView = lazy(() =>
   import('../views/PortfolioView' /*webpackChunkName: 'Portfolio'*/),
 );
+const AdminView = lazy(() =>
+  import('../views/AdminView' /*webpackChunkName: 'Admin'*/),
+);
 // const ContactsView = lazy(() =>
 //   import('../views/ContactView' /*webpackChunkName: 'Contacts'*/),
 // );
@@ -32,6 +35,12 @@ export const routes = [
     label: 'Portfolio',
     component: PortfolioView,
     showInMenu: true,
+  },
+  {
+    path: '/admin',
+    label: 'Admin',
+    component: AdminView,
+    showInMenu: false,
   },
   // {
   //   path: '/contacts',
