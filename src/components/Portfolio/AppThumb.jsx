@@ -49,7 +49,7 @@ const AppThumb = ({ s, src, alt, requires, overlayText }) => {
           alt={alt}
         />
       </picture>
-      )
+
       <div>
         <h3>Used in the project:</h3>
         {requires !== '' && <b>{requires}</b>}
