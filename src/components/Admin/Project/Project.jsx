@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useStyles, muiForm } from '../AdminStyles';
+import { useStyles, muiForm } from '../AdminPanelStyles';
 import TextField from '@material-ui/core/TextField';
 import Checkbox from '@material-ui/core/Checkbox';
 import Button from '@material-ui/core/Button';
@@ -164,6 +164,7 @@ const Project = ({ toggleForm, onSubmit }) => {
         >
           Cancel
         </Button>
+
         <Button id="addlBtn" type="submit" variant="contained" color="primary">
           Add
         </Button>
