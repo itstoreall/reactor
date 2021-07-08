@@ -1,42 +1,90 @@
 import { useState } from 'react';
-import { useStyles, muiBtn, muiForm } from './AdminStyles';
-import TextField from '@material-ui/core/TextField';
+import { useStyles, muiBtn } from './AdminStyles';
+import Project from './Project';
+// import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-import Checkbox from '@material-ui/core/Checkbox';
+// import Checkbox from '@material-ui/core/Checkbox';
 
-// const { log } = console;
+const { log } = console;
 
 const Admin = () => {
   const [showForm, setshowForm] = useState(false);
-  const [name, setName] = useState('');
-  const [description, setDescription] = useState('');
-  const [restApi, setRestApi] = useState(false);
+  // const [name, setName] = useState('');
+  // const [title, setTitle] = useState('');
+  // const [description, setDescription] = useState('');
+  // const [requires, setRequires] = useState('');
+  // const [overlayText, setOverlayText] = useState('');
+  // const [page, setPage] = useState('');
+  // const [source, setSource] = useState('');
+  // const [src, setSrc] = useState('');
+  // const [restApi, setRestApi] = useState(false);
   const s = useStyles();
   const mb = muiBtn();
-  const mf = muiForm();
+  // const mf = muiForm();
 
   // Form
   const toggleForm = () => setshowForm(!showForm);
 
-  // Change Input value
-  const handleInputChange = e => {
-    const { name, value } = e.target;
+  // // Change Input value
+  // const handleInputChange = e => {
+  //   const { name, value } = e.target;
 
-    name === 'name'
-      ? setName(value)
-      : name === 'description'
-      ? setDescription(value)
-      : console.log('ERROR Input value!');
-  };
+  //   name === 'name'
+  //     ? setName(value)
+  //     : name === 'title'
+  //     ? setTitle(value)
+  //     : name === 'description'
+  //     ? setDescription(value)
+  //     : name === 'requires'
+  //     ? setRequires(value)
+  //     : name === 'overlayText'
+  //     ? setOverlayText(value)
+  //     : name === 'page'
+  //     ? setPage(value)
+  //     : name === 'source'
+  //     ? setSource(value)
+  //     : name === 'src'
+  //     ? setSrc(value)
+  //     : log('ERROR Input value!');
+  // };
 
-  // Checkbox
-  const handleChange = e => {
-    setRestApi(e.target.checked);
-  };
+  // // Checkbox
+  // const handleChange = e => {
+  //   setRestApi(e.target.checked);
+  // };
 
-  // Submit
-  const handleSubmit = e => {
-    e.preventDefault();
+  // // Create new Project
+  // const handleCreateNewProject = e => {
+  //   e.preventDefault();
+
+  //   const newProject = {
+  //     name,
+  //     title,
+  //     description,
+  //     requires,
+  //     overlayText,
+  //     page,
+  //     source,
+  //     src,
+  //     restApi,
+  //   };
+
+  //   handleSubmit(newProject);
+
+  //   setName('');
+  //   setTitle('');
+  //   setDescription('');
+  //   setRequires('');
+  //   setOverlayText('');
+  //   setPage('');
+  //   setSource('');
+  //   setSrc('');
+  //   setRestApi(false);
+  // };
+
+  // Submit project to the DB
+  const handleSubmit = newProject => {
+    log(newProject);
   };
 
   return (
@@ -45,54 +93,7 @@ const Admin = () => {
 
       <div className={s.formWrap}>
         {showForm ? (
-          <form
-            onSubmit={handleSubmit}
-            className={mf.root}
-            noValidate
-            autoComplete="off"
-          >
-            <TextField
-              id="outlined-basic"
-              name="name"
-              value={name}
-              onChange={handleInputChange}
-              label="Name"
-              variant="outlined"
-            />
-            <TextField
-              id="outlined-basic"
-              name="description"
-              value={description}
-              onChange={handleInputChange}
-              label="Description"
-              variant="outlined"
-            />
-            <Checkbox
-              checked={restApi}
-              // onC
-              color="primary"
-              onChange={handleChange}
-              inputProps={{ 'aria-label': 'primary checkbox' }}
-            />
-
-            <Button
-              onClick={toggleForm}
-              id="cancelBtn"
-              variant="contained"
-              color="primary"
-            >
-              Cancel
-            </Button>
-            <Button
-              id="addlBtn"
-              type="submit"
-              // className={mf.addBtn}
-              variant="contained"
-              color="primary"
-            >
-              Add
-            </Button>
-          </form>
+          <Project toggleForm={toggleForm} onSubmit={handleSubmit} />
         ) : (
           <Button
             onClick={toggleForm}
@@ -104,10 +105,18 @@ const Admin = () => {
           </Button>
         )}
       </div>
-      <ul className={s.requestList}>
+
+      {/* <ul className={s.requestList}>
         <li>{name}</li>
+        <li>{title}</li>
         <li>{description}</li>
-      </ul>
+        <li>{requires}</li>
+        <li>{overlayText}</li>
+        <li>{page}</li>
+        <li>{source}</li>
+        <li>{src}</li>
+        <li>{restApi ? 'REST-API: true' : null}</li>
+      </ul> */}
     </div>
   );
 };
