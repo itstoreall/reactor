@@ -16,15 +16,12 @@ const Admin = () => {
 
   // Submit new Project to the DB
   const handleSubmit = newProject => {
-    // --> Loader
+    log('Is sent...'); // show Loader
 
     createProject(newProject)
-      // .then(data => log(data))
       .then(result => log(result))
-      .catch(err => log('ERROR Message: -->', err.message))
-      .finally(data => log(data));
-
-    log('newProject:', newProject);
+      .catch(err => log('AdminPanel --> Submit ERROR Message:', err.message))
+      .finally(() => log('Successfully sent!')); // hide Loader
   };
 
   return (

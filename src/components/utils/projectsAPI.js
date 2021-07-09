@@ -1,42 +1,33 @@
 import axios from 'axios';
 
-const BASE_URL = 'https://reactor-rest-api.herokuapp.com/api';
+// const BASE_URL = 'https://reactor-rest-api.herokuapp.com/api';
 const AUTH_TOKEN =
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwZDVmOTBjMzAwMTQ1N2Q3YzhiNDVmNCIsImlhdCI6MTYyNTc4MjQ4NiwiZXhwIjoxNjI1ODY4ODg2fQ.kyE2cXT4oC8vKjOqzfiq_PuND7rJM7fy9ie0PxlVRU4';
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwZDVmOTBjMzAwMTQ1N2Q3YzhiNDVmNCIsImlhdCI6MTYyNTgxOTkxMiwiZXhwIjoxNjI1OTA2MzEyfQ.OnxyEELA0Du59q9AyCKcp5J1lQcjugyAaVWkZ-r33ns';
 
-axios.defaults.baseURL = BASE_URL;
+axios.defaults.baseURL = 'http://localhost:5288/api';
+// axios.defaults.baseURL = 'https://reactor-rest-api.herokuapp.com/api';
 axios.defaults.headers.common = { Authorization: `bearer ${AUTH_TOKEN}` };
 
 const { log } = console;
 
-// log(axios.default.baseURL);
-
+// GET All
 export const getAllProjects = async () => {
   try {
     const { data } = await axios.get(`/projects`);
     const { projects } = data.data;
-    // log(projects);
 
     return projects;
   } catch (err) {
-    log('axios ERR:-->', { err });
+    log('axios: GET All ERR:-->', { err });
   }
 };
 
+// CREATE
 export const createProject = async payload => {
   try {
     const response = await axios.post(`/projects`, payload);
-    log(response);
+    return `${response.statusText}: ${response.status}`;
   } catch (err) {
-    log('axios ERR:-->', { err });
+    log('axios CREATE ERR:-->', { err });
   }
 };
-
-// export const createProject = payload =>
-//   fetch('https://reactor-rest-api.herokuapp.com/api/projects', {
-//     method: 'POST',
-//     headers: {
-//       'Content-Type': 'application/json',
-//     },
-//     body: JSON.stringify(payload),
-//   }).then(res => res.json());

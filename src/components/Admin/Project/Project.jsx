@@ -11,10 +11,10 @@ const Project = ({ toggleForm, onSubmit }) => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [requires, setRequires] = useState('');
-  const [overlayText, setOverlayText] = useState('');
+  const [used, setUsed] = useState([]);
   const [page, setPage] = useState('');
   const [source, setSource] = useState('');
-  const [src, setSrc] = useState('');
+  const [src, setSrc] = useState([]);
   const [restApi, setRestApi] = useState(false);
   const mf = muiForm();
   const s = useStyles();
@@ -31,8 +31,8 @@ const Project = ({ toggleForm, onSubmit }) => {
       ? setDescription(value)
       : name === 'requires'
       ? setRequires(value)
-      : name === 'overlayText'
-      ? setOverlayText(value)
+      : name === 'used'
+      ? handleUsed(value)
       : name === 'page'
       ? setPage(value)
       : name === 'source'
@@ -47,6 +47,12 @@ const Project = ({ toggleForm, onSubmit }) => {
     setRestApi(e.target.checked);
   };
 
+  // Used
+  const handleUsed = value => {
+    // setOverlayText([...overlayText, value]);
+    setUsed([value]);
+  };
+
   // Create new Project
   const handleCreateNewProject = e => {
     e.preventDefault();
@@ -54,12 +60,26 @@ const Project = ({ toggleForm, onSubmit }) => {
     const newProject = {
       name,
       title,
-      description,
+      description: description[0].toUpperCase() + description.slice(1),
+      alt: title,
       requires,
-      overlayText,
+      used,
       page,
       source,
-      src,
+      src: [
+        `mob_${name}_450_wp`,
+        `mob_${name}_900_wp`,
+        `mob_${name}_450`,
+        `mob_${name}_900`,
+        `tab_${name}_354_wp`,
+        `tab_${name}_708_wp`,
+        `tab_${name}_354`,
+        `tab_${name}_708`,
+        `desk_${name}_370_wp`,
+        `desk_${name}_740_wp`,
+        `desk_${name}_370`,
+        `desk_${name}_740`,
+      ],
       restApi,
     };
 
@@ -69,7 +89,7 @@ const Project = ({ toggleForm, onSubmit }) => {
     setTitle('');
     setDescription('');
     setRequires('');
-    setOverlayText('');
+    setUsed('');
     setPage('');
     setSource('');
     setSrc('');
@@ -85,6 +105,7 @@ const Project = ({ toggleForm, onSubmit }) => {
         autoComplete="off"
       >
         <TextField
+          required
           id="outlined-basic"
           name="name"
           value={name}
@@ -93,6 +114,7 @@ const Project = ({ toggleForm, onSubmit }) => {
           variant="outlined"
         />
         <TextField
+          required
           id="outlined-basic"
           name="title"
           value={title}
@@ -101,6 +123,7 @@ const Project = ({ toggleForm, onSubmit }) => {
           variant="outlined"
         />
         <TextField
+          required
           id="outlined-basic"
           name="description"
           value={description}
@@ -117,11 +140,12 @@ const Project = ({ toggleForm, onSubmit }) => {
           variant="outlined"
         />
         <TextField
+          required
           id="outlined-basic"
-          name="overlayText"
-          value={overlayText}
+          name="used"
+          value={used}
           onChange={handleInputChange}
-          label="OverlayText"
+          label="Used"
           variant="outlined"
         />
         <TextField
@@ -133,6 +157,7 @@ const Project = ({ toggleForm, onSubmit }) => {
           variant="outlined"
         />
         <TextField
+          required
           id="outlined-basic"
           name="source"
           value={source}
@@ -140,17 +165,16 @@ const Project = ({ toggleForm, onSubmit }) => {
           label="Source"
           variant="outlined"
         />
-        <TextField
+        {/* <TextField
           id="outlined-basic"
           name="src"
           value={src}
           onChange={handleInputChange}
           label="src"
           variant="outlined"
-        />
+        /> */}
         <Checkbox
           checked={restApi}
-          // onC
           color="primary"
           onChange={handleChange}
           inputProps={{ 'aria-label': 'primary checkbox' }}
@@ -174,8 +198,9 @@ const Project = ({ toggleForm, onSubmit }) => {
         <li>{name}</li>
         <li>{title}</li>
         <li>{description}</li>
+        <li>alt={title}</li>
         <li>{requires}</li>
-        <li>{overlayText}</li>
+        <li>{used}</li>
         <li>{page}</li>
         <li>{source}</li>
         <li>{src}</li>
