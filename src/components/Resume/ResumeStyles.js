@@ -130,7 +130,7 @@ export default createUseStyles({
       justifyContent: 'center',
       minHeight: 290,
     },
-    
+
     '& img': {
       display: 'block',
       borderRadius: '50%',
@@ -139,7 +139,6 @@ export default createUseStyles({
         margin: '0 auto 30px',
       },
     },
-
 
     '& h1': {
       marginBottom: 10,
@@ -216,9 +215,11 @@ export default createUseStyles({
           fontSize: 16,
         },
 
+        // a
         '& a': {
           paddingLeft: 10,
           fontWeight: 400,
+          color: refs.primaryColor,
 
           [`@media (min-width: ${refs.tablet}px) and (max-width: ${refs.desktopMax}px)`]: {
             display: 'block',
@@ -354,7 +355,7 @@ export default createUseStyles({
     },
   },
 
-  // Primary Content
+  // Primary Content ------------------------------
   primaryContent: {
     [`@media (min-width: ${refs.desktop}px)`]: {
       padding: {
@@ -390,7 +391,7 @@ export default createUseStyles({
         marginBottom: 30,
         fontSize: 22,
         fontWeight: 500,
-        color: refs.secondaryWhiteColor,
+        color: refs.primaryColor,
       },
 
       '& h2': {

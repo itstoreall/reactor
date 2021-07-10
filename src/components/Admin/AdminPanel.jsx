@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useStyles, muiBtn } from './AdminPanelStyles';
 import Project from './Project';
 import Button from '@material-ui/core/Button';
-import { createProject } from '../utils/projectsAPI';
+import api from '../utils/projectsAPI';
 
 const { log } = console;
 
@@ -18,7 +18,8 @@ const Admin = () => {
   const handleSubmit = newProject => {
     log('Is sent...'); // show Loader
 
-    createProject(newProject)
+    api
+      .createProject(newProject)
       .then(result => log(result))
       .catch(err => log('AdminPanel --> Submit ERROR Message:', err.message))
       .finally(() => log('Successfully sent!')); // hide Loader

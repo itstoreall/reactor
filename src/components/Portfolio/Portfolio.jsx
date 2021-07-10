@@ -1,26 +1,25 @@
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import useStyles from './PortfolioStyles';
 import AppThumb from './AppThumb';
 import AppMeta from './AppMeta';
-import { projects } from './projects.json';
-import { getAllProjects } from '../utils/projectsAPI';
+// import { projects } from './projects.json';
+import api from '../utils/projectsAPI';
 
 const { log } = console;
 
 const Portfolio = () => {
+  const [projects, setProjects] = useState([]);
   const s = useStyles();
 
-  useEffect(() => {
-    getAllProjects()
-      .then(result => log(result))
-      .catch(err => log(err.message));
-  }, []);
+  useEffect(() => api.getAllProjects().then(res => setProjects(res)), []);
+
+  log(projects);
 
   return (
     <section className={s.Portfolio}>
       <h1>Portfolio</h1>
       <ul>
-        {projects.map(
+        {projects?.map(
           ({
             id,
             src,
@@ -28,7 +27,7 @@ const Portfolio = () => {
             title,
             description,
             requires,
-            overlayText,
+            used,
             page,
             source,
           }) => (
@@ -39,7 +38,7 @@ const Portfolio = () => {
                   src={src}
                   alt={alt}
                   requires={requires}
-                  overlayText={overlayText}
+                  used={used}
                 />
                 <AppMeta
                   s={s}

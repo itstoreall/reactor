@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import images from './images';
 
-const AppThumb = ({ s, src, alt, requires, overlayText }) => {
+const AppThumb = ({ s, src, alt, requires, used }) => {
+  console.log(used);
   return (
     <div className={s.thumb}>
       <picture>
@@ -54,7 +55,7 @@ const AppThumb = ({ s, src, alt, requires, overlayText }) => {
         <h3>Used in the project:</h3>
         {requires !== '' && <b>{requires}</b>}
         <ul>
-          {overlayText.map(el => (
+          {used.map(el => (
             <li key={el}>{el}</li>
           ))}
         </ul>
@@ -69,7 +70,7 @@ AppThumb.propTypes = {
   s: PropTypes.object.isRequired,
   src: PropTypes.arrayOf(PropTypes.string).isRequired,
   alt: PropTypes.string.isRequired,
-  overlayText: PropTypes.array.isRequired,
+  used: PropTypes.array.isRequired,
 };
 
 export default AppThumb;
