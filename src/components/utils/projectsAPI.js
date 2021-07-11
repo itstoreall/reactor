@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // const BASE_URL = 'https://reactor-rest-api.herokuapp.com/api';
 const AUTH_TOKEN =
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwZDVmOTBjMzAwMTQ1N2Q3YzhiNDVmNCIsImlhdCI6MTYyNTkzOTA0NywiZXhwIjoxNjI2MDI1NDQ3fQ.nTHvCDnI7jwe1ihsB1nhnYl02pS8k3r4sNeYYmVlaeo';
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwZDVmOTBjMzAwMTQ1N2Q3YzhiNDVmNCIsImlhdCI6MTYyNTk5NDQwMSwiZXhwIjoxNjI2MDgwODAxfQ.ZWfTF96saLRNH5UP5QMs3B3axPuqS_o3hixpVypi9Ho'; // 12:07
 
 // axios.defaults.baseURL = 'http://localhost:5288/api';
 axios.defaults.baseURL = 'https://reactor-rest-api.herokuapp.com/api';

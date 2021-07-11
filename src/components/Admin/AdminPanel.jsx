@@ -22,7 +22,7 @@ const Admin = () => {
       .createProject(newProject)
       .then(result => log(result))
       .catch(err => log('AdminPanel --> Submit ERROR Message:', err.message))
-      .finally(() => log('Successfully sent!')); // hide Loader
+      .finally(() => log('Finally')); // hide Loader
   };
 
   return (

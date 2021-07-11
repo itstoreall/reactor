@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useStyles, muiForm } from '../AdminPanelStyles';
+import { useStyles, muiForm } from './ProjectStyles';
 import TextField from '@material-ui/core/TextField';
 import Checkbox from '@material-ui/core/Checkbox';
 import Button from '@material-ui/core/Button';
@@ -85,6 +85,7 @@ const Project = ({ toggleForm, onSubmit }) => {
 
     onSubmit(newProject);
 
+    /*
     setName('');
     setTitle('');
     setDescription('');
@@ -94,104 +95,113 @@ const Project = ({ toggleForm, onSubmit }) => {
     setSource('');
     setSrc('');
     setRestApi(false);
+    */
   };
 
   return (
-    <>
+    <section className={s.projectWrap}>
       <form
         onSubmit={handleCreateNewProject}
         className={mf.root}
         noValidate
         autoComplete="off"
       >
-        <TextField
-          required
-          id="outlined-basic"
-          name="name"
-          value={name}
-          onChange={handleInputChange}
-          label="Name"
-          variant="outlined"
-        />
-        <TextField
-          required
-          id="outlined-basic"
-          name="title"
-          value={title}
-          onChange={handleInputChange}
-          label="Title"
-          variant="outlined"
-        />
-        <TextField
-          required
-          id="outlined-basic"
-          name="description"
-          value={description}
-          onChange={handleInputChange}
-          label="Description"
-          variant="outlined"
-        />
-        <TextField
-          id="outlined-basic"
-          name="requires"
-          value={requires}
-          onChange={handleInputChange}
-          label="Requires"
-          variant="outlined"
-        />
-        <TextField
-          required
-          id="outlined-basic"
-          name="used"
-          value={used}
-          onChange={handleInputChange}
-          label="Used"
-          variant="outlined"
-        />
-        <TextField
-          id="outlined-basic"
-          name="page"
-          value={page}
-          onChange={handleInputChange}
-          label="Page"
-          variant="outlined"
-        />
-        <TextField
-          required
-          id="outlined-basic"
-          name="source"
-          value={source}
-          onChange={handleInputChange}
-          label="Source"
-          variant="outlined"
-        />
-        {/* <TextField
-          id="outlined-basic"
-          name="src"
-          value={src}
-          onChange={handleInputChange}
-          label="src"
-          variant="outlined"
-        /> */}
-        <Checkbox
-          checked={restApi}
-          color="primary"
-          onChange={handleChange}
-          inputProps={{ 'aria-label': 'primary checkbox' }}
-        />
+        <div className={s.inputsWrap}>
+          <div className={s.requiredWrap}>
+            <h3>Required:</h3>
+            <TextField
+              required
+              id="outlined-basic"
+              name="name"
+              value={name}
+              onChange={handleInputChange}
+              label="Name"
+              variant="outlined"
+            />
+            <TextField
+              required
+              id="outlined-basic"
+              name="title"
+              value={title}
+              onChange={handleInputChange}
+              label="Title"
+              variant="outlined"
+            />
+            <TextField
+              required
+              id="outlined-basic"
+              name="description"
+              value={description}
+              onChange={handleInputChange}
+              label="Description"
+              variant="outlined"
+            />
+            <TextField
+              required
+              id="outlined-basic"
+              name="used"
+              value={used}
+              onChange={handleInputChange}
+              label="Used"
+              variant="outlined"
+            />
+            <TextField
+              required
+              id="outlined-basic"
+              name="source"
+              value={source}
+              onChange={handleInputChange}
+              label="Source"
+              variant="outlined"
+            />
+          </div>
 
-        <Button
-          onClick={toggleForm}
-          id="cancelBtn"
-          variant="contained"
-          color="primary"
-        >
-          Cancel
-        </Button>
+          <div className={s.optionallyWrap}>
+            <h3>Optionally:</h3>
+            <TextField
+              id="outlined-basic"
+              name="requires"
+              value={requires}
+              onChange={handleInputChange}
+              label="Requires"
+              variant="outlined"
+            />
+            <TextField
+              id="outlined-basic"
+              name="page"
+              value={page}
+              onChange={handleInputChange}
+              label="Page"
+              variant="outlined"
+            />
+            <Checkbox
+              checked={restApi}
+              color="primary"
+              onChange={handleChange}
+              inputProps={{ 'aria-label': 'primary checkbox' }}
+            />
+          </div>
+        </div>
 
-        <Button id="addlBtn" type="submit" variant="contained" color="primary">
-          Add
-        </Button>
+        <div className={s.buttonWrap}>
+          <Button
+            onClick={toggleForm}
+            id="cancelBtn"
+            variant="contained"
+            color="primary"
+          >
+            Cancel
+          </Button>
+
+          <Button
+            id="addlBtn"
+            type="submit"
+            variant="contained"
+            color="primary"
+          >
+            Add
+          </Button>
+        </div>
       </form>
 
       <ul className={s.requestList}>
@@ -206,7 +216,7 @@ const Project = ({ toggleForm, onSubmit }) => {
         <li>{src}</li>
         <li>{restApi ? 'REST-API: true' : null}</li>
       </ul>
-    </>
+    </section>
   );
 };
 

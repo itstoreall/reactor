@@ -179,7 +179,7 @@
       "name": "todos",
       "alt": "Todos application",
       "title": "Todos",
-      "description": "It's a regular to-do list with four functions: create to-do item, delete, completed and search by character",
+      "description": "It's a regular to-do list with four functions: create, delete, completed and search by character",
       "requires": "Requires a local server",
       "overlayText": [
         "prop-types",
@@ -225,7 +225,7 @@
       "name": "image_finder",
       "alt": "Image finder application",
       "title": "Image finder",
-      "description": "App, which allows search images by keyword, show big size and load more images by press the button ",
+      "description": "App, which allows search images by keyword, show big size and load more images by press the button",
       "requires": "",
       "overlayText": [
         "axios",

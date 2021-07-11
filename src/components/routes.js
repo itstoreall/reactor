@@ -40,7 +40,7 @@ export const routes = [
     path: '/admin',
     label: 'Admin',
     component: AdminView,
-    showInMenu: false,
+    showInMenu: true,
   },
   // {
   //   path: '/contacts',
