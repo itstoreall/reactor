@@ -24,7 +24,7 @@ export const useStyles = createUseStyles({
 
   // Required
   requiredWrap: {
-    backgroundColor: 'pink',
+    // backgroundColor: 'pink',
 
     [`@media (max-width: ${refs.tabletMax}px)`]: {
       marginBottom: '20px',
@@ -38,7 +38,7 @@ export const useStyles = createUseStyles({
 
   // Optionally
   optionallyWrap: {
-    backgroundColor: 'skyblue',
+    // backgroundColor: 'skyblue',
 
     [`@media (min-width: ${refs.tablet}px)`]: {
       width: '50%',
@@ -47,13 +47,13 @@ export const useStyles = createUseStyles({
 
   // Buttons
   buttonWrap: {
-    backgroundColor: 'palevioletred',
+    // backgroundColor: 'palevioletred',
     marginBottom: '40px',
   },
 
   // Request List
   requestList: {
-    backgroundColor: 'grey',
+    // backgroundColor: 'grey',
   },
 }); // ---------------------------------------
 
@@ -107,20 +107,27 @@ export const muiForm = makeStyles({
           color: refs.primaryWhiteColor,
         },
 
-        '& .PrivateNotchedOutline-root-2': {
+        // Outline
+        '& .PrivateNotchedOutline-root-3': {
           '&.MuiOutlinedInput-notchedOutline': {},
 
-          '& .PrivateNotchedOutline-legendLabelled-4': {
+          // Legend
+          '& .PrivateNotchedOutline-legendLabelled-5': {
             fontSize: '0.65em',
           },
         },
       },
     },
 
-    // Cancel Btn
     '& .MuiButton-root': {
+      // Cancel Btn
       '&#cancelBtn': {
-        marginRight: 20,
+        marginRight: 10,
+      },
+
+      // Reset Btn
+      '&#resetBtn': {
+        marginRight: 10,
       },
     },
   },

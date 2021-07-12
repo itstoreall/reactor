@@ -10,12 +10,17 @@ const Project = ({ toggleForm, onSubmit }) => {
   const [name, setName] = useState('');
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
+
+  // Used
   const [requires, setRequires] = useState('');
+  const [usedValue, setUsedValue] = useState('');
   const [used, setUsed] = useState([]);
+
   const [page, setPage] = useState('');
   const [source, setSource] = useState('');
   const [src, setSrc] = useState([]);
   const [restApi, setRestApi] = useState(false);
+
   const mf = muiForm();
   const s = useStyles();
 
@@ -49,8 +54,11 @@ const Project = ({ toggleForm, onSubmit }) => {
 
   // Used
   const handleUsed = value => {
-    // setOverlayText([...overlayText, value]);
-    setUsed([value]);
+    setUsedValue([value]);
+    const arr = value.split(' ');
+
+    setUsed(arr.filter(Boolean));
+    // log('used', used);
   };
 
   // Create new Project
@@ -59,10 +67,10 @@ const Project = ({ toggleForm, onSubmit }) => {
 
     const newProject = {
       name,
-      title,
-      description: description[0].toUpperCase() + description.slice(1),
+      title: title[0]?.toUpperCase() + title.slice(1),
+      description: description[0]?.toUpperCase() + description.slice(1),
       alt: title,
-      requires,
+      requires: requires[0]?.toUpperCase() + requires.slice(1),
       used,
       page,
       source,
@@ -96,6 +104,18 @@ const Project = ({ toggleForm, onSubmit }) => {
     setSrc('');
     setRestApi(false);
     */
+  };
+
+  const resetForm = () => {
+    setName('');
+    setTitle('');
+    setDescription('');
+    setRequires('');
+    setUsed('');
+    setPage('');
+    setSource('');
+    setSrc('');
+    setRestApi(false);
   };
 
   return (
@@ -140,7 +160,7 @@ const Project = ({ toggleForm, onSubmit }) => {
               required
               id="outlined-basic"
               name="used"
-              value={used}
+              value={usedValue}
               onChange={handleInputChange}
               label="Used"
               variant="outlined"
@@ -194,12 +214,21 @@ const Project = ({ toggleForm, onSubmit }) => {
           </Button>
 
           <Button
+            onClick={resetForm}
+            id="resetBtn"
+            variant="contained"
+            color="primary"
+          >
+            Reset
+          </Button>
+
+          <Button
             id="addlBtn"
             type="submit"
             variant="contained"
             color="primary"
           >
-            Add
+            Submit
           </Button>
         </div>
       </form>
