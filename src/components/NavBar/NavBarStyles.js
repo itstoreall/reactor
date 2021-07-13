@@ -8,20 +8,18 @@ export default createUseStyles({
     right: 0,
     width: '100%',
     height: '100vh',
-    backgroundColor: refs.primaryColor,
+    backgroundColor: 'red',
+    // backgroundColor: refs.primaryColor,
     overflow: 'scroll',
-
     [`@media (min-width: ${refs.tablet}px)`]: {
       width: 220,
     },
   },
-
-  // NavMenu
-  NavMenu: {
+  // NavBar
+  NavBar: {
     position: 'relative',
   },
-
-  navMenuButton: {
+  navBarBtn: {
     position: 'fixed',
     top: 11,
     right: 10,
@@ -42,15 +40,13 @@ export default createUseStyles({
     border: `2px solid ${refs.accentBg}`,
     borderRadius: 4,
     outline: 'none',
-
     '&:hover': {
       backgroundColor: refs.primaryColor,
       color: refs.darkColor,
       border: `2px solid ${refs.primaryColor}`,
     },
   },
-
-  activeNavMenuButton: {
+  activeNavBarBtn: {
     composes: 'navMenuButton',
     position: 'fixed',
     top: 11,
@@ -71,13 +67,11 @@ export default createUseStyles({
     border: `2px solid ${refs.primaryBg}`,
     borderRadius: 4,
     outline: 'none',
-
     '&:hover': {
       backgroundColor: refs.primaryBg,
       color: refs.primaryWhiteColor,
     },
   },
-
   // Navigation
   Navigation: {
     display: 'flex',
@@ -94,7 +88,6 @@ export default createUseStyles({
     },
     // backgroundColor: refs.darkBg,
     // overflow: 'scroll',
-
     [`@media (min-width: ${refs.tablet}px)`]: {
       padding: {
         top: 100,
@@ -105,7 +98,6 @@ export default createUseStyles({
       width: 220,
     },
   },
-
   link: {
     textDecoration: 'none',
     padding: 15,
@@ -113,25 +105,20 @@ export default createUseStyles({
     color: refs.darkColor,
     backgroundColor: 'inherit',
     borderRadius: 4,
-
     [`@media (min-width: ${refs.tablet}px)`]: {
       fontSize: 16,
     },
-
     '&:not(:last-child)': {
       marginBottom: 5,
     },
-
     '&:hover': {
       color: refs.primaryWhiteColor,
       backgroundColor: refs.primaryBg,
     },
   },
-
   activeLink: {
     backgroundColor: refs.primaryBg,
     color: refs.primaryWhiteColor,
-
     '&:hover': {
       color: refs.primaryWhiteColor,
       backgroundColor: refs.primaryBg,

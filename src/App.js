@@ -1,39 +1,46 @@
-import { useEffect } from 'react';
-import { connect } from 'react-redux';
-import { toggleOverflow } from '../src/redux/app/actions';
+import { useState, useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
-import appInfo from './app.json';
+import useStyles from './AppStyles';
 import Header from './components/Header';
-import NavMenu from './components/NavMenu';
 import Main from './components/Main';
-import ResumeStyles from './AppStyles';
-import ReactGA from 'react-ga'; 
+import MenuBtn from './components/MenuBtn';
+import NavBar from './components/NavBar';
+import ReactGA from 'react-ga';
 
-const App = ({ location, hidden, toggleOverflow }) => {
-  const s = ResumeStyles();
+const App = ({ location, toggleOverflow }) => {
+  const [showNavBar, setShowNavBar] = useState(false);
+  const s = useStyles();
 
+  // Google Analytics
   useEffect(() => {
     ReactGA.initialize('UA-199360185-1');
     ReactGA.pageview(location.pathname);
+  }, [location.pathname]);
 
-    appInfo.location.map(url =>
-      location.pathname === url ? toggleOverflow(true) : toggleOverflow(false),
-    );
-  }, [location.pathname, toggleOverflow, location.search]);
+  // Body overflow
+  useEffect(() => {
+    const body = document.querySelector('body');
+    body.style.overflow = showNavBar ? 'hidden' : 'auto';
+  }, [showNavBar]);
+
+  const toggleNavBar = () => {
+    setShowNavBar(!showNavBar);
+  };
 
   return (
-    <div className={hidden ? s.AppOption_one : s.AppOption_two}>
+    <div className={s.AppOption_two}>
       <Header />
       <Main />
-      <NavMenu />
+      <MenuBtn toggleNavBar={toggleNavBar} />
+      {showNavBar && <NavBar toggleNavBar={toggleNavBar} />}
     </div>
   );
 };
 
-const mapState = state => ({
-  hidden: state.app.hidden,
-});
+// const mapState = state => ({
+//   hidden: state.app.hidden,
+// });
 
-const mapDispatch = { toggleOverflow };
+// const mapDispatch = { toggleOverflow };
 
-export default connect(mapState, mapDispatch)(withRouter(App));
+export default withRouter(App);

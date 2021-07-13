@@ -1,12 +1,16 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useStyles, muiForm } from './ProjectStyles';
 import TextField from '@material-ui/core/TextField';
 import Checkbox from '@material-ui/core/Checkbox';
 import Button from '@material-ui/core/Button';
+import api from '../../utils/projectsAPI';
 
 const { log } = console;
 
 const Project = ({ toggleForm, onSubmit }) => {
+  const [projects, setProjects] = useState([]);
+  log(projects);
+  // Create Project
   const [name, setName] = useState('');
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
@@ -23,6 +27,8 @@ const Project = ({ toggleForm, onSubmit }) => {
 
   const mf = muiForm();
   const s = useStyles();
+
+  useEffect(() => api.getAllProjects().then(res => setProjects(res)), []);
 
   // Change Input value
   const handleInputChange = e => {

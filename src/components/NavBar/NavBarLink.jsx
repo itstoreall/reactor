@@ -1,11 +1,11 @@
 import { NavLink } from 'react-router-dom';
-import useStyles from './NavStyles';
+import useStyles from './NavBarStyles';
 import { routes } from '../routes';
 
-export default function Navigation({ onToggleVisible }) {
+export default function NavBarLink({ toggleNavBar }) {
   const s = useStyles();
 
-  const handleToggleNavMenu = () => onToggleVisible();
+  // const handleToggleNavMenu = () => onToggleVisible();
 
   return (
     <div className={s.Navigation}>
@@ -17,7 +17,7 @@ export default function Navigation({ onToggleVisible }) {
             exact
             className={s.link}
             activeClassName={s.activeLink}
-            onClick={handleToggleNavMenu}
+            onClick={toggleNavBar}
             replace
           >
             {label}

@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import images from './images';
 
 const AppThumb = ({ s, src, alt, requires, used }) => {
-  console.log(used);
   return (
     <div className={s.thumb}>
       <picture>
@@ -55,8 +54,8 @@ const AppThumb = ({ s, src, alt, requires, used }) => {
         <h3>Used in the project:</h3>
         {requires !== '' && <b>{requires}</b>}
         <ul>
-          {used.map(el => (
-            <li key={el}>{el}</li>
+          {used.map((el, idx) => (
+            <li key={idx}>{el}</li>
           ))}
         </ul>
 

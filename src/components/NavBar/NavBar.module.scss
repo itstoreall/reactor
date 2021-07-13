@@ -1,0 +1,122 @@
+// @import '../../scss/vars';
+// @import '../../scss/breakpoints';
+
+@keyframes showModalBackdrop {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes showModalSlide {
+  0% {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes showModalSlideMob {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes rotateCloseBtn {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+.backdrop {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - 60px);
+  background-color: #fff;
+
+  @media screen and (max-width: 767px) {
+    top: 61px;
+    z-index: 3;
+  }
+
+  @media screen and (min-width: 768px) {
+    top: 0;
+    height: 100vh;
+    background-color: pink;
+    animation: showModalBackdrop 200ms forwards;
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+    padding: 63px 20px 0;
+    height: 100%;
+    background-color: #fff;
+    overflow-y: scroll;
+
+    // Hides Modal scrollbar
+    -ms-overflow-style: none; // IE and Edge
+    scrollbar-width: none; // Firefox
+    &::-webkit-scrollbar {
+      display: none; // Chrome, Safari,Opera
+    }
+
+    @media screen and (max-width: 767px) {
+      margin: 0 auto;
+      animation: showModalSlideMob 400ms forwards;
+    }
+
+    @media screen and (min-width: 768px) {
+      margin-left: auto;
+      padding: 120px 40px 40px;
+      width: 512px;
+      animation: showModalSlide 400ms forwards;
+    }
+
+    @media screen and (min-width: 1200px) {
+      padding: 120px 50px 40px;
+      width: 530px;
+      // box-shadow: $primaryShadow;
+    }
+
+    .childrenWrap {
+      @media screen and (max-width: 767px) {
+        width: 100%;
+        max-width: 414px;
+      }
+    }
+
+    .CloseModalBtn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 9px;
+      width: 44px;
+      height: 44px;
+      cursor: pointer;
+
+      &:hover {
+        animation: rotateCloseBtn 600ms forwards;
+      }
+    }
+  }
+}
