@@ -1,7 +1,6 @@
-// @import '../../scss/vars';
-// @import '../../scss/breakpoints';
+@import '../../styles/main.scss';
 
-@keyframes showModalBackdrop {
+@keyframes backdrop {
   0% {
     opacity: 0;
   }
@@ -10,7 +9,7 @@
   }
 }
 
-@keyframes showModalSlide {
+@keyframes NavBarlSlide {
   0% {
     opacity: 0;
     transform: translateX(200px);
@@ -23,7 +22,7 @@
   }
 }
 
-@keyframes showModalSlideMob {
+@keyframes NavBarlSlideMobile {
   0% {
     opacity: 0;
     transform: translateY(50px);
@@ -36,14 +35,14 @@
   }
 }
 
-@keyframes rotateCloseBtn {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(180deg);
-  }
-}
+// @keyframes rotateCloseBtn {
+//   0% {
+//     transform: rotate(0deg);
+//   }
+//   100% {
+//     transform: rotate(180deg);
+//   }
+// }
 
 .backdrop {
   position: fixed;
@@ -51,72 +50,101 @@
   left: 0;
   width: 100vw;
   height: calc(100vh - 60px);
-  background-color: #fff;
+  animation: backdrop 200ms forwards;
 
   @media screen and (max-width: 767px) {
-    top: 61px;
+    background-color: $accentBg;
+    top: 60px;
     z-index: 3;
   }
 
   @media screen and (min-width: 768px) {
     top: 0;
     height: 100vh;
-    background-color: pink;
-    animation: showModalBackdrop 200ms forwards;
+    background-color: $backdropBg;
+    // animation: backdrop 200ms forwards;
   }
 
-  .content {
-    display: flex;
-    justify-content: center;
-    padding: 63px 20px 0;
+  .NavBar {
     height: 100%;
-    background-color: #fff;
-    overflow-y: scroll;
-
-    // Hides Modal scrollbar
-    -ms-overflow-style: none; // IE and Edge
-    scrollbar-width: none; // Firefox
-    &::-webkit-scrollbar {
-      display: none; // Chrome, Safari,Opera
-    }
+    background-color: $accentBg;
 
     @media screen and (max-width: 767px) {
+      display: flex;
+      justify-content: center;
+      padding: 63px 20px 0;
       margin: 0 auto;
-      animation: showModalSlideMob 400ms forwards;
+      max-width: 320px;
+      animation: NavBarlSlideMobile 400ms forwards;
     }
 
     @media screen and (min-width: 768px) {
       margin-left: auto;
-      padding: 120px 40px 40px;
-      width: 512px;
-      animation: showModalSlide 400ms forwards;
+      padding: 120px 20px 0;
+      width: 280px;
+      animation: NavBarlSlide 400ms forwards;
     }
 
-    @media screen and (min-width: 1200px) {
-      padding: 120px 50px 40px;
-      width: 530px;
-      // box-shadow: $primaryShadow;
-    }
+    // Navigation
+    .navigation {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      list-style: none;
+      background-color: skyblue;
 
-    .childrenWrap {
-      @media screen and (max-width: 767px) {
-        width: 100%;
-        max-width: 414px;
+      .NavBarLink {
+        text-decoration: none;
+        padding: 15px;
+        font-size: 22px;
+        color: white;
+        background-color: inherit;
+        border-radius: 4;
+
+        @media screen and (min-width: 768px) {
+          fontsize: 16;
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 5;
+        }
+
+        &:hover {
+          color: yellow;
+          background-color: blue;
+        }
+      }
+
+      .activeNavBarLink {
+        background-color: red;
+        color: green;
+
+        &:hover {
+          color: yellow;
+          background-color: black;
+        }
       }
     }
 
-    .CloseModalBtn {
-      position: absolute;
-      top: 0;
-      right: 0;
-      padding: 9px;
-      width: 44px;
-      height: 44px;
-      cursor: pointer;
+    // .childrenWrap {
+    //   @media screen and (max-width: 767px) {
+    //     width: 100%;
+    //     max-width: 414px;
+    //   }
+    // }
 
-      &:hover {
-        animation: rotateCloseBtn 600ms forwards;
-      }
-    }
+    // .CloseModalBtn {
+    //   position: absolute;
+    //   top: 0;
+    //   right: 0;
+    //   padding: 9px;
+    //   width: 44px;
+    //   height: 44px;
+    //   cursor: pointer;
+
+    //   &:hover {
+    //     animation: rotateCloseBtn 600ms forwards;
+    //   }
+    // }
   }
 }

@@ -2,6 +2,7 @@ import { createUseStyles } from 'react-jss';
 import { refs } from '../refs';
 
 export default createUseStyles({
+  // Header
   Header: {
     paddingLeft: 15,
     display: 'flex',
@@ -10,9 +11,17 @@ export default createUseStyles({
     height: 60,
     width: '100%',
 
-    [`@media (max-width: 767px)`]: {
-      // maxWidth: 450,
-    },
+    position: 'fixed',
+    zIndex: 1,
+    backgroundColor: '#212225a1',
+    backdropFilter: 'blur(10px)',
+
+    // [`@media (max-width: 767px)`]: {
+    //   position: 'fixed',
+    //   zIndex: 1,
+    //   backgroundColor: refs.darkColor,
+    //   // maxWidth: 450,
+    // },
 
     [`@media (min-width: ${refs.tablet}px)`]: {
       paddingLeft: 30,
@@ -23,6 +32,8 @@ export default createUseStyles({
       // maxWidth: 1440,
     },
   },
+
+  // Logo
   logoLink: {
     fontSize: 18,
     fontWeight: 600,
@@ -30,60 +41,4 @@ export default createUseStyles({
     textTransform: 'uppercase',
     color: refs.primaryColor,
   },
-
-  // navBarBtn: {
-  //   position: 'fixed',
-  //   top: 11,
-  //   right: 10,
-  //   width: 84,
-  //   padding: {
-  //     top: 10,
-  //     left: 10,
-  //     right: 10,
-  //     bottom: 10,
-  //   },
-  //   fontSize: 14,
-  //   fontWeight: 500,
-  //   letterSpacing: 1,
-  //   textTransform: 'uppercase',
-  //   cursor: 'pointer',
-  //   color: refs.primaryColor,
-  //   backgroundColor: refs.primaryBg,
-  //   border: `2px solid ${refs.accentBg}`,
-  //   borderRadius: 4,
-  //   outline: 'none',
-
-  //   '&:hover': {
-  //     backgroundColor: refs.primaryColor,
-  //     color: refs.darkColor,
-  //     border: `2px solid ${refs.primaryColor}`,
-  //   },
-  // },
-  // activeNavBarBtn: {
-  //   composes: 'navMenuButton',
-  //   position: 'fixed',
-  //   top: 11,
-  //   right: 10,
-  //   width: 84,
-  //   padding: {
-  //     top: 10,
-  //     left: 10,
-  //     right: 10,
-  //     bottom: 10,
-  //   },
-  //   fontSize: 14,
-  //   fontWeight: 500,
-  //   textTransform: 'uppercase',
-  //   cursor: 'pointer',
-  //   color: refs.primaryBg,
-  //   backgroundColor: 'transparent',
-  //   border: `2px solid ${refs.primaryBg}`,
-  //   borderRadius: 4,
-  //   outline: 'none',
-
-  //   '&:hover': {
-  //     backgroundColor: refs.primaryBg,
-  //     color: refs.primaryWhiteColor,
-  //   },
-  // },
 });

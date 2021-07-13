@@ -7,7 +7,7 @@ import MenuBtn from './components/MenuBtn';
 import NavBar from './components/NavBar';
 import ReactGA from 'react-ga';
 
-const App = ({ location, toggleOverflow }) => {
+const App = ({ location }) => {
   const [showNavBar, setShowNavBar] = useState(false);
   const s = useStyles();
 
@@ -28,7 +28,7 @@ const App = ({ location, toggleOverflow }) => {
   };
 
   return (
-    <div className={s.AppOption_two}>
+    <div className={s.AppWrap}>
       <Header />
       <Main />
       <MenuBtn toggleNavBar={toggleNavBar} />

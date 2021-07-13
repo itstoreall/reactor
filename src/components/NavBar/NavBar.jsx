@@ -24,7 +24,7 @@ const NavBar = ({ toggleNavBar }) => {
 
   return createPortal(
     <div className={s.backdrop} onClick={handleCloseByBackdrop}>
-      <div className={s.content}>
+      <div className={s.NavBar}>
         <NavBarLink toggleNavBar={toggleNavBar} />
       </div>
     </div>,

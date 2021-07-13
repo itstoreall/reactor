@@ -59,24 +59,23 @@ export default createUseStyles({
     },
   },
 
-  // Resume
+  // Resume (div) ---------------------------------------
   ResumeContent: {
     width: '100%',
+
     [`@media (min-width: ${refs.desktop}px)`]: {
       display: 'flex',
       justifyContent: 'center',
     },
-    // backgroundColor: 'skyblue',
+    // backgroundColor: 'pink',
     // box-shadow: 5px 8.66px 20px 0px rgba(0, 0, 0, 0.15);
   },
 
   // Aside
   aside: {
-    padding: {
-      top: 30,
-      // bottom: 30,
-    },
-    marginBottom: 30,
+    paddingTop: 90,
+    paddingBottom: 30,
+    // marginBottom: 30,
 
     [`@media (min-width: ${refs.tablet}px) and (max-width: ${refs.desktopMax}px)`]: {
       display: 'flex',
@@ -84,13 +83,9 @@ export default createUseStyles({
     },
 
     [`@media (min-width: ${refs.desktop}px)`]: {
-      padding: {
-        top: 40,
-        right: 50,
-        bottom: 50,
-      },
+      paddingRight: 50,
       width: 320,
-      height: 'calc(100vh - 60px)',
+      height: '100vh',
       borderRight: `1px solid ${refs.secondaryBg}`,
       overflow: 'scroll',
 
@@ -355,25 +350,25 @@ export default createUseStyles({
     },
   },
 
-  // Primary Content ------------------------------
-  primaryContent: {
+  // Main Content --------------------------------------
+  mainContent: {
+    paddingBottom: 40,
+
+    [`@media (min-width: ${refs.tablet}px)`]: {
+      paddingBottom: 60,
+    },
+
     [`@media (min-width: ${refs.desktop}px)`]: {
-      padding: {
-        top: 40,
-        left: 50,
-        bottom: 70,
-      },
+      paddingTop: 90,
+      paddingLeft: 50,
       width: 550,
-      height: 'calc(100vh - 60px)',
+      height: '100vh',
       overflow: 'scroll',
 
-      // Hide scrollbar for IE, Edge and Firefox
-      '-ms-overflow-style': 'none',
-      'scrollbar-width': 'none',
-
-      // Hide scrollbar for Chrome, Safari and Opera
+      '-ms-overflow-style': 'none', // IE, Edge
+      'scrollbar-width': 'none', // Firefox
       '&::-webkit-scrollbar': {
-        display: 'none',
+        display: 'none', // Chrome, Safari Opera
       },
     },
 

@@ -2,6 +2,7 @@ import { createUseStyles } from 'react-jss';
 import { refs } from '../refs';
 
 export default createUseStyles({
+  // Btn
   MenuBtn: {
     position: 'fixed',
     top: 11,
@@ -19,10 +20,11 @@ export default createUseStyles({
     textTransform: 'uppercase',
     cursor: 'pointer',
     color: refs.primaryColor,
-    backgroundColor: refs.primaryBg,
+    backgroundColor: 'transparent',
     border: `2px solid ${refs.accentBg}`,
     borderRadius: 4,
     outline: 'none',
+    zIndex: 3,
 
     '&:hover': {
       backgroundColor: refs.primaryColor,
@@ -31,6 +33,7 @@ export default createUseStyles({
     },
   },
 
+  // Active Btn
   activeMenuBtn: {
     composes: 'navMenuButton',
     position: 'fixed',

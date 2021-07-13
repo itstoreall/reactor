@@ -5,18 +5,12 @@ export default createUseStyles({
   // Article (article)
 
   article: {
-    '& section > h1': {
-      // marginBottom: 40,
-      // color: 'pink',
-    },
+    // backgroundColor: 'pink',
+    // '& section > h1': {
+    // marginBottom: 40,
+    // color: 'pink',
+    // },
   },
-
-  // AppOption_one: {
-  //   '& h1': {
-  //     marginBottom: 40,
-  //     color: 'pink',
-  //   },
-  // },
 
   // Container (div)
   container: {
