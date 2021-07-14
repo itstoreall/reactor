@@ -146,9 +146,9 @@ export default createUseStyles({
       display: 'block',
       marginBottom: 30,
       fontSize: 22,
-      fontWeight: 500,
+      fontWeight: 400,
       textAlign: 'center',
-      color: refs.secondaryWhiteColor,
+      color: refs.primaryColor,
 
       [`@media (min-width: ${refs.tablet}px) and (max-width: ${refs.desktopMax}px)`]: {
         marginBottom: 50,
@@ -345,8 +345,24 @@ export default createUseStyles({
   downloadResume: {
     padding: '30px 0',
 
-    '& a:hover': {
+    '& > a': {
+      display: 'inline-flex',
+      alignItems: 'center',
+
+      '& svg': {
+        marginRight: 12,
+        width: 20,
+        height: 20,
+        fill: refs.linkColor,
+      },
+    },
+
+    '& > a:hover': {
       color: refs.primaryWhiteColor,
+
+      '& > svg': {
+        fill: refs.primaryWhiteColor,
+      },
     },
   },
 
@@ -385,7 +401,7 @@ export default createUseStyles({
         display: 'block',
         marginBottom: 30,
         fontSize: 22,
-        fontWeight: 500,
+        fontWeight: 400,
         color: refs.primaryColor,
       },
 
@@ -398,6 +414,7 @@ export default createUseStyles({
         lineHeight: 1.4,
 
         '& span': {
+          fontWeight: 400,
           color: refs.primaryColor,
         },
       },
@@ -424,8 +441,45 @@ export default createUseStyles({
 
   // Summary (p)
   summary: {
+    marginBottom: 30,
     lineHeight: 1.6,
     color: refs.secondaryWhiteColor,
+  },
+
+  // Certificate
+  certificateLink: {
+    display: 'inline-flex',
+    alignItems: 'center',
+    // color: refs.linkColor,
+
+    '& svg': {
+      marginRight: 7,
+      width: 26,
+      height: 26,
+      fill: refs.linkColor,
+    },
+
+    '&:hover svg': {
+      fill: refs.primaryWhiteColor,
+    },
+  },
+
+  projectLink: {
+    display: 'inline-flex',
+    alignItems: 'center',
+    paddingLeft: 4,
+    color: refs.linkColor,
+
+    '& svg': {
+      marginRight: 10,
+      width: 26,
+      height: 26,
+      fill: refs.linkColor,
+    },
+
+    '&:hover svg': {
+      fill: refs.primaryWhiteColor,
+    },
   },
 
   // Date (p)

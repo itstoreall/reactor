@@ -18,8 +18,8 @@ export default createUseStyles({
     //   // paddingBottom: 80,
     // },
 
-    '& h1': {
-      marginBottom: 40,
-    },
+    // '& h1': {
+    //   marginBottom: 40,
+    // },
   },
 });

@@ -17,7 +17,6 @@ const Portfolio = () => {
 
   return (
     <section className={s.Portfolio}>
-      <h1>Portfolio</h1>
       <ul>
         {projects?.map(
           ({

@@ -5,7 +5,7 @@ const ContentJobs = ({ resume }) => {
 
   return (
     <section className={s.jobs}>
-      <h2>Employment history</h2>
+      <h2>Employment history:</h2>
       {resume.jobs.map(({ position, company, date, specialization }) => (
         <div key={date} className={s.jobListWrap}>
           <h3>
