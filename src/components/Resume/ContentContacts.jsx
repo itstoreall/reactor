@@ -12,13 +12,17 @@ const ContentContacts = ({ tablet, desktop, resume }) => {
         <li>
           Phone:
           {tablet && !desktop && <br />}
-          <a href={phone_href}>{phone}</a>
+          <a className={s.contactLink} href={phone_href}>
+            {phone}
+          </a>
         </li>
 
         <li>
           E-mail:
           {tablet && !desktop && <br />}
-          <a href={email_href}>{email}</a>
+          <a className={s.contactLink} href={email_href}>
+            {email}
+          </a>
         </li>
       </ul>
 

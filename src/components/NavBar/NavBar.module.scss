@@ -1,0 +1,127 @@
+@import '../../styles/main.scss';
+
+@keyframes backdrop {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes NavBarlSlide {
+  0% {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes NavBarlSlideMobile {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+// @keyframes rotateCloseBtn {
+//   0% {
+//     transform: rotate(0deg);
+//   }
+//   100% {
+//     transform: rotate(180deg);
+//   }
+// }
+
+.backdrop {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - 60px);
+  animation: backdrop 200ms forwards;
+
+  @media screen and (max-width: 767px) {
+    background-color: $accentBg;
+    top: 60px;
+    z-index: 3;
+  }
+
+  @media screen and (min-width: 768px) {
+    top: 0;
+    height: 100vh;
+    background-color: $backdropBg;
+    // animation: backdrop 200ms forwards;
+  }
+
+  .NavBar {
+    height: 100%;
+    background-color: $accentBg;
+
+    @media screen and (max-width: 767px) {
+      display: flex;
+      justify-content: center;
+      padding: 63px 20px 0;
+      margin: 0 auto;
+      max-width: 320px;
+      animation: NavBarlSlideMobile 400ms forwards;
+    }
+
+    @media screen and (min-width: 768px) {
+      margin-left: auto;
+      padding: 120px 20px 0;
+      width: 280px;
+      animation: NavBarlSlide 400ms forwards;
+    }
+
+    // Navigation
+    .navigation {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      list-style: none;
+      // background-color: skyblue;
+
+      .NavBarLink {
+        padding: 15px;
+        font-size: 22px;
+        text-decoration: none;
+        color: $primaryBlackColor;
+        border-radius: 4px;
+
+        @media screen and (min-width: 768px) {
+          fontsize: 16;
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 5px;
+        }
+
+        &:hover {
+          color: $primaryWhiteColor;
+          background-color: $primaryBg;
+        }
+      }
+
+      .activeNavBarLink {
+        background-color: $primaryBg;
+        color: $primaryWhiteColor;
+
+        &:hover {
+          background-color: black;
+        }
+      }
+    }
+  }
+}

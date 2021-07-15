@@ -30,6 +30,7 @@ export const refs = {
 
   // Shadows
   itemShadow: 'rgba(99, 99, 99, 0.5) 0px 2px 5px -1px',
+  headerShadow: 'rgba(0, 0, 0, 0.5) 0px 2px 5px -1px',
 
   // Timing function
   cubicBezier: 'cubic-bezier(0.4, 0, 0.2, 1)',

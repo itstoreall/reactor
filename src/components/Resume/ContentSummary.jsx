@@ -1,4 +1,6 @@
 import useStyles from './ResumeStyles';
+import sprite from '../../svg/sprite.svg';
+import certificate from './serhii_stanislav-goit_certificate.jpg';
 
 const ContentSummary = ({ desktop, resume }) => {
   const {
@@ -16,6 +18,17 @@ const ContentSummary = ({ desktop, resume }) => {
         </>
       )}
       <p className={s.summary}>{summary}</p>
+      <a
+        className={s.certificateLink}
+        href={certificate}
+        target="_blank"
+        rel="noreferrer"
+      >
+        <svg>
+          <use href={`${sprite}#certificate`}></use>
+        </svg>
+        Certificate
+      </a>
     </section>
   );
 };

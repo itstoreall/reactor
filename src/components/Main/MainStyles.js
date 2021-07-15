@@ -5,18 +5,12 @@ export default createUseStyles({
   // Article (article)
 
   article: {
-    '& section > h1': {
-      // marginBottom: 40,
-      // color: 'pink',
-    },
+    // backgroundColor: 'pink',
+    // '& section > h1': {
+    // marginBottom: 40,
+    // color: 'pink',
+    // },
   },
-
-  // AppOption_one: {
-  //   '& h1': {
-  //     marginBottom: 40,
-  //     color: 'pink',
-  //   },
-  // },
 
   // Container (div)
   container: {
@@ -73,7 +67,7 @@ export default createUseStyles({
     justifyContent: 'center',
     alignItems: 'center',
     width: '100%',
-    height: 'calc(100vh - 180px)',
+    height: '100vh',
     fontSize: 18,
     fontWeight: 600,
     letterSpacing: 3,

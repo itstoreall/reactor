@@ -59,24 +59,23 @@ export default createUseStyles({
     },
   },
 
-  // Resume
+  // Resume (div) ---------------------------------------
   ResumeContent: {
     width: '100%',
+
     [`@media (min-width: ${refs.desktop}px)`]: {
       display: 'flex',
       justifyContent: 'center',
     },
-    // backgroundColor: 'skyblue',
+    // backgroundColor: 'pink',
     // box-shadow: 5px 8.66px 20px 0px rgba(0, 0, 0, 0.15);
   },
 
   // Aside
   aside: {
-    padding: {
-      top: 30,
-      // bottom: 30,
-    },
-    marginBottom: 30,
+    paddingTop: 100,
+    paddingBottom: 30,
+    // marginBottom: 30,
 
     [`@media (min-width: ${refs.tablet}px) and (max-width: ${refs.desktopMax}px)`]: {
       display: 'flex',
@@ -84,13 +83,10 @@ export default createUseStyles({
     },
 
     [`@media (min-width: ${refs.desktop}px)`]: {
-      padding: {
-        top: 40,
-        right: 50,
-        bottom: 50,
-      },
+      paddingTop: 110,
+      paddingRight: 50,
       width: 320,
-      height: 'calc(100vh - 60px)',
+      height: '100vh',
       borderRight: `1px solid ${refs.secondaryBg}`,
       overflow: 'scroll',
 
@@ -130,7 +126,7 @@ export default createUseStyles({
       justifyContent: 'center',
       minHeight: 290,
     },
-    
+
     '& img': {
       display: 'block',
       borderRadius: '50%',
@@ -139,7 +135,6 @@ export default createUseStyles({
         margin: '0 auto 30px',
       },
     },
-
 
     '& h1': {
       marginBottom: 10,
@@ -152,9 +147,9 @@ export default createUseStyles({
       display: 'block',
       marginBottom: 30,
       fontSize: 22,
-      fontWeight: 500,
+      fontWeight: 400,
       textAlign: 'center',
-      color: refs.secondaryWhiteColor,
+      color: refs.primaryColor,
 
       [`@media (min-width: ${refs.tablet}px) and (max-width: ${refs.desktopMax}px)`]: {
         marginBottom: 50,
@@ -216,9 +211,11 @@ export default createUseStyles({
           fontSize: 16,
         },
 
+        // a
         '& a': {
           paddingLeft: 10,
           fontWeight: 400,
+          color: refs.linkColor,
 
           [`@media (min-width: ${refs.tablet}px) and (max-width: ${refs.desktopMax}px)`]: {
             display: 'block',
@@ -251,7 +248,7 @@ export default createUseStyles({
       display: 'block',
 
       '& svg': {
-        fill: refs.primaryColor,
+        fill: refs.linkColor,
         width: 30,
         height: 30,
 
@@ -349,30 +346,46 @@ export default createUseStyles({
   downloadResume: {
     padding: '30px 0',
 
-    '& a:hover': {
+    '& > a': {
+      display: 'inline-flex',
+      alignItems: 'center',
+
+      '& svg': {
+        marginRight: 12,
+        width: 20,
+        height: 20,
+        fill: refs.linkColor,
+      },
+    },
+
+    '& > a:hover': {
       color: refs.primaryWhiteColor,
+
+      '& > svg': {
+        fill: refs.primaryWhiteColor,
+      },
     },
   },
 
-  // Primary Content
-  primaryContent: {
+  // Main Content --------------------------------------
+  mainContent: {
+    paddingBottom: 40,
+
+    [`@media (min-width: ${refs.tablet}px)`]: {
+      paddingBottom: 60,
+    },
+
     [`@media (min-width: ${refs.desktop}px)`]: {
-      padding: {
-        top: 40,
-        left: 50,
-        bottom: 70,
-      },
+      paddingTop: 110,
+      paddingLeft: 50,
       width: 550,
-      height: 'calc(100vh - 60px)',
+      height: '100vh',
       overflow: 'scroll',
 
-      // Hide scrollbar for IE, Edge and Firefox
-      '-ms-overflow-style': 'none',
-      'scrollbar-width': 'none',
-
-      // Hide scrollbar for Chrome, Safari and Opera
+      '-ms-overflow-style': 'none', // IE, Edge
+      'scrollbar-width': 'none', // Firefox
       '&::-webkit-scrollbar': {
-        display: 'none',
+        display: 'none', // Chrome, Safari Opera
       },
     },
 
@@ -389,8 +402,8 @@ export default createUseStyles({
         display: 'block',
         marginBottom: 30,
         fontSize: 22,
-        fontWeight: 500,
-        color: refs.secondaryWhiteColor,
+        fontWeight: 400,
+        color: refs.primaryColor,
       },
 
       '& h2': {
@@ -402,6 +415,7 @@ export default createUseStyles({
         lineHeight: 1.4,
 
         '& span': {
+          fontWeight: 400,
           color: refs.primaryColor,
         },
       },
@@ -428,8 +442,45 @@ export default createUseStyles({
 
   // Summary (p)
   summary: {
+    marginBottom: 30,
     lineHeight: 1.6,
     color: refs.secondaryWhiteColor,
+  },
+
+  // Certificate
+  certificateLink: {
+    display: 'inline-flex',
+    alignItems: 'center',
+    // color: refs.linkColor,
+
+    '& svg': {
+      marginRight: 7,
+      width: 26,
+      height: 26,
+      fill: refs.linkColor,
+    },
+
+    '&:hover svg': {
+      fill: refs.primaryWhiteColor,
+    },
+  },
+
+  projectLink: {
+    display: 'inline-flex',
+    alignItems: 'center',
+    paddingLeft: 4,
+    color: refs.linkColor,
+
+    '& svg': {
+      marginRight: 10,
+      width: 26,
+      height: 26,
+      fill: refs.linkColor,
+    },
+
+    '&:hover svg': {
+      fill: refs.primaryWhiteColor,
+    },
   },
 
   // Date (p)

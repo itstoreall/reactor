@@ -48,7 +48,7 @@ const ResumeContent = () => {
         {desktop && <DownloadResume />}
       </aside>
 
-      <div className={s.primaryContent}>
+      <div className={s.mainContent}>
         {desktop && <TechIconList techIcons={resumeInfo.techIcons} />}
         <ContentSummary desktop={desktop} resume={resumeInfo} />
         <ContentProjects />

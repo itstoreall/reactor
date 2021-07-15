@@ -1,23 +1,23 @@
 import { NavLink } from 'react-router-dom';
-import useStyles from './NavStyles';
+import s from './NavBar.module.scss';
 import { routes } from '../routes';
 
-export default function Navigation({ onToggleVisible }) {
-  const s = useStyles();
+export default function NavBarLink({ toggleNavBar }) {
+  // const s = useStyles();
 
-  const handleToggleNavMenu = () => onToggleVisible();
+  // const handleToggleNavMenu = () => onToggleVisible();
 
   return (
-    <div className={s.Navigation}>
+    <div className={s.navigation}>
       {routes.map(({ path, label, showInMenu }) =>
         showInMenu ? (
           <NavLink
             key={path}
             to={path}
             exact
-            className={s.link}
-            activeClassName={s.activeLink}
-            onClick={handleToggleNavMenu}
+            className={s.NavBarLink}
+            activeClassName={s.activeNavBarLink}
+            onClick={toggleNavBar}
             replace
           >
             {label}

@@ -5,7 +5,7 @@ const ContentEducation = ({ resume }) => {
 
   return (
     <section className={s.education}>
-      <h2>Education</h2>
+      <h2>Education:</h2>
       {resume.education.map(({ subject, institute, date }) => (
         <div key={subject}>
           <h3>
