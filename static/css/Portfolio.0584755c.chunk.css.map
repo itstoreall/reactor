@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/views/ViewStyles.module.scss"],"names":[],"mappings":"AACA,6BACE,iBAAkB,CACnB,6BAIC,kBAAmB","file":"Portfolio.0584755c.chunk.css","sourcesContent":["// Views\n.AdminView {\n  padding-top: 100px;\n}\n\n// h1\n.viewTitle {\n  margin-bottom: 45px;\n}\n"]}
