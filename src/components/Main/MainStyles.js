@@ -67,7 +67,7 @@ export default createUseStyles({
     justifyContent: 'center',
     alignItems: 'center',
     width: '100%',
-    height: 'calc(100vh - 180px)',
+    height: '100vh',
     fontSize: 18,
     fontWeight: 600,
     letterSpacing: 3,

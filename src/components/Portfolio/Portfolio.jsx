@@ -1,19 +1,20 @@
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 import useStyles from './PortfolioStyles';
 import AppThumb from './AppThumb';
 import AppMeta from './AppMeta';
-// import { projects } from './projects.json';
-import api from '../utils/projectsAPI';
+import { projects } from './projects.json';
+// import api from '../utils/projectsAPI';
 
-const { log } = console;
+// const { log } = console;
 
 const Portfolio = () => {
-  const [projects, setProjects] = useState([]);
+  // const [projects, setProjects] = useState([]);
   const s = useStyles();
 
-  useEffect(() => api.getAllProjects().then(res => setProjects(res)), []);
+  // Get all projects
+  // useEffect(() => api.getAllProjects().then(res => setProjects(res)), []);
 
-  log(projects);
+  // log(projects);
 
   return (
     <section className={s.Portfolio}>

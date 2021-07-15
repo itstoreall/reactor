@@ -91,60 +91,37 @@
       flex-direction: column;
       width: 100%;
       list-style: none;
-      background-color: skyblue;
+      // background-color: skyblue;
 
       .NavBarLink {
-        text-decoration: none;
         padding: 15px;
         font-size: 22px;
-        color: white;
-        background-color: inherit;
-        border-radius: 4;
+        text-decoration: none;
+        color: $primaryBlackColor;
+        border-radius: 4px;
 
         @media screen and (min-width: 768px) {
           fontsize: 16;
         }
 
         &:not(:last-child) {
-          margin-bottom: 5;
+          margin-bottom: 5px;
         }
 
         &:hover {
-          color: yellow;
-          background-color: blue;
+          color: $primaryWhiteColor;
+          background-color: $primaryBg;
         }
       }
 
       .activeNavBarLink {
-        background-color: red;
-        color: green;
+        background-color: $primaryBg;
+        color: $primaryWhiteColor;
 
         &:hover {
-          color: yellow;
           background-color: black;
         }
       }
     }
-
-    // .childrenWrap {
-    //   @media screen and (max-width: 767px) {
-    //     width: 100%;
-    //     max-width: 414px;
-    //   }
-    // }
-
-    // .CloseModalBtn {
-    //   position: absolute;
-    //   top: 0;
-    //   right: 0;
-    //   padding: 9px;
-    //   width: 44px;
-    //   height: 44px;
-    //   cursor: pointer;
-
-    //   &:hover {
-    //     animation: rotateCloseBtn 600ms forwards;
-    //   }
-    // }
   }
 }

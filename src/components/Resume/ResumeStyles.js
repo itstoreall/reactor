@@ -73,7 +73,7 @@ export default createUseStyles({
 
   // Aside
   aside: {
-    paddingTop: 90,
+    paddingTop: 100,
     paddingBottom: 30,
     // marginBottom: 30,
 
@@ -83,6 +83,7 @@ export default createUseStyles({
     },
 
     [`@media (min-width: ${refs.desktop}px)`]: {
+      paddingTop: 110,
       paddingRight: 50,
       width: 320,
       height: '100vh',
@@ -214,7 +215,7 @@ export default createUseStyles({
         '& a': {
           paddingLeft: 10,
           fontWeight: 400,
-          color: refs.primaryColor,
+          color: refs.linkColor,
 
           [`@media (min-width: ${refs.tablet}px) and (max-width: ${refs.desktopMax}px)`]: {
             display: 'block',
@@ -247,7 +248,7 @@ export default createUseStyles({
       display: 'block',
 
       '& svg': {
-        fill: refs.primaryColor,
+        fill: refs.linkColor,
         width: 30,
         height: 30,
 
@@ -375,7 +376,7 @@ export default createUseStyles({
     },
 
     [`@media (min-width: ${refs.desktop}px)`]: {
-      paddingTop: 90,
+      paddingTop: 110,
       paddingLeft: 50,
       width: 550,
       height: '100vh',

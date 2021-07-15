@@ -11,7 +11,7 @@ import './styles/base.scss';
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store.store}>
-      <PersistGate loading={<p>Loading...</p>} persistor={store.persistor}>
+      <PersistGate loading={<p>Loading!</p>} persistor={store.persistor}>
         <Router>
           <App />
         </Router>

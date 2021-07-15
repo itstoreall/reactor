@@ -4,6 +4,7 @@ import { refs } from '../refs';
 export default createUseStyles({
   // Portfolio (section)
   Portfolio: {
+    paddingBottom: 80,
     // backgroundColor: 'skyblue',
 
     '& > ul': {

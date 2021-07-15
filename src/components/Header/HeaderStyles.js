@@ -15,6 +15,7 @@ export default createUseStyles({
     zIndex: 1,
     backgroundColor: '#212225a1',
     backdropFilter: 'blur(10px)',
+    boxShadow: refs.headerShadow,
 
     // [`@media (max-width: 767px)`]: {
     //   position: 'fixed',

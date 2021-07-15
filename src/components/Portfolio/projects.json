@@ -8,7 +8,7 @@
       "description2": "App for working with a collection of contacts based on the Node.js, Express and the MongoDB database",
       "description": "The site you are currently visiting. Contains a resume, portfolio and my coding experience",
       "requires": "",
-      "overlayText": [
+      "used": [
         "@material-ui",
         "axios",
         "classnames",
@@ -58,7 +58,7 @@
       "title": "REST API",
       "description": "App for working with a collection of contacts based on the Node.js, Express and the MongoDB database",
       "requires": "",
-      "overlayText": [
+      "used": [
         "bcryptjs",
         "cloudinary",
         "cors",
@@ -104,7 +104,7 @@
       "title": "Phonebook",
       "description": "Simple phone book with user registration and login. Allows to create, delete and searches contacts",
       "requires": "",
-      "overlayText": [
+      "used": [
         "axios",
         "eslint",
         "gh-pages",
@@ -146,7 +146,7 @@
       "title": "Movies",
       "description": "This application provides a list of trending movies with full information, and search by movie title",
       "requires": "",
-      "overlayText": [
+      "used": [
         "TMDb",
         "hooks",
         "query-string",
@@ -181,7 +181,7 @@
       "title": "Todos",
       "description": "It's a regular to-do list with four functions: create, delete, completed and search by character",
       "requires": "Requires a local server",
-      "overlayText": [
+      "used": [
         "prop-types",
         "eslint",
         "prettier",
@@ -227,7 +227,7 @@
       "title": "Image finder",
       "description": "App, which allows search images by keyword, show big size and load more images by press the button",
       "requires": "",
-      "overlayText": [
+      "used": [
         "axios",
         "eslint",
         "gh-pages",
@@ -266,7 +266,7 @@
       "title": "Feedback",
       "description": "This is an application with simple styles, which calculates average number of positive feedback",
       "requires": "",
-      "overlayText": [
+      "used": [
         "gh-pages",
         "modern-normalize",
         "node-sass",
@@ -301,7 +301,7 @@
       "title": "Business card website",
       "description": "It's just html/css layout with some JavaScript code. Template for simple Web-site",
       "requires": "",
-      "overlayText": [
+      "used": [
         "html",
         "sass",
         "js",

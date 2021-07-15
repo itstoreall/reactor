@@ -57,7 +57,7 @@
       "specialization": [
         "Website development",
         "SPA development (React/Redux)",
-        "REST API",
+        "REST API (Node.js)",
         "Teamwork"
       ]
     },
@@ -109,5 +109,9 @@
       "date": "June - August 2004"
     }
   ],
-  "languages": ["English (Beginner)", "Ukrainian (Native)", "Russian (Native)"]
+  "languages": [
+    "English (Pre-Intermediate)",
+    "Ukrainian (Native)",
+    "Russian (Native)"
+  ]
 }

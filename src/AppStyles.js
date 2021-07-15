@@ -1,8 +1,6 @@
 import { createUseStyles } from 'react-jss';
-// import { refs } from './components/refs';
 
 export default createUseStyles({
-  // Portfolio
   AppWrap: {
     height: '100vh',
     overflow: 'scroll',
@@ -12,14 +10,5 @@ export default createUseStyles({
     '&::-webkit-scrollbar': {
       display: 'none', // Chrome, Safari, Opera
     },
-
-    // '& article': {
-    //   // paddingTop: 60,
-    //   // paddingBottom: 80,
-    // },
-
-    // '& h1': {
-    //   marginBottom: 40,
-    // },
   },
 });
