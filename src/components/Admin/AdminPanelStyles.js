@@ -1,5 +1,6 @@
 import { createUseStyles } from 'react-jss';
 import { makeStyles } from '@material-ui/core/styles';
+import { refs } from '../refs';
 
 // const cancelButton = document.querySelector('#cancelBtn > span');
 
@@ -18,14 +19,40 @@ export const useStyles = createUseStyles({
       //
     },
   },
+
+  // Delete Project Modal
+  deleteProjectModal: {
+    padding: 30,
+    textAlign: 'center',
+    borderRadius: 4,
+    backgroundColor: refs.accentBg,
+
+    '& h2': {
+      marginBottom: 20,
+      color: refs.primaryWhiteColor,
+    },
+
+    '& p': {
+      marginBottom: 30,
+      color: refs.primaryWhiteColor,
+    },
+  },
+
+  deleteBtnWrap: {
+    display: 'flex',
+    justifyContent: 'center',
+
+    '& button:not(:last-child)': {
+      marginRight: 20,
+    },
+  },
 });
 
 // muiBtn
 export const muiBtn = makeStyles({
-  addProjectBtn: {
-    marginBottom: 30,
-  },
-
+  // addProjectBtn: {
+  //   marginBottom: 30,
+  // },
   // '&.MuiButton-containedPrimary': {
   //   // backgroundColor: 'red',
   // },
