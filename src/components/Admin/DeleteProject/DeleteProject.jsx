@@ -1,5 +1,6 @@
 import { useStyles } from './DeleteProjectStyles';
-import Button from '@material-ui/core/Button';
+import ProjectList from './ProjectList';
+import ConfirmDelete from './ConfirmDelete';
 
 const DeleteProject = ({
   projects,
@@ -11,35 +12,15 @@ const DeleteProject = ({
   const s = useStyles();
 
   return (
-    <section className={s.deleteProjectWrap}>
-      <h3>Delete Project:</h3>
+    <section className={s.DeleteProjectWrap}>
+      <h3>Projects:</h3>
       {!deleteOk ? (
-        <ul>
-          {projects?.map(project => (
-            <li key={project.id}>
-              <span>{project.title}</span>
-              <button onClick={() => onDeleteProject(project.id)}>
-                Delete
-              </button>
-            </li>
-          ))}
-        </ul>
+        <ProjectList projects={projects} onDeleteProject={onDeleteProject} />
       ) : (
-        <div>
-          <h4>Delete?</h4>
-          <div>
-            <Button onClick={toggleModal} variant="contained" color="primary">
-              Cancel
-            </Button>
-            <Button
-              onClick={handleDeleteOk}
-              variant="contained"
-              color="primary"
-            >
-              Ok
-            </Button>
-          </div>
-        </div>
+        <ConfirmDelete
+          toggleModal={toggleModal}
+          handleDeleteOk={handleDeleteOk}
+        />
       )}
     </section>
   );

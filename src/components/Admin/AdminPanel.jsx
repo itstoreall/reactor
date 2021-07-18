@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { useStyles, muiBtn } from './AdminPanelStyles';
+import { useStyles } from './AdminPanelStyles';
+import { muiBtn } from './AdminPanelStyles';
 import AddProject from './AddProject';
 import DeleteProject from './DeleteProject';
 import Button from '@material-ui/core/Button';
@@ -10,7 +11,6 @@ const { log } = console;
 
 const AdminPanel = () => {
   const [projects, setProjects] = useState([]);
-  // const [showForm, setshowForm] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [component, setComponent] = useState('');
   const [projectToDelete, setProjectToDelete] = useState('');
@@ -18,15 +18,13 @@ const AdminPanel = () => {
   const s = useStyles();
   const mb = muiBtn();
 
-  // log('projects', projects);
-
+  // componentDidMount (Get all Projects)
   useEffect(() => api.getAllProjects().then(res => setProjects(res)), []);
 
-  const getProjects = () => {
-    api.getAllProjects().then(res => setProjects(res));
-  };
+  // Get all Projects
+  const getProjects = () => api.getAllProjects().then(res => setProjects(res));
 
-  // Modal
+  // Modal --------------------------------v
   const toggleModal = e => {
     getProjects();
     setShowModal(!showModal);
@@ -38,7 +36,7 @@ const AdminPanel = () => {
       : setComponent('');
   };
 
-  // Create Project
+  // Create Project -----------------------v
   const handleSubmit = newProject => {
     log('Is sent...'); // show Loader
 
@@ -49,26 +47,13 @@ const AdminPanel = () => {
       .finally(() => log('Finally')); // hide Loader
   };
 
-  // Delete Project
+  // Delete Project -----------------------v
   const handleDeleteProject = id => {
-    log('projects', projects);
-    log('id', id);
-
     setProjectToDelete(projects.find(project => project.id === id));
-
-    log('projectToDelete', projectToDelete);
     setDeleteOk(!deleteOk);
-
-    // api
-    //   .deleteProject(projectToDelete.id)
-    //   .then(result => log('result', result))
-    //   .catch(err => log('AdminPanel --> Submit ERROR Message:', err.message))
-    //   .finally(() => log('Finally')); // hide Loader
-
-    // setShowModal(!showModal);
   };
 
-  // Delete OK
+  // Confirm Delete
   const handleDeleteOk = async () => {
     log(projectToDelete?.id);
 
@@ -80,60 +65,54 @@ const AdminPanel = () => {
 
     setDeleteOk(!deleteOk);
     getProjects();
-    // setShowModal(!showModal);
   };
 
   return (
-    <>
-      <div className={s.Admin}>
-        <h2>Portfolio</h2>
+    <div className={s.AdminPanel}>
+      <h2>Portfolio</h2>
 
-        <div>
-          {showModal && (
-            <Modal onCloseModal={toggleModal}>
-              {component === 'addProject' ? (
-                <AddProject
-                  onCloseModal={toggleModal}
-                  onSubmit={handleSubmit}
-                />
-              ) : component === 'deleteProject' ? (
-                <DeleteProject
-                  projects={projects}
-                  onDeleteProject={handleDeleteProject}
-                  deleteOk={deleteOk}
-                  toggleModal={toggleModal}
-                  handleDeleteOk={handleDeleteOk}
-                  onCloseModal={toggleModal}
-                  onSubmit={handleSubmit}
-                />
-              ) : (
-                console.log('null')
-              )}
-            </Modal>
-          )}
+      <div>
+        {showModal && (
+          <Modal onCloseModal={toggleModal}>
+            {component === 'addProject' ? (
+              <AddProject onCloseModal={toggleModal} onSubmit={handleSubmit} />
+            ) : component === 'deleteProject' ? (
+              <DeleteProject
+                projects={projects}
+                onDeleteProject={handleDeleteProject}
+                deleteOk={deleteOk}
+                toggleModal={toggleModal}
+                handleDeleteOk={handleDeleteOk}
+                onCloseModal={toggleModal}
+                onSubmit={handleSubmit}
+              />
+            ) : (
+              console.log('null')
+            )}
+          </Modal>
+        )}
 
-          <Button
-            name="addProject"
-            onClick={toggleModal}
-            className={mb.addProjectBtn}
-            variant="contained"
-            color="primary"
-          >
-            + Add project
-          </Button>
+        <Button
+          name="addProject"
+          onClick={toggleModal}
+          className={mb.addProjectBtn}
+          variant="contained"
+          color="primary"
+        >
+          + Add project
+        </Button>
 
-          <Button
-            name="deleteProject"
-            onClick={toggleModal}
-            className={mb.addProjectBtn}
-            variant="contained"
-            color="primary"
-          >
-            – Del project
-          </Button>
-        </div>
+        <Button
+          name="deleteProject"
+          onClick={toggleModal}
+          className={mb.addProjectBtn}
+          variant="contained"
+          color="primary"
+        >
+          – Del project
+        </Button>
       </div>
-    </>
+    </div>
   );
 };
 

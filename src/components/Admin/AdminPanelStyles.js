@@ -3,18 +3,18 @@ import { makeStyles } from '@material-ui/core/styles';
 
 // s
 export const useStyles = createUseStyles({
-  Admin: {
+  AdminPanel: {
     '& h2': {
       marginBottom: '30px',
     },
 
-    '& .addProjectBtn': {
-      marginBottom: 30,
-    },
+    // '& .addProjectBtn': {
+    //   marginBottom: 30,
+    // },
 
-    '& .requestList': {
-      //
-    },
+    // '& .requestList': {
+    //   //
+    // },
   },
 
   // // Delete Project Modal
