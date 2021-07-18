@@ -9,20 +9,18 @@ import api from '../utils/projectsAPI';
 const { log } = console;
 
 const AdminPanel = () => {
-  // const [projects, setProjects] = useState([]);
+  const [projects, setProjects] = useState([]);
   // const [showForm, setshowForm] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [component, setComponent] = useState('');
-  const [projectToDelete, setProjectToDelete] = useState(false);
+  const [projectToDelete, setProjectToDelete] = useState('');
+  const [deleteOk, setDeleteOk] = useState(false);
   const s = useStyles();
   const mb = muiBtn();
 
   // log('projects', projects);
 
-  // useEffect(() => api.getAllProjects().then(res => setProjects(res)), []);
-
-  // Project Form
-  // const toggleForm = () => setshowForm(!showForm);
+  useEffect(() => api.getAllProjects().then(res => setProjects(res)), []);
 
   // Modal
   const toggleModal = e => {
@@ -35,7 +33,7 @@ const AdminPanel = () => {
       : setComponent('');
   };
 
-  // Submit new Project to the DB
+  // Create Project
   const handleSubmit = newProject => {
     log('Is sent...'); // show Loader
 
@@ -46,22 +44,29 @@ const AdminPanel = () => {
       .finally(() => log('Finally')); // hide Loader
   };
 
-  // Delete
-  const handleDeleteProject = (projects, id) => {
-    api
-      .deleteProject(projectToDelete.id)
-      .then(result => log(result))
-      .catch(err => log('AdminPanel --> Submit ERROR Message:', err.message))
-      .finally(() => log('Finally')); // hide Loader
+  // Delete Project
+  const handleDeleteProject = id => {
+    log('projects', projects);
+    log('id', id);
 
     setProjectToDelete(projects.find(project => project.id === id));
-    setShowModal(!showModal);
+
+    log('projectToDelete', projectToDelete);
+    setDeleteOk(!deleteOk);
+
+    // api
+    //   .deleteProject(projectToDelete.id)
+    //   .then(result => log('result', result))
+    //   .catch(err => log('AdminPanel --> Submit ERROR Message:', err.message))
+    //   .finally(() => log('Finally')); // hide Loader
+
+    // setShowModal(!showModal);
   };
 
   // Delete OK
-  const handleOkModal = () => {
+  const handleDeleteOk = () => {
     log(projectToDelete?.id);
-    setShowModal(!showModal);
+    setDeleteOk(!deleteOk);
   };
 
   return (
@@ -79,6 +84,7 @@ const AdminPanel = () => {
                 />
               ) : component === 'deleteProject' ? (
                 <DeleteProject
+                  projects={projects}
                   onDeleteProject={handleDeleteProject}
                   onCloseModal={toggleModal}
                   onSubmit={handleSubmit}
@@ -108,14 +114,6 @@ const AdminPanel = () => {
           >
             – Del project
           </Button>
-
-          {/* // <Button
-          //   onClick={handleDeleteProject}
-          //   variant="contained"
-          //   color="primary"
-          // >
-          //   Open Modal
-          // </Button> */}
         </div>
       </div>
     </>

@@ -37,15 +37,6 @@
   }
 }
 
-// @keyframes rotateCloseBtn {
-//   0% {
-//     transform: rotate(0deg);
-//   }
-//   100% {
-//     transform: rotate(180deg);
-//   }
-// }
-
 .backdrop {
   position: fixed;
   display: flex;
@@ -90,27 +81,5 @@
     @media screen and (min-width: $desktop) {
       box-shadow: $modalShadow;
     }
-
-    // .childrenWrap {
-    //   @media screen and (max-width: $tabletMax) {
-    //     width: 100%;
-    //     max-width: $mobilePlus;
-    //     background-color: skyblue;
-    //   }
-    // }
-
-    // .CloseModalBtn {
-    //   position: absolute;
-    //   top: 0;
-    //   right: 0;
-    //   padding: 9px;
-    //   width: 44px;
-    //   height: 44px;
-    //   cursor: pointer;
-
-    //   &:hover {
-    //     animation: rotateCloseBtn 600ms forwards;
-    //   }
-    // }
   }
 }
