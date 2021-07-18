@@ -22,8 +22,13 @@ const AdminPanel = () => {
 
   useEffect(() => api.getAllProjects().then(res => setProjects(res)), []);
 
+  const getProjects = () => {
+    api.getAllProjects().then(res => setProjects(res));
+  };
+
   // Modal
   const toggleModal = e => {
+    getProjects();
     setShowModal(!showModal);
 
     e?.currentTarget.name === 'addProject'
@@ -64,9 +69,18 @@ const AdminPanel = () => {
   };
 
   // Delete OK
-  const handleDeleteOk = () => {
+  const handleDeleteOk = async () => {
     log(projectToDelete?.id);
+
+    await api
+      .deleteProject(projectToDelete.id)
+      .then(result => log('result', result))
+      .catch(err => log('AdminPanel --> Submit ERROR Message:', err.message))
+      .finally(() => log('Finally')); // hide Loader
+
     setDeleteOk(!deleteOk);
+    getProjects();
+    // setShowModal(!showModal);
   };
 
   return (
@@ -86,6 +100,9 @@ const AdminPanel = () => {
                 <DeleteProject
                   projects={projects}
                   onDeleteProject={handleDeleteProject}
+                  deleteOk={deleteOk}
+                  toggleModal={toggleModal}
+                  handleDeleteOk={handleDeleteOk}
                   onCloseModal={toggleModal}
                   onSubmit={handleSubmit}
                 />
