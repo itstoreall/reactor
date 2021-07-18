@@ -33,5 +33,16 @@ const createProject = async payload => {
   }
 };
 
-const api = { getAllProjects, createProject };
+// DELETE
+const deleteProject = async id => {
+  try {
+    const response = await axios.delete(`/projects/${id}`);
+
+    return response;
+  } catch (err) {
+    log(err.message);
+  }
+};
+
+const api = { getAllProjects, createProject, deleteProject };
 export default api;

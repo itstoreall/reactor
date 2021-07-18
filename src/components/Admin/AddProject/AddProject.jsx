@@ -1,15 +1,12 @@
-import { useState, useEffect } from 'react';
-import { useStyles, muiForm } from './ProjectStyles';
+import { useState } from 'react';
+import { useStyles, muiForm } from './AddProjectStyles';
 import TextField from '@material-ui/core/TextField';
 import Checkbox from '@material-ui/core/Checkbox';
 import Button from '@material-ui/core/Button';
-import api from '../../utils/projectsAPI';
 
 const { log } = console;
 
-const Project = ({ toggleForm, onSubmit }) => {
-  const [projects, setProjects] = useState([]);
-  log(projects);
+const AddProject = ({ onCloseModal, onSubmit }) => {
   // Create Project
   const [name, setName] = useState('');
   const [title, setTitle] = useState('');
@@ -27,8 +24,6 @@ const Project = ({ toggleForm, onSubmit }) => {
 
   const mf = muiForm();
   const s = useStyles();
-
-  useEffect(() => api.getAllProjects().then(res => setProjects(res)), []);
 
   // Change Input value
   const handleInputChange = e => {
@@ -125,7 +120,8 @@ const Project = ({ toggleForm, onSubmit }) => {
   };
 
   return (
-    <section className={s.projectWrap}>
+    <section className={s.addProjectWrap}>
+      <h3>Add Project:</h3>
       <form
         onSubmit={handleCreateNewProject}
         className={mf.root}
@@ -134,7 +130,7 @@ const Project = ({ toggleForm, onSubmit }) => {
       >
         <div className={s.inputsWrap}>
           <div className={s.requiredWrap}>
-            <h3>Required:</h3>
+            <h4>Required:</h4>
             <TextField
               required
               id="outlined-basic"
@@ -183,7 +179,7 @@ const Project = ({ toggleForm, onSubmit }) => {
           </div>
 
           <div className={s.optionallyWrap}>
-            <h3>Optionally:</h3>
+            <h4>Optionally:</h4>
             <TextField
               id="outlined-basic"
               name="requires"
@@ -211,7 +207,7 @@ const Project = ({ toggleForm, onSubmit }) => {
 
         <div className={s.buttonWrap}>
           <Button
-            onClick={toggleForm}
+            onClick={onCloseModal}
             id="cancelBtn"
             variant="contained"
             color="primary"
@@ -255,4 +251,4 @@ const Project = ({ toggleForm, onSubmit }) => {
   );
 };
 
-export default Project;
+export default AddProject;

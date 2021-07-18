@@ -4,17 +4,24 @@ import { refs } from '../../refs';
 
 // s -----------------------------------------
 export const useStyles = createUseStyles({
-  projectWrap: {
-    //
+  addProjectWrap: {
+    padding: '30px 30px 30px 30px',
+    minHeight: '100%',
+    backgroundColor: refs.darkBg,
   },
 
   // Wrap
   inputsWrap: {
     marginBottom: '20px',
 
-    '& h3': {
-      marginBottom: '20px',
+    '& h3, h4': {
+      // marginBottom: '20px',
       color: refs.primaryColor,
+    },
+
+    '& h4': {
+      marginBottom: '20px',
+      // color: refs.primaryColor,
     },
 
     [`@media (min-width: ${refs.tablet}px)`]: {
