@@ -26,6 +26,20 @@ import desk_restApi_740_wp from './desk_restApi_740_wp.webp';
 import desk_restApi_370 from './desk_restApi_370.jpg';
 import desk_restApi_740 from './desk_restApi_740.jpg';
 
+// Planning
+import mob_planning_450_wp from './mob_planning_450_wp.webp';
+import mob_planning_900_wp from './mob_planning_900_wp.webp';
+import mob_planning_450 from './mob_planning_450.jpg';
+import mob_planning_900 from './mob_planning_900.jpg';
+import tab_planning_354_wp from './tab_planning_354_wp.webp';
+import tab_planning_708_wp from './tab_planning_708_wp.webp';
+import tab_planning_354 from './tab_planning_354.jpg';
+import tab_planning_708 from './tab_planning_708.jpg';
+import desk_planning_370_wp from './desk_planning_370_wp.webp';
+import desk_planning_740_wp from './desk_planning_740_wp.webp';
+import desk_planning_370 from './desk_planning_370.jpg';
+import desk_planning_740 from './desk_planning_740.jpg';
+
 // Phonebook
 import mob_phonebook_450_wp from './mob_phonebook_450_wp.webp';
 import mob_phonebook_900_wp from './mob_phonebook_900_wp.webp';
@@ -138,6 +152,20 @@ const images = {
   desk_restApi_740_wp,
   desk_restApi_370,
   desk_restApi_740,
+
+  // Planning
+  mob_planning_450_wp,
+  mob_planning_900_wp,
+  mob_planning_450,
+  mob_planning_900,
+  tab_planning_354_wp,
+  tab_planning_708_wp,
+  tab_planning_354,
+  tab_planning_708,
+  desk_planning_370_wp,
+  desk_planning_740_wp,
+  desk_planning_370,
+  desk_planning_740,
 
   // Phonebook
   mob_phonebook_450_wp,
