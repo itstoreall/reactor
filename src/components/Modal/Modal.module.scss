@@ -1,0 +1,85 @@
+@import '../../styles/backgrounds';
+@import '../../styles/breakpoints';
+@import '../../styles/shadows';
+
+@keyframes showModalBackdrop {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes showModalSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes showModalSlideMob {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.backdrop {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: $backdropBg;
+  z-index: 3;
+
+  @media screen and (max-width: $tabletMax) {
+    top: 0;
+    z-index: 3;
+  }
+
+  @media screen and (min-width: $tablet) {
+    top: 0;
+    height: 100vh;
+    animation: showModalBackdrop 200ms forwards;
+  }
+
+  .content {
+    min-width: 240px;
+    // height: 100%;
+    overflow-y: scroll;
+
+    // Hides Modal scrollbar
+    -ms-overflow-style: none; // IE and Edge
+    scrollbar-width: none; // Firefox
+    &::-webkit-scrollbar {
+      display: none; // Chrome, Safari,Opera
+    }
+
+    @media screen and (max-width: $tabletMax) {
+      animation: showModalSlideMob 400ms forwards;
+    }
+
+    @media screen and (min-width: $tablet) {
+      animation: showModalSlide 400ms forwards;
+    }
+
+    @media screen and (min-width: $desktop) {
+      box-shadow: $modalShadow;
+    }
+  }
+}
