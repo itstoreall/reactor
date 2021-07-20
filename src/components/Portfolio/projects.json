@@ -36,6 +36,7 @@
       ],
       "page": "",
       "source": "https://github.com/itstoreall/reactor",
+      "team": false,
       "src": [
         "mob_reactor_450_wp",
         "mob_reactor_900_wp",
@@ -82,6 +83,7 @@
       ],
       "page": "",
       "source": "https://github.com/itstoreall/nodejs-rest-api",
+      "team": false,
       "src": [
         "mob_restApi_450_wp",
         "mob_restApi_900_wp",
@@ -124,6 +126,7 @@
       ],
       "page": "https://itstoreall.github.io/goit-react-hw-09-phonebook/#/",
       "source": "https://github.com/itstoreall/goit-react-hw-09-phonebook",
+      "team": false,
       "src": [
         "mob_phonebook_450_wp",
         "mob_phonebook_900_wp",
@@ -182,6 +185,7 @@
       ],
       "page": "https://project-planning.netlify.app",
       "source": "https://github.com/itstoreall/project-planning",
+      "team": true,
       "src": [
         "mob_planning_450_wp",
         "mob_planning_900_wp",
@@ -221,6 +225,7 @@
       ],
       "page": "https://itstoreall.github.io/goit-react-hw-03-image-finder/",
       "source": "https://github.com/itstoreall/goit-react-hw-03-image-finder",
+      "team": false,
       "src": [
         "mob_imgFinder_450_wp",
         "mob_imgFinder_900_wp",
@@ -256,6 +261,7 @@
       ],
       "page": "https://its-react-movies.netlify.app/",
       "source": "https://github.com/itstoreall/goit-react-hw-04-movies",
+      "team": false,
       "src": [
         "mob_movies_450_wp",
         "mob_movies_900_wp",
@@ -302,6 +308,7 @@
       ],
       "page": "https://itstoreall.github.io/todos/#/",
       "source": "https://github.com/itstoreall/todos",
+      "team": false,
       "src": [
         "mob_todos_450_wp",
         "mob_todos_900_wp",
@@ -337,6 +344,7 @@
       ],
       "page": "https://itstoreall.github.io/goit-react-hw-02-feedback/",
       "source": "https://github.com/itstoreall/goit-react-hw-02-feedback",
+      "team": false,
       "src": [
         "mob_feedback_450_wp",
         "mob_feedback_900_wp",
@@ -369,6 +377,7 @@
       ],
       "page": "https://itstoreall.github.io/oktotrade/",
       "source": "https://github.com/itstoreall/oktotrade",
+      "team": false,
       "src": [
         "mob_oktotrade_450_wp",
         "mob_oktotrade_900_wp",
@@ -382,6 +391,32 @@
         "desk_oktotrade_740_wp",
         "desk_oktotrade_370",
         "desk_oktotrade_740"
+      ]
+    },
+    {
+      "id": "filmoteka",
+      "name": "filmoteka",
+      "alt": "Filmoteka",
+      "title": "Filmoteka",
+      "description": "The app demonstrates new films, descriptions, trailers and allows you to add to the library",
+      "requires": "",
+      "used": ["html", "sass"],
+      "page": "https://hushkov.github.io/filmoteka-firebase-app/",
+      "source": "https://github.com/itstoreall/filmoteka-firebase-app",
+      "team": true,
+      "src": [
+        "mob_filmoteka_450_wp",
+        "mob_filmoteka_900_wp",
+        "mob_filmoteka_450",
+        "mob_filmoteka_900",
+        "tab_filmoteka_354_wp",
+        "tab_filmoteka_708_wp",
+        "tab_filmoteka_354",
+        "tab_filmoteka_708",
+        "desk_filmoteka_370_wp",
+        "desk_filmoteka_740_wp",
+        "desk_filmoteka_370",
+        "desk_filmoteka_740"
       ]
     }
   ]

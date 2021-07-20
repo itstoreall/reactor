@@ -40,6 +40,20 @@ import desk_planning_740_wp from './desk_planning_740_wp.webp';
 import desk_planning_370 from './desk_planning_370.jpg';
 import desk_planning_740 from './desk_planning_740.jpg';
 
+// Filmoteka
+import mob_filmoteka_450_wp from './mob_filmoteka_450_wp.webp';
+import mob_filmoteka_900_wp from './mob_filmoteka_900_wp.webp';
+import mob_filmoteka_450 from './mob_filmoteka_450.jpg';
+import mob_filmoteka_900 from './mob_filmoteka_900.jpg';
+import tab_filmoteka_354_wp from './tab_filmoteka_354_wp.webp';
+import tab_filmoteka_708_wp from './tab_filmoteka_708_wp.webp';
+import tab_filmoteka_354 from './tab_filmoteka_354.jpg';
+import tab_filmoteka_708 from './tab_filmoteka_708.jpg';
+import desk_filmoteka_370_wp from './desk_filmoteka_370_wp.webp';
+import desk_filmoteka_740_wp from './desk_filmoteka_740_wp.webp';
+import desk_filmoteka_370 from './desk_filmoteka_370.jpg';
+import desk_filmoteka_740 from './desk_filmoteka_740.jpg';
+
 // Phonebook
 import mob_phonebook_450_wp from './mob_phonebook_450_wp.webp';
 import mob_phonebook_900_wp from './mob_phonebook_900_wp.webp';
@@ -166,6 +180,20 @@ const images = {
   desk_planning_740_wp,
   desk_planning_370,
   desk_planning_740,
+
+  // Filmoteka
+  mob_filmoteka_450_wp,
+  mob_filmoteka_900_wp,
+  mob_filmoteka_450,
+  mob_filmoteka_900,
+  tab_filmoteka_354_wp,
+  tab_filmoteka_708_wp,
+  tab_filmoteka_354,
+  tab_filmoteka_708,
+  desk_filmoteka_370_wp,
+  desk_filmoteka_740_wp,
+  desk_filmoteka_370,
+  desk_filmoteka_740,
 
   // Phonebook
   mob_phonebook_450_wp,
