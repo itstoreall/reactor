@@ -1,12 +1,13 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { useStyles, muiForm } from './AddProjectStyles';
 import TextField from '@material-ui/core/TextField';
 import Checkbox from '@material-ui/core/Checkbox';
 import Button from '@material-ui/core/Button';
+import Context from '../../../Context';
 
 const { log } = console;
 
-const AddProject = ({ onCloseModal, onSubmit }) => {
+const AddProject = () => {
   // Create Project
   const [name, setName] = useState('');
   const [title, setTitle] = useState('');
@@ -21,6 +22,8 @@ const AddProject = ({ onCloseModal, onSubmit }) => {
   const [source, setSource] = useState('');
   const [src, setSrc] = useState([]);
   const [restApi, setRestApi] = useState(false);
+
+  const { toggleModal, onSubmit } = useContext(Context);
 
   const mf = muiForm();
   const s = useStyles();
@@ -59,7 +62,6 @@ const AddProject = ({ onCloseModal, onSubmit }) => {
     const arr = value.split(' ');
 
     setUsed(arr.filter(Boolean));
-    // log('used', used);
   };
 
   // Create new Project
@@ -207,7 +209,7 @@ const AddProject = ({ onCloseModal, onSubmit }) => {
 
         <div className={s.buttonWrap}>
           <Button
-            onClick={onCloseModal}
+            onClick={toggleModal}
             id="cancelBtn"
             variant="contained"
             color="primary"

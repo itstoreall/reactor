@@ -5,6 +5,7 @@ import AddProject from './AddProject';
 import DeleteProject from './DeleteProject';
 import Button from '@material-ui/core/Button';
 import Modal from '../Modal';
+import Context from '../../Context';
 import api from '../utils/projectsAPI';
 
 const { log } = console;
@@ -14,7 +15,7 @@ const AdminPanel = () => {
   const [showModal, setShowModal] = useState(false);
   const [component, setComponent] = useState('');
   const [projectToDelete, setProjectToDelete] = useState('');
-  const [deleteOk, setDeleteOk] = useState(false);
+  const [deleteConfirm, setDeleteConfirm] = useState(false);
   const s = useStyles();
   const mb = muiBtn();
 
@@ -25,7 +26,7 @@ const AdminPanel = () => {
   const getProjects = () => api.getAllProjects().then(res => setProjects(res));
 
   // Modal --------------------------------v
-  const toggleModal = e => {
+  const toggleAdminPanelModal = e => {
     getProjects();
     setShowModal(!showModal);
 
@@ -49,12 +50,14 @@ const AdminPanel = () => {
 
   // Delete Project -----------------------v
   const handleDeleteProject = id => {
+    console.log('DeleteProject', id);
     setProjectToDelete(projects.find(project => project.id === id));
-    setDeleteOk(!deleteOk);
+    setDeleteConfirm(!deleteConfirm);
   };
 
   // Confirm Delete
-  const handleDeleteOk = async () => {
+  const handleDeleteConfirm = async () => {
+    log('Confirm Click');
     log(projectToDelete?.id);
 
     await api
@@ -63,56 +66,59 @@ const AdminPanel = () => {
       .catch(err => log('AdminPanel --> Submit ERROR Message:', err.message))
       .finally(() => log('Finally')); // hide Loader
 
-    setDeleteOk(!deleteOk);
+    setDeleteConfirm(!deleteConfirm);
     getProjects();
   };
 
   return (
-    <div className={s.AdminPanel}>
-      <h2>Portfolio</h2>
+    <Context.Provider
+      value={{
+        projects,
+        toggleModal: toggleAdminPanelModal,
+        onDeleteProject: handleDeleteProject,
+        deleteConfirm,
+        onDeleteConfirm: handleDeleteConfirm,
+        onSubmit: handleSubmit,
+      }}
+    >
+      <div className={s.AdminPanel}>
+        <h2>Portfolio</h2>
 
-      <div>
-        {showModal && (
-          <Modal onCloseModal={toggleModal}>
-            {component === 'addProject' ? (
-              <AddProject onCloseModal={toggleModal} onSubmit={handleSubmit} />
-            ) : component === 'deleteProject' ? (
-              <DeleteProject
-                projects={projects}
-                onDeleteProject={handleDeleteProject}
-                deleteOk={deleteOk}
-                toggleModal={toggleModal}
-                handleDeleteOk={handleDeleteOk}
-                onCloseModal={toggleModal}
-                onSubmit={handleSubmit}
-              />
-            ) : (
-              console.log('null')
-            )}
-          </Modal>
-        )}
+        <div>
+          {showModal && (
+            <Modal>
+              {component === 'addProject' ? (
+                <AddProject />
+              ) : component === 'deleteProject' ? (
+                <DeleteProject />
+              ) : (
+                console.log('null')
+              )}
+            </Modal>
+          )}
 
-        <Button
-          name="addProject"
-          onClick={toggleModal}
-          className={mb.addProjectBtn}
-          variant="contained"
-          color="primary"
-        >
-          + Add project
-        </Button>
+          <Button
+            name="addProject"
+            onClick={toggleAdminPanelModal}
+            className={mb.addProjectBtn}
+            variant="contained"
+            color="primary"
+          >
+            + Add project
+          </Button>
 
-        <Button
-          name="deleteProject"
-          onClick={toggleModal}
-          className={mb.addProjectBtn}
-          variant="contained"
-          color="primary"
-        >
-          – Del project
-        </Button>
+          <Button
+            name="deleteProject"
+            onClick={toggleAdminPanelModal}
+            className={mb.addProjectBtn}
+            variant="contained"
+            color="primary"
+          >
+            – Del project
+          </Button>
+        </div>
       </div>
-    </div>
+    </Context.Provider>
   );
 };
 

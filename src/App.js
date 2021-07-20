@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Main from './components/Main';
 import MenuBtn from './components/MenuBtn';
 import NavBar from './components/NavBar';
+import Context from './Context';
 import ReactGA from 'react-ga';
 
 const App = ({ location }) => {
@@ -28,12 +29,14 @@ const App = ({ location }) => {
   };
 
   return (
-    <div className={s.AppWrap}>
-      <Header />
-      <Main />
-      <MenuBtn toggleNavBar={toggleNavBar} />
-      {showNavBar && <NavBar toggleNavBar={toggleNavBar} />}
-    </div>
+    <Context.Provider value={{ toggleNavBar: toggleNavBar }}>
+      <div className={s.AppWrap}>
+        <Header />
+        <Main />
+        <MenuBtn />
+        {showNavBar && <NavBar />}
+      </div>
+    </Context.Provider>
   );
 };
 

@@ -1,12 +1,14 @@
-import { useEffect } from 'react';
+import { useEffect, useContext } from 'react';
 import { createPortal } from 'react-dom';
 import NavBarLink from './NavBarLink';
-import PropTypes from 'prop-types';
+import Context from '../../Context';
 import s from './NavBar.module.scss';
 
 const navBarRoot = document.querySelector('#navbar-root');
 
-const NavBar = ({ toggleNavBar }) => {
+const NavBar = () => {
+  const { toggleNavBar } = useContext(Context);
+
   useEffect(() => {
     window.addEventListener('keydown', handleCloseByEsc);
 
@@ -25,15 +27,11 @@ const NavBar = ({ toggleNavBar }) => {
   return createPortal(
     <div className={s.backdrop} onClick={handleCloseByBackdrop}>
       <div className={s.NavBar}>
-        <NavBarLink toggleNavBar={toggleNavBar} />
+        <NavBarLink />
       </div>
     </div>,
     navBarRoot,
   );
-};
-
-NavBar.propTypes = {
-  toggleNavBar: PropTypes.func.isRequired,
 };
 
 export default NavBar;

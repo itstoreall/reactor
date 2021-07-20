@@ -1,11 +1,14 @@
-import { useEffect } from 'react';
+import { useEffect, useContext } from 'react';
 import { createPortal } from 'react-dom';
+import Context from '../../Context';
 import PropTypes from 'prop-types';
 import s from './Modal.module.scss';
 
 const modalRoot = document.querySelector('#modal-root');
 
-const Modal = ({ onCloseModal, children }) => {
+const Modal = ({ children }) => {
+  const { toggleModal } = useContext(Context);
+
   useEffect(() => {
     window.addEventListener('keydown', handleCloseByEsc);
 
@@ -15,11 +18,12 @@ const Modal = ({ onCloseModal, children }) => {
   });
 
   // Close by backdrop
-  const handleCloseByBackdrop = e =>
-    e.currentTarget === e.target && onCloseModal();
+  const handleCloseByBackdrop = e => {
+    e.currentTarget === e.target && toggleModal();
+  };
 
   // Close by ESC
-  const handleCloseByEsc = e => e.code === 'Escape' && onCloseModal();
+  const handleCloseByEsc = e => e.code === 'Escape' && toggleModal();
 
   return createPortal(
     <div className={s.backdrop} onClick={handleCloseByBackdrop}>
@@ -30,7 +34,6 @@ const Modal = ({ onCloseModal, children }) => {
 };
 
 Modal.propTypes = {
-  onCloseModal: PropTypes.func.isRequired,
   children: PropTypes.node.isRequired,
 };
 

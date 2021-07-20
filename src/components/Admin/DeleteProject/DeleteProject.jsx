@@ -1,27 +1,18 @@
+import { useContext } from 'react';
 import { useStyles } from './DeleteProjectStyles';
 import ProjectList from './ProjectList';
 import ConfirmDelete from './ConfirmDelete';
+import Context from '../../../Context';
 
-const DeleteProject = ({
-  projects,
-  onDeleteProject,
-  deleteOk,
-  handleDeleteOk,
-  toggleModal,
-}) => {
+const DeleteProject = () => {
+  const { projects, deleteConfirm } = useContext(Context);
+
   const s = useStyles();
 
   return (
     <section className={s.DeleteProjectWrap}>
       <h3>Projects:</h3>
-      {!deleteOk ? (
-        <ProjectList projects={projects} onDeleteProject={onDeleteProject} />
-      ) : (
-        <ConfirmDelete
-          toggleModal={toggleModal}
-          handleDeleteOk={handleDeleteOk}
-        />
-      )}
+      {!deleteConfirm ? <ProjectList projects={projects} /> : <ConfirmDelete />}
     </section>
   );
 };

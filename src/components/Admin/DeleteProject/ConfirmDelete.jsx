@@ -1,6 +1,10 @@
+import { useContext } from 'react';
 import Button from '@material-ui/core/Button';
+import Context from '../../../Context';
 
-const ConfirmDelete = ({ toggleModal, handleDeleteOk }) => {
+const ConfirmDelete = () => {
+  const { toggleModal, onDeleteConfirm } = useContext(Context);
+
   return (
     <div>
       <h4>Delete?</h4>
@@ -9,7 +13,7 @@ const ConfirmDelete = ({ toggleModal, handleDeleteOk }) => {
           Cancel
         </Button>
 
-        <Button onClick={handleDeleteOk} variant="contained" color="primary">
+        <Button onClick={onDeleteConfirm} variant="contained" color="primary">
           Ok
         </Button>
       </div>

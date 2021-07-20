@@ -1,8 +1,11 @@
+import { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
+import Context from '../../Context';
 import s from './NavBar.module.scss';
 import { routes } from '../routes';
 
-export default function NavBarLink({ toggleNavBar }) {
+export default function NavBarLink() {
+  const { toggleNavBar } = useContext(Context);
   // const s = useStyles();
 
   // const handleToggleNavMenu = () => onToggleVisible();
