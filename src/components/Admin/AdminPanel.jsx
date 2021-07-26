@@ -2,9 +2,10 @@ import { useState, useEffect } from 'react';
 import { useStyles } from './AdminPanelStyles';
 import { muiBtn } from './AdminPanelStyles';
 import AddProject from './AddProject';
+import UpdateProject from './UpdateProject';
 import DeleteProject from './DeleteProject';
 import Button from '@material-ui/core/Button';
-import Modal from '../Modal';
+import AdminModal from '../AdminModal';
 import Context from '../../Context';
 import api from '../utils/projectsAPI';
 
@@ -14,6 +15,8 @@ const AdminPanel = () => {
   const [projects, setProjects] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [component, setComponent] = useState('');
+  const [projectToUpdate, setProjectToUpdate] = useState('');
+  const [updateConfirm, setUpdateConfirm] = useState(false);
   const [projectToDelete, setProjectToDelete] = useState('');
   const [deleteConfirm, setDeleteConfirm] = useState(false);
   const s = useStyles();
@@ -32,9 +35,9 @@ const AdminPanel = () => {
 
     e?.currentTarget.name === 'addProject'
       ? setComponent('addProject')
-      : e?.currentTarget.name === 'deleteProject'
-      ? setComponent('deleteProject')
-      : setComponent('');
+      : e?.currentTarget.name === 'updateProject'
+      ? setComponent('updateProject')
+      : setComponent('deleteProject');
   };
 
   // Create Project -----------------------v
@@ -46,6 +49,28 @@ const AdminPanel = () => {
       .then(result => log(result))
       .catch(err => log('AdminPanel --> Submit ERROR Message:', err.message))
       .finally(() => log('Finally')); // hide Loader
+  };
+
+  // Update Project -----------------------v
+  const handleUpdateProject = id => {
+    console.log('UpdateProject', id);
+    setProjectToUpdate(projects.find(project => project.id === id));
+    setUpdateConfirm(!updateConfirm);
+  };
+
+  // Confirm Update
+  const handleUpdateConfirm = async () => {
+    log('Confirm Click');
+    log(projectToUpdate?.id);
+
+    // await api
+    //   .deleteProject(projectToDelete.id)
+    //   .then(result => log('result', result))
+    //   .catch(err => log('AdminPanel --> Submit ERROR Message:', err.message))
+    //   .finally(() => log('Finally')); // hide Loader
+
+    setUpdateConfirm(!updateConfirm);
+    getProjects();
   };
 
   // Delete Project -----------------------v
@@ -75,10 +100,12 @@ const AdminPanel = () => {
       value={{
         projects,
         toggleModal: toggleAdminPanelModal,
-        onDeleteProject: handleDeleteProject,
-        deleteConfirm,
-        onDeleteConfirm: handleDeleteConfirm,
         onSubmit: handleSubmit,
+        onUpdateProject: handleUpdateProject,
+        onUpdateConfirm: handleUpdateConfirm,
+        onDeleteProject: handleDeleteProject,
+        onDeleteConfirm: handleDeleteConfirm,
+        deleteConfirm,
       }}
     >
       <div className={s.AdminPanel}>
@@ -86,21 +113,21 @@ const AdminPanel = () => {
 
         <div>
           {showModal && (
-            <Modal>
+            <AdminModal>
               {component === 'addProject' ? (
                 <AddProject />
-              ) : component === 'deleteProject' ? (
-                <DeleteProject />
+              ) : component === 'updateProject' ? (
+                <UpdateProject />
               ) : (
-                console.log('null')
+                <DeleteProject />
               )}
-            </Modal>
+            </AdminModal>
           )}
 
           <Button
             name="addProject"
             onClick={toggleAdminPanelModal}
-            className={mb.addProjectBtn}
+            className={mb.adminProjectBtn}
             variant="contained"
             color="primary"
           >
@@ -108,9 +135,19 @@ const AdminPanel = () => {
           </Button>
 
           <Button
+            name="updateProject"
+            onClick={toggleAdminPanelModal}
+            className={mb.adminProjectBtn}
+            variant="contained"
+            color="primary"
+          >
+            ~ Update project
+          </Button>
+
+          <Button
             name="deleteProject"
             onClick={toggleAdminPanelModal}
-            className={mb.addProjectBtn}
+            className={mb.adminProjectBtn}
             variant="contained"
             color="primary"
           >

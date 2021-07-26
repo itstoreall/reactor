@@ -44,5 +44,18 @@ const deleteProject = async id => {
   }
 };
 
-const api = { getAllProjects, createProject, deleteProject };
+// UPDATE
+const updateProject = async (id, payload) => {
+  try {
+    const response = await axios
+      .patch(`/projects/${id}`, payload)
+      .then(({ data }) => data);
+
+    return response;
+  } catch (err) {
+    log(err.message);
+  }
+};
+
+const api = { getAllProjects, createProject, deleteProject, updateProject };
 export default api;

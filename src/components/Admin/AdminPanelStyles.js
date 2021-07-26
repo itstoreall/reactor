@@ -47,6 +47,13 @@ export const useStyles = createUseStyles({
 
 // muiBtn
 export const muiBtn = makeStyles({
+  adminProjectBtn: {
+    marginBottom: 20,
+
+    '&:not(:last-child)': {
+      marginRight: 20,
+    },
+  },
   // addProjectBtn: {
   //   marginBottom: 30,
   // },

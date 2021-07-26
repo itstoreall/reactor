@@ -11,7 +11,7 @@ const DeleteProject = () => {
 
   return (
     <section className={s.DeleteProjectWrap}>
-      <h3>Projects:</h3>
+      <h3>Projects to Delete:</h3>
       {!deleteConfirm ? <ProjectList projects={projects} /> : <ConfirmDelete />}
     </section>
   );

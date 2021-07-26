@@ -1,12 +1,14 @@
 import { useEffect, useContext } from 'react';
 import { createPortal } from 'react-dom';
 import NavBarLink from './NavBarLink';
+import UserMenu from './UserMenu';
+import AuthMenu from './AuthMenu';
 import Context from '../../Context';
 import s from './NavBar.module.scss';
 
 const navBarRoot = document.querySelector('#navbar-root');
 
-const NavBar = () => {
+const NavBar = ({ isAuthenticated }) => {
   const { toggleNavBar } = useContext(Context);
 
   useEffect(() => {
@@ -28,6 +30,7 @@ const NavBar = () => {
     <div className={s.backdrop} onClick={handleCloseByBackdrop}>
       <div className={s.NavBar}>
         <NavBarLink />
+        {isAuthenticated ? <UserMenu /> : <AuthMenu />}
       </div>
     </div>,
     navBarRoot,

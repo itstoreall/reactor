@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
 import useStyles from './AppStyles';
-import Header from './components/Header';
+import Header from './components/AppBar';
 import Main from './components/Main';
 import MenuBtn from './components/MenuBtn';
 import NavBar from './components/NavBar';

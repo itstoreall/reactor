@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
-import useStyles from './HeaderStyles';
+import useStyles from './AppBarStyles';
 
-export default function Header() {
+export default function AppBar() {
   const s = useStyles();
 
   return (

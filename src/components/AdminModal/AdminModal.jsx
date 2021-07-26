@@ -2,11 +2,11 @@ import { useEffect, useContext } from 'react';
 import { createPortal } from 'react-dom';
 import Context from '../../Context';
 import PropTypes from 'prop-types';
-import s from './Modal.module.scss';
+import s from './AdminModal.module.scss';
 
 const modalRoot = document.querySelector('#modal-root');
 
-const Modal = ({ children }) => {
+const AdminModal = ({ children }) => {
   const { toggleModal } = useContext(Context);
 
   useEffect(() => {
@@ -33,8 +33,8 @@ const Modal = ({ children }) => {
   );
 };
 
-Modal.propTypes = {
+AdminModal.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default Modal;
+export default AdminModal;
