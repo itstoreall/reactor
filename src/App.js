@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Switch, Route, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import useStyles from './AppStyles';
-import RegisterView from './views/RegisterView';
-import LoginView from './views/LoginView';
 import Header from './components/AppBar';
 import Main from './components/Main';
 import MenuBtn from './components/MenuBtn';
@@ -37,11 +35,6 @@ const App = ({ location }) => {
         <Main />
         <MenuBtn />
         {showNavBar && <NavBar />}
-
-        <Switch>
-          <Route exact path="/register" component={RegisterView} />
-          <Route exact path="/login" component={LoginView} />
-        </Switch>
       </div>
     </Context.Provider>
   );

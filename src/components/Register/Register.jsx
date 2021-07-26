@@ -1,87 +1,74 @@
-import { useState } from 'react';
-import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
-import useStyles from './RegisterStyles';
+// import { useState } from 'react';
+// import { connect } from 'react-redux';
+// import { authOperations } from '../../redux/auth';
+// import useStyles from './RegisterStyles';
 
-const Register = () => {
-  const [formValue, setFormValue] = useState({
-    name: '',
-    email: '',
-    password: '',
-  });
+// const { log } = console;
 
-  const s = useStyles();
+// const Register = ({ onRegister }) => {
+//   const [name, setName] = useState('');
+//   const [email, setEmail] = useState('');
+//   const [password, setPassword] = useState('');
 
-  const handleInputChange = ({ target: { name, value } }) => {
-    setFormValue({ [name]: value });
-  };
+//   // const mf = muiForm();
+//   const s = useStyles();
 
-  const handleSubmit = e => {
-    e.preventDefault();
+//   const handleInputChange = e => {
+//     const { name, value } = e.target;
 
-    setFormValue({ name: '', email: '', password: '' });
-  };
+//     name === 'name'
+//       ? setName(value)
+//       : name === 'email'
+//       ? setEmail(value)
+//       : setPassword(value);
+//   };
 
-  return (
-    <section className={s.addProjectWrap}>
-      <h2>Login</h2>
-      <form
-        onSubmit={handleSubmit}
-        // className={mf.root}
-        noValidate
-        autoComplete="off"
-      >
-        <div className={s.inputsWrap}>
-          <div className={s.requiredWrap}>
-            <h4>Required:</h4>
-            <TextField
-              required
-              id="outlined-basic"
-              name="name"
-              type="text"
-              value={formValue.name}
-              onChange={handleInputChange}
-              label="Name"
-              variant="outlined"
-            />
+//   const handleSubmit = e => {
+//     e.preventDefault();
 
-            <TextField
-              required
-              id="outlined-basic"
-              name="email"
-              type="email"
-              value={formValue.email}
-              onChange={handleInputChange}
-              label="Email"
-              variant="outlined"
-            />
+//     const newUser = {
+//       name,
+//       email,
+//       password,
+//     };
 
-            <TextField
-              required
-              id="outlined-basic"
-              name="password"
-              type="password"
-              value={formValue.password}
-              onChange={handleInputChange}
-              label="Password"
-              variant="outlined"
-            />
-          </div>
-        </div>
+//     log('newUser', newUser);
 
-        <div className={s.buttonWrap}>
-          <Button
-            id="addlBtn"
-            type="submit"
-            variant="contained"
-            color="primary"
-          >
-            Submit
-          </Button>
-        </div>
-      </form>
-    </section>
-  );
-};
+//     onRegister(newUser);
+//   };
 
-export default Register;
+//   return (
+//     <section className={s.Register}>
+//       <form onSubmit={handleSubmit}>
+//         <input
+//           type="text"
+//           name="name"
+//           value={name}
+//           onChange={handleInputChange}
+//           autoComplete="off"
+//         />
+//         <input
+//           type="email"
+//           name="email"
+//           value={email}
+//           onChange={handleInputChange}
+//           autoComplete="off"
+//         />
+//         <input
+//           type="password"
+//           name="password"
+//           value={password}
+//           onChange={handleInputChange}
+//           autoComplete="off"
+//         />
+//         <button type="submit">Submit</button>
+//       </form>
+//     </section>
+//   );
+// };
+
+// const mapDispatch = {
+//   onRegister: authOperations.register,
+// };
+
+// export default connect(null, mapDispatch)(Register);
