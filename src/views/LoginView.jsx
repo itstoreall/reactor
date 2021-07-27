@@ -31,7 +31,7 @@ const LoginView = ({ onLogin }) => {
 
   return (
     <div className={s.RegisterView}>
-      <h1 className={s.viewTitle}>Register</h1>
+      <h1 className={s.viewTitle}>Login</h1>
 
       <section className={s.Register}>
         <form onSubmit={handleSubmit} autoComplete="off">

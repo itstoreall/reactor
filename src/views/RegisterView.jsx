@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { authOperations } from '../redux/auth';
 import s from './ViewStyles.module.scss';
 
-const { log } = console;
+// const { log } = console;
 
 const RegisterView = ({ onRegister }) => {
   const [name, setName] = useState('');
