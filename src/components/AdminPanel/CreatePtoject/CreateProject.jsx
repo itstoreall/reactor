@@ -94,7 +94,7 @@ const CreateProject = ({ props: { location, match, history } }) => {
       restApi,
     };
 
-    log(newProject);
+    // log(newProject);
 
     onSubmit(newProject);
 

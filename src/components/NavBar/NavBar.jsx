@@ -2,8 +2,8 @@ import { useEffect, useContext } from 'react';
 import { connect } from 'react-redux';
 import { createPortal } from 'react-dom';
 import NavBarLink from './NavBarLink';
-import UserMenu from './UserMenu/UserMenu';
-import AuthNav from './AuthNav';
+// import UserMenu from './UserMenu/UserMenu';
+// import AuthNav from './AuthNav';
 import { authSelectors } from '../../redux/auth';
 import Context from '../../Context';
 import s from './NavBar.module.scss';
@@ -32,7 +32,6 @@ const NavBar = ({ isAuthenticated }) => {
     <div className={s.backdrop} onClick={handleCloseByBackdrop}>
       <div className={s.NavBar}>
         <NavBarLink />
-        {isAuthenticated ? <UserMenu /> : <AuthNav />}
       </div>
     </div>,
     navBarRoot,

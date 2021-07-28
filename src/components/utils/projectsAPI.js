@@ -24,17 +24,27 @@ const getAllProjects = async () => {
 
 // CREATE
 const createProject = async payload => {
+  axios.defaults.headers.common.Authorization
+    ? log('token is true')
+    : log('token is false');
+
   try {
     const response = await axios.post(`/projects`, payload);
 
     return `${response.statusText}: ${response.status}`;
   } catch (err) {
     log('axios CREATE ERR:-->', { err });
+    log('axios CREATE ERR.message:-->', err.message);
+    //
   }
 };
 
 // DELETE
 const deleteProject = async id => {
+  axios.defaults.headers.common.Authorization
+    ? log('token is true')
+    : log('token is false');
+
   try {
     const response = await axios.delete(`/projects/${id}`);
 

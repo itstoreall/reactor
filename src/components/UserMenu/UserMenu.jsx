@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { authSelectors, authOperations } from '../../../redux/auth';
+import { authSelectors, authOperations } from '../../redux/auth';
 import useStyles from './UserMenuStyles';
 
 const UserMenu = ({ avatar, name, onLogout }) => {

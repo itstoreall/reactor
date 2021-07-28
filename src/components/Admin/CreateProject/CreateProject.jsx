@@ -1,5 +1,8 @@
 import { useState, useContext } from 'react';
-import { useStyles, muiForm } from './CreateProjectStyles';
+import {
+  useStyles,
+  muiForm,
+} from '../../AdminPanel/DeleteProject/CreateProjectStyles';
 import TextField from '@material-ui/core/TextField';
 import Checkbox from '@material-ui/core/Checkbox';
 import Button from '@material-ui/core/Button';
