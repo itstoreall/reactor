@@ -3,8 +3,8 @@ import authActions from './auth-actions';
 
 const { log } = console;
 
-axios.defaults.baseURL = 'http://localhost:5288/api';
-// axios.defaults.baseURL = 'https://reactor-rest-api.herokuapp.com/api';
+// axios.defaults.baseURL = 'http://localhost:5288/api';
+axios.defaults.baseURL = 'https://reactor-rest-api.herokuapp.com/api';
 
 const token = {
   set(token) {
@@ -34,7 +34,6 @@ const login = credentials => async dispatch => {
 
   try {
     const response = await axios.post('/users/login', credentials);
-    log('Login token', response.data.data.token);
 
     token.set(response.data.data.token);
     dispatch(authActions.loginSuccess(response.data));

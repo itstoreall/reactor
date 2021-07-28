@@ -1,5 +1,5 @@
 import { useState, useContext } from 'react';
-import { useStyles, muiForm } from './AddProjectStyles';
+import { useStyles, muiForm } from './CreateProjectStyles';
 import TextField from '@material-ui/core/TextField';
 import Checkbox from '@material-ui/core/Checkbox';
 import Button from '@material-ui/core/Button';
@@ -7,8 +7,8 @@ import Context from '../../../Context';
 
 const { log } = console;
 
-const AddProject = () => {
-  // Create Project
+const CreateProject = () => {
+  // Create
   const [name, setName] = useState('');
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
@@ -237,7 +237,7 @@ const AddProject = () => {
         </div>
       </form>
 
-      <ul className={s.requestList}>
+      {/* <ul className={s.requestList}>
         <li>{name}</li>
         <li>{title}</li>
         <li>{description}</li>
@@ -248,9 +248,9 @@ const AddProject = () => {
         <li>{source}</li>
         <li>{src}</li>
         <li>{restApi ? 'REST-API: true' : null}</li>
-      </ul>
+      </ul> */}
     </section>
   );
 };
 
-export default AddProject;
+export default CreateProject;

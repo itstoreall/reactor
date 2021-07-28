@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useStyles } from './AdminPanelStyles';
 import { muiBtn } from './AdminPanelStyles';
-import AddProject from './AddProject';
+import CreateProject from './CreateProject';
 import UpdateProject from './UpdateProject';
 import DeleteProject from './DeleteProject';
 import Button from '@material-ui/core/Button';
@@ -115,7 +115,7 @@ const AdminPanel = () => {
           {showModal && (
             <AdminModal>
               {component === 'addProject' ? (
-                <AddProject />
+                <CreateProject />
               ) : component === 'updateProject' ? (
                 <UpdateProject />
               ) : (
