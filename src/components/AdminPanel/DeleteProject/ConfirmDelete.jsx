@@ -3,13 +3,17 @@ import Button from '@material-ui/core/Button';
 import Context from '../../../Context';
 
 const ConfirmDelete = () => {
-  const { toggleModal, onDeleteConfirm } = useContext(Context);
+  const { toggleDeleteConfirmModal, onDeleteConfirm } = useContext(Context);
 
   return (
     <div>
       <h4>Delete?</h4>
       <div>
-        <Button onClick={toggleModal} variant="contained" color="primary">
+        <Button
+          onClick={toggleDeleteConfirmModal}
+          variant="contained"
+          color="primary"
+        >
           Cancel
         </Button>
 

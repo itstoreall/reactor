@@ -1,14 +1,14 @@
 import { useState, useContext } from 'react';
-import { useStyles, muiForm } from './AddProjectStyles';
 import TextField from '@material-ui/core/TextField';
 import Checkbox from '@material-ui/core/Checkbox';
 import Button from '@material-ui/core/Button';
 import Context from '../../../Context';
+import { useStyles, muiForm } from './CreateProjectStyles';
 
 const { log } = console;
 
-const AddProject = () => {
-  // Create Project
+const CreateProject = ({ props: { location, match, history } }) => {
+  // Create
   const [name, setName] = useState('');
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
@@ -23,7 +23,7 @@ const AddProject = () => {
   const [src, setSrc] = useState([]);
   const [restApi, setRestApi] = useState(false);
 
-  const { toggleModal, onSubmit } = useContext(Context);
+  const { onSubmit } = useContext(Context);
 
   const mf = muiForm();
   const s = useStyles();
@@ -93,6 +93,8 @@ const AddProject = () => {
       ],
       restApi,
     };
+
+    // log(newProject);
 
     onSubmit(newProject);
 
@@ -209,15 +211,6 @@ const AddProject = () => {
 
         <div className={s.buttonWrap}>
           <Button
-            onClick={toggleModal}
-            id="cancelBtn"
-            variant="contained"
-            color="primary"
-          >
-            Cancel
-          </Button>
-
-          <Button
             onClick={resetForm}
             id="resetBtn"
             variant="contained"
@@ -237,7 +230,7 @@ const AddProject = () => {
         </div>
       </form>
 
-      <ul className={s.requestList}>
+      {/* <ul className={s.requestList}>
         <li>{name}</li>
         <li>{title}</li>
         <li>{description}</li>
@@ -248,9 +241,9 @@ const AddProject = () => {
         <li>{source}</li>
         <li>{src}</li>
         <li>{restApi ? 'REST-API: true' : null}</li>
-      </ul>
+      </ul> */}
     </section>
   );
 };
 
-export default AddProject;
+export default CreateProject;

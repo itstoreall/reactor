@@ -1,13 +1,109 @@
-import AdminPanel from '../components/Admin';
+import { useState, useEffect } from 'react';
+// import AdminPanel from '../components/Admin';
+// import { NavLink } from 'react-router-dom';
+import { withRouter, NavLink, Route } from 'react-router-dom';
+import Create from '../components/AdminPanel/CreatePtoject';
+import Delete from '../components/AdminPanel/DeleteProject';
+import api from '../components/utils/projectsAPI';
+import Context from '../Context';
 import s from './ViewStyles.module.scss';
 
-const AdminView = () => {
+const { log } = console;
+
+const AdminView = ({ match, location, history }) => {
+  const [projects, setProjects] = useState([]);
+  const [showModal, setShowModal] = useState(false);
+  // const [component, setComponent] = useState('');
+  // const [projectToUpdate, setProjectToUpdate] = useState('');
+  // const [updateConfirm, setUpdateConfirm] = useState(false);
+  const [projectToDelete, setProjectToDelete] = useState('');
+  const [deleteConfirm, setDeleteConfirm] = useState(false);
+
+  // // componentDidMount (Get all Projects)
+  // useEffect(() => api.getAllProjects().then(res => setProjects(res)), []);
+
+  // Get all Projects
+  const getProjects = () => api.getAllProjects().then(res => setProjects(res));
+
+  // Modal --------------------------------v
+  const toggleDeleteConfirmModal = () => setDeleteConfirm(!deleteConfirm);
+  // const toggleAdminPanelModal = e => {
+  //   getProjects();
+  //   setShowModal(!showModal);
+
+  //   log(555);
+
+  // e?.currentTarget.name === 'addProject'
+  //   ? setComponent('addProject')
+  //   : e?.currentTarget.name === 'updateProject'
+  //   ? setComponent('updateProject')
+  //   : setComponent('deleteProject');
+  // };
+
+  const handleSubmit = newProject => {
+    log('Is sent...'); // show Loader
+
+    api
+      .createProject(newProject)
+      .then(result => log(result))
+      .catch(err => log('AdminPanel --> Submit ERROR Message:', err.message))
+      .finally(() => log('Finally')); // hide Loader
+  };
+
+  // Delete Project -----------------------v
+  const handleDeleteProject = id => {
+    console.log('DeleteProject', id);
+    setProjectToDelete(projects.find(project => project.id === id));
+    // setDeleteConfirm(!deleteConfirm);
+    toggleDeleteConfirmModal();
+  };
+
+  // Confirm Delete
+  const handleDeleteConfirm = async () => {
+    log('Confirm Click');
+    log(projectToDelete?.id);
+
+    await api
+      .deleteProject(projectToDelete.id)
+      // .then(result => log('result', result))
+      .catch(err => log('AdminPanel --> Submit ERROR Message:', err.message))
+      .finally(() => log('Finally')); // hide Loader
+
+    toggleDeleteConfirmModal();
+    // getProjects();
+  };
+
   return (
-    <div className={s.AdminView}>
-      <h1 className={s.viewTitle}>Admin panel</h1>
-      <AdminPanel />
-    </div>
+    <Context.Provider
+      value={{
+        getProjects,
+        projects,
+        toggleDeleteConfirmModal,
+        // showModal: showModal,
+        onSubmit: handleSubmit,
+        // onUpdateProject: handleUpdateProject,
+        // onUpdateConfirm: handleUpdateConfirm,
+        onDeleteProject: handleDeleteProject,
+        onDeleteConfirm: handleDeleteConfirm,
+        deleteConfirm,
+      }}
+    >
+      <div className={s.AdminView}>
+        <h1 className={s.viewTitle}>Admin panel</h1>
+        <NavLink to={`${match.url}/create-project`}>Create</NavLink>
+        <NavLink to={`${match.url}/delete-project`}>Delete</NavLink>
+
+        <Route
+          path={`${match.path}/create-project`}
+          render={() => <Create props={{ match, location, history }} />}
+        />
+        <Route
+          path={`${match.path}/delete-project`}
+          render={() => <Delete props={{ match, location, history }} />}
+        />
+      </div>
+    </Context.Provider>
   );
 };
 
-export default AdminView;
+export default withRouter(AdminView);

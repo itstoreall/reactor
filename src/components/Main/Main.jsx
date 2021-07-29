@@ -1,4 +1,4 @@
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
 import { Suspense } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import { routes } from '../routes';
@@ -31,8 +31,9 @@ const Main = ({ visible, location }) => {
   );
 };
 
-const mapState = state => ({
-  visible: state.navMenu.visible,
-});
+// const mapState = state => ({
+//   visible: state.navMenu.visible,
+// });
 
-export default connect(mapState)(Main);
+// export default connect(mapState)(Main);
+export default Main;

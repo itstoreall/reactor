@@ -1,9 +1,15 @@
 import { useContext } from 'react';
+import { useEffect } from 'react';
 import ProjectItem from './ProjectItem';
 import Context from '../../../Context';
 
 const ProjectList = () => {
-  const { projects } = useContext(Context);
+  const { getProjects, projects } = useContext(Context);
+
+  // componentDidMount (Get all Projects)
+  useEffect(() => {
+    getProjects();
+  }, []); // eslint-disable-line
 
   return (
     <ul>

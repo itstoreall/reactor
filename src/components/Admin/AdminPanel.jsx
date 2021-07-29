@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useStyles } from './AdminPanelStyles';
 import { muiBtn } from './AdminPanelStyles';
-import AddProject from './AddProject';
+import CreateProject from './CreateProject';
 import UpdateProject from './UpdateProject';
 import DeleteProject from './DeleteProject';
 import Button from '@material-ui/core/Button';
@@ -12,33 +12,33 @@ import api from '../utils/projectsAPI';
 const { log } = console;
 
 const AdminPanel = () => {
-  const [projects, setProjects] = useState([]);
-  const [showModal, setShowModal] = useState(false);
-  const [component, setComponent] = useState('');
-  const [projectToUpdate, setProjectToUpdate] = useState('');
-  const [updateConfirm, setUpdateConfirm] = useState(false);
-  const [projectToDelete, setProjectToDelete] = useState('');
-  const [deleteConfirm, setDeleteConfirm] = useState(false);
-  const s = useStyles();
-  const mb = muiBtn();
+  // const [projects, setProjects] = useState([]);
+  // const [showModal, setShowModal] = useState(false);
+  // const [component, setComponent] = useState('');
+  // const [projectToUpdate, setProjectToUpdate] = useState('');
+  // const [updateConfirm, setUpdateConfirm] = useState(false);
+  // const [projectToDelete, setProjectToDelete] = useState('');
+  // const [deleteConfirm, setDeleteConfirm] = useState(false);
+  // const s = useStyles();
+  // const mb = muiBtn();
 
-  // componentDidMount (Get all Projects)
-  useEffect(() => api.getAllProjects().then(res => setProjects(res)), []);
+  // // componentDidMount (Get all Projects)
+  // useEffect(() => api.getAllProjects().then(res => setProjects(res)), []);
 
-  // Get all Projects
-  const getProjects = () => api.getAllProjects().then(res => setProjects(res));
+  // // Get all Projects
+  // const getProjects = () => api.getAllProjects().then(res => setProjects(res));
 
-  // Modal --------------------------------v
-  const toggleAdminPanelModal = e => {
-    getProjects();
-    setShowModal(!showModal);
+  // // Modal --------------------------------v
+  // const toggleAdminPanelModal = e => {
+  //   getProjects();
+  //   setShowModal(!showModal);
 
-    e?.currentTarget.name === 'addProject'
-      ? setComponent('addProject')
-      : e?.currentTarget.name === 'updateProject'
-      ? setComponent('updateProject')
-      : setComponent('deleteProject');
-  };
+  //   e?.currentTarget.name === 'addProject'
+  //     ? setComponent('addProject')
+  //     : e?.currentTarget.name === 'updateProject'
+  //     ? setComponent('updateProject')
+  //     : setComponent('deleteProject');
+  // };
 
   // Create Project -----------------------v
   const handleSubmit = newProject => {
@@ -73,27 +73,27 @@ const AdminPanel = () => {
     getProjects();
   };
 
-  // Delete Project -----------------------v
-  const handleDeleteProject = id => {
-    console.log('DeleteProject', id);
-    setProjectToDelete(projects.find(project => project.id === id));
-    setDeleteConfirm(!deleteConfirm);
-  };
+  // // Delete Project -----------------------v
+  // const handleDeleteProject = id => {
+  //   console.log('DeleteProject', id);
+  //   setProjectToDelete(projects.find(project => project.id === id));
+  //   setDeleteConfirm(!deleteConfirm);
+  // };
 
-  // Confirm Delete
-  const handleDeleteConfirm = async () => {
-    log('Confirm Click');
-    log(projectToDelete?.id);
+  // // Confirm Delete
+  // const handleDeleteConfirm = async () => {
+  //   log('Confirm Click');
+  //   log(projectToDelete?.id);
 
-    await api
-      .deleteProject(projectToDelete.id)
-      .then(result => log('result', result))
-      .catch(err => log('AdminPanel --> Submit ERROR Message:', err.message))
-      .finally(() => log('Finally')); // hide Loader
+  //   await api
+  //     .deleteProject(projectToDelete.id)
+  //     .then(result => log('result', result))
+  //     .catch(err => log('AdminPanel --> Submit ERROR Message:', err.message))
+  //     .finally(() => log('Finally')); // hide Loader
 
-    setDeleteConfirm(!deleteConfirm);
-    getProjects();
-  };
+  //   setDeleteConfirm(!deleteConfirm);
+  //   getProjects();
+  // };
 
   return (
     <Context.Provider
@@ -115,7 +115,7 @@ const AdminPanel = () => {
           {showModal && (
             <AdminModal>
               {component === 'addProject' ? (
-                <AddProject />
+                <CreateProject />
               ) : component === 'updateProject' ? (
                 <UpdateProject />
               ) : (
