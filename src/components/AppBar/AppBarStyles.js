@@ -42,4 +42,22 @@ export default createUseStyles({
     textTransform: 'uppercase',
     color: refs.primaryColor,
   },
+
+  lockWrap: {
+    marginLeft: 'auto',
+    paddingRight: 110,
+
+    '& > svg': {
+      width: 20,
+      height: 23,
+    },
+  },
+
+  lock: {
+    fill: refs.primaryYellow,
+  },
+
+  unlock: {
+    fill: refs.linkColor,
+  },
 });

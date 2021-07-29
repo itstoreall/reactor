@@ -1,19 +1,15 @@
 import { useContext } from 'react';
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import ProjectItem from './ProjectItem';
-import api from '../../utils/projectsAPI';
 import Context from '../../../Context';
 
 const ProjectList = () => {
-  // const { getProjects, projects } = useContext(Context);
-
-  const [projects, setProjects] = useState([]);
+  const { getProjects, projects } = useContext(Context);
 
   // componentDidMount (Get all Projects)
-  // useEffect(() => {
-  //   getProjects();
-  // }, [getProjects]);
-  useEffect(() => api.getAllProjects().then(res => setProjects(res)), []);
+  useEffect(() => {
+    getProjects();
+  }, []); // eslint-disable-line
 
   return (
     <ul>

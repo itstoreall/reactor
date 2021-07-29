@@ -47,12 +47,6 @@ const App = ({ onGetCurrentUser, location }) => {
   );
 };
 
-// const mapState = state => ({
-//   hidden: state.app.hidden,
-// });
-
-// const mapDispatch = { toggleOverflow };
-
 const mapDispatch = {
   onGetCurrentUser: authOperations.getCurrentUser,
 };
