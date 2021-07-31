@@ -20,6 +20,8 @@ export const refs = {
   trinityWhiteColor: '#ffffff52',
   fourthWhiteColor: '#ffffff17',
   linkColor: '#6ecab6',
+  linkHover: 'palevioletred',
+  borderGreyColor: '#41414e',
 
   // Backgrounds
   primaryBg: '#252729',

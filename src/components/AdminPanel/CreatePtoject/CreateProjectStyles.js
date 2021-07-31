@@ -5,7 +5,6 @@ import { refs } from '../../refs';
 // s -----------------------------------------
 export const useStyles = createUseStyles({
   addProjectWrap: {
-    padding: '30px 30px 30px 30px',
     minHeight: '100%',
     backgroundColor: refs.darkBg,
   },
@@ -15,41 +14,24 @@ export const useStyles = createUseStyles({
     marginBottom: '20px',
 
     '& h3, h4': {
-      // marginBottom: '20px',
       color: refs.primaryColor,
     },
 
     '& h4': {
       marginBottom: '20px',
-      // color: refs.primaryColor,
-    },
-
-    [`@media (min-width: ${refs.tablet}px)`]: {
-      display: 'flex',
     },
   },
 
   // Required
   requiredWrap: {
-    // backgroundColor: 'pink',
-
     [`@media (max-width: ${refs.tabletMax}px)`]: {
       marginBottom: '20px',
-    },
-
-    [`@media (min-width: ${refs.tablet}px)`]: {
-      marginRight: '20px',
-      width: '50%',
     },
   },
 
   // Optionally
   optionallyWrap: {
     // backgroundColor: 'skyblue',
-
-    [`@media (min-width: ${refs.tablet}px)`]: {
-      width: '50%',
-    },
   },
 
   // Buttons
@@ -81,7 +63,7 @@ export const muiForm = makeStyles({
 
         // Label upstairs
         '&.MuiInputLabel-outlined.MuiInputLabel-shrink': {
-          transform: 'translate(14px, -5px) scale(0.65)',
+          transform: 'translate(14px, -5px) scale(0.76)',
         },
 
         // Lable inside

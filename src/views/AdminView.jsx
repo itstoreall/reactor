@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 // import AdminPanel from '../components/Admin';
 // import { NavLink } from 'react-router-dom';
 import { withRouter, NavLink, Route } from 'react-router-dom';
+import AddCircleIcon from '@material-ui/icons/AddCircle';
+import CancelIcon from '@material-ui/icons/Cancel';
 import Create from '../components/AdminPanel/CreatePtoject';
 import Delete from '../components/AdminPanel/DeleteProject';
 import api from '../components/utils/projectsAPI';
@@ -90,17 +92,31 @@ const AdminView = ({ match, location, history }) => {
     >
       <div className={s.AdminView}>
         <h1 className={s.viewTitle}>Admin panel</h1>
-        <NavLink to={`${match.url}/create-project`}>Create</NavLink>
-        <NavLink to={`${match.url}/delete-project`}>Delete</NavLink>
+        <div className={s.AdminViewContentWrap}>
+          {location.pathname === '/admin/create-project' ? (
+            <NavLink className={s.AdminViewCreateBtn} to={`${match.url}`}>
+              <CancelIcon className={s.AdminViewCancelBtnIcon} />
+            </NavLink>
+          ) : (
+            <NavLink
+              className={s.AdminViewCreateBtn}
+              to={`${match.url}/create-project`}
+            >
+              <AddCircleIcon className={s.AdminViewCreateBtnIcon} />
+            </NavLink>
+          )}
 
-        <Route
-          path={`${match.path}/create-project`}
-          render={() => <Create props={{ match, location, history }} />}
-        />
-        <Route
-          path={`${match.path}/delete-project`}
-          render={() => <Delete props={{ match, location, history }} />}
-        />
+          <Route
+            path={`${match.path}/create-project`}
+            render={() => <Create props={{ match, location, history }} />}
+          />
+          <Route
+            path={`${match.path}`}
+            exact
+            // path={`${match.path}/delete-project`}
+            render={() => <Delete props={{ match, location, history }} />}
+          />
+        </div>
       </div>
     </Context.Provider>
   );

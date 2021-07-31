@@ -180,10 +180,6 @@ const CreateProject = ({ props: { location, match, history } }) => {
               label="Source"
               variant="outlined"
             />
-          </div>
-
-          <div className={s.optionallyWrap}>
-            <h4>Optionally:</h4>
             <TextField
               id="outlined-basic"
               name="requires"

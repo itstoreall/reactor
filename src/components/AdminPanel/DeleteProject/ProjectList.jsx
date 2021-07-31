@@ -2,17 +2,24 @@ import { useContext } from 'react';
 import { useEffect } from 'react';
 import ProjectItem from './ProjectItem';
 import Context from '../../../Context';
+import { useStyles } from './DeleteProjectStyles';
+
+const { log } = console;
 
 const ProjectList = () => {
   const { getProjects, projects } = useContext(Context);
 
-  // componentDidMount (Get all Projects)
-  useEffect(() => {
-    getProjects();
-  }, []); // eslint-disable-line
+  const s = useStyles();
+
+  // useEffect(() => {
+  //   getProjects();
+  // }, []); // eslint-disable-line
+
+  // Get all Projects
+  useEffect(() => getProjects(), []); // eslint-disable-line
 
   return (
-    <ul>
+    <ul className={s.ProjectList}>
       {projects?.map(project => (
         <ProjectItem key={project.id} project={project} />
       ))}
