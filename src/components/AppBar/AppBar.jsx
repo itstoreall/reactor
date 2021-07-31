@@ -3,10 +3,10 @@ import { NavLink } from 'react-router-dom';
 import UserMenu from '../UserMenu';
 import AuthNav from '../AuthNav';
 import sprite from '../../svg/sprite.svg';
-import { authSelectors } from '../../redux/auth';
+import { authOperations, authSelectors } from '../../redux/auth';
 import useStyles from './AppBarStyles';
 
-const AppBar = ({ isAuthenticated }) => {
+const AppBar = ({ isAuthenticated, onLogout }) => {
   const s = useStyles();
 
   return (
@@ -15,17 +15,24 @@ const AppBar = ({ isAuthenticated }) => {
         Reactor
       </NavLink>
 
-      {isAuthenticated ? <UserMenu /> : <AuthNav />}
-
       <div className={s.lockWrap}>
         {!isAuthenticated ? (
-          <svg className={s.lock}>
-            <use href={`${sprite}#lock`}></use>
-          </svg>
+          <NavLink
+            to="/login"
+            exact
+            className={s.loginBtn}
+            // activeClassName={s.activetLink}
+          >
+            <svg className={s.lock}>
+              <use href={`${sprite}#lock`}></use>
+            </svg>
+          </NavLink>
         ) : (
-          <svg className={s.unlock}>
-            <use href={`${sprite}#unlock`}></use>
-          </svg>
+          <button className={s.logoutBtm} type="button" onClick={onLogout}>
+            <svg className={s.unlock}>
+              <use href={`${sprite}#unlock`}></use>
+            </svg>
+          </button>
         )}
       </div>
     </header>
@@ -36,4 +43,8 @@ const mapState = state => ({
   isAuthenticated: authSelectors.getIsAuthenticated(state),
 });
 
-export default connect(mapState)(AppBar);
+const mapDispatch = {
+  onLogout: authOperations.logout, // Logout
+};
+
+export default connect(mapState, mapDispatch)(AppBar);

@@ -1,17 +1,14 @@
 import { connect } from 'react-redux';
-import { authSelectors, authOperations } from '../../redux/auth';
+import { authSelectors } from '../../redux/auth';
 import useStyles from './UserMenuStyles';
 
-const UserMenu = ({ avatar, name, onLogout }) => {
+const UserMenu = ({ avatar, name }) => {
   const s = useStyles();
 
   return (
     <div className={s.UserMenuContainer}>
       <img className={s.UserAvatar} src={avatar} alt={name} width="32" />
-      <span className={s.UserName}>Welcome, {name}</span>
-      <button type="button" onClick={onLogout}>
-        Logout
-      </button>
+      <span className={s.UserName}>{name}</span>
     </div>
   );
 };
@@ -21,8 +18,4 @@ const mapState = state => ({
   avatar: authSelectors.getUserAvatar(state),
 });
 
-const mapDispatch = {
-  onLogout: authOperations.logout, // Logout
-};
-
-export default connect(mapState, mapDispatch)(UserMenu);
+export default connect(mapState)(UserMenu);

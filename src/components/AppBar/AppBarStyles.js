@@ -46,6 +46,35 @@ export default createUseStyles({
   lockWrap: {
     marginLeft: 'auto',
     paddingRight: 110,
+  },
+
+  // Login
+  loginBtn: {
+    display: 'block',
+
+    '& > svg': {
+      width: 20,
+      height: 23,
+    },
+  },
+
+  // link: {
+  //   display: 'inline-block',
+  //   textDecoration: 'none',
+  //   padding: 12,
+  //   fontWeight: 700,
+  //   color: 'pink',
+  // },
+  // activeLink: {
+  //   color: 'skyblue',
+  // },
+
+  // Logout
+  logoutBtm: {
+    padding: 0,
+    backgroundColor: 'transparent',
+    border: 'none',
+    cursor: 'pointer',
 
     '& > svg': {
       width: 20,
