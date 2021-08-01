@@ -3,9 +3,9 @@ import { lazy } from 'react';
 // const HomeView = lazy(() =>
 //   import('../views/HomeView' /*webpackChunkName: 'Home'*/),
 // );
-const RegisterView = lazy(() =>
-  import('../views/RegisterView' /*webpackChunkName: 'Register'*/),
-);
+// const RegisterView = lazy(() =>
+//   import('../views/RegisterView' /*webpackChunkName: 'Register'*/),
+// );
 const LoginView = lazy(() =>
   import('../views/LoginView' /*webpackChunkName: 'Login'*/),
 );
@@ -30,35 +30,40 @@ export const routes = [
   //   exact: true,
   //   showInMenu: false,
   // },
-  {
-    path: '/register',
-    label: 'Register',
-    component: RegisterView,
-    showInMenu: false,
-  },
+  // {
+  //   path: '/register',
+  //   label: 'Register',
+  //   component: RegisterView,
+  //   showInMenu: false,
+  //   needsAuthorization: true,
+  // },
   {
     path: '/login',
     label: 'Login',
     component: LoginView,
     showInMenu: false,
+    needsAuthorization: false,
   },
   {
     path: '/resume',
     label: 'Resume',
     component: ResumeView,
     showInMenu: true,
+    needsAuthorization: false,
   },
   {
     path: '/portfolio',
     label: 'Portfolio',
     component: PortfolioView,
     showInMenu: true,
+    needsAuthorization: false,
   },
   {
     path: '/admin',
     label: 'Admin',
     component: AdminView,
     showInMenu: true,
+    needsAuthorization: true,
   },
   // {
   //   path: '/contacts',
