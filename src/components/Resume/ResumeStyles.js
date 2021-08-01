@@ -73,9 +73,7 @@ export default createUseStyles({
 
   // Aside
   aside: {
-    paddingTop: 100,
     paddingBottom: 30,
-    // marginBottom: 30,
 
     [`@media (min-width: ${refs.tablet}px) and (max-width: ${refs.desktopMax}px)`]: {
       display: 'flex',
@@ -105,7 +103,10 @@ export default createUseStyles({
   avatar: {
     paddingBottom: 40,
     borderBottom: `1px solid ${refs.secondaryBg}`,
-    // backgroundColor: '#1e2939',
+
+    [`@media (max-width: ${refs.tabletMax}px)`]: {
+      paddingTop: 100,
+    },
 
     [`@media (min-width: ${refs.mobile}px)`]: {
       minHeight: 460,
@@ -346,6 +347,10 @@ export default createUseStyles({
   downloadResume: {
     padding: '30px 0',
 
+    [`@media (max-width: ${refs.tabletMax}px)`]: {
+      paddingBottom: 80,
+    },
+
     '& > a': {
       display: 'inline-flex',
       alignItems: 'center',
@@ -369,8 +374,6 @@ export default createUseStyles({
 
   // Main Content --------------------------------------
   mainContent: {
-    paddingBottom: 40,
-
     [`@media (min-width: ${refs.tablet}px)`]: {
       paddingBottom: 60,
     },
@@ -451,7 +454,6 @@ export default createUseStyles({
   certificateLink: {
     display: 'inline-flex',
     alignItems: 'center',
-    // color: refs.linkColor,
 
     '& svg': {
       marginRight: 7,

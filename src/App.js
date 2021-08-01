@@ -36,7 +36,7 @@ const App = ({ onGetCurrentUser, location }) => {
   };
 
   return (
-    <Context.Provider value={{ toggleNavBar: toggleNavBar }}>
+    <Context.Provider value={{ showNavBar, toggleNavBar }}>
       <div className={s.AppWrap}>
         <Header />
         <Main />

@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { createPortal } from 'react-dom';
 import NavBarLink from './NavBarLink';
 import UserMenu from '../UserMenu';
-import AuthNav from '../AuthNav';
 import { authSelectors } from '../../redux/auth';
 import Context from '../../Context';
 import s from './NavBar.module.scss';

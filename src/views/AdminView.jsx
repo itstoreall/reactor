@@ -1,6 +1,4 @@
-import { useState, useEffect } from 'react';
-// import AdminPanel from '../components/Admin';
-// import { NavLink } from 'react-router-dom';
+import { useState } from 'react';
 import { withRouter, NavLink, Route } from 'react-router-dom';
 import AddCircleIcon from '@material-ui/icons/AddCircle';
 import CancelIcon from '@material-ui/icons/Cancel';
@@ -14,34 +12,14 @@ const { log } = console;
 
 const AdminView = ({ match, location, history }) => {
   const [projects, setProjects] = useState([]);
-  const [showModal, setShowModal] = useState(false);
-  // const [component, setComponent] = useState('');
-  // const [projectToUpdate, setProjectToUpdate] = useState('');
-  // const [updateConfirm, setUpdateConfirm] = useState(false);
   const [projectToDelete, setProjectToDelete] = useState('');
   const [deleteConfirm, setDeleteConfirm] = useState(false);
-
-  // // componentDidMount (Get all Projects)
-  // useEffect(() => api.getAllProjects().then(res => setProjects(res)), []);
 
   // Get all Projects
   const getProjects = () => api.getAllProjects().then(res => setProjects(res));
 
   // Modal --------------------------------v
   const toggleDeleteConfirmModal = () => setDeleteConfirm(!deleteConfirm);
-  // const toggleAdminPanelModal = e => {
-  //   getProjects();
-  //   setShowModal(!showModal);
-
-  //   log(555);
-
-  // e?.currentTarget.name === 'addProject'
-  //   ? setComponent('addProject')
-  //   : e?.currentTarget.name === 'updateProject'
-  //   ? setComponent('updateProject')
-  //   : setComponent('deleteProject');
-  // };
-
   const handleSubmit = newProject => {
     log('Is sent...'); // show Loader
 
@@ -49,30 +27,24 @@ const AdminView = ({ match, location, history }) => {
       .createProject(newProject)
       .then(result => log(result))
       .catch(err => log('AdminPanel --> Submit ERROR Message:', err.message))
-      .finally(() => log('Finally')); // hide Loader
+      .finally(() => log('Finally Create')); // hide Loader
   };
 
   // Delete Project -----------------------v
   const handleDeleteProject = id => {
-    console.log('DeleteProject', id);
     setProjectToDelete(projects.find(project => project.id === id));
-    // setDeleteConfirm(!deleteConfirm);
     toggleDeleteConfirmModal();
   };
 
   // Confirm Delete
   const handleDeleteConfirm = async () => {
-    log('Confirm Click');
-    log(projectToDelete?.id);
-
     await api
       .deleteProject(projectToDelete.id)
       // .then(result => log('result', result))
       .catch(err => log('AdminPanel --> Submit ERROR Message:', err.message))
-      .finally(() => log('Finally')); // hide Loader
+      .finally(() => log('Finally Delete')); // hide Loader
 
     toggleDeleteConfirmModal();
-    // getProjects();
   };
 
   return (
@@ -81,10 +53,7 @@ const AdminView = ({ match, location, history }) => {
         getProjects,
         projects,
         toggleDeleteConfirmModal,
-        // showModal: showModal,
         onSubmit: handleSubmit,
-        // onUpdateProject: handleUpdateProject,
-        // onUpdateConfirm: handleUpdateConfirm,
         onDeleteProject: handleDeleteProject,
         onDeleteConfirm: handleDeleteConfirm,
         deleteConfirm,
@@ -113,7 +82,6 @@ const AdminView = ({ match, location, history }) => {
           <Route
             path={`${match.path}`}
             exact
-            // path={`${match.path}/delete-project`}
             render={() => <Delete props={{ match, location, history }} />}
           />
         </div>

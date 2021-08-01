@@ -1,13 +1,25 @@
+import { useContext } from 'react';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import UserMenu from '../UserMenu';
-import AuthNav from '../AuthNav';
 import sprite from '../../svg/sprite.svg';
 import { authOperations, authSelectors } from '../../redux/auth';
+import Context from '../../Context';
 import useStyles from './AppBarStyles';
 
+// const { log } = console;
+
 const AppBar = ({ isAuthenticated, onLogout }) => {
+  const { showNavBar, toggleNavBar } = useContext(Context);
   const s = useStyles();
+
+  const handleLogin = () => {
+    showNavBar && toggleNavBar();
+  };
+
+  const handleLogout = () => {
+    showNavBar && toggleNavBar();
+    onLogout();
+  };
 
   return (
     <header className={s.Header}>
@@ -21,18 +33,18 @@ const AppBar = ({ isAuthenticated, onLogout }) => {
             to="/login"
             exact
             className={s.loginBtn}
-            // activeClassName={s.activetLink}
+            onClick={handleLogin}
           >
             <svg className={s.lock}>
               <use href={`${sprite}#lock`}></use>
             </svg>
           </NavLink>
         ) : (
-          <button className={s.logoutBtm} type="button" onClick={onLogout}>
+          <NavLink to="/resume" className={s.logoutBtm} onClick={handleLogout}>
             <svg className={s.unlock}>
               <use href={`${sprite}#unlock`}></use>
             </svg>
-          </button>
+          </NavLink>
         )}
       </div>
     </header>

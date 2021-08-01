@@ -1,13 +1,5 @@
 import axios from 'axios';
 
-// const BASE_URL = 'https://reactor-rest-api.herokuapp.com/api';
-// const AUTH_TOKEN =
-//   'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwZDVmOTBjMzAwMTQ1N2Q3YzhiNDVmNCIsImlhdCI6MTYyNjc5NzM2NywiZXhwIjoxNjI2ODgzNzY3fQ.F7Db9VmF_z1Y7oZZkMOIiP-hbQt41MSHeTwBcIuAwXM'; // 19:11
-
-// axios.defaults.baseURL = 'http://localhost:5288/api';
-// axios.defaults.baseURL = 'https://reactor-rest-api.herokuapp.com/api';
-// axios.defaults.headers.common = { Authorization: `bearer ${AUTH_TOKEN}` };
-
 const { log } = console;
 
 // GET All
@@ -24,10 +16,6 @@ const getAllProjects = async () => {
 
 // CREATE
 const createProject = async payload => {
-  axios.defaults.headers.common.Authorization
-    ? log('token is true')
-    : log('token is false');
-
   try {
     const response = await axios.post(`/projects`, payload);
 
@@ -35,16 +23,11 @@ const createProject = async payload => {
   } catch (err) {
     log('axios CREATE ERR:-->', { err });
     log('axios CREATE ERR.message:-->', err.message);
-    //
   }
 };
 
 // DELETE
 const deleteProject = async id => {
-  axios.defaults.headers.common.Authorization
-    ? log('token is true')
-    : log('token is false');
-
   try {
     const response = await axios.delete(`/projects/${id}`);
 

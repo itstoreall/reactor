@@ -2,6 +2,7 @@
 import { Suspense } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import PrivateRoute from '../Routes/PrivateRoute';
+import PublicRoute from '../Routes/PublicRoute';
 import { routes } from '../routes';
 import useStyles from './MainStyles';
 
@@ -15,13 +16,28 @@ const Main = () => {
           <Suspense fallback={<p className={s.loading}>LOADING...</p>}>
             <Switch>
               {routes.map(
-                ({ path, exact, component: Component, needsAuthorization }) =>
+                ({
+                  path,
+                  exact,
+                  component: Component,
+                  needsAuthorization,
+                  restricted,
+                }) =>
                   needsAuthorization ? (
                     <PrivateRoute
                       key={path}
                       path={path}
                       exact={exact}
                       component={Component}
+                    />
+                  ) : restricted ? (
+                    <PublicRoute
+                      key={path}
+                      path={path}
+                      exact={exact}
+                      redirectTo="/admin"
+                      component={Component}
+                      restricted
                     />
                   ) : (
                     <Route

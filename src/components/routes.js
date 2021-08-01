@@ -43,6 +43,7 @@ export const routes = [
     component: LoginView,
     showInMenu: false,
     needsAuthorization: false,
+    restricted: true,
   },
   {
     path: '/resume',
@@ -50,6 +51,7 @@ export const routes = [
     component: ResumeView,
     showInMenu: true,
     needsAuthorization: false,
+    restricted: false,
   },
   {
     path: '/portfolio',
@@ -57,6 +59,7 @@ export const routes = [
     component: PortfolioView,
     showInMenu: true,
     needsAuthorization: false,
+    restricted: false,
   },
   {
     path: '/admin',
@@ -64,6 +67,7 @@ export const routes = [
     component: AdminView,
     showInMenu: true,
     needsAuthorization: true,
+    restricted: false,
   },
   // {
   //   path: '/contacts',

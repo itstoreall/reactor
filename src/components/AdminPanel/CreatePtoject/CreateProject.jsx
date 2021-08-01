@@ -48,7 +48,7 @@ const CreateProject = ({ props: { location, match, history } }) => {
       ? setSource(value)
       : name === 'src'
       ? setSrc(value)
-      : log('ERROR Input value!');
+      : log('ERROR Input value! src:', src);
   };
 
   // Checkbox

@@ -4,16 +4,12 @@ import ProjectItem from './ProjectItem';
 import Context from '../../../Context';
 import { useStyles } from './DeleteProjectStyles';
 
-const { log } = console;
+// const { log } = console;
 
 const ProjectList = () => {
   const { getProjects, projects } = useContext(Context);
 
   const s = useStyles();
-
-  // useEffect(() => {
-  //   getProjects();
-  // }, []); // eslint-disable-line
 
   // Get all Projects
   useEffect(() => getProjects(), []); // eslint-disable-line
