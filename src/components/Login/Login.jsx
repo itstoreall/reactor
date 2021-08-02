@@ -1,75 +1,51 @@
-// import { useState } from 'react';
-// import TextField from '@material-ui/core/TextField';
-// import Button from '@material-ui/core/Button';
-// import useStyles from './LoginStyles';
+import { useContext } from 'react';
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
+import Context from '../../Context';
+import useStyles from './LoginStyles';
 
-// const Login = () => {
-//   const [formValue, setFormValue] = useState({
-//     email: '',
-//     password: '',
-//   });
+const Login = () => {
+  const { email, password, onInputChange, onSubmit } = useContext(Context);
 
-//   const s = useStyles();
+  const s = useStyles();
 
-//   const handleInputChange = ({ target: { name, value } }) => {
-//     setFormValue({ [name]: value });
-//   };
+  return (
+    <section className={s.Register}>
+      <form className={s.LoginViewForm} onSubmit={onSubmit} autoComplete="off">
+        <TextField
+          id="LoginViewEmail"
+          className={s.LoginViewEmail}
+          name="email"
+          value={email}
+          onChange={onInputChange}
+          label="Email"
+          variant="outlined"
+          required
+        />
 
-//   const handleSubmit = e => {
-//     e.preventDefault();
+        <TextField
+          id="LoginViewEmailPassword"
+          className={s.LoginViewPassword}
+          name="password"
+          value={password}
+          onChange={onInputChange}
+          label="Password"
+          variant="outlined"
+          required
+        />
 
-//     setFormValue({ email: '', password: '' });
-//   };
+        <Button
+          className={s.LoginViewBtn}
+          id="addlBtn"
+          type="submit"
+          variant="contained"
+          color="primary"
+        >
+          Submit
+        </Button>
+      </form>
+    </section>
+  );
+};
 
-//   return (
-//     <section className={s.addProjectWrap}>
-//       <h2>Login</h2>
-//       <form
-//         onSubmit={handleSubmit}
-//         // className={mf.root}
-//         noValidate
-//         autoComplete="off"
-//       >
-//         <div className={s.inputsWrap}>
-//           <div className={s.requiredWrap}>
-//             <h4>Required:</h4>
-//             <TextField
-//               required
-//               id="outlined-basic"
-//               name="email"
-//               type="email"
-//               value={formValue.email}
-//               onChange={handleInputChange}
-//               label="Email"
-//               variant="outlined"
-//             />
-
-//             <TextField
-//               required
-//               id="outlined-basic"
-//               name="password"
-//               type="password"
-//               value={formValue.password}
-//               onChange={handleInputChange}
-//               label="Password"
-//               variant="outlined"
-//             />
-//           </div>
-//         </div>
-
-//         <div className={s.buttonWrap}>
-//           <Button
-//             id="addlBtn"
-//             type="submit"
-//             variant="contained"
-//             color="primary"
-//           >
-//             Submit
-//           </Button>
-//         </div>
-//       </form>
-//     </section>
-//   );
-// };
-
-// export default Login;
+export default Login;

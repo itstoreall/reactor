@@ -343,7 +343,7 @@
       "name": "jessi",
       "alt": "Jessi",
       "title": "Jessi",
-      "description": "Just a simple HTML/CSS layout of the first page of the site or personal blog (WordPress Theme)",
+      "description": "Simple HTML/CSS layout of the first page of the personal blog (WordPress Theme - Desktop version)",
       "requires": "",
       "used": [
         "eslint",

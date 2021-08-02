@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import Login from '../components/Login';
+import Context from '../Context';
 import { connect } from 'react-redux';
 import { authOperations } from '../redux/auth';
 import s from './ViewStyles.module.scss';
@@ -7,7 +9,8 @@ import s from './ViewStyles.module.scss';
 
 const LoginView = ({ onLogin }) => {
   const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  // const [email, setEmail] = useState('serhiist@mail.net');
+  const [password, setPassword] = useState('112233');
 
   const handleInputChange = e => {
     const { name, value } = e.target;
@@ -30,29 +33,19 @@ const LoginView = ({ onLogin }) => {
   };
 
   return (
-    <div className={s.RegisterView}>
-      <h1 className={s.viewTitle}>Login</h1>
-
-      <section className={s.Register}>
-        <form onSubmit={handleSubmit} autoComplete="off">
-          <input
-            type="email"
-            name="email"
-            value={email}
-            onChange={handleInputChange}
-            autoComplete="off"
-          />
-          <input
-            type="password"
-            name="password"
-            value={password}
-            onChange={handleInputChange}
-            autoComplete="off"
-          />
-          <button type="submit">Submit</button>
-        </form>
-      </section>
-    </div>
+    <Context.Provider
+      value={{
+        email,
+        password,
+        onInputChange: handleInputChange,
+        onSubmit: handleSubmit,
+      }}
+    >
+      <div className={s.RegisterView}>
+        <h1 className={s.viewTitle}>Login</h1>
+        <Login />
+      </div>
+    </Context.Provider>
   );
 };
 
