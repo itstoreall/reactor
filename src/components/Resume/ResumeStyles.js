@@ -104,7 +104,7 @@ export default createUseStyles({
     paddingBottom: 40,
     borderBottom: `1px solid ${refs.secondaryBg}`,
 
-    [`@media (max-width: ${refs.tabletMax}px)`]: {
+    [`@media (max-width: ${refs.desktopMax}px)`]: {
       paddingTop: 100,
     },
 

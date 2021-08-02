@@ -1,14 +1,27 @@
 @import '../styles/colors';
 
 // Views
-.AdminView,
-.RegisterView {
+.AdminView {
   padding-top: 100px;
 }
 
 // h1
 .viewTitle {
   margin-bottom: 45px;
+}
+
+// Login View
+.LoginView {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 100px);
+  min-height: 420px;
+
+  .LoginViewContentWrap {
+    max-width: 350px;
+    text-align: center;
+  }
 }
 
 // Admin View

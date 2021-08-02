@@ -3,8 +3,8 @@ import authActions from './auth-actions';
 
 // const { log } = console;
 
-axios.defaults.baseURL = 'http://localhost:5288/api';
-// axios.defaults.baseURL = 'https://reactor-rest-api.herokuapp.com/api';
+// axios.defaults.baseURL = 'http://localhost:5288/api';
+axios.defaults.baseURL = 'https://reactor-rest-api.herokuapp.com/api';
 
 const token = {
   set(token) {

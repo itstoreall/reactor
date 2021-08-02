@@ -8,42 +8,54 @@ import s from './ViewStyles.module.scss';
 // const { log } = console;
 
 const LoginView = ({ onLogin }) => {
-  const [email, setEmail] = useState('');
-  // const [email, setEmail] = useState('serhiist@mail.net');
-  const [password, setPassword] = useState('112233');
+  const [values, setValues] = useState({
+    email: '',
+    password: '',
+    showPassword: false,
+  });
 
-  const handleInputChange = e => {
-    const { name, value } = e.target;
+  const handleChange = prop => event => {
+    setValues({ ...values, [prop]: event.target.value });
+  };
 
-    name === 'email' ? setEmail(value) : setPassword(value);
+  const handleClickShowPassword = () => {
+    setValues({ ...values, showPassword: !values.showPassword });
+  };
+
+  const handleMouseDownPassword = event => {
+    event.preventDefault();
   };
 
   const handleSubmit = e => {
     e.preventDefault();
 
     const newUser = {
-      email,
-      password,
+      email: values.email,
+      password: values.password,
     };
 
     onLogin(newUser);
 
-    setEmail('');
-    setPassword('');
+    // setEmail('');
+    // setPassword('');
   };
 
   return (
     <Context.Provider
       value={{
-        email,
-        password,
-        onInputChange: handleInputChange,
+        values,
+        setValues,
+        onChange: handleChange,
+        onShowPassword: handleClickShowPassword,
+        onMouseDownPassword: handleMouseDownPassword,
         onSubmit: handleSubmit,
       }}
     >
-      <div className={s.RegisterView}>
-        <h1 className={s.viewTitle}>Login</h1>
-        <Login />
+      <div className={s.LoginView}>
+        <div className={s.LoginViewContentWrap}>
+          <h1 className={s.viewTitle}>Login</h1>
+          <Login />
+        </div>
       </div>
     </Context.Provider>
   );

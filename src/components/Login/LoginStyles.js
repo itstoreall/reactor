@@ -1,49 +1,56 @@
-import { createUseStyles } from 'react-jss';
+import { makeStyles } from '@material-ui/core/styles';
+import { refs } from '../refs';
 
-export default createUseStyles({
-  LoginViewForm: {
-    // backgroundColor: 'red',
-  },
+export const useStyles = makeStyles({
+  root: {
+    '& form': {
+      '& > div': {
+        marginBottom: 25,
+        width: '100%',
 
-  LoginViewEmail: {
-    width: '100%',
-    // backgroundColor: 'skyblue',
+        // Label
+        '& > label': {
+          color: refs.primaryColor,
 
-    '& > label': {
-      color: 'yellow',
-      // backgroundColor: 'yellow',
-    },
+          '&.Mui-focused': {
+            color: refs.linkColor,
+          },
+        },
 
-    '& > div': {
-      // backgroundColor: 'yellow',
+        // Wrap
+        '& > div': {
+          '&.MuiOutlinedInput-root.Mui-focused input': {
+            color: refs.linkColor,
+          },
 
-      '& > input': {
-        // backgroundColor: 'skyblue',
-      },
-      '& > fieldset': {
-        // backgroundColor: 'skyblue',
-        border: '1px solid #fff',
+          // Input
+          '&.MuiOutlinedInput-root .MuiInputBase-input': {
+            color: refs.primaryColor,
+          },
 
-        '& > legend': {
-          '& > span': {},
+          // Eye
+          '&.MuiOutlinedInput-root button > span > svg': {
+            fill: refs.primaryColor,
+          },
+          '&.MuiOutlinedInput-root.Mui-focused button > span > svg': {
+            fill: refs.linkColor,
+          },
+
+          // Fieldset
+          '&.MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline': {
+            borderColor: refs.primaryColor,
+          },
+          '&.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline': {
+            borderColor: refs.linkColor,
+          },
         },
       },
+
+      // Submit Button
+      '& > button': {
+        width: '100%',
+        height: 50,
+      },
     },
-  },
-
-  LoginViewPassword: {
-    width: '100%',
-    backgroundColor: 'pink',
-
-    '& > label': {
-      backgroundColor: 'yellow',
-    },
-  },
-
-  LoginViewBtn: {
-    // display: 'block',
-    width: 200,
-    height: 50,
-    backgroundColor: 'green',
   },
 });
