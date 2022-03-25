@@ -1,5 +1,13 @@
 {
-  "techIcons": ["#react", "#redux", "#nodejs", "#js", "#sass", "#html"],
+  "techIcons": [
+    "#react",
+    "#redux",
+    "#nodejs",
+    "#js",
+    "#graphql",
+    "#sass",
+    "#html"
+  ],
   "avatar": {
     "name": "Serhii Stanislav",
     "position": "Front-end Developer"
@@ -40,6 +48,8 @@
       "JavaScript",
       "React",
       "Node.js",
+      "Apollo GraphQl",
+      "PostgreSQL",
       "Scrum",
       "Agile"
     ],
@@ -51,9 +61,19 @@
   "summary": "Since 2015 I developed websites in Webflow at freelance. These were simple projects using HTML/CSS. At the beginning of 2020, I started my studies at the GoIT school, where I had experience in teamwork and coding for over a year. I prefer to use React, Redux and JavaScript in development. In the stack of these technologies, I can be most effective as a front-end developer for remote work",
   "jobs": [
     {
+      "position": "Full Stack developer",
+      "company": "at TechBand",
+      "date": "August 2021 - up to now",
+      "specialization": [
+        "Front-end (React, Apollo GraphQl)",
+        "Back-end (Node.js, PostgreSQl)",
+        "Teamwork"
+      ]
+    },
+    {
       "position": "Front-end developer",
       "company": "at Freelance",
-      "date": "September 2020 - up to now",
+      "date": "September 2020 - July 2021",
       "specialization": [
         "Website development",
         "SPA development (React/Redux)",

@@ -12,6 +12,48 @@ import desk_reactor_740_wp from './desk_reactor_740_wp.webp';
 import desk_reactor_370 from './desk_reactor_370.jpg';
 import desk_reactor_740 from './desk_reactor_740.jpg';
 
+// codebox
+import mob_codebox_450_wp from './mob_codebox_450_wp.webp';
+import mob_codebox_900_wp from './mob_codebox_900_wp.webp';
+import mob_codebox_450 from './mob_codebox_450.jpg';
+import mob_codebox_900 from './mob_codebox_900.jpg';
+import tab_codebox_354_wp from './tab_codebox_354_wp.webp';
+import tab_codebox_708_wp from './tab_codebox_708_wp.webp';
+import tab_codebox_354 from './tab_codebox_354.jpg';
+import tab_codebox_708 from './tab_codebox_708.jpg';
+import desk_codebox_370_wp from './desk_codebox_370_wp.webp';
+import desk_codebox_740_wp from './desk_codebox_740_wp.webp';
+import desk_codebox_370 from './desk_codebox_370.jpg';
+import desk_codebox_740 from './desk_codebox_740.jpg';
+
+// GraphQl Mongoose server
+import mob_graphqlMongooseServer_450_wp from './mob_graphqlMongooseServer_450_wp.webp';
+import mob_graphqlMongooseServer_900_wp from './mob_graphqlMongooseServer_900_wp.webp';
+import mob_graphqlMongooseServer_450 from './mob_graphqlMongooseServer_450.jpg';
+import mob_graphqlMongooseServer_900 from './mob_graphqlMongooseServer_900.jpg';
+import tab_graphqlMongooseServer_354_wp from './tab_graphqlMongooseServer_354_wp.webp';
+import tab_graphqlMongooseServer_708_wp from './tab_graphqlMongooseServer_708_wp.webp';
+import tab_graphqlMongooseServer_354 from './tab_graphqlMongooseServer_354.jpg';
+import tab_graphqlMongooseServer_708 from './tab_graphqlMongooseServer_708.jpg';
+import desk_graphqlMongooseServer_370_wp from './desk_graphqlMongooseServer_370_wp.webp';
+import desk_graphqlMongooseServer_740_wp from './desk_graphqlMongooseServer_740_wp.webp';
+import desk_graphqlMongooseServer_370 from './desk_graphqlMongooseServer_370.jpg';
+import desk_graphqlMongooseServer_740 from './desk_graphqlMongooseServer_740.jpg';
+
+// Phonebook
+import mob_phonebook_450_wp from './mob_phonebook_450_wp.webp';
+import mob_phonebook_900_wp from './mob_phonebook_900_wp.webp';
+import mob_phonebook_450 from './mob_phonebook_450.jpg';
+import mob_phonebook_900 from './mob_phonebook_900.jpg';
+import tab_phonebook_354_wp from './tab_phonebook_354_wp.webp';
+import tab_phonebook_708_wp from './tab_phonebook_708_wp.webp';
+import tab_phonebook_354 from './tab_phonebook_354.jpg';
+import tab_phonebook_708 from './tab_phonebook_708.jpg';
+import desk_phonebook_370_wp from './desk_phonebook_370_wp.webp';
+import desk_phonebook_740_wp from './desk_phonebook_740_wp.webp';
+import desk_phonebook_370 from './desk_phonebook_370.jpg';
+import desk_phonebook_740 from './desk_phonebook_740.jpg';
+
 // REST API
 import mob_restApi_450_wp from './mob_restApi_450_wp.webp';
 import mob_restApi_900_wp from './mob_restApi_900_wp.webp';
@@ -39,20 +81,6 @@ import desk_planning_370_wp from './desk_planning_370_wp.webp';
 import desk_planning_740_wp from './desk_planning_740_wp.webp';
 import desk_planning_370 from './desk_planning_370.jpg';
 import desk_planning_740 from './desk_planning_740.jpg';
-
-// Phonebook
-import mob_phonebook_450_wp from './mob_phonebook_450_wp.webp';
-import mob_phonebook_900_wp from './mob_phonebook_900_wp.webp';
-import mob_phonebook_450 from './mob_phonebook_450.jpg';
-import mob_phonebook_900 from './mob_phonebook_900.jpg';
-import tab_phonebook_354_wp from './tab_phonebook_354_wp.webp';
-import tab_phonebook_708_wp from './tab_phonebook_708_wp.webp';
-import tab_phonebook_354 from './tab_phonebook_354.jpg';
-import tab_phonebook_708 from './tab_phonebook_708.jpg';
-import desk_phonebook_370_wp from './desk_phonebook_370_wp.webp';
-import desk_phonebook_740_wp from './desk_phonebook_740_wp.webp';
-import desk_phonebook_370 from './desk_phonebook_370.jpg';
-import desk_phonebook_740 from './desk_phonebook_740.jpg';
 
 // Movies
 import mob_movies_450_wp from './mob_movies_450_wp.webp';
@@ -167,6 +195,48 @@ const images = {
   desk_reactor_370,
   desk_reactor_740,
 
+  // codebox
+  mob_codebox_450_wp,
+  mob_codebox_900_wp,
+  mob_codebox_450,
+  mob_codebox_900,
+  tab_codebox_354_wp,
+  tab_codebox_708_wp,
+  tab_codebox_354,
+  tab_codebox_708,
+  desk_codebox_370_wp,
+  desk_codebox_740_wp,
+  desk_codebox_370,
+  desk_codebox_740,
+
+  // Phonebook
+  mob_phonebook_450_wp,
+  mob_phonebook_900_wp,
+  mob_phonebook_450,
+  mob_phonebook_900,
+  tab_phonebook_354_wp,
+  tab_phonebook_708_wp,
+  tab_phonebook_354,
+  tab_phonebook_708,
+  desk_phonebook_370_wp,
+  desk_phonebook_740_wp,
+  desk_phonebook_370,
+  desk_phonebook_740,
+
+  // GraphQl Mongoose server
+  mob_graphqlMongooseServer_450_wp,
+  mob_graphqlMongooseServer_900_wp,
+  mob_graphqlMongooseServer_450,
+  mob_graphqlMongooseServer_900,
+  tab_graphqlMongooseServer_354_wp,
+  tab_graphqlMongooseServer_708_wp,
+  tab_graphqlMongooseServer_354,
+  tab_graphqlMongooseServer_708,
+  desk_graphqlMongooseServer_370_wp,
+  desk_graphqlMongooseServer_740_wp,
+  desk_graphqlMongooseServer_370,
+  desk_graphqlMongooseServer_740,
+
   // REST API
   mob_restApi_450_wp,
   mob_restApi_900_wp,
@@ -194,20 +264,6 @@ const images = {
   desk_planning_740_wp,
   desk_planning_370,
   desk_planning_740,
-
-  // Phonebook
-  mob_phonebook_450_wp,
-  mob_phonebook_900_wp,
-  mob_phonebook_450,
-  mob_phonebook_900,
-  tab_phonebook_354_wp,
-  tab_phonebook_708_wp,
-  tab_phonebook_354,
-  tab_phonebook_708,
-  desk_phonebook_370_wp,
-  desk_phonebook_740_wp,
-  desk_phonebook_370,
-  desk_phonebook_740,
 
   // Movies
   mob_movies_450_wp,

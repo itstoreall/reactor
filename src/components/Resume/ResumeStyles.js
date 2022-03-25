@@ -34,18 +34,18 @@ export default createUseStyles({
     },
 
     '& svg': {
-      width: 30,
-      height: 30,
+      width: 25,
+      height: 25,
       fill: refs.primaryYellow,
 
       [`@media (min-width: ${refs.mobile}px)`]: {
-        width: 35,
-        height: 35,
+        width: 30,
+        height: 30,
       },
 
       [`@media (min-width: ${refs.mobilePlus}px)`]: {
-        width: 43,
-        height: 43,
+        width: 35,
+        height: 35,
       },
 
       [`@media (min-width: ${refs.tablet}px) and (max-width: ${refs.desktopMax}px)`]: {
@@ -101,7 +101,7 @@ export default createUseStyles({
 
   // Avatar (section)
   avatar: {
-    paddingBottom: 40,
+    paddingBottom: 30,
     borderBottom: `1px solid ${refs.secondaryBg}`,
 
     [`@media (max-width: ${refs.desktopMax}px)`]: {
