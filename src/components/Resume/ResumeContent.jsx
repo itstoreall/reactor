@@ -45,7 +45,7 @@ const ResumeContent = () => {
         />
         <ContentSkills resume={resumeInfo} />
 
-        {desktop && <DownloadResume />}
+        {/* {desktop && <DownloadResume />} */}
       </aside>
 
       <div className={s.mainContent}>

@@ -36,7 +36,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "server": "json-server --delay 300 --port 2222 --watch server/db.json ",
+    "server": "json-server --delay 300 --port 8888 --watch server/db.json ",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",

@@ -13,16 +13,11 @@
     "position": "Front-end Developer"
   },
   "contacts": {
-    "phone": "+38 (067) 518 3309",
-    "phone_href": "tel:+380675183309",
-    "email": "serhiistanislav@gmail.com",
-    "email_href": "mailto:serhiistanislav@gmail.com",
+    "phone": "*************",
+    "phone_href": "tel:+380...",
+    "email": "*************",
+    "email_href": "mailto:...@gmail.com",
     "social": [
-      {
-        "title": "Telegram",
-        "icon": "#telegram",
-        "link": "https://t.me/serhiistanislav"
-      },
       {
         "title": "Facebook",
         "icon": "#fb",
