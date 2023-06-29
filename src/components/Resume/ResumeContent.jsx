@@ -55,7 +55,7 @@ const ResumeContent = () => {
         <ContentJobs resume={resumeInfo} />
         <ContentEducation resume={resumeInfo} />
         <ContentLanguages resume={resumeInfo} />
-        {!desktop && <DownloadResume />}
+        {/* {!desktop && <DownloadResume />} */}
       </div>
     </div>
   );
